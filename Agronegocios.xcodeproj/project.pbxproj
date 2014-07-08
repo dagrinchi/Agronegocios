@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		092A214FD7954C2EB2E9EB25 /* libPods-Agronegocios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40EDC4279B7347119FB1AE5B /* libPods-Agronegocios.a */; };
 		63611B051969FA36006B3282 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63611B041969FA36006B3282 /* Foundation.framework */; };
 		63611B071969FA36006B3282 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63611B061969FA36006B3282 /* CoreGraphics.framework */; };
 		63611B091969FA36006B3282 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63611B081969FA36006B3282 /* UIKit.framework */; };
@@ -19,6 +20,8 @@
 		63611B201969FA36006B3282 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63611B081969FA36006B3282 /* UIKit.framework */; };
 		63611B281969FA36006B3282 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 63611B261969FA36006B3282 /* InfoPlist.strings */; };
 		63611B2A1969FA36006B3282 /* AgronegociosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63611B291969FA36006B3282 /* AgronegociosTests.m */; };
+		63611B3E196B3A6E006B3282 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63611B3D196B3A6E006B3282 /* Main.storyboard */; };
+		63611B41196B3A90006B3282 /* C4CStockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63611B40196B3A90006B3282 /* C4CStockViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		40EDC4279B7347119FB1AE5B /* libPods-Agronegocios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Agronegocios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63611B011969FA36006B3282 /* Agronegocios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Agronegocios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63611B041969FA36006B3282 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		63611B061969FA36006B3282 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -48,6 +52,10 @@
 		63611B251969FA36006B3282 /* AgronegociosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AgronegociosTests-Info.plist"; sourceTree = "<group>"; };
 		63611B271969FA36006B3282 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		63611B291969FA36006B3282 /* AgronegociosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AgronegociosTests.m; sourceTree = "<group>"; };
+		63611B3D196B3A6E006B3282 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		63611B3F196B3A90006B3282 /* C4CStockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4CStockViewController.h; sourceTree = "<group>"; };
+		63611B40196B3A90006B3282 /* C4CStockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CStockViewController.m; sourceTree = "<group>"; };
+		F60A556C6DD14941B74DDECB /* Pods-Agronegocios.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Agronegocios.xcconfig"; path = "Pods/Pods-Agronegocios.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,7 @@
 				63611B071969FA36006B3282 /* CoreGraphics.framework in Frameworks */,
 				63611B091969FA36006B3282 /* UIKit.framework in Frameworks */,
 				63611B051969FA36006B3282 /* Foundation.framework in Frameworks */,
+				092A214FD7954C2EB2E9EB25 /* libPods-Agronegocios.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +90,7 @@
 				63611B231969FA36006B3282 /* AgronegociosTests */,
 				63611B031969FA36006B3282 /* Frameworks */,
 				63611B021969FA36006B3282 /* Products */,
+				F60A556C6DD14941B74DDECB /* Pods-Agronegocios.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +110,7 @@
 				63611B061969FA36006B3282 /* CoreGraphics.framework */,
 				63611B081969FA36006B3282 /* UIKit.framework */,
 				63611B1D1969FA36006B3282 /* XCTest.framework */,
+				40EDC4279B7347119FB1AE5B /* libPods-Agronegocios.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -107,6 +118,10 @@
 		63611B0A1969FA36006B3282 /* Agronegocios */ = {
 			isa = PBXGroup;
 			children = (
+				63611B42196B5244006B3282 /* Models */,
+				63611B3C196B3A1E006B3282 /* Views */,
+				63611B3B196B3A15006B3282 /* Controllers */,
+				63611B341969FA99006B3282 /* Assets */,
 				63611B131969FA36006B3282 /* C4CAppDelegate.h */,
 				63611B141969FA36006B3282 /* C4CAppDelegate.m */,
 				63611B161969FA36006B3282 /* Images.xcassets */,
@@ -144,6 +159,37 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		63611B341969FA99006B3282 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		63611B3B196B3A15006B3282 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				63611B3F196B3A90006B3282 /* C4CStockViewController.h */,
+				63611B40196B3A90006B3282 /* C4CStockViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		63611B3C196B3A1E006B3282 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				63611B3D196B3A6E006B3282 /* Main.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		63611B42196B5244006B3282 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,9 +197,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63611B2D1969FA36006B3282 /* Build configuration list for PBXNativeTarget "Agronegocios" */;
 			buildPhases = (
+				496A70E164B149F499E61CD1 /* Check Pods Manifest.lock */,
 				63611AFD1969FA36006B3282 /* Sources */,
 				63611AFE1969FA36006B3282 /* Frameworks */,
 				63611AFF1969FA36006B3282 /* Resources */,
+				585E6E422EF541259B9AC58D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -220,6 +268,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63611B3E196B3A6E006B3282 /* Main.storyboard in Resources */,
 				63611B0F1969FA36006B3282 /* InfoPlist.strings in Resources */,
 				63611B171969FA36006B3282 /* Images.xcassets in Resources */,
 			);
@@ -235,6 +284,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		496A70E164B149F499E61CD1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		585E6E422EF541259B9AC58D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-Agronegocios-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		63611AFD1969FA36006B3282 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -242,6 +324,7 @@
 			files = (
 				63611B111969FA36006B3282 /* main.m in Sources */,
 				63611B151969FA36006B3282 /* C4CAppDelegate.m in Sources */,
+				63611B41196B3A90006B3282 /* C4CStockViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +440,7 @@
 		};
 		63611B2E1969FA36006B3282 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F60A556C6DD14941B74DDECB /* Pods-Agronegocios.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -370,6 +454,7 @@
 		};
 		63611B2F1969FA36006B3282 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F60A556C6DD14941B74DDECB /* Pods-Agronegocios.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -440,6 +525,7 @@
 				63611B2F1969FA36006B3282 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63611B301969FA36006B3282 /* Build configuration list for PBXNativeTarget "AgronegociosTests" */ = {
 			isa = XCConfigurationList;
@@ -448,6 +534,7 @@
 				63611B321969FA36006B3282 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
