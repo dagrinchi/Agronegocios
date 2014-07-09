@@ -84,6 +84,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Agronegocios-TDBadgedCell.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Agronegocios.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -92,87 +97,92 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>09B4AEECF6FE46AEA7130610</key>
+		<key>080FD4AAFE8342EAB3F8058C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0A11C238B19E4EA1A1F906F6</key>
+		<key>197DD484109446E2ADE3D51A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0A95F30C4C86458897E5A6C2</key>
+		<key>1DA24F9D01BE4963B5FB6757</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0EAEF7D33CD64A978860AF94</key>
+		<key>20EBEC4391EF455CB9215A32</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>13D738F4FD76491CBD6E9A10</key>
+		<key>2EA1DB91410F426EAA4388C8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1B053B2C98C3442EA028818E</key>
+		<key>2FC56C4F6DFF427BA18724EF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1C10F59CF21E4188A1128EDB</key>
+		<key>37BE903586CA46CEA65647CE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3A70AA836639470283427974</key>
+		<key>49CB49740B5D4843BDE02630</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>63056CDED6C4491099F3F64A</key>
+		<key>5630A03C84C7480CAEF5146E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7AEA731FA6B945969B7CD1DE</key>
+		<key>802B650809D040CE971C48AB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8C0E95D9DE384A9790BCE57A</key>
+		<key>919E6DE4368142B89971F79A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BB1FF6F0BA94456C8CB21474</key>
+		<key>96351E16279E40BC89477819</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D4DA6ABA6392476C84685804</key>
+		<key>A03E99F3ACBF4D1FB6A1E2C6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E9A1A7A41EA8434EA5383E7A</key>
+		<key>A553E6FDC4104EFDA164F2ED</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F4A3589B87084BE0A0824317</key>
+		<key>B8A746BFDD2D44BE8B2FAEEB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F77EA082314A48F38F644404</key>
+		<key>C3F6648ACF774C6FA670E910</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F8191E256217473E90CC1593</key>
+		<key>C8AAAB115BF04A30A109C03B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CA6921C5D6CB4FF296CA8706</key>
 		<dict>
 			<key>primary</key>
 			<true/>

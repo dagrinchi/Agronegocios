@@ -10,4 +10,7 @@
 
 @interface C4CStockViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UISearchBar *search;
+
+
 @end

@@ -22,6 +22,8 @@
 		63611B2A1969FA36006B3282 /* AgronegociosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63611B291969FA36006B3282 /* AgronegociosTests.m */; };
 		63611B3E196B3A6E006B3282 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63611B3D196B3A6E006B3282 /* Main.storyboard */; };
 		63611B41196B3A90006B3282 /* C4CStockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63611B40196B3A90006B3282 /* C4CStockViewController.m */; };
+		63A68634196CA6EF004EAFC2 /* C4CLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A68633196CA6EF004EAFC2 /* C4CLabel.m */; };
+		63A68637196CAEE6004EAFC2 /* C4CImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A68636196CAEE6004EAFC2 /* C4CImageTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,10 @@
 		63611B3D196B3A6E006B3282 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		63611B3F196B3A90006B3282 /* C4CStockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4CStockViewController.h; sourceTree = "<group>"; };
 		63611B40196B3A90006B3282 /* C4CStockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CStockViewController.m; sourceTree = "<group>"; };
+		63A68632196CA6EF004EAFC2 /* C4CLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4CLabel.h; sourceTree = "<group>"; };
+		63A68633196CA6EF004EAFC2 /* C4CLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CLabel.m; sourceTree = "<group>"; };
+		63A68635196CAEE6004EAFC2 /* C4CImageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4CImageTableViewCell.h; sourceTree = "<group>"; };
+		63A68636196CAEE6004EAFC2 /* C4CImageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CImageTableViewCell.m; sourceTree = "<group>"; };
 		F60A556C6DD14941B74DDECB /* Pods-Agronegocios.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Agronegocios.xcconfig"; path = "Pods/Pods-Agronegocios.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -178,6 +184,10 @@
 		63611B3C196B3A1E006B3282 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				63A68635196CAEE6004EAFC2 /* C4CImageTableViewCell.h */,
+				63A68636196CAEE6004EAFC2 /* C4CImageTableViewCell.m */,
+				63A68632196CA6EF004EAFC2 /* C4CLabel.h */,
+				63A68633196CA6EF004EAFC2 /* C4CLabel.m */,
 				63611B3D196B3A6E006B3282 /* Main.storyboard */,
 			);
 			name = Views;
@@ -323,6 +333,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				63611B111969FA36006B3282 /* main.m in Sources */,
+				63A68634196CA6EF004EAFC2 /* C4CLabel.m in Sources */,
+				63A68637196CAEE6004EAFC2 /* C4CImageTableViewCell.m in Sources */,
 				63611B151969FA36006B3282 /* C4CAppDelegate.m in Sources */,
 				63611B41196B3A90006B3282 /* C4CStockViewController.m in Sources */,
 			);
