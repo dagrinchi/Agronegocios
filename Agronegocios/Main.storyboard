@@ -743,7 +743,7 @@
             </objects>
             <point key="canvasLocation" x="1631" y="-1816"/>
         </scene>
-        <!--View Controller - Pedidos-->
+        <!--View Controller - Demanda-->
         <scene sceneID="qhz-FO-dcf">
             <objects>
                 <viewController id="fMs-fB-7qj" sceneMemberID="viewController">
@@ -788,7 +788,7 @@
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="Pedidos" image="folder.png" id="gCH-2g-L2z"/>
+                    <tabBarItem key="tabBarItem" title="Demanda" image="folder.png" id="gCH-2g-L2z"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Brh-CF-Cso" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
