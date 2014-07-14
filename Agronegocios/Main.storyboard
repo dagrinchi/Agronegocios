@@ -267,7 +267,28 @@
                     <view key="view" contentMode="scaleToFill" id="FOc-C4-hlY">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="NCc-Te-yVT">
+                                <rect key="frame" x="0.0" y="44" width="320" height="323"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="nHd-3A-LQP">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="NCc-Te-yVT" firstAttribute="leading" secondItem="FOc-C4-hlY" secondAttribute="leading" id="2bR-MN-day"/>
+                            <constraint firstAttribute="trailing" secondItem="nHd-3A-LQP" secondAttribute="trailing" id="ABM-7L-9BG"/>
+                            <constraint firstItem="nHd-3A-LQP" firstAttribute="leading" secondItem="NCc-Te-yVT" secondAttribute="leading" id="AaR-bA-YD4"/>
+                            <constraint firstItem="nHd-3A-LQP" firstAttribute="trailing" secondItem="NCc-Te-yVT" secondAttribute="trailing" id="Ip6-ue-dMy"/>
+                            <constraint firstAttribute="bottom" secondItem="NCc-Te-yVT" secondAttribute="bottom" id="ZLW-5i-5Et"/>
+                            <constraint firstItem="nHd-3A-LQP" firstAttribute="top" secondItem="FOc-C4-hlY" secondAttribute="top" id="giy-ea-XDt"/>
+                            <constraint firstItem="NCc-Te-yVT" firstAttribute="top" secondItem="nHd-3A-LQP" secondAttribute="bottom" id="wBX-38-x5G"/>
+                        </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="Precios" image="calc.png" id="Dln-3L-308"/>
@@ -312,7 +333,28 @@
                     <view key="view" contentMode="scaleToFill" id="n75-R2-PYP">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="fH9-td-Esn">
+                                <rect key="frame" x="0.0" y="44" width="320" height="323"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="iNx-1H-aU3">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="iNx-1H-aU3" firstAttribute="top" secondItem="n75-R2-PYP" secondAttribute="top" id="3rV-eP-HmN"/>
+                            <constraint firstAttribute="bottom" secondItem="fH9-td-Esn" secondAttribute="bottom" id="Fl4-K1-O5Z"/>
+                            <constraint firstItem="iNx-1H-aU3" firstAttribute="leading" secondItem="fH9-td-Esn" secondAttribute="leading" id="GEe-gY-Pz7"/>
+                            <constraint firstItem="fH9-td-Esn" firstAttribute="top" secondItem="iNx-1H-aU3" secondAttribute="bottom" id="TGa-6l-OWj"/>
+                            <constraint firstAttribute="trailing" secondItem="iNx-1H-aU3" secondAttribute="trailing" id="eax-4F-Otu"/>
+                            <constraint firstItem="fH9-td-Esn" firstAttribute="leading" secondItem="n75-R2-PYP" secondAttribute="leading" id="rRB-N0-vjY"/>
+                            <constraint firstItem="fH9-td-Esn" firstAttribute="trailing" secondItem="iNx-1H-aU3" secondAttribute="trailing" id="ygz-DJ-yxJ"/>
+                        </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="Oferta" image="papers.png" id="h6a-kW-0cB"/>
@@ -332,7 +374,28 @@
                     <view key="view" contentMode="scaleToFill" id="tKZ-5K-Gls">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ta5-Jt-BtY">
+                                <rect key="frame" x="0.0" y="44" width="320" height="323"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="RMj-wX-Y3h">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ta5-Jt-BtY" firstAttribute="leading" secondItem="RMj-wX-Y3h" secondAttribute="leading" id="5e3-FY-fqo"/>
+                            <constraint firstAttribute="trailing" secondItem="RMj-wX-Y3h" secondAttribute="trailing" id="93r-zw-pln"/>
+                            <constraint firstAttribute="bottom" secondItem="Ta5-Jt-BtY" secondAttribute="bottom" id="Cw1-d3-5G6"/>
+                            <constraint firstItem="RMj-wX-Y3h" firstAttribute="leading" secondItem="tKZ-5K-Gls" secondAttribute="leading" id="K6w-Qt-63b"/>
+                            <constraint firstItem="Ta5-Jt-BtY" firstAttribute="top" secondItem="RMj-wX-Y3h" secondAttribute="bottom" id="lwZ-cn-9G8"/>
+                            <constraint firstItem="RMj-wX-Y3h" firstAttribute="trailing" secondItem="Ta5-Jt-BtY" secondAttribute="trailing" id="s4p-o7-n6g"/>
+                            <constraint firstItem="RMj-wX-Y3h" firstAttribute="top" secondItem="tKZ-5K-Gls" secondAttribute="top" id="vHx-sw-P4g"/>
+                        </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="Mis pedidos" image="folder.png" id="7Ha-St-IUh"/>
@@ -352,7 +415,20 @@
                     <view key="view" contentMode="scaleToFill" id="De3-sS-ygk">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Jbr-pE-dzK">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Jbr-pE-dzK" secondAttribute="bottom" id="1cT-Uq-U5C"/>
+                            <constraint firstItem="Jbr-pE-dzK" firstAttribute="top" secondItem="De3-sS-ygk" secondAttribute="top" id="L23-dA-nHg"/>
+                            <constraint firstAttribute="trailing" secondItem="Jbr-pE-dzK" secondAttribute="trailing" id="nyX-DJ-PLY"/>
+                            <constraint firstItem="Jbr-pE-dzK" firstAttribute="leading" secondItem="De3-sS-ygk" secondAttribute="leading" id="x7w-hh-gUx"/>
+                        </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="Aprende" image="aprende.png" id="iT9-G6-R3x"/>
@@ -621,13 +697,13 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="R0a-Dd-3oc" firstAttribute="leading" secondItem="c2w-h5-WeI" secondAttribute="leading" id="30u-MT-1aN"/>
-                            <constraint firstAttribute="trailing" secondItem="R0a-Dd-3oc" secondAttribute="trailing" id="9ik-pA-feV"/>
-                            <constraint firstItem="QQ7-PM-xC2" firstAttribute="leading" secondItem="R0a-Dd-3oc" secondAttribute="leading" id="Cb5-yy-eGo"/>
-                            <constraint firstAttribute="bottom" secondItem="QQ7-PM-xC2" secondAttribute="bottom" id="Eqf-EU-XCY"/>
-                            <constraint firstItem="QQ7-PM-xC2" firstAttribute="trailing" secondItem="R0a-Dd-3oc" secondAttribute="trailing" id="IUi-MI-6L0"/>
-                            <constraint firstItem="R0a-Dd-3oc" firstAttribute="top" secondItem="v48-rV-iHn" secondAttribute="bottom" id="Ppr-qo-xg8"/>
-                            <constraint firstItem="QQ7-PM-xC2" firstAttribute="top" secondItem="R0a-Dd-3oc" secondAttribute="bottom" id="yVU-Nc-ene"/>
+                            <constraint firstAttribute="trailing" secondItem="QQ7-PM-xC2" secondAttribute="trailing" id="6OK-6a-Aog"/>
+                            <constraint firstItem="QQ7-PM-xC2" firstAttribute="trailing" secondItem="R0a-Dd-3oc" secondAttribute="trailing" id="6rp-qY-b1b"/>
+                            <constraint firstAttribute="bottom" secondItem="QQ7-PM-xC2" secondAttribute="bottom" id="PAc-W2-586"/>
+                            <constraint firstItem="R0a-Dd-3oc" firstAttribute="top" secondItem="c2w-h5-WeI" secondAttribute="top" id="XZC-df-L0F"/>
+                            <constraint firstItem="QQ7-PM-xC2" firstAttribute="leading" secondItem="R0a-Dd-3oc" secondAttribute="leading" id="axk-wF-b4M"/>
+                            <constraint firstItem="QQ7-PM-xC2" firstAttribute="leading" secondItem="c2w-h5-WeI" secondAttribute="leading" id="dYq-fZ-tc6"/>
+                            <constraint firstItem="QQ7-PM-xC2" firstAttribute="top" secondItem="R0a-Dd-3oc" secondAttribute="bottom" id="fD3-Ob-DM6"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
@@ -702,13 +778,13 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Ulz-WB-ssJ" firstAttribute="trailing" secondItem="PNb-gK-0jO" secondAttribute="trailing" id="48R-SB-ghk"/>
-                            <constraint firstItem="PNb-gK-0jO" firstAttribute="top" secondItem="Ulz-WB-ssJ" secondAttribute="bottom" id="7NV-Jc-L8h"/>
-                            <constraint firstItem="PNb-gK-0jO" firstAttribute="leading" secondItem="5gC-e0-6Xf" secondAttribute="leading" id="GYl-0Y-gp9"/>
-                            <constraint firstAttribute="trailing" secondItem="Ulz-WB-ssJ" secondAttribute="trailing" id="Yys-vL-MuO"/>
-                            <constraint firstItem="Ulz-WB-ssJ" firstAttribute="top" secondItem="5gC-e0-6Xf" secondAttribute="top" id="l0r-IG-70B"/>
-                            <constraint firstItem="PNb-gK-0jO" firstAttribute="leading" secondItem="Ulz-WB-ssJ" secondAttribute="leading" id="lGd-Pa-qYT"/>
-                            <constraint firstAttribute="bottom" secondItem="PNb-gK-0jO" secondAttribute="bottom" id="vmV-9j-D1U"/>
+                            <constraint firstItem="Ulz-WB-ssJ" firstAttribute="leading" secondItem="5gC-e0-6Xf" secondAttribute="leading" id="HKm-iE-F94"/>
+                            <constraint firstItem="Ulz-WB-ssJ" firstAttribute="leading" secondItem="PNb-gK-0jO" secondAttribute="leading" id="JZn-J1-5WX"/>
+                            <constraint firstItem="PNb-gK-0jO" firstAttribute="trailing" secondItem="Ulz-WB-ssJ" secondAttribute="trailing" id="NP1-0O-IDj"/>
+                            <constraint firstAttribute="trailing" secondItem="Ulz-WB-ssJ" secondAttribute="trailing" id="m1M-IZ-HbX"/>
+                            <constraint firstItem="Ulz-WB-ssJ" firstAttribute="top" secondItem="5gC-e0-6Xf" secondAttribute="top" id="nSs-7w-25I"/>
+                            <constraint firstItem="PNb-gK-0jO" firstAttribute="top" secondItem="Ulz-WB-ssJ" secondAttribute="bottom" id="nx5-0t-OKB"/>
+                            <constraint firstAttribute="bottom" secondItem="PNb-gK-0jO" secondAttribute="bottom" id="rwa-Sf-bwE"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
@@ -718,7 +794,7 @@
             </objects>
             <point key="canvasLocation" x="2529" y="-2169"/>
         </scene>
-        <!--View Controller - Inventarios-->
+        <!--View Controller - Mis inventarios-->
         <scene sceneID="XCQ-zC-Sbu">
             <objects>
                 <viewController id="Vyp-Yi-kD0" sceneMemberID="viewController">
@@ -763,7 +839,7 @@
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="Inventarios" image="box.png" id="PgY-ue-r8u"/>
+                    <tabBarItem key="tabBarItem" title="Mis inventarios" image="box.png" id="PgY-ue-r8u"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QFV-l4-JJd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -780,7 +856,20 @@
                     <view key="view" contentMode="scaleToFill" id="Ibb-BY-ipJ">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="LVk-d2-LPP">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="LVk-d2-LPP" secondAttribute="trailing" id="8KB-vD-1Ad"/>
+                            <constraint firstItem="LVk-d2-LPP" firstAttribute="top" secondItem="Ibb-BY-ipJ" secondAttribute="top" id="Cwm-7e-Yhh"/>
+                            <constraint firstItem="LVk-d2-LPP" firstAttribute="leading" secondItem="Ibb-BY-ipJ" secondAttribute="leading" id="Zsc-f6-zo5"/>
+                            <constraint firstAttribute="bottom" secondItem="LVk-d2-LPP" secondAttribute="bottom" id="vtt-IX-tOB"/>
+                        </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="Aprende" image="aprende.png" id="b50-1o-Xjq"/>
@@ -844,7 +933,7 @@
                         <sections>
                             <tableViewSection id="P93-om-dlp">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="WsQ-pP-1Sd" detailTextLabel="pvI-3W-9C8" style="IBUITableViewCellStyleValue1" id="TzY-it-Htl">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="WsQ-pP-1Sd" detailTextLabel="pvI-3W-9C8" style="IBUITableViewCellStyleValue1" id="TzY-it-Htl">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TzY-it-Htl" id="r8s-dg-XBA">
@@ -872,7 +961,7 @@
                                             <segue destination="mbb-hq-a4y" kind="push" id="1Cs-ll-huy"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="J8J-kl-UQP" detailTextLabel="d22-m8-uSm" style="IBUITableViewCellStyleValue1" id="dIO-MG-4zG">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="J8J-kl-UQP" detailTextLabel="d22-m8-uSm" style="IBUITableViewCellStyleValue1" id="dIO-MG-4zG">
                                         <rect key="frame" x="0.0" y="44" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dIO-MG-4zG" id="vmO-OZ-5JL">
@@ -897,7 +986,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="i06-Jr-JIK">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="i06-Jr-JIK">
                                         <rect key="frame" x="0.0" y="88" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="i06-Jr-JIK" id="LTz-RL-yyj">
@@ -928,7 +1017,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="4Ig-jg-Acl">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="4Ig-jg-Acl">
                                         <rect key="frame" x="0.0" y="132" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Ig-jg-Acl" id="ycQ-c4-ymz">
@@ -959,7 +1048,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="4aS-pW-gqf" detailTextLabel="adl-Vg-Q8g" style="IBUITableViewCellStyleValue1" id="9QV-Lp-VPo">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="4aS-pW-gqf" detailTextLabel="adl-Vg-Q8g" style="IBUITableViewCellStyleValue1" id="9QV-Lp-VPo">
                                         <rect key="frame" x="0.0" y="176" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9QV-Lp-VPo" id="gC8-Wk-a40">
@@ -984,7 +1073,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="GJb-fk-i3O" detailTextLabel="cwa-io-7DV" style="IBUITableViewCellStyleValue1" id="sec-BA-f78">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="GJb-fk-i3O" detailTextLabel="cwa-io-7DV" style="IBUITableViewCellStyleValue1" id="sec-BA-f78">
                                         <rect key="frame" x="0.0" y="220" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sec-BA-f78" id="8bs-zk-lUa">
