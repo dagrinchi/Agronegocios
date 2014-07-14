@@ -8,6 +8,7 @@ target "Agronegocios" do
     pod 'SSToolkit', '2.0.0'
     pod 'Nimbus', '1.2.0'
     pod 'TDBadgedCell', '2.6'
+    pod 'JSONKit', '1.5pre'
     
 end
 

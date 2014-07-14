@@ -2,7 +2,7 @@
 //  C4CStockViewController.m
 //  Agronegocios
 //
-//  Created by David Almeciga on 7/7/14.
+//  Created by David Almeciga on 7/8/14.
 //  Copyright (c) 2014 COOL4CODE. All rights reserved.
 //
 

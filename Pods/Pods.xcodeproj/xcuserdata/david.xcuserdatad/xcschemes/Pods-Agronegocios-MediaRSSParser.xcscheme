@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "49CB49740B5D4843BDE02630"
+               BlueprintIdentifier = "925D3FE2326446458E335A7D"
                BuildableName = "libPods-Agronegocios-MediaRSSParser.a"
                BlueprintName = "Pods-Agronegocios-MediaRSSParser"
                ReferencedContainer = "container:Pods.xcodeproj">

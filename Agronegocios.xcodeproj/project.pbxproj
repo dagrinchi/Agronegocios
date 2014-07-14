@@ -8,22 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		092A214FD7954C2EB2E9EB25 /* libPods-Agronegocios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40EDC4279B7347119FB1AE5B /* libPods-Agronegocios.a */; };
+		635F82DF1973507C008CC466 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = 635F82DE1973507C008CC466 /* login.png */; };
+		635F82E21973510D008CC466 /* C4CLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 635F82E11973510D008CC466 /* C4CLoginViewController.m */; };
+		635F82E919735678008CC466 /* aprende.png in Resources */ = {isa = PBXBuildFile; fileRef = 635F82E419735678008CC466 /* aprende.png */; };
+		635F82EA19735678008CC466 /* box.png in Resources */ = {isa = PBXBuildFile; fileRef = 635F82E519735678008CC466 /* box.png */; };
+		635F82EB19735678008CC466 /* calc.png in Resources */ = {isa = PBXBuildFile; fileRef = 635F82E619735678008CC466 /* calc.png */; };
+		635F82EC19735678008CC466 /* folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 635F82E719735678008CC466 /* folder.png */; };
+		635F82ED19735678008CC466 /* papers.png in Resources */ = {isa = PBXBuildFile; fileRef = 635F82E819735678008CC466 /* papers.png */; };
+		635F82F019735BF0008CC466 /* C4CPriceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 635F82EF19735BF0008CC466 /* C4CPriceViewController.m */; };
 		63611B051969FA36006B3282 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63611B041969FA36006B3282 /* Foundation.framework */; };
 		63611B071969FA36006B3282 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63611B061969FA36006B3282 /* CoreGraphics.framework */; };
 		63611B091969FA36006B3282 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63611B081969FA36006B3282 /* UIKit.framework */; };
-		63611B0F1969FA36006B3282 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 63611B0D1969FA36006B3282 /* InfoPlist.strings */; };
 		63611B111969FA36006B3282 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63611B101969FA36006B3282 /* main.m */; };
 		63611B151969FA36006B3282 /* C4CAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63611B141969FA36006B3282 /* C4CAppDelegate.m */; };
 		63611B171969FA36006B3282 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63611B161969FA36006B3282 /* Images.xcassets */; };
 		63611B1E1969FA36006B3282 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63611B1D1969FA36006B3282 /* XCTest.framework */; };
 		63611B1F1969FA36006B3282 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63611B041969FA36006B3282 /* Foundation.framework */; };
 		63611B201969FA36006B3282 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63611B081969FA36006B3282 /* UIKit.framework */; };
-		63611B281969FA36006B3282 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 63611B261969FA36006B3282 /* InfoPlist.strings */; };
 		63611B2A1969FA36006B3282 /* AgronegociosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63611B291969FA36006B3282 /* AgronegociosTests.m */; };
 		63611B3E196B3A6E006B3282 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63611B3D196B3A6E006B3282 /* Main.storyboard */; };
-		63611B41196B3A90006B3282 /* C4CStockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63611B40196B3A90006B3282 /* C4CStockViewController.m */; };
 		63A68634196CA6EF004EAFC2 /* C4CLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A68633196CA6EF004EAFC2 /* C4CLabel.m */; };
 		63A68637196CAEE6004EAFC2 /* C4CImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A68636196CAEE6004EAFC2 /* C4CImageTableViewCell.m */; };
+		63A6863D196CC85F004EAFC2 /* C4CStockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A6863C196CC85F004EAFC2 /* C4CStockViewController.m */; };
+		63A68642196D9D64004EAFC2 /* C4CStockDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A68641196D9D64004EAFC2 /* C4CStockDetailViewController.m */; };
+		63A68645196DB1DA004EAFC2 /* agricultor.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A68643196DB1DA004EAFC2 /* agricultor.png */; };
+		63A68646196DB1DA004EAFC2 /* consumidor.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A68644196DB1DA004EAFC2 /* consumidor.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,12 +47,21 @@
 
 /* Begin PBXFileReference section */
 		40EDC4279B7347119FB1AE5B /* libPods-Agronegocios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Agronegocios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		635F82DE1973507C008CC466 /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
+		635F82E01973510D008CC466 /* C4CLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4CLoginViewController.h; sourceTree = "<group>"; };
+		635F82E11973510D008CC466 /* C4CLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CLoginViewController.m; sourceTree = "<group>"; };
+		635F82E419735678008CC466 /* aprende.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aprende.png; sourceTree = "<group>"; };
+		635F82E519735678008CC466 /* box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = box.png; sourceTree = "<group>"; };
+		635F82E619735678008CC466 /* calc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calc.png; sourceTree = "<group>"; };
+		635F82E719735678008CC466 /* folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = folder.png; sourceTree = "<group>"; };
+		635F82E819735678008CC466 /* papers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = papers.png; sourceTree = "<group>"; };
+		635F82EE19735BF0008CC466 /* C4CPriceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4CPriceViewController.h; sourceTree = "<group>"; };
+		635F82EF19735BF0008CC466 /* C4CPriceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CPriceViewController.m; sourceTree = "<group>"; };
 		63611B011969FA36006B3282 /* Agronegocios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Agronegocios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63611B041969FA36006B3282 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		63611B061969FA36006B3282 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		63611B081969FA36006B3282 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		63611B0C1969FA36006B3282 /* Agronegocios-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Agronegocios-Info.plist"; sourceTree = "<group>"; };
-		63611B0E1969FA36006B3282 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		63611B101969FA36006B3282 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		63611B121969FA36006B3282 /* Agronegocios-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Agronegocios-Prefix.pch"; sourceTree = "<group>"; };
 		63611B131969FA36006B3282 /* C4CAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = C4CAppDelegate.h; sourceTree = "<group>"; };
@@ -52,15 +70,18 @@
 		63611B1C1969FA36006B3282 /* AgronegociosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgronegociosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63611B1D1969FA36006B3282 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		63611B251969FA36006B3282 /* AgronegociosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AgronegociosTests-Info.plist"; sourceTree = "<group>"; };
-		63611B271969FA36006B3282 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		63611B291969FA36006B3282 /* AgronegociosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AgronegociosTests.m; sourceTree = "<group>"; };
 		63611B3D196B3A6E006B3282 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		63611B3F196B3A90006B3282 /* C4CStockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4CStockViewController.h; sourceTree = "<group>"; };
-		63611B40196B3A90006B3282 /* C4CStockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CStockViewController.m; sourceTree = "<group>"; };
 		63A68632196CA6EF004EAFC2 /* C4CLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4CLabel.h; sourceTree = "<group>"; };
 		63A68633196CA6EF004EAFC2 /* C4CLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CLabel.m; sourceTree = "<group>"; };
 		63A68635196CAEE6004EAFC2 /* C4CImageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4CImageTableViewCell.h; sourceTree = "<group>"; };
 		63A68636196CAEE6004EAFC2 /* C4CImageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CImageTableViewCell.m; sourceTree = "<group>"; };
+		63A6863B196CC85F004EAFC2 /* C4CStockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4CStockViewController.h; sourceTree = "<group>"; };
+		63A6863C196CC85F004EAFC2 /* C4CStockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CStockViewController.m; sourceTree = "<group>"; };
+		63A68640196D9D64004EAFC2 /* C4CStockDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4CStockDetailViewController.h; sourceTree = "<group>"; };
+		63A68641196D9D64004EAFC2 /* C4CStockDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CStockDetailViewController.m; sourceTree = "<group>"; };
+		63A68643196DB1DA004EAFC2 /* agricultor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = agricultor.png; sourceTree = "<group>"; };
+		63A68644196DB1DA004EAFC2 /* consumidor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = consumidor.png; sourceTree = "<group>"; };
 		F60A556C6DD14941B74DDECB /* Pods-Agronegocios.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Agronegocios.xcconfig"; path = "Pods/Pods-Agronegocios.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,14 +110,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		635F82E319735649008CC466 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				635F82E419735678008CC466 /* aprende.png */,
+				635F82E519735678008CC466 /* box.png */,
+				635F82E619735678008CC466 /* calc.png */,
+				635F82E719735678008CC466 /* folder.png */,
+				635F82E819735678008CC466 /* papers.png */,
+			);
+			name = icons;
+			sourceTree = "<group>";
+		};
 		63611AF81969FA36006B3282 = {
 			isa = PBXGroup;
 			children = (
 				63611B0A1969FA36006B3282 /* Agronegocios */,
 				63611B231969FA36006B3282 /* AgronegociosTests */,
 				63611B031969FA36006B3282 /* Frameworks */,
-				63611B021969FA36006B3282 /* Products */,
 				F60A556C6DD14941B74DDECB /* Pods-Agronegocios.xcconfig */,
+				63611B021969FA36006B3282 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,7 +173,6 @@
 			isa = PBXGroup;
 			children = (
 				63611B0C1969FA36006B3282 /* Agronegocios-Info.plist */,
-				63611B0D1969FA36006B3282 /* InfoPlist.strings */,
 				63611B101969FA36006B3282 /* main.m */,
 				63611B121969FA36006B3282 /* Agronegocios-Prefix.pch */,
 			);
@@ -160,7 +192,6 @@
 			isa = PBXGroup;
 			children = (
 				63611B251969FA36006B3282 /* AgronegociosTests-Info.plist */,
-				63611B261969FA36006B3282 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -168,6 +199,10 @@
 		63611B341969FA99006B3282 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				635F82E319735649008CC466 /* icons */,
+				635F82DE1973507C008CC466 /* login.png */,
+				63A68643196DB1DA004EAFC2 /* agricultor.png */,
+				63A68644196DB1DA004EAFC2 /* consumidor.png */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -175,8 +210,14 @@
 		63611B3B196B3A15006B3282 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				63611B3F196B3A90006B3282 /* C4CStockViewController.h */,
-				63611B40196B3A90006B3282 /* C4CStockViewController.m */,
+				63A6863B196CC85F004EAFC2 /* C4CStockViewController.h */,
+				63A6863C196CC85F004EAFC2 /* C4CStockViewController.m */,
+				63A68640196D9D64004EAFC2 /* C4CStockDetailViewController.h */,
+				63A68641196D9D64004EAFC2 /* C4CStockDetailViewController.m */,
+				635F82E01973510D008CC466 /* C4CLoginViewController.h */,
+				635F82E11973510D008CC466 /* C4CLoginViewController.m */,
+				635F82EE19735BF0008CC466 /* C4CPriceViewController.h */,
+				635F82EF19735BF0008CC466 /* C4CPriceViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -261,6 +302,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				es,
 			);
 			mainGroup = 63611AF81969FA36006B3282;
 			productRefGroup = 63611B021969FA36006B3282 /* Products */;
@@ -278,9 +320,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				635F82ED19735678008CC466 /* papers.png in Resources */,
 				63611B3E196B3A6E006B3282 /* Main.storyboard in Resources */,
-				63611B0F1969FA36006B3282 /* InfoPlist.strings in Resources */,
+				635F82DF1973507C008CC466 /* login.png in Resources */,
+				635F82EB19735678008CC466 /* calc.png in Resources */,
+				635F82E919735678008CC466 /* aprende.png in Resources */,
+				635F82EA19735678008CC466 /* box.png in Resources */,
+				63A68646196DB1DA004EAFC2 /* consumidor.png in Resources */,
+				63A68645196DB1DA004EAFC2 /* agricultor.png in Resources */,
 				63611B171969FA36006B3282 /* Images.xcassets in Resources */,
+				635F82EC19735678008CC466 /* folder.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +337,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63611B281969FA36006B3282 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,11 +380,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63A6863D196CC85F004EAFC2 /* C4CStockViewController.m in Sources */,
+				635F82E21973510D008CC466 /* C4CLoginViewController.m in Sources */,
+				63A68642196D9D64004EAFC2 /* C4CStockDetailViewController.m in Sources */,
 				63611B111969FA36006B3282 /* main.m in Sources */,
 				63A68634196CA6EF004EAFC2 /* C4CLabel.m in Sources */,
 				63A68637196CAEE6004EAFC2 /* C4CImageTableViewCell.m in Sources */,
 				63611B151969FA36006B3282 /* C4CAppDelegate.m in Sources */,
-				63611B41196B3A90006B3282 /* C4CStockViewController.m in Sources */,
+				635F82F019735BF0008CC466 /* C4CPriceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,25 +408,6 @@
 			targetProxy = 63611B211969FA36006B3282 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		63611B0D1969FA36006B3282 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				63611B0E1969FA36006B3282 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		63611B261969FA36006B3282 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				63611B271969FA36006B3282 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		63611B2B1969FA36006B3282 /* Debug */ = {

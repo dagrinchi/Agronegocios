@@ -2,7 +2,7 @@
 //  C4CStockViewController.h
 //  Agronegocios
 //
-//  Created by David Almeciga on 7/7/14.
+//  Created by David Almeciga on 7/8/14.
 //  Copyright (c) 2014 COOL4CODE. All rights reserved.
 //
 
@@ -11,6 +11,5 @@
 @interface C4CStockViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UISearchBar *search;
-
 
 @end
