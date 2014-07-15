@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		092A214FD7954C2EB2E9EB25 /* libPods-Agronegocios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40EDC4279B7347119FB1AE5B /* libPods-Agronegocios.a */; };
+		632E29BF1974992D00593689 /* C4CStockNewTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 632E29BE1974992D00593689 /* C4CStockNewTableViewController.m */; };
+		632E29C21974CB4600593689 /* C4CWhoamiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 632E29C11974CB4600593689 /* C4CWhoamiViewController.m */; };
 		635F82DF1973507C008CC466 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = 635F82DE1973507C008CC466 /* login.png */; };
 		635F82E21973510D008CC466 /* C4CLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 635F82E11973510D008CC466 /* C4CLoginViewController.m */; };
 		635F82E919735678008CC466 /* aprende.png in Resources */ = {isa = PBXBuildFile; fileRef = 635F82E419735678008CC466 /* aprende.png */; };
@@ -47,6 +49,10 @@
 
 /* Begin PBXFileReference section */
 		40EDC4279B7347119FB1AE5B /* libPods-Agronegocios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Agronegocios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		632E29BD1974992D00593689 /* C4CStockNewTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4CStockNewTableViewController.h; sourceTree = "<group>"; };
+		632E29BE1974992D00593689 /* C4CStockNewTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CStockNewTableViewController.m; sourceTree = "<group>"; };
+		632E29C01974CB4600593689 /* C4CWhoamiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4CWhoamiViewController.h; sourceTree = "<group>"; };
+		632E29C11974CB4600593689 /* C4CWhoamiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CWhoamiViewController.m; sourceTree = "<group>"; };
 		635F82DE1973507C008CC466 /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
 		635F82E01973510D008CC466 /* C4CLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4CLoginViewController.h; sourceTree = "<group>"; };
 		635F82E11973510D008CC466 /* C4CLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CLoginViewController.m; sourceTree = "<group>"; };
@@ -218,6 +224,10 @@
 				635F82E11973510D008CC466 /* C4CLoginViewController.m */,
 				635F82EE19735BF0008CC466 /* C4CPriceViewController.h */,
 				635F82EF19735BF0008CC466 /* C4CPriceViewController.m */,
+				632E29BD1974992D00593689 /* C4CStockNewTableViewController.h */,
+				632E29BE1974992D00593689 /* C4CStockNewTableViewController.m */,
+				632E29C01974CB4600593689 /* C4CWhoamiViewController.h */,
+				632E29C11974CB4600593689 /* C4CWhoamiViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -380,6 +390,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				632E29C21974CB4600593689 /* C4CWhoamiViewController.m in Sources */,
+				632E29BF1974992D00593689 /* C4CStockNewTableViewController.m in Sources */,
 				63A6863D196CC85F004EAFC2 /* C4CStockViewController.m in Sources */,
 				635F82E21973510D008CC466 /* C4CLoginViewController.m in Sources */,
 				63A68642196D9D64004EAFC2 /* C4CStockDetailViewController.m in Sources */,
