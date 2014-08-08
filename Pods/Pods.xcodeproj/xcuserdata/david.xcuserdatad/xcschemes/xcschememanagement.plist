@@ -9,11 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-Agronegocios-JSONKit.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-Agronegocios-MediaRSSParser.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -102,97 +97,92 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>093809715A734596B534F928</key>
+		<key>09DD065C80BA49C6AEA08C33</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0A99C944FB934FFB80B1DF18</key>
+		<key>16BF2558FD414AEC81AD4FA3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1CB9FB982B9E452C9BC9A4C4</key>
+		<key>1CA76C49CD694E1DA8D28D1A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2149435D227448289B59256F</key>
+		<key>2E527D60F47C4141A4559C6F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>494EB972A93E427BB3DC3422</key>
+		<key>339953A91C794DE1BCE9D27D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5416E8EC9DD2460A992C820E</key>
+		<key>400466B8C1254619BAA94E3F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6BDFAA5E140840AF95D7E458</key>
+		<key>5C5D13B6B1FF42BBA74A9A6F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6D650C7B20D74B6DA2413937</key>
+		<key>721D43C4E671442195EDAA68</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7EEA0FC89058407F9AAE2C5B</key>
+		<key>876F8FDF1E1B439898F0A703</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8259D6A4A8BB40EE94192521</key>
+		<key>8FFF1A3C9D664C078E149363</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>875B0824F9024C22927CCBAE</key>
+		<key>93EEA3B8EFC6436DA7B6C917</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>925D3FE2326446458E335A7D</key>
+		<key>9418A7DFC55E44C28A9D81D9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A9B3CA129D0E4AA3904A0A80</key>
+		<key>96574D87EA084247BDFDCAB3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BD23AA90316C41EBBC83196E</key>
+		<key>99DF251085AC49D8A0F713CC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D174BCEC67574DDA9BFE230C</key>
+		<key>9B7805B0C12C4169B82475B3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D45A5CAD21254AB0A179193C</key>
+		<key>CA070CE4E3374C67A01A359A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E5BE5600427949D69BF35521</key>
+		<key>E0DC1BE057A641378B500CD8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EC745A8B9E40422B9D8C6228</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FC4C39D033224F2EA548896D</key>
+		<key>F6F3A4AFA0D74BDBA7398225</key>
 		<dict>
 			<key>primary</key>
 			<true/>
