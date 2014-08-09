@@ -36,6 +36,17 @@
 		63A68642196D9D64004EAFC2 /* C4CStockDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A68641196D9D64004EAFC2 /* C4CStockDetailViewController.m */; };
 		63A68645196DB1DA004EAFC2 /* agricultor.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A68643196DB1DA004EAFC2 /* agricultor.png */; };
 		63A68646196DB1DA004EAFC2 /* consumidor.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A68644196DB1DA004EAFC2 /* consumidor.png */; };
+		63E9F0F019969184008FEEA0 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E9F0EF19969184008FEEA0 /* Accounts.framework */; };
+		63E9F0F21996919C008FEEA0 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E9F0F11996919C008FEEA0 /* Social.framework */; };
+		63E9F0F4199691A5008FEEA0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E9F0F3199691A5008FEEA0 /* SystemConfiguration.framework */; };
+		63E9F0F6199691B0008FEEA0 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E9F0F5199691B0008FEEA0 /* StoreKit.framework */; };
+		63E9F0F8199691BC008FEEA0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E9F0F7199691BC008FEEA0 /* Security.framework */; };
+		63E9F0FA199691C9008FEEA0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E9F0F9199691C9008FEEA0 /* QuartzCore.framework */; };
+		63E9F0FC199691D2008FEEA0 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E9F0FB199691D2008FEEA0 /* MobileCoreServices.framework */; };
+		63E9F0FE199691DB008FEEA0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E9F0FD199691DB008FEEA0 /* CoreLocation.framework */; };
+		63E9F100199691F2008FEEA0 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E9F0FF199691F2008FEEA0 /* CFNetwork.framework */; };
+		63E9F102199691FA008FEEA0 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E9F101199691FA008FEEA0 /* AudioToolbox.framework */; };
+		63E9F1041996921A008FEEA0 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E9F1031996921A008FEEA0 /* Parse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +101,17 @@
 		63A68641196D9D64004EAFC2 /* C4CStockDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CStockDetailViewController.m; sourceTree = "<group>"; };
 		63A68643196DB1DA004EAFC2 /* agricultor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = agricultor.png; sourceTree = "<group>"; };
 		63A68644196DB1DA004EAFC2 /* consumidor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = consumidor.png; sourceTree = "<group>"; };
+		63E9F0EF19969184008FEEA0 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		63E9F0F11996919C008FEEA0 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		63E9F0F3199691A5008FEEA0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		63E9F0F5199691B0008FEEA0 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		63E9F0F7199691BC008FEEA0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		63E9F0F9199691C9008FEEA0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		63E9F0FB199691D2008FEEA0 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		63E9F0FD199691DB008FEEA0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		63E9F0FF199691F2008FEEA0 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		63E9F101199691FA008FEEA0 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		63E9F1031996921A008FEEA0 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		F60A556C6DD14941B74DDECB /* Pods-Agronegocios.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Agronegocios.xcconfig"; path = "Pods/Pods-Agronegocios.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,8 +120,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63611B071969FA36006B3282 /* CoreGraphics.framework in Frameworks */,
 				63611B091969FA36006B3282 /* UIKit.framework in Frameworks */,
+				63E9F102199691FA008FEEA0 /* AudioToolbox.framework in Frameworks */,
+				63E9F100199691F2008FEEA0 /* CFNetwork.framework in Frameworks */,
+				63611B071969FA36006B3282 /* CoreGraphics.framework in Frameworks */,
+				63E9F1041996921A008FEEA0 /* Parse.framework in Frameworks */,
+				63E9F0FE199691DB008FEEA0 /* CoreLocation.framework in Frameworks */,
+				63E9F0FC199691D2008FEEA0 /* MobileCoreServices.framework in Frameworks */,
+				63E9F0FA199691C9008FEEA0 /* QuartzCore.framework in Frameworks */,
+				63E9F0F8199691BC008FEEA0 /* Security.framework in Frameworks */,
+				63E9F0F6199691B0008FEEA0 /* StoreKit.framework in Frameworks */,
+				63E9F0F4199691A5008FEEA0 /* SystemConfiguration.framework in Frameworks */,
+				63E9F0F21996919C008FEEA0 /* Social.framework in Frameworks */,
+				63E9F0F019969184008FEEA0 /* Accounts.framework in Frameworks */,
 				63611B051969FA36006B3282 /* Foundation.framework in Frameworks */,
 				092A214FD7954C2EB2E9EB25 /* libPods-Agronegocios.a in Frameworks */,
 			);
@@ -153,6 +186,17 @@
 		63611B031969FA36006B3282 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				63E9F1031996921A008FEEA0 /* Parse.framework */,
+				63E9F101199691FA008FEEA0 /* AudioToolbox.framework */,
+				63E9F0FF199691F2008FEEA0 /* CFNetwork.framework */,
+				63E9F0FD199691DB008FEEA0 /* CoreLocation.framework */,
+				63E9F0FB199691D2008FEEA0 /* MobileCoreServices.framework */,
+				63E9F0F9199691C9008FEEA0 /* QuartzCore.framework */,
+				63E9F0F7199691BC008FEEA0 /* Security.framework */,
+				63E9F0F5199691B0008FEEA0 /* StoreKit.framework */,
+				63E9F0F3199691A5008FEEA0 /* SystemConfiguration.framework */,
+				63E9F0F11996919C008FEEA0 /* Social.framework */,
+				63E9F0EF19969184008FEEA0 /* Accounts.framework */,
 				63611B041969FA36006B3282 /* Foundation.framework */,
 				63611B061969FA36006B3282 /* CoreGraphics.framework */,
 				63611B081969FA36006B3282 /* UIKit.framework */,
@@ -504,9 +548,35 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Agronegocios/Agronegocios-Prefix.pch";
 				INFOPLIST_FILE = "Agronegocios/Agronegocios-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					CoreGraphics,
+					"-framework",
+					CoreLocation,
+					"-framework",
+					CoreText,
+					"-framework",
+					Foundation,
+					"-framework",
+					MessageUI,
+					"-framework",
+					MobileCoreServices,
+					"-framework",
+					QuartzCore,
+					"-framework",
+					Security,
+					"-framework",
+					SystemConfiguration,
+					"-framework",
+					UIKit,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -518,9 +588,35 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Agronegocios/Agronegocios-Prefix.pch";
 				INFOPLIST_FILE = "Agronegocios/Agronegocios-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					CoreGraphics,
+					"-framework",
+					CoreLocation,
+					"-framework",
+					CoreText,
+					"-framework",
+					Foundation,
+					"-framework",
+					MessageUI,
+					"-framework",
+					MobileCoreServices,
+					"-framework",
+					QuartzCore,
+					"-framework",
+					Security,
+					"-framework",
+					SystemConfiguration,
+					"-framework",
+					UIKit,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
