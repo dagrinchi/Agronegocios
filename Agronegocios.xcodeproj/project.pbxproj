@@ -32,7 +32,6 @@
 		6377234819756458004F1970 /* agronegocios.png in Resources */ = {isa = PBXBuildFile; fileRef = 6377234719756458004F1970 /* agronegocios.png */; };
 		63A68634196CA6EF004EAFC2 /* C4CLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A68633196CA6EF004EAFC2 /* C4CLabel.m */; };
 		63A68637196CAEE6004EAFC2 /* C4CImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A68636196CAEE6004EAFC2 /* C4CImageTableViewCell.m */; };
-		63A6863D196CC85F004EAFC2 /* C4CStockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A6863C196CC85F004EAFC2 /* C4CStockViewController.m */; };
 		63A68642196D9D64004EAFC2 /* C4CStockDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A68641196D9D64004EAFC2 /* C4CStockDetailViewController.m */; };
 		63A68645196DB1DA004EAFC2 /* agricultor.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A68643196DB1DA004EAFC2 /* agricultor.png */; };
 		63A68646196DB1DA004EAFC2 /* consumidor.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A68644196DB1DA004EAFC2 /* consumidor.png */; };
@@ -47,6 +46,8 @@
 		63E9F100199691F2008FEEA0 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E9F0FF199691F2008FEEA0 /* CFNetwork.framework */; };
 		63E9F102199691FA008FEEA0 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E9F101199691FA008FEEA0 /* AudioToolbox.framework */; };
 		63E9F1041996921A008FEEA0 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E9F1031996921A008FEEA0 /* Parse.framework */; };
+		63E9F1071996A402008FEEA0 /* C4CStockTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E9F1061996A402008FEEA0 /* C4CStockTableViewController.m */; };
+		63E9F10A1996CA69008FEEA0 /* C4CProductTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E9F1091996CA69008FEEA0 /* C4CProductTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,8 +96,6 @@
 		63A68633196CA6EF004EAFC2 /* C4CLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CLabel.m; sourceTree = "<group>"; };
 		63A68635196CAEE6004EAFC2 /* C4CImageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4CImageTableViewCell.h; sourceTree = "<group>"; };
 		63A68636196CAEE6004EAFC2 /* C4CImageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CImageTableViewCell.m; sourceTree = "<group>"; };
-		63A6863B196CC85F004EAFC2 /* C4CStockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4CStockViewController.h; sourceTree = "<group>"; };
-		63A6863C196CC85F004EAFC2 /* C4CStockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CStockViewController.m; sourceTree = "<group>"; };
 		63A68640196D9D64004EAFC2 /* C4CStockDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4CStockDetailViewController.h; sourceTree = "<group>"; };
 		63A68641196D9D64004EAFC2 /* C4CStockDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CStockDetailViewController.m; sourceTree = "<group>"; };
 		63A68643196DB1DA004EAFC2 /* agricultor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = agricultor.png; sourceTree = "<group>"; };
@@ -112,6 +111,10 @@
 		63E9F0FF199691F2008FEEA0 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		63E9F101199691FA008FEEA0 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		63E9F1031996921A008FEEA0 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		63E9F1051996A402008FEEA0 /* C4CStockTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4CStockTableViewController.h; sourceTree = "<group>"; };
+		63E9F1061996A402008FEEA0 /* C4CStockTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CStockTableViewController.m; sourceTree = "<group>"; };
+		63E9F1081996CA69008FEEA0 /* C4CProductTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4CProductTableViewController.h; sourceTree = "<group>"; };
+		63E9F1091996CA69008FEEA0 /* C4CProductTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CProductTableViewController.m; sourceTree = "<group>"; };
 		F60A556C6DD14941B74DDECB /* Pods-Agronegocios.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Agronegocios.xcconfig"; path = "Pods/Pods-Agronegocios.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -263,16 +266,9 @@
 		63611B3B196B3A15006B3282 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				63A6863B196CC85F004EAFC2 /* C4CStockViewController.h */,
-				63A6863C196CC85F004EAFC2 /* C4CStockViewController.m */,
-				63A68640196D9D64004EAFC2 /* C4CStockDetailViewController.h */,
-				63A68641196D9D64004EAFC2 /* C4CStockDetailViewController.m */,
-				635F82E01973510D008CC466 /* C4CLoginViewController.h */,
-				635F82E11973510D008CC466 /* C4CLoginViewController.m */,
-				635F82EE19735BF0008CC466 /* C4CPriceViewController.h */,
-				635F82EF19735BF0008CC466 /* C4CPriceViewController.m */,
-				632E29BD1974992D00593689 /* C4CStockNewTableViewController.h */,
-				632E29BE1974992D00593689 /* C4CStockNewTableViewController.m */,
+				63E9F1111996F4AF008FEEA0 /* Price */,
+				63E9F1101996F4A4008FEEA0 /* Login */,
+				63E9F10E1996F47D008FEEA0 /* Stock */,
 				632E29C01974CB4600593689 /* C4CWhoamiViewController.h */,
 				632E29C11974CB4600593689 /* C4CWhoamiViewController.m */,
 			);
@@ -296,6 +292,47 @@
 			children = (
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		63E9F10E1996F47D008FEEA0 /* Stock */ = {
+			isa = PBXGroup;
+			children = (
+				63E9F10F1996F48F008FEEA0 /* Product */,
+				63A68640196D9D64004EAFC2 /* C4CStockDetailViewController.h */,
+				63A68641196D9D64004EAFC2 /* C4CStockDetailViewController.m */,
+				632E29BD1974992D00593689 /* C4CStockNewTableViewController.h */,
+				632E29BE1974992D00593689 /* C4CStockNewTableViewController.m */,
+				63E9F1051996A402008FEEA0 /* C4CStockTableViewController.h */,
+				63E9F1061996A402008FEEA0 /* C4CStockTableViewController.m */,
+			);
+			name = Stock;
+			sourceTree = "<group>";
+		};
+		63E9F10F1996F48F008FEEA0 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				63E9F1081996CA69008FEEA0 /* C4CProductTableViewController.h */,
+				63E9F1091996CA69008FEEA0 /* C4CProductTableViewController.m */,
+			);
+			name = Product;
+			sourceTree = "<group>";
+		};
+		63E9F1101996F4A4008FEEA0 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				635F82E01973510D008CC466 /* C4CLoginViewController.h */,
+				635F82E11973510D008CC466 /* C4CLoginViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		63E9F1111996F4AF008FEEA0 /* Price */ = {
+			isa = PBXGroup;
+			children = (
+				635F82EE19735BF0008CC466 /* C4CPriceViewController.h */,
+				635F82EF19735BF0008CC466 /* C4CPriceViewController.m */,
+			);
+			name = Price;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -440,7 +477,8 @@
 			files = (
 				632E29C21974CB4600593689 /* C4CWhoamiViewController.m in Sources */,
 				632E29BF1974992D00593689 /* C4CStockNewTableViewController.m in Sources */,
-				63A6863D196CC85F004EAFC2 /* C4CStockViewController.m in Sources */,
+				63E9F10A1996CA69008FEEA0 /* C4CProductTableViewController.m in Sources */,
+				63E9F1071996A402008FEEA0 /* C4CStockTableViewController.m in Sources */,
 				635F82E21973510D008CC466 /* C4CLoginViewController.m in Sources */,
 				63A68642196D9D64004EAFC2 /* C4CStockDetailViewController.m in Sources */,
 				63611B111969FA36006B3282 /* main.m in Sources */,

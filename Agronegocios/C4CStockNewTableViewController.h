@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface C4CStockNewTableViewController : UITableViewController
+@interface C4CStockNewTableViewController : UITableViewController<UIPickerViewDataSource, UIPickerViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UIPickerView *unitPicker;
 - (IBAction)unwindProductList:(UIStoryboardSegue *)segue;
 
 @end
