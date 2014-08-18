@@ -7,7 +7,6 @@
 //
 
 #import "C4CStockNewTableViewController.h"
-#import <Parse/Parse.h>
 
 #define titleKey @"title"
 #define valueKey @"value"
@@ -44,17 +43,6 @@ static NSString *_unitPickerCellID = @"unitPickerCell";
     UITableViewCell *unitPickerCell = [self.tableView dequeueReusableCellWithIdentifier:_unitPickerCellID];
     self.unitPickerCellRowHeight = CGRectGetHeight(unitPickerCell.frame);
     
-    PFQuery *unitsQuery = [PFQuery queryWithClassName:@"Unit"];
-    [unitsQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            for (PFObject *object in objects) {
-                [self.unitPickerData addObject:object[@"description"]];
-            }
-        } else {
-            NSLog(@"Error!");
-        }
-    }];
-
 }
 
 - (void)didReceiveMemoryWarning

@@ -496,7 +496,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Spa-vf-EoI" firstAttribute="leading" secondItem="mBS-Yg-Ht9" secondAttribute="leading" id="9iy-6C-I3f"/>
                             <constraint firstAttribute="centerX" secondItem="mBS-Yg-Ht9" secondAttribute="centerX" id="Jyu-3e-rbO"/>
@@ -863,7 +863,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="¿Quien soy?" id="xhH-aG-Q8O"/>

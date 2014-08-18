@@ -46,7 +46,6 @@
 		63E9F0FE199691DB008FEEA0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E9F0FD199691DB008FEEA0 /* CoreLocation.framework */; };
 		63E9F100199691F2008FEEA0 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E9F0FF199691F2008FEEA0 /* CFNetwork.framework */; };
 		63E9F102199691FA008FEEA0 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E9F101199691FA008FEEA0 /* AudioToolbox.framework */; };
-		63E9F1041996921A008FEEA0 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E9F1031996921A008FEEA0 /* Parse.framework */; };
 		63E9F1071996A402008FEEA0 /* C4CStockTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E9F1061996A402008FEEA0 /* C4CStockTableViewController.m */; };
 		63E9F10A1996CA69008FEEA0 /* C4CProductTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E9F1091996CA69008FEEA0 /* C4CProductTableViewController.m */; };
 /* End PBXBuildFile section */
@@ -111,7 +110,6 @@
 		63E9F0FD199691DB008FEEA0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		63E9F0FF199691F2008FEEA0 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		63E9F101199691FA008FEEA0 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		63E9F1031996921A008FEEA0 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		63E9F1051996A402008FEEA0 /* C4CStockTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4CStockTableViewController.h; sourceTree = "<group>"; };
 		63E9F1061996A402008FEEA0 /* C4CStockTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CStockTableViewController.m; sourceTree = "<group>"; };
 		63E9F1081996CA69008FEEA0 /* C4CProductTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4CProductTableViewController.h; sourceTree = "<group>"; };
@@ -128,7 +126,6 @@
 				63E9F102199691FA008FEEA0 /* AudioToolbox.framework in Frameworks */,
 				63E9F100199691F2008FEEA0 /* CFNetwork.framework in Frameworks */,
 				63611B071969FA36006B3282 /* CoreGraphics.framework in Frameworks */,
-				63E9F1041996921A008FEEA0 /* Parse.framework in Frameworks */,
 				63E9F0FE199691DB008FEEA0 /* CoreLocation.framework in Frameworks */,
 				63E9F0FC199691D2008FEEA0 /* MobileCoreServices.framework in Frameworks */,
 				63E9F0FA199691C9008FEEA0 /* QuartzCore.framework in Frameworks */,
@@ -190,7 +187,6 @@
 		63611B031969FA36006B3282 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				63E9F1031996921A008FEEA0 /* Parse.framework */,
 				63E9F101199691FA008FEEA0 /* AudioToolbox.framework */,
 				63E9F0FF199691F2008FEEA0 /* CFNetwork.framework */,
 				63E9F0FD199691DB008FEEA0 /* CoreLocation.framework */,
