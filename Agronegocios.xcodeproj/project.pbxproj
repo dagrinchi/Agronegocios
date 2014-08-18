@@ -34,7 +34,6 @@
 		6377234819756458004F1970 /* agronegocios.png in Resources */ = {isa = PBXBuildFile; fileRef = 6377234719756458004F1970 /* agronegocios.png */; };
 		63A68634196CA6EF004EAFC2 /* C4CLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A68633196CA6EF004EAFC2 /* C4CLabel.m */; };
 		63A68637196CAEE6004EAFC2 /* C4CImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A68636196CAEE6004EAFC2 /* C4CImageTableViewCell.m */; };
-		63A68642196D9D64004EAFC2 /* C4CStockDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A68641196D9D64004EAFC2 /* C4CStockDetailViewController.m */; };
 		63A68645196DB1DA004EAFC2 /* agricultor.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A68643196DB1DA004EAFC2 /* agricultor.png */; };
 		63A68646196DB1DA004EAFC2 /* consumidor.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A68644196DB1DA004EAFC2 /* consumidor.png */; };
 		63E9F0F019969184008FEEA0 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E9F0EF19969184008FEEA0 /* Accounts.framework */; };
@@ -100,8 +99,6 @@
 		63A68633196CA6EF004EAFC2 /* C4CLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CLabel.m; sourceTree = "<group>"; };
 		63A68635196CAEE6004EAFC2 /* C4CImageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4CImageTableViewCell.h; sourceTree = "<group>"; };
 		63A68636196CAEE6004EAFC2 /* C4CImageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CImageTableViewCell.m; sourceTree = "<group>"; };
-		63A68640196D9D64004EAFC2 /* C4CStockDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4CStockDetailViewController.h; sourceTree = "<group>"; };
-		63A68641196D9D64004EAFC2 /* C4CStockDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CStockDetailViewController.m; sourceTree = "<group>"; };
 		63A68643196DB1DA004EAFC2 /* agricultor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = agricultor.png; sourceTree = "<group>"; };
 		63A68644196DB1DA004EAFC2 /* consumidor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = consumidor.png; sourceTree = "<group>"; };
 		63E9F0EF19969184008FEEA0 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
@@ -304,8 +301,6 @@
 			isa = PBXGroup;
 			children = (
 				63E9F10F1996F48F008FEEA0 /* Product */,
-				63A68640196D9D64004EAFC2 /* C4CStockDetailViewController.h */,
-				63A68641196D9D64004EAFC2 /* C4CStockDetailViewController.m */,
 				632E29BD1974992D00593689 /* C4CStockNewTableViewController.h */,
 				632E29BE1974992D00593689 /* C4CStockNewTableViewController.m */,
 				63E9F1051996A402008FEEA0 /* C4CStockTableViewController.h */,
@@ -488,7 +483,6 @@
 				63E9F10A1996CA69008FEEA0 /* C4CProductTableViewController.m in Sources */,
 				63E9F1071996A402008FEEA0 /* C4CStockTableViewController.m in Sources */,
 				635F82E21973510D008CC466 /* C4CLoginViewController.m in Sources */,
-				63A68642196D9D64004EAFC2 /* C4CStockDetailViewController.m in Sources */,
 				63611B111969FA36006B3282 /* main.m in Sources */,
 				63A68634196CA6EF004EAFC2 /* C4CLabel.m in Sources */,
 				63A68637196CAEE6004EAFC2 /* C4CImageTableViewCell.m in Sources */,

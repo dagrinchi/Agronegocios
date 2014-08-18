@@ -53,7 +53,7 @@
             <objects>
                 <navigationController definesPresentationContext="YES" id="npq-Ux-sYb" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="vi5-1s-JA2"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tuv-30-fnV">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Tuv-30-fnV">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.40000000000000002" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
@@ -193,12 +193,12 @@
             <objects>
                 <tableViewController id="rEy-sW-aWf" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="DZO-sQ-9Me">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="UgQ-rC-Gyf">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UgQ-rC-Gyf" id="jli-BZ-ByF">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -246,47 +246,6 @@
             </objects>
             <point key="canvasLocation" x="2529" y="-903"/>
         </scene>
-        <!--Price View Controller - Precios-->
-        <scene sceneID="Dhn-NX-R8r">
-            <objects>
-                <viewController id="Xm0-Os-Xg4" customClass="C4CPriceViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="wzM-YU-piu"/>
-                        <viewControllerLayoutGuide type="bottom" id="DZp-sl-MX7"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="FOc-C4-hlY">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="NCc-Te-yVT">
-                                <rect key="frame" x="0.0" y="44" width="320" height="323"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="nHd-3A-LQP">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="NCc-Te-yVT" firstAttribute="leading" secondItem="FOc-C4-hlY" secondAttribute="leading" id="2bR-MN-day"/>
-                            <constraint firstAttribute="trailing" secondItem="nHd-3A-LQP" secondAttribute="trailing" id="ABM-7L-9BG"/>
-                            <constraint firstItem="nHd-3A-LQP" firstAttribute="leading" secondItem="NCc-Te-yVT" secondAttribute="leading" id="AaR-bA-YD4"/>
-                            <constraint firstItem="nHd-3A-LQP" firstAttribute="trailing" secondItem="NCc-Te-yVT" secondAttribute="trailing" id="Ip6-ue-dMy"/>
-                            <constraint firstAttribute="bottom" secondItem="NCc-Te-yVT" secondAttribute="bottom" id="ZLW-5i-5Et"/>
-                            <constraint firstItem="nHd-3A-LQP" firstAttribute="top" secondItem="FOc-C4-hlY" secondAttribute="top" id="giy-ea-XDt"/>
-                            <constraint firstItem="NCc-Te-yVT" firstAttribute="top" secondItem="nHd-3A-LQP" secondAttribute="bottom" id="wBX-38-x5G"/>
-                        </constraints>
-                    </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="Precios" image="calc.png" id="Dln-3L-308"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KYK-MY-3c6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2529" y="-179"/>
-        </scene>
         <!--Tab Bar Controller - Consumidor-->
         <scene sceneID="aMw-FW-sAe">
             <objects>
@@ -307,10 +266,10 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Xm0-Os-Xg4" kind="relationship" relationship="viewControllers" id="Xll-KB-Ic8"/>
-                        <segue destination="6Be-NM-Jbd" kind="relationship" relationship="viewControllers" id="nbR-9R-31e"/>
-                        <segue destination="fGG-wE-yuH" kind="relationship" relationship="viewControllers" id="1qr-od-THe"/>
-                        <segue destination="f7o-qk-qaW" kind="relationship" relationship="viewControllers" id="Ef3-zQ-qNu"/>
+                        <segue destination="vME-2u-lFt" kind="relationship" relationship="viewControllers" id="gsz-kG-W8A"/>
+                        <segue destination="BeC-ut-6la" kind="relationship" relationship="viewControllers" id="LMu-Jq-s1l"/>
+                        <segue destination="WPG-9N-sxj" kind="relationship" relationship="viewControllers" id="2wD-Us-Fid"/>
+                        <segue destination="POh-nm-b5G" kind="relationship" relationship="viewControllers" id="tV4-1N-3bu"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1IU-Yh-UgU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -318,120 +277,181 @@
             </objects>
             <point key="canvasLocation" x="1631" y="621"/>
         </scene>
-        <!--Stock View Controller - Oferta-->
-        <scene sceneID="nJM-a1-QmN">
+        <!--Table View Controller - Precios-->
+        <scene sceneID="ybc-Ay-NAF">
             <objects>
-                <viewController id="6Be-NM-Jbd" customClass="C4CStockViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="5a3-g4-Wmt"/>
-                        <viewControllerLayoutGuide type="bottom" id="JVZ-0r-WXK"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="n75-R2-PYP">
+                <tableViewController id="vME-2u-lFt" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="CBK-jl-U5m">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="fH9-td-Esn">
-                                <rect key="frame" x="0.0" y="44" width="320" height="323"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="iNx-1H-aU3">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="iNx-1H-aU3" firstAttribute="top" secondItem="n75-R2-PYP" secondAttribute="top" id="3rV-eP-HmN"/>
-                            <constraint firstAttribute="bottom" secondItem="fH9-td-Esn" secondAttribute="bottom" id="Fl4-K1-O5Z"/>
-                            <constraint firstItem="iNx-1H-aU3" firstAttribute="leading" secondItem="fH9-td-Esn" secondAttribute="leading" id="GEe-gY-Pz7"/>
-                            <constraint firstItem="fH9-td-Esn" firstAttribute="top" secondItem="iNx-1H-aU3" secondAttribute="bottom" id="TGa-6l-OWj"/>
-                            <constraint firstAttribute="trailing" secondItem="iNx-1H-aU3" secondAttribute="trailing" id="eax-4F-Otu"/>
-                            <constraint firstItem="fH9-td-Esn" firstAttribute="leading" secondItem="n75-R2-PYP" secondAttribute="leading" id="rRB-N0-vjY"/>
-                            <constraint firstItem="fH9-td-Esn" firstAttribute="trailing" secondItem="iNx-1H-aU3" secondAttribute="trailing" id="ygz-DJ-yxJ"/>
-                        </constraints>
-                    </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="Oferta" image="papers.png" id="h6a-kW-0cB"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hdf-wZ-kY0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Buscar" id="nsF-rV-n6H">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="vME-2u-lFt" id="FYn-FH-QK6"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="XWM-AC-Isg">
+                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XWM-AC-Isg" id="0uL-1q-4M0">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="vME-2u-lFt" id="emR-A5-buk"/>
+                            <outlet property="delegate" destination="vME-2u-lFt" id="rHJ-HO-Jdq"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Precios" image="calc.png" id="P12-Iz-VDI"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="cOb-Zm-XIA" id="tmk-Uz-xWH"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mod-Ln-GM1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="cOb-Zm-XIA">
+                    <connections>
+                        <outlet property="delegate" destination="vME-2u-lFt" id="u7B-TM-got"/>
+                        <outlet property="searchBar" destination="nsF-rV-n6H" id="Y5t-8P-ATW"/>
+                        <outlet property="searchContentsController" destination="vME-2u-lFt" id="TYL-kf-FY6"/>
+                        <outlet property="searchResultsDataSource" destination="vME-2u-lFt" id="XwM-E5-eT0"/>
+                        <outlet property="searchResultsDelegate" destination="vME-2u-lFt" id="gvV-iT-VUe"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="2529" y="381"/>
+            <point key="canvasLocation" x="2529" y="-229"/>
         </scene>
-        <!--View Controller - Mis pedidos-->
-        <scene sceneID="lUU-A9-fHy">
+        <!--Table View Controller - Oferta-->
+        <scene sceneID="Jww-51-lm9">
             <objects>
-                <viewController id="fGG-wE-yuH" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="maC-b0-XRF"/>
-                        <viewControllerLayoutGuide type="bottom" id="efD-jh-7Kb"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="tKZ-5K-Gls">
+                <tableViewController id="BeC-ut-6la" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="goA-u5-P9i">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ta5-Jt-BtY">
-                                <rect key="frame" x="0.0" y="44" width="320" height="323"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="RMj-wX-Y3h">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="Ta5-Jt-BtY" firstAttribute="leading" secondItem="RMj-wX-Y3h" secondAttribute="leading" id="5e3-FY-fqo"/>
-                            <constraint firstAttribute="trailing" secondItem="RMj-wX-Y3h" secondAttribute="trailing" id="93r-zw-pln"/>
-                            <constraint firstAttribute="bottom" secondItem="Ta5-Jt-BtY" secondAttribute="bottom" id="Cw1-d3-5G6"/>
-                            <constraint firstItem="RMj-wX-Y3h" firstAttribute="leading" secondItem="tKZ-5K-Gls" secondAttribute="leading" id="K6w-Qt-63b"/>
-                            <constraint firstItem="Ta5-Jt-BtY" firstAttribute="top" secondItem="RMj-wX-Y3h" secondAttribute="bottom" id="lwZ-cn-9G8"/>
-                            <constraint firstItem="RMj-wX-Y3h" firstAttribute="trailing" secondItem="Ta5-Jt-BtY" secondAttribute="trailing" id="s4p-o7-n6g"/>
-                            <constraint firstItem="RMj-wX-Y3h" firstAttribute="top" secondItem="tKZ-5K-Gls" secondAttribute="top" id="vHx-sw-P4g"/>
-                        </constraints>
-                    </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="Mis pedidos" image="folder.png" id="7Ha-St-IUh"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JWQ-Bw-qwF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Buscar" id="1bo-7c-Er6">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="BeC-ut-6la" id="afh-x2-DON"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="hrp-Wi-71G">
+                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hrp-Wi-71G" id="1Cg-xe-5Pc">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="BeC-ut-6la" id="FS5-On-a6S"/>
+                            <outlet property="delegate" destination="BeC-ut-6la" id="h28-of-IyV"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Oferta" image="papers.png" id="zi1-M5-Uyf"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="wM7-6O-jWB" id="V25-vH-hvH"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s4n-lN-xlq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="wM7-6O-jWB">
+                    <connections>
+                        <outlet property="delegate" destination="BeC-ut-6la" id="TrR-p5-RVu"/>
+                        <outlet property="searchBar" destination="1bo-7c-Er6" id="Je0-6a-Xsi"/>
+                        <outlet property="searchContentsController" destination="BeC-ut-6la" id="yc4-nJ-zna"/>
+                        <outlet property="searchResultsDataSource" destination="BeC-ut-6la" id="1gN-c1-Qha"/>
+                        <outlet property="searchResultsDelegate" destination="BeC-ut-6la" id="zCi-2I-uZf"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="2529" y="971"/>
+            <point key="canvasLocation" x="2529" y="355"/>
         </scene>
-        <!--View Controller - Aprende-->
-        <scene sceneID="N1q-xS-R0T">
+        <!--Table View Controller - Mis pedidos-->
+        <scene sceneID="cUc-m1-cxh">
             <objects>
-                <viewController id="f7o-qk-qaW" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Uoo-g0-mNj"/>
-                        <viewControllerLayoutGuide type="bottom" id="Tp8-oQ-BFF"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="De3-sS-ygk">
+                <tableViewController id="WPG-9N-sxj" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="STx-Gp-5MB">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Jbr-pE-dzK">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="Jbr-pE-dzK" secondAttribute="bottom" id="1cT-Uq-U5C"/>
-                            <constraint firstItem="Jbr-pE-dzK" firstAttribute="top" secondItem="De3-sS-ygk" secondAttribute="top" id="L23-dA-nHg"/>
-                            <constraint firstAttribute="trailing" secondItem="Jbr-pE-dzK" secondAttribute="trailing" id="nyX-DJ-PLY"/>
-                            <constraint firstItem="Jbr-pE-dzK" firstAttribute="leading" secondItem="De3-sS-ygk" secondAttribute="leading" id="x7w-hh-gUx"/>
-                        </constraints>
-                    </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="Aprende" image="aprende.png" id="iT9-G6-R3x"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XX6-UT-sww" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Buscar" id="e77-HX-ZOx">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="WPG-9N-sxj" id="bTJ-vb-tu4"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="26h-w6-Fi4">
+                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="26h-w6-Fi4" id="o5a-Hl-Du2">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="WPG-9N-sxj" id="SCW-fq-sc2"/>
+                            <outlet property="delegate" destination="WPG-9N-sxj" id="fWd-Xn-had"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Mis pedidos" image="folder.png" id="gdm-h6-xoV"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="HtT-bl-uHl" id="8DX-1E-E5S"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Md7-gX-02S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="HtT-bl-uHl">
+                    <connections>
+                        <outlet property="delegate" destination="WPG-9N-sxj" id="tof-cz-kVE"/>
+                        <outlet property="searchBar" destination="e77-HX-ZOx" id="ZeB-X5-tR1"/>
+                        <outlet property="searchContentsController" destination="WPG-9N-sxj" id="xKs-Ro-BNZ"/>
+                        <outlet property="searchResultsDataSource" destination="WPG-9N-sxj" id="kcg-qa-nll"/>
+                        <outlet property="searchResultsDelegate" destination="WPG-9N-sxj" id="WAA-mo-8p5"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="2529" y="1556"/>
+            <point key="canvasLocation" x="2529" y="964"/>
+        </scene>
+        <!--Table View Controller - Aprende-->
+        <scene sceneID="e8m-RY-J05">
+            <objects>
+                <tableViewController id="POh-nm-b5G" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="sE7-YG-m1J">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="iZm-SP-vuN">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iZm-SP-vuN" id="1Y1-bX-Dhl">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="POh-nm-b5G" id="IL9-A0-eW4"/>
+                            <outlet property="delegate" destination="POh-nm-b5G" id="l4l-DJ-AER"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Aprende" image="aprende.png" id="Gf8-yv-RYZ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mUD-bs-ooN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2529" y="1587"/>
         </scene>
         <!--Login View Controller - Iniciar sesión-->
         <scene sceneID="vkH-yP-edW">
@@ -875,7 +895,7 @@
         <scene sceneID="hdV-ci-7Tb">
             <objects>
                 <navigationController definesPresentationContext="YES" id="Bkh-LW-s9o" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Cvl-hi-0XE">
+                    <navigationBar key="navigationBar" clipsSubviews="YES" contentMode="scaleToFill" translucent="NO" id="Cvl-hi-0XE">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.0" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
