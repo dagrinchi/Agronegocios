@@ -68,6 +68,26 @@
             </objects>
             <point key="canvasLocation" x="-525" y="-338"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ITX-Ex-sjf">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="ley-1u-ExE" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="lin-Ck-zlv">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.40000000000000002" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="yxp-az-8eg" kind="relationship" relationship="rootViewController" id="hup-0a-Xid"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MH3-em-LAz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-88" y="-1091"/>
+        </scene>
         <!--Stock Table View Controller-->
         <scene sceneID="zuD-Ec-8om">
             <objects>
@@ -76,11 +96,11 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="sectionIndexBackgroundColor" red="1" green="0.90980392160000001" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Buscar" id="uMp-ir-X8U">
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Buscar" translucent="NO" id="uMp-ir-X8U">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="barTintColor" red="0.40000000000000002" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
                                 <outlet property="delegate" destination="IVg-Lo-67t" id="qBe-VN-NhJ"/>
@@ -161,13 +181,12 @@
                             <outlet property="delegate" destination="IVg-Lo-67t" id="2Zf-gh-Zbv"/>
                         </connections>
                     </tableView>
-                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="Bfp-pW-ASV">
                         <barButtonItem key="backBarButtonItem" title="Inicio" id="5y2-Rn-Uae"/>
                         <barButtonItem key="rightBarButtonItem" title="Iniciar sesión" id="hxh-oR-89g">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="BhV-fD-FsU" kind="push" id="AhE-7r-hxT"/>
+                                <segue destination="ley-1u-ExE" kind="modal" id="Qiw-2F-CLz"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -215,7 +234,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uy8-gu-dbN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="496" y="-338"/>
+            <point key="canvasLocation" x="489" y="-338"/>
         </scene>
         <!--Table View Controller - Aprende-->
         <scene sceneID="7Zd-9r-X0q">
@@ -240,22 +259,23 @@
                             <outlet property="delegate" destination="Mzc-TR-nEY" id="UTv-4Z-grX"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="Aprende" image="aprende.png" id="OSK-7i-GtW"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FvU-qr-oYx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2529" y="-903"/>
         </scene>
-        <!--Tab Bar Controller - Consumidor-->
+        <!--Tab Bar Controller - Comprador-->
         <scene sceneID="aMw-FW-sAe">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="FBw-Gu-xfR" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="Consumidor" id="0VH-t0-cxD">
+                    <navigationItem key="navigationItem" title="Comprador" id="0VH-t0-cxD">
                         <barButtonItem key="leftBarButtonItem" title="Atras" id="zGh-UR-QUm">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="Pub-Fu-kuV" kind="unwind" unwindAction="unwindCustomer:" id="V1C-o7-Hnx"/>
+                                <segue destination="Jhl-Oh-Z9T" kind="unwind" unwindAction="unwindCustomer:" id="qHo-38-8Pd"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -273,7 +293,7 @@
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1IU-Yh-UgU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="Pub-Fu-kuV" userLabel="Exit" sceneMemberID="exit"/>
+                <exit id="Jhl-Oh-Z9T" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1631" y="621"/>
         </scene>
@@ -285,9 +305,11 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Buscar" id="nsF-rV-n6H">
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Buscar" translucent="NO" id="nsF-rV-n6H">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="barTintColor" red="1" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
                                 <outlet property="delegate" destination="vME-2u-lFt" id="FYn-FH-QK6"/>
@@ -308,6 +330,7 @@
                             <outlet property="delegate" destination="vME-2u-lFt" id="rHJ-HO-Jdq"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="Precios" image="calc.png" id="P12-Iz-VDI"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="cOb-Zm-XIA" id="tmk-Uz-xWH"/>
@@ -334,9 +357,11 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Buscar" id="1bo-7c-Er6">
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Buscar" translucent="NO" id="1bo-7c-Er6">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="barTintColor" red="1" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
                                 <outlet property="delegate" destination="BeC-ut-6la" id="afh-x2-DON"/>
@@ -357,6 +382,7 @@
                             <outlet property="delegate" destination="BeC-ut-6la" id="h28-of-IyV"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="Oferta" image="papers.png" id="zi1-M5-Uyf"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="wM7-6O-jWB" id="V25-vH-hvH"/>
@@ -383,9 +409,11 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Buscar" id="e77-HX-ZOx">
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Buscar" translucent="NO" id="e77-HX-ZOx">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="barTintColor" red="1" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
                                 <outlet property="delegate" destination="WPG-9N-sxj" id="bTJ-vb-tu4"/>
@@ -406,6 +434,7 @@
                             <outlet property="delegate" destination="WPG-9N-sxj" id="fWd-Xn-had"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="Mis pedidos" image="folder.png" id="gdm-h6-xoV"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="HtT-bl-uHl" id="8DX-1E-E5S"/>
@@ -447,83 +476,172 @@
                             <outlet property="delegate" destination="POh-nm-b5G" id="l4l-DJ-AER"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="Aprende" image="aprende.png" id="Gf8-yv-RYZ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mUD-bs-ooN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2529" y="1587"/>
         </scene>
-        <!--Login View Controller - Iniciar sesión-->
-        <scene sceneID="vkH-yP-edW">
+        <!--Table View Controller - Iniciar sesión-->
+        <scene sceneID="VIV-e1-ad4">
             <objects>
-                <viewController id="BhV-fD-FsU" customClass="C4CLoginViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="vgQ-ro-Fga"/>
-                        <viewControllerLayoutGuide type="bottom" id="I0d-f9-ngu"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="f48-mk-RIv">
+                <tableViewController id="yxp-az-8eg" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="J7E-Hg-YYP">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Usuario" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Spa-vf-EoI">
-                                <rect key="frame" x="20" y="41" width="280" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mBS-Yg-Ht9">
-                                <rect key="frame" x="20" y="79" width="281" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qic-ag-tHd">
-                                <rect key="frame" x="94" y="155" width="133" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="¿No tienes cuenta?">
-                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="D8S-3b-ppr" kind="push" id="fZs-Qs-d18"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login.png" translatesAutoresizingMaskIntoConstraints="NO" id="D9t-56-6Iy">
-                                <rect key="frame" x="96" y="225" width="128" height="136"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="136" id="a6y-l5-tSL"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="Spa-vf-EoI" firstAttribute="leading" secondItem="mBS-Yg-Ht9" secondAttribute="leading" id="9iy-6C-I3f"/>
-                            <constraint firstAttribute="centerX" secondItem="mBS-Yg-Ht9" secondAttribute="centerX" id="Jyu-3e-rbO"/>
-                            <constraint firstItem="mBS-Yg-Ht9" firstAttribute="top" secondItem="Spa-vf-EoI" secondAttribute="bottom" constant="8" symbolic="YES" id="Kte-zq-kDU"/>
-                            <constraint firstAttribute="centerX" secondItem="Spa-vf-EoI" secondAttribute="centerX" id="M8P-oT-RF8"/>
-                            <constraint firstItem="D9t-56-6Iy" firstAttribute="leading" secondItem="f48-mk-RIv" secondAttribute="leading" constant="96" id="PtJ-9T-Bn4"/>
-                            <constraint firstItem="D9t-56-6Iy" firstAttribute="top" secondItem="qic-ag-tHd" secondAttribute="bottom" constant="40" id="QBB-Nx-6US"/>
-                            <constraint firstItem="Spa-vf-EoI" firstAttribute="top" secondItem="vgQ-ro-Fga" secondAttribute="bottom" constant="41" id="RdF-bq-mDb"/>
-                            <constraint firstItem="I0d-f9-ngu" firstAttribute="top" secondItem="D9t-56-6Iy" secondAttribute="bottom" constant="55" id="VwY-Ih-2AQ"/>
-                            <constraint firstAttribute="centerX" secondItem="D9t-56-6Iy" secondAttribute="centerX" id="bTm-4x-5YY"/>
-                            <constraint firstItem="Spa-vf-EoI" firstAttribute="leading" secondItem="f48-mk-RIv" secondAttribute="leading" constant="20" symbolic="YES" id="opc-Kf-W6h"/>
-                            <constraint firstAttribute="centerX" secondItem="qic-ag-tHd" secondAttribute="centerX" id="qWU-zo-F7U"/>
-                        </constraints>
-                    </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="Iniciar sesión" id="L9T-HZ-JDi">
-                        <barButtonItem key="backBarButtonItem" title="Atras" id="6a0-iw-nsp"/>
-                        <barButtonItem key="rightBarButtonItem" title="Ingresar" id="wM9-e3-2GB">
-                            <connections>
-                                <segue destination="dMh-eZ-3jz" kind="push" id="ajv-Lm-4FG"/>
-                            </connections>
-                        </barButtonItem>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="QRh-nA-i5z">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Mky-7Z-nOW">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mky-7Z-nOW" id="WxP-0X-aXO">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Fcw-R5-KM5">
+                                        <rect key="frame" x="0.0" y="44" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fcw-R5-KM5" id="vLb-VA-uN0">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="2aj-26-HnI">
+                                        <rect key="frame" x="0.0" y="88" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2aj-26-HnI" id="N7e-oG-qDz">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phh-xL-SC9">
+                                                    <rect key="frame" x="132" y="7" width="56" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Ingresar">
+                                                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="pmI-6Z-eRX" kind="push" id="0qA-h5-RmI"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerX" secondItem="phh-xL-SC9" secondAttribute="centerX" id="5pD-bx-BtN"/>
+                                                <constraint firstAttribute="centerY" secondItem="phh-xL-SC9" secondAttribute="centerY" id="gdR-vY-uxw"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="flO-9n-kAd">
+                                        <rect key="frame" x="0.0" y="132" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="flO-9n-kAd" id="6Vd-VK-cbK">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZq-Z7-iSJ">
+                                                    <rect key="frame" x="94" y="7" width="133" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="¿No tienes cuenta?">
+                                                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="D8S-3b-ppr" kind="push" id="xTi-Dc-2V7"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="bZq-Z7-iSJ" secondAttribute="centerY" id="TYy-8D-xhe"/>
+                                                <constraint firstAttribute="centerX" secondItem="bZq-Z7-iSJ" secondAttribute="centerX" id="bjP-sd-7Vd"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="yxp-az-8eg" id="N9z-q7-Lkd"/>
+                            <outlet property="delegate" destination="yxp-az-8eg" id="r6n-KX-mYc"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Iniciar sesión" id="0LL-oD-y5M">
+                        <barButtonItem key="backBarButtonItem" title="Atras" id="cN5-Gq-VmP"/>
                     </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KFE-0F-6oG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uJQ-3m-8iG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="433" y="-1075"/>
+            <point key="canvasLocation" x="489" y="-1091"/>
+        </scene>
+        <!--Whoami Table View Controller - ¿Quien soy?-->
+        <scene sceneID="ShK-Pm-OTJ">
+            <objects>
+                <tableViewController id="pmI-6Z-eRX" customClass="C4CWhoamiTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="wHk-Li-jkU">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <sections>
+                            <tableViewSection id="lj1-va-FjQ">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="230" id="wSX-KF-2j2">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="230"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wSX-KF-2j2" id="0Fr-hj-CiM">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="230"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="productor.png" translatesAutoresizingMaskIntoConstraints="NO" id="vUn-wM-wnH">
+                                                    <rect key="frame" x="44" y="-4" width="233" height="239"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerX" secondItem="vUn-wM-wnH" secondAttribute="centerX" id="ONF-4M-hjJ"/>
+                                                <constraint firstAttribute="centerY" secondItem="vUn-wM-wnH" secondAttribute="centerY" id="jTo-1t-Uih"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Bkh-LW-s9o" kind="modal" id="SAM-Qj-uFc"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="230" id="bRJ-XM-YhP">
+                                        <rect key="frame" x="0.0" y="230" width="320" height="230"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bRJ-XM-YhP" id="YOU-d8-iIe">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="230"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="comprador.png" translatesAutoresizingMaskIntoConstraints="NO" id="lcp-0c-wgC">
+                                                    <rect key="frame" x="44" y="-5" width="233" height="239"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="lcp-0c-wgC" secondAttribute="centerY" id="CRN-fd-A92"/>
+                                                <constraint firstAttribute="centerX" secondItem="lcp-0c-wgC" secondAttribute="centerX" id="LTh-bU-GPF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="9c6-b0-CPR" kind="modal" modalTransitionStyle="crossDissolve" id="kug-DR-zeR"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="pmI-6Z-eRX" id="T3b-51-Zcf"/>
+                            <outlet property="delegate" destination="pmI-6Z-eRX" id="IEQ-GQ-lcv"/>
+                        </connections>
+                    </tableView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="¿Quien soy?" id="0jd-Ra-pFm"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xLf-qb-dwe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1020" y="-1091"/>
         </scene>
         <!--Table View Controller - Registro-->
         <scene sceneID="WxY-mD-Vb0">
@@ -687,13 +805,11 @@
                         </connections>
                     </tableView>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="Registro" id="Ufh-1y-itb">
-                        <barButtonItem key="rightBarButtonItem" title="Guardar" id="qg5-Yo-qJ0"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Registro" id="Ufh-1y-itb"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CXO-4Z-ebZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="433" y="-1716"/>
+            <point key="canvasLocation" x="489" y="-1816"/>
         </scene>
         <!--Table View Controller - Precios-->
         <scene sceneID="8ck-6L-jpf">
@@ -703,9 +819,11 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Buscar" id="N7e-2T-wou">
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Buscar" translucent="NO" id="N7e-2T-wou">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="barTintColor" red="0.0" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
                                 <outlet property="delegate" destination="ZKj-wQ-a2d" id="2ld-2W-kMN"/>
@@ -726,6 +844,7 @@
                             <outlet property="delegate" destination="ZKj-wQ-a2d" id="86h-cm-Yva"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="Precios" image="calc.png" id="41M-Iy-txO"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="MVw-Nz-tEp" id="Vbg-55-xqv"/>
@@ -744,16 +863,16 @@
             </objects>
             <point key="canvasLocation" x="2529" y="-2854"/>
         </scene>
-        <!--Tab Bar Controller - Agricultor-->
+        <!--Tab Bar Controller - Productor-->
         <scene sceneID="Njk-so-xNC">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="hba-UY-ZRW" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="Agricultor" id="QMx-WP-Dk9">
+                    <navigationItem key="navigationItem" title="Productor" id="QMx-WP-Dk9">
                         <barButtonItem key="leftBarButtonItem" title="Atras" id="iJj-eb-ObC">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="Rua-Be-oZH" kind="unwind" unwindAction="unwindFarmer:" id="raZ-D2-rAb"/>
+                                <segue destination="mFh-Sb-gbH" kind="unwind" unwindAction="unwindFarmer:" id="2Tk-kp-XaK"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="rcj-6n-sbf">
@@ -767,7 +886,6 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="5i4-oW-jgY">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="tintColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="ZKj-wQ-a2d" kind="relationship" relationship="viewControllers" id="Rnl-FX-vs5"/>
@@ -777,7 +895,7 @@
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YN3-nt-UAA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="Rua-Be-oZH" userLabel="Exit" sceneMemberID="exit"/>
+                <exit id="mFh-Sb-gbH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1631" y="-1816"/>
         </scene>
@@ -789,9 +907,11 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="hjF-pb-WZb">
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Buscar" translucent="NO" id="hjF-pb-WZb">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="barTintColor" red="0.0" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
                                 <outlet property="delegate" destination="bIg-iW-TUh" id="TpF-Mw-DlF"/>
@@ -812,6 +932,7 @@
                             <outlet property="delegate" destination="bIg-iW-TUh" id="yi0-Ge-xYH"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="Demanda" image="folder.png" id="zfD-Im-8Uk"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="ks2-Q2-3ZJ" id="zJB-Rb-oQK"/>
@@ -830,57 +951,18 @@
             </objects>
             <point key="canvasLocation" x="2529" y="-2205"/>
         </scene>
-        <!--Whoami View Controller - ¿Quien soy?-->
-        <scene sceneID="rd0-Gl-IZR">
-            <objects>
-                <viewController id="dMh-eZ-3jz" customClass="C4CWhoamiViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="6hJ-0p-Ian"/>
-                        <viewControllerLayoutGuide type="bottom" id="FJt-ST-SRE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="gb7-zc-EWT">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="by8-Gp-hEN">
-                                <rect key="frame" x="60" y="12" width="200" height="206"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="productor.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Bkh-LW-s9o" kind="modal" modalTransitionStyle="crossDissolve" id="vTL-jk-JXf"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbu-u3-olE">
-                                <rect key="frame" x="65" y="202" width="200" height="206"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="comprador.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="9c6-b0-CPR" kind="modal" modalTransitionStyle="crossDissolve" id="LAI-Fc-pVA"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="¿Quien soy?" id="xhH-aG-Q8O"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sT8-MF-F6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="964" y="-1075"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="1DQ-WY-kBw">
             <objects>
                 <navigationController definesPresentationContext="YES" id="9c6-b0-CPR" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="PxC-eg-IRa"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Wjh-rw-9La">
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="1" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>
@@ -889,26 +971,32 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z1G-My-0Z2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="964" y="-344"/>
+            <point key="canvasLocation" x="1020" y="-338"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hdV-ci-7Tb">
             <objects>
                 <navigationController definesPresentationContext="YES" id="Bkh-LW-s9o" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" clipsSubviews="YES" contentMode="scaleToFill" translucent="NO" id="Cvl-hi-0XE">
+                    <navigationItem key="navigationItem" id="zNz-Sg-UcK"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Cvl-hi-0XE">
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.0" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="8ga-gI-Kca">
+                        <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="hba-UY-ZRW" kind="relationship" relationship="rootViewController" id="6wn-m5-ze8"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wGv-Cd-wsn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="964" y="-1716"/>
+            <point key="canvasLocation" x="1020" y="-1816"/>
         </scene>
         <!--Table View Controller - Inventario-->
         <scene sceneID="6b7-Jm-5ME">
@@ -918,9 +1006,11 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Buscar" id="lFu-hQ-PCE">
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Buscar" translucent="NO" id="lFu-hQ-PCE">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="barTintColor" red="0.0" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
                                 <outlet property="delegate" destination="3gC-rl-W54" id="QCN-YS-8dj"/>
@@ -941,6 +1031,7 @@
                             <outlet property="delegate" destination="3gC-rl-W54" id="mnQ-Bt-ye3"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="Inventario" image="box.png" id="AAB-rp-Afr"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="5zh-uw-idi" id="7fI-yD-g7e"/>
@@ -959,7 +1050,7 @@
             </objects>
             <point key="canvasLocation" x="2529" y="-1510"/>
         </scene>
-        <!--Stock New Table View Controller - Nuevo inventario-->
+        <!--Stock New Table View Controller - Nuevo-->
         <scene sceneID="apq-RT-x6k">
             <objects>
                 <tableViewController id="ha9-2X-RCB" customClass="C4CStockNewTableViewController" sceneMemberID="viewController">
@@ -1228,8 +1319,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </connections>
                     </tableView>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="Nuevo inventario" id="1WL-9w-gdO">
-                        <barButtonItem key="backBarButtonItem" title="Atras" id="qwa-oz-4fZ"/>
+                    <navigationItem key="navigationItem" title="Nuevo" id="1WL-9w-gdO">
                         <barButtonItem key="rightBarButtonItem" title="Guardar" id="lm5-DQ-lam">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
@@ -1273,7 +1363,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </tableView>
                     <navigationItem key="navigationItem" title="Productos" id="Pjq-Bd-iYH">
                         <barButtonItem key="leftBarButtonItem" title="Cancelar" id="9rq-hL-iAH">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="w33-DC-7Rm" kind="unwind" unwindAction="unwindProductList:" id="Msq-zO-xgj"/>
                             </connections>
@@ -1304,6 +1394,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <navigationItem key="navigationItem" id="JMQ-XS-hBB"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="2Jf-Dn-t6E">
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.0" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="kid-Ip-eev" kind="relationship" relationship="rootViewController" id="bOW-Sg-bZo"/>
@@ -1321,11 +1416,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="calc.png" width="30" height="30"/>
         <image name="comprador.png" width="233" height="239"/>
         <image name="folder.png" width="30" height="30"/>
-        <image name="login.png" width="206" height="219"/>
         <image name="papers.png" width="30" height="30"/>
         <image name="productor.png" width="233" height="239"/>
     </resources>
-    <color key="tintColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
