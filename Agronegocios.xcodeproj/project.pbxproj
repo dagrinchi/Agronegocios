@@ -11,6 +11,7 @@
 		632E29BF1974992D00593689 /* C4CStockNewTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 632E29BE1974992D00593689 /* C4CStockNewTableViewController.m */; };
 		63495EE019A259D6007BB920 /* comprador.png in Resources */ = {isa = PBXBuildFile; fileRef = 63495EDF19A259D6007BB920 /* comprador.png */; };
 		63495EE219A25A0D007BB920 /* productor.png in Resources */ = {isa = PBXBuildFile; fileRef = 63495EE119A25A0D007BB920 /* productor.png */; };
+		635606EE19AC0F73007B41DE /* C4CHomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 635606ED19AC0F73007B41DE /* C4CHomeTableViewController.m */; };
 		635F82DF1973507C008CC466 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = 635F82DE1973507C008CC466 /* login.png */; };
 		635F82E21973510D008CC466 /* C4CLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 635F82E11973510D008CC466 /* C4CLoginViewController.m */; };
 		635F82E919735678008CC466 /* aprende.png in Resources */ = {isa = PBXBuildFile; fileRef = 635F82E419735678008CC466 /* aprende.png */; };
@@ -66,6 +67,8 @@
 		632E29BE1974992D00593689 /* C4CStockNewTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CStockNewTableViewController.m; sourceTree = "<group>"; };
 		63495EDF19A259D6007BB920 /* comprador.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comprador.png; sourceTree = "<group>"; };
 		63495EE119A25A0D007BB920 /* productor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = productor.png; sourceTree = "<group>"; };
+		635606EC19AC0F73007B41DE /* C4CHomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4CHomeTableViewController.h; sourceTree = "<group>"; };
+		635606ED19AC0F73007B41DE /* C4CHomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CHomeTableViewController.m; sourceTree = "<group>"; };
 		635F82DE1973507C008CC466 /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
 		635F82E01973510D008CC466 /* C4CLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4CLoginViewController.h; sourceTree = "<group>"; };
 		635F82E11973510D008CC466 /* C4CLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CLoginViewController.m; sourceTree = "<group>"; };
@@ -270,6 +273,8 @@
 				63E9F10E1996F47D008FEEA0 /* Stock */,
 				636CB24319A27D780085FE1A /* C4CWhoamiTableViewController.h */,
 				636CB24419A27D780085FE1A /* C4CWhoamiTableViewController.m */,
+				635606EC19AC0F73007B41DE /* C4CHomeTableViewController.h */,
+				635606ED19AC0F73007B41DE /* C4CHomeTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -478,6 +483,7 @@
 				63E9F10A1996CA69008FEEA0 /* C4CProductTableViewController.m in Sources */,
 				63E9F1071996A402008FEEA0 /* C4CStockTableViewController.m in Sources */,
 				635F82E21973510D008CC466 /* C4CLoginViewController.m in Sources */,
+				635606EE19AC0F73007B41DE /* C4CHomeTableViewController.m in Sources */,
 				63611B111969FA36006B3282 /* main.m in Sources */,
 				63A68634196CA6EF004EAFC2 /* C4CLabel.m in Sources */,
 				636CB24519A27D780085FE1A /* C4CWhoamiTableViewController.m in Sources */,
