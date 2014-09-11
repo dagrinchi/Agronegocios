@@ -49,6 +49,11 @@
 		63E9F102199691FA008FEEA0 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E9F101199691FA008FEEA0 /* AudioToolbox.framework */; };
 		63E9F1071996A402008FEEA0 /* C4CStockTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E9F1061996A402008FEEA0 /* C4CStockTableViewController.m */; };
 		63E9F10A1996CA69008FEEA0 /* C4CProductTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E9F1091996CA69008FEEA0 /* C4CProductTableViewController.m */; };
+		63F5366D19B6B01600A897A4 /* clientregister.png in Resources */ = {isa = PBXBuildFile; fileRef = 63F5366A19B6B01600A897A4 /* clientregister.png */; };
+		63F5366E19B6B01600A897A4 /* farmerred.png in Resources */ = {isa = PBXBuildFile; fileRef = 63F5366B19B6B01600A897A4 /* farmerred.png */; };
+		63F5366F19B6B01600A897A4 /* farmerregister-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 63F5366C19B6B01600A897A4 /* farmerregister-1.png */; };
+		63F5367119B7C0B300A897A4 /* papa.png in Resources */ = {isa = PBXBuildFile; fileRef = 63F5367019B7C0B300A897A4 /* papa.png */; };
+		63F5367719B7C75500A897A4 /* fresa.png in Resources */ = {isa = PBXBuildFile; fileRef = 63F5367619B7C75500A897A4 /* fresa.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +122,11 @@
 		63E9F1061996A402008FEEA0 /* C4CStockTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CStockTableViewController.m; sourceTree = "<group>"; };
 		63E9F1081996CA69008FEEA0 /* C4CProductTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4CProductTableViewController.h; sourceTree = "<group>"; };
 		63E9F1091996CA69008FEEA0 /* C4CProductTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CProductTableViewController.m; sourceTree = "<group>"; };
+		63F5366A19B6B01600A897A4 /* clientregister.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clientregister.png; sourceTree = "<group>"; };
+		63F5366B19B6B01600A897A4 /* farmerred.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = farmerred.png; sourceTree = "<group>"; };
+		63F5366C19B6B01600A897A4 /* farmerregister-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "farmerregister-1.png"; sourceTree = "<group>"; };
+		63F5367019B7C0B300A897A4 /* papa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = papa.png; sourceTree = "<group>"; };
+		63F5367619B7C75500A897A4 /* fresa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fresa.png; sourceTree = "<group>"; };
 		F60A556C6DD14941B74DDECB /* Pods-Agronegocios.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Agronegocios.xcconfig"; path = "Pods/Pods-Agronegocios.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -254,6 +264,10 @@
 		63611B341969FA99006B3282 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				63F5367819B7C75900A897A4 /* products */,
+				63F5366A19B6B01600A897A4 /* clientregister.png */,
+				63F5366B19B6B01600A897A4 /* farmerred.png */,
+				63F5366C19B6B01600A897A4 /* farmerregister-1.png */,
 				63495EE119A25A0D007BB920 /* productor.png */,
 				6377234719756458004F1970 /* agronegocios.png */,
 				635F82E319735649008CC466 /* icons */,
@@ -282,8 +296,7 @@
 		63611B3C196B3A1E006B3282 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				63A68635196CAEE6004EAFC2 /* C4CImageTableViewCell.h */,
-				63A68636196CAEE6004EAFC2 /* C4CImageTableViewCell.m */,
+				63F5367519B7C14200A897A4 /* Stock */,
 				63A68632196CA6EF004EAFC2 /* C4CLabel.h */,
 				63A68633196CA6EF004EAFC2 /* C4CLabel.m */,
 				63611B3D196B3A6E006B3282 /* Main.storyboard */,
@@ -335,6 +348,24 @@
 				635F82EF19735BF0008CC466 /* C4CPriceViewController.m */,
 			);
 			name = Price;
+			sourceTree = "<group>";
+		};
+		63F5367519B7C14200A897A4 /* Stock */ = {
+			isa = PBXGroup;
+			children = (
+				63A68635196CAEE6004EAFC2 /* C4CImageTableViewCell.h */,
+				63A68636196CAEE6004EAFC2 /* C4CImageTableViewCell.m */,
+			);
+			name = Stock;
+			sourceTree = "<group>";
+		};
+		63F5367819B7C75900A897A4 /* products */ = {
+			isa = PBXGroup;
+			children = (
+				63F5367619B7C75500A897A4 /* fresa.png */,
+				63F5367019B7C0B300A897A4 /* papa.png */,
+			);
+			name = products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,13 +447,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63F5367119B7C0B300A897A4 /* papa.png in Resources */,
 				635F82ED19735678008CC466 /* papers.png in Resources */,
 				63611B3E196B3A6E006B3282 /* Main.storyboard in Resources */,
 				635F82DF1973507C008CC466 /* login.png in Resources */,
 				63495EE019A259D6007BB920 /* comprador.png in Resources */,
+				63F5367719B7C75500A897A4 /* fresa.png in Resources */,
 				63495EE219A25A0D007BB920 /* productor.png in Resources */,
 				635F82EB19735678008CC466 /* calc.png in Resources */,
+				63F5366E19B6B01600A897A4 /* farmerred.png in Resources */,
+				63F5366F19B6B01600A897A4 /* farmerregister-1.png in Resources */,
 				635F82E919735678008CC466 /* aprende.png in Resources */,
+				63F5366D19B6B01600A897A4 /* clientregister.png in Resources */,
 				6377234819756458004F1970 /* agronegocios.png in Resources */,
 				635F82EA19735678008CC466 /* box.png in Resources */,
 				63A68646196DB1DA004EAFC2 /* consumidor.png in Resources */,
