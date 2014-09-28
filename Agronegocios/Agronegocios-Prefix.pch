@@ -13,4 +13,11 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #import <CoreData/CoreData.h>
+
+    #import <AFNetworking/AFNetworking.h>
+    #import <SAMHUDView/SAMHUDView.h>
+
+    #import "Webservice.h"
+    #import "C4CJSONResponseSerializerWithData.h"
 #endif
