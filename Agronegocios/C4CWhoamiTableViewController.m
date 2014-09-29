@@ -26,12 +26,6 @@
 {
     [super viewDidLoad];
     
-//    UITableViewCell *farmerCell = [self.tableView dequeueReusableCellWithIdentifier:@"farmerCell"];
-//    [farmerCell set
-    
-//    UITableViewCell *unitPickerCell = [self.tableView dequeueReusableCellWithIdentifier:_unitPickerCellID];
-//    self.unitPickerCellRowHeight = CGRectGetHeight(unitPickerCell.frame);
-    
 }
 
 @end

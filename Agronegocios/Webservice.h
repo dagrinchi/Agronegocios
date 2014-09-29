@@ -11,7 +11,11 @@
 
 #define BASE_URL @"http://placita.azurewebsites.net/"
 
+#define GRANT_TYPE @"password"
+
 #define REGISTER_URL [NSString stringWithFormat:@"%@%@", BASE_URL, @"api/Account/Register"]
+
+#define TOKEN_URL [NSString stringWithFormat:@"%@%@", BASE_URL, @"Token"]
 
 #define PRODUCTS_URL [NSString stringWithFormat:@"%@%@", BASE_URL, @"api/Products"]
 

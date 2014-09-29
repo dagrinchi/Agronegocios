@@ -20,6 +20,7 @@ PODS:
   - AFNetworking/UIKit (2.3.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - FXForms (1.2)
   - MediaRSSParser (1.0.1):
     - AFNetworking (~> 2.0)
   - Nimbus (1.2.0):
@@ -83,7 +84,7 @@ PODS:
   - SAMLabel (0.1.0)
   - SAMLoadingView (0.1.0)
   - SAMRateLimit (0.2.0)
-  - SAMTextField (0.1.1)
+  - SAMTextField (0.1.2)
   - SAMTextView (0.2.1)
   - SAMWebView (0.2.1)
   - SSToolkit (2.0.0):
@@ -103,6 +104,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
+  - FXForms (= 1.2)
   - MediaRSSParser (~> 1.0.1)
   - Nimbus (= 1.2.0)
   - SSToolkit (= 2.0.0)
@@ -110,6 +112,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 6d7b76aa5d04c8c37daad3eef4b7e3f2a7620da3
+  FXForms: 856ac15e98d2c6ecf40c40754fe66d73d604cbc6
   MediaRSSParser: 6d8bc5d86b7a7a897c122aa841a3302c8ee8113c
   Nimbus: 14fd6f034c5f53d3dccef6cfd5763959497289a9
   SAMAddressBar: 5880d7cc6fea49e7371b8183924b59cdd14b82fe
@@ -121,7 +124,7 @@ SPEC CHECKSUMS:
   SAMLabel: 14570303160fa7844fd4ebb0358cdb3841076825
   SAMLoadingView: 11b746311268140f6a2380723215fe96a6d15dee
   SAMRateLimit: f47a9961333e2d44fe189ef2233cee48012905ee
-  SAMTextField: 2dece66424f76a0aea1209adb0becbe728ad9098
+  SAMTextField: 10e2252e15f2e43f67f71a4399928ed10d884076
   SAMTextView: 1062a784ba7b2080b0c17748001c416b53010b4b
   SAMWebView: e615d50d3683b9b4fd3e10da9d079ed03230ee24
   SSToolkit: 64d8bb043b4f36da68936ddbb4ec4e8cb3c5a8df
