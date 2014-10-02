@@ -25,9 +25,9 @@
     [hud show];
     
     NSMutableDictionary *parameters = [[NSMutableDictionary alloc] init];
-    if (form.email != nil && form.password != nil) {
+    if (form.identification != nil && form.password != nil) {
         [parameters setValue:GRANT_TYPE forKey:@"grant_type"];
-        [parameters setValue:form.email forKey:@"username"];
+        [parameters setValue:form.identification forKey:@"username"];
         [parameters setValue:form.password forKey:@"password"];
         
         response = [self login:parameters :hud];
@@ -47,11 +47,12 @@
     [hud show];
     
     NSMutableDictionary *parameters = [[NSMutableDictionary alloc] init];
-    if (form.name != nil && form.phone != nil && form.address != nil && form.email != nil && form.password != nil && form.repeatPassword != nil) {
+    if (form.name != nil && form.identification != nil && form.phone != nil && form.address != nil && form.email != nil && form.password != nil && form.repeatPassword != nil) {
         
         if ([form.password isEqualToString:form.repeatPassword]) {
             
             [parameters setValue:form.name forKey:@"Name"];
+            [parameters setValue:form.identification forKey:@"Identification"];
             [parameters setValue:form.phone forKey:@"Phone"];
             [parameters setValue:form.address forKey:@"Address"];
             [parameters setValue:form.email forKey:@"Email"];
@@ -80,7 +81,6 @@
     __block NSString * _result;
     
     AFHTTPRequestOperationManager *afmanager = [AFHTTPRequestOperationManager manager];
-    //afmanager.requestSerializer = [AFJSONRequestSerializer serializer];
     afmanager.responseSerializer = [C4CJSONResponseSerializerWithData serializer];
     
     [afmanager
@@ -89,6 +89,7 @@
      success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
          _result = responseObject;
+         NSLog(@"Success: %@", responseObject);
          
          hud.textLabel.text = @"Listo!";
          hud.loading = FALSE;
@@ -145,7 +146,7 @@
 
 -(void) returnToLogin:(SAMHUDView *)hud {
     [hud dismiss];
-    [self.navigationController popToRootViewControllerAnimated:YES];
+//    [self.navigationController popToRootViewControllerAnimated:TRUE];
 }
 
 @end

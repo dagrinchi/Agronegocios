@@ -10,7 +10,7 @@
 
 @interface C4CLoginForm : NSObject <FXForm>
 
-@property (nonatomic, copy) NSString *email;
+@property (nonatomic, copy) NSString *identification;
 @property (nonatomic, copy) NSString *password;
 @property (nonatomic, assign) BOOL rememberMe;
 

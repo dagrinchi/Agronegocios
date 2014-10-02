@@ -12,9 +12,10 @@
 @implementation C4CLoginForm
 
 - (NSArray *)fields {
-    return @[@{FXFormFieldKey: @"email"},
+    return @[@{FXFormFieldKey: @"identification",
+               FXFormFieldTitle: @"Documento"},
              @{FXFormFieldKey: @"password",
-               FXFormFieldTitle: @"Contraseña"},
+               FXFormFieldTitle: @"Clave"},
              @{FXFormFieldKey: @"rememberMe",
                FXFormFieldTitle: @"Recordarme"},
              @{//FXFormFieldCell: [C4CSubmitButtonCell class],

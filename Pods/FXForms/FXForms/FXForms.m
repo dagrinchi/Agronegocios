@@ -1,7 +1,7 @@
 //
 //  FXForms.m
 //
-//  Version 1.2
+//  Version 1.2.1
 //
 //  Created by Nick Lockwood on 13/02/2014.
 //  Copyright (c) 2014 Charcoal Design. All rights reserved.
@@ -40,6 +40,45 @@
 #pragma GCC diagnostic ignored "-Wreceiver-is-weak"
 #pragma GCC diagnostic ignored "-Wconversion"
 #pragma GCC diagnostic ignored "-Wgnu"
+
+
+NSString *const FXFormFieldKey = @"key";
+NSString *const FXFormFieldType = @"type";
+NSString *const FXFormFieldClass = @"class";
+NSString *const FXFormFieldCell = @"cell";
+NSString *const FXFormFieldTitle = @"title";
+NSString *const FXFormFieldPlaceholder = @"placeholder";
+NSString *const FXFormFieldDefaultValue = @"default";
+NSString *const FXFormFieldOptions = @"options";
+NSString *const FXFormFieldTemplate = @"template";
+NSString *const FXFormFieldValueTransformer = @"valueTransformer";
+NSString *const FXFormFieldAction = @"action";
+NSString *const FXFormFieldSegue = @"segue";
+NSString *const FXFormFieldHeader = @"header";
+NSString *const FXFormFieldFooter = @"footer";
+NSString *const FXFormFieldInline = @"inline";
+NSString *const FXFormFieldSortable = @"sortable";
+NSString *const FXFormFieldViewController = @"viewController";
+
+NSString *const FXFormFieldTypeDefault = @"default";
+NSString *const FXFormFieldTypeLabel = @"label";
+NSString *const FXFormFieldTypeText = @"text";
+NSString *const FXFormFieldTypeLongText = @"longtext";
+NSString *const FXFormFieldTypeURL = @"url";
+NSString *const FXFormFieldTypeEmail = @"email";
+NSString *const FXFormFieldTypePhone = @"phone";
+NSString *const FXFormFieldTypePassword = @"password";
+NSString *const FXFormFieldTypeNumber = @"number";
+NSString *const FXFormFieldTypeInteger = @"integer";
+NSString *const FXFormFieldTypeUnsigned = @"unsigned";
+NSString *const FXFormFieldTypeFloat = @"float";
+NSString *const FXFormFieldTypeBitfield = @"bitfield";
+NSString *const FXFormFieldTypeBoolean = @"boolean";
+NSString *const FXFormFieldTypeOption = @"option";
+NSString *const FXFormFieldTypeDate = @"date";
+NSString *const FXFormFieldTypeTime = @"time";
+NSString *const FXFormFieldTypeDateTime = @"datetime";
+NSString *const FXFormFieldTypeImage = @"image";
 
 
 static NSString *const FXFormsException = @"FXFormsException";
@@ -113,11 +152,28 @@ static inline void FXFormLabelSetMinFontSize(UILabel *label, CGFloat fontSize)
 static inline NSArray *FXFormProperties(id<FXForm> form)
 {
     if (!form) return nil;
-    
+
     static void *FXFormPropertiesKey = &FXFormPropertiesKey;
     NSMutableArray *properties = objc_getAssociatedObject(form, FXFormPropertiesKey);
     if (!properties)
     {
+        static NSSet *NSObjectProperties;
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            NSObjectProperties = [NSMutableSet set];
+            unsigned int propertyCount;
+            objc_property_t *propertyList = class_copyPropertyList([NSObject class], &propertyCount);
+            for (unsigned int i = 0; i < propertyCount; i++)
+            {
+                //get property name
+                objc_property_t property = propertyList[i];
+                const char *propertyName = property_getName(property);
+                [(NSMutableSet *)NSObjectProperties addObject:@(propertyName)];
+            }
+            free(propertyList);
+            NSObjectProperties = [NSObjectProperties copy];
+        });
+        
         properties = [NSMutableArray array];
         Class subclass = [form class];
         while (subclass != [NSObject class])
@@ -131,12 +187,12 @@ static inline NSArray *FXFormProperties(id<FXForm> form)
                 const char *propertyName = property_getName(property);
                 NSString *key = @(propertyName);
                 
-                //ignore NSObject properties
+                //ignore NSObject properties, unless overridden as readwrite
                 char *readonly = property_copyAttributeValue(property, "R");
                 if (readonly)
                 {
                     free(readonly);
-                    if ([@[@"hash", @"superclass", @"description", @"debugDescription"] containsObject:key])
+                    if ([NSObjectProperties containsObject:key])
                     {
                         continue;
                     }
@@ -752,6 +808,28 @@ static void FXFormPreprocessFieldDictionary(NSMutableDictionary *dictionary)
     _cellConfig[key] = value;
 }
 
+- (id)valueWithoutDefaultSubstitution
+{
+    if (FXFormCanGetValueForKey(self.form, self.key))
+    {
+        id value = [(NSObject *)self.form valueForKey:self.key];
+        if (value && self.options)
+        {
+            if ([self isIndexedType])
+            {
+                if ([value unsignedIntegerValue] >= [self.options count]) value = nil;
+            }
+            else if (![self isCollectionType] && ![self.type isEqualToString:FXFormFieldTypeBitfield])
+            {
+                //TODO: should we validate collection types too, or is that overkill?
+                if (![self.options containsObject:value]) value = nil;
+            }
+        }
+        return value;
+    }
+    return nil;
+}
+
 - (id)value
 {
     if (FXFormCanGetValueForKey(self.form, self.key))
@@ -813,13 +891,14 @@ static void FXFormPreprocessFieldDictionary(NSMutableDictionary *dictionary)
             value = [value description];
         }
       
-        if ([self.valueClass isSubclassOfClass:[NSMutableString class]])
+        if (self.valueClass == [NSMutableString class])
         {
             //replace string or make mutable copy of it
-            if (self.value)
+            id _value = [self valueWithoutDefaultSubstitution];
+            if (_value)
             {
-                [(NSMutableString *)self.value setString:value];
-                value = self.value;
+                [(NSMutableString *)_value setString:value];
+                value = _value;
             }
             else
             {
@@ -953,7 +1032,11 @@ static void FXFormPreprocessFieldDictionary(NSMutableDictionary *dictionary)
             header = [header copy];
         }
     }
-    if ([header class] == header)
+    if ([header isKindOfClass:[NSNull class]])
+    {
+        header = @"";
+    }
+    else if ([header class] == header)
     {
         header = [[header alloc] init];
     }
@@ -974,7 +1057,11 @@ static void FXFormPreprocessFieldDictionary(NSMutableDictionary *dictionary)
             footer = [footer copy];
         }
     }
-    if ([footer class] == footer)
+    if ([footer isKindOfClass:[NSNull class]])
+    {
+        footer = @"";
+    }
+    else if ([footer class] == footer)
     {
         footer = [[footer alloc] init];
     }
@@ -2053,9 +2140,9 @@ static void FXFormPreprocessFieldDictionary(NSMutableDictionary *dictionary)
     UIView *header = [self sectionAtIndex:index].header;
     if ([header isKindOfClass:[UIView class]])
     {
-        return header.frame.size.height ?: 56; //standard height for header views
+        return header.frame.size.height ?: UITableViewAutomaticDimension;
     }
-    return 38; //standard height for text headers
+    return UITableViewAutomaticDimension;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)index
@@ -2087,9 +2174,9 @@ static void FXFormPreprocessFieldDictionary(NSMutableDictionary *dictionary)
     UIView *footer = [self sectionAtIndex:index].footer;
     if ([footer isKindOfClass:[UIView class]])
     {
-        return footer.frame.size.height ?: 46; //standard height for footer views
+        return footer.frame.size.height ?: UITableViewAutomaticDimension;
     }
-    return 30; //standard height for text footers
+    return UITableViewAutomaticDimension;
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath

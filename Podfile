@@ -8,7 +8,7 @@ target "Agronegocios" do
     pod 'SSToolkit', '2.0.0'
     pod 'Nimbus', '1.2.0'
     pod 'TDBadgedCell', '2.6'
-    pod 'FXForms', '1.2'
+    pod 'FXForms', '1.2.1'
     
 end
 

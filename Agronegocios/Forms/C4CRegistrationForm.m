@@ -22,6 +22,8 @@
                FXFormFieldHeader: @"Información Básica",
                FXFormFieldTitle: @"Nombre",
                @"textField.autocapitalizationType": @(UITextAutocapitalizationTypeWords)},
+             @{FXFormFieldKey: @"identification",
+               FXFormFieldTitle: @"Documento"},
              @{FXFormFieldKey: @"phone",
                FXFormFieldTitle: @"Teléfono móvil",},
              @{FXFormFieldKey: @"address",

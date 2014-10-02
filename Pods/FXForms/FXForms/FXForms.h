@@ -1,7 +1,7 @@
 //
 //  FXForms.h
 //
-//  Version 1.2
+//  Version 1.2.1
 //
 //  Created by Nick Lockwood on 13/02/2014.
 //  Copyright (c) 2014 Charcoal Design. All rights reserved.
@@ -32,50 +32,49 @@
 
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wobjc-missing-property-synthesis"
+#pragma GCC diagnostic ignored "-Wmissing-variable-declarations"
+
+
 #import <UIKit/UIKit.h>
 
 
-#ifndef FXForms
+extern NSString *const FXFormFieldKey; //key
+extern NSString *const FXFormFieldType; //type
+extern NSString *const FXFormFieldClass; //class
+extern NSString *const FXFormFieldCell; //cell
+extern NSString *const FXFormFieldTitle; //title
+extern NSString *const FXFormFieldPlaceholder; //placeholder
+extern NSString *const FXFormFieldDefaultValue; //default
+extern NSString *const FXFormFieldOptions; //options
+extern NSString *const FXFormFieldTemplate; //template
+extern NSString *const FXFormFieldValueTransformer; //valueTransformer
+extern NSString *const FXFormFieldAction; //action
+extern NSString *const FXFormFieldSegue; //segue
+extern NSString *const FXFormFieldHeader; //header
+extern NSString *const FXFormFieldFooter; //footer
+extern NSString *const FXFormFieldInline; //inline
+extern NSString *const FXFormFieldSortable; //sortable
+extern NSString *const FXFormFieldViewController; //viewController
 
-static NSString *const FXFormFieldKey = @"key";
-static NSString *const FXFormFieldType = @"type";
-static NSString *const FXFormFieldClass = @"class";
-static NSString *const FXFormFieldCell = @"cell";
-static NSString *const FXFormFieldTitle = @"title";
-static NSString *const FXFormFieldPlaceholder = @"placeholder";
-static NSString *const FXFormFieldDefaultValue = @"default";
-static NSString *const FXFormFieldOptions = @"options";
-static NSString *const FXFormFieldTemplate = @"template";
-static NSString *const FXFormFieldValueTransformer = @"valueTransformer";
-static NSString *const FXFormFieldAction = @"action";
-static NSString *const FXFormFieldSegue = @"segue";
-static NSString *const FXFormFieldHeader = @"header";
-static NSString *const FXFormFieldFooter = @"footer";
-static NSString *const FXFormFieldInline = @"inline";
-static NSString *const FXFormFieldSortable = @"sortable";
-static NSString *const FXFormFieldViewController = @"viewController";
-
-static NSString *const FXFormFieldTypeDefault = @"default";
-static NSString *const FXFormFieldTypeLabel = @"label";
-static NSString *const FXFormFieldTypeText = @"text";
-static NSString *const FXFormFieldTypeLongText = @"longtext";
-static NSString *const FXFormFieldTypeURL = @"url";
-static NSString *const FXFormFieldTypeEmail = @"email";
-static NSString *const FXFormFieldTypePhone = @"phone";
-static NSString *const FXFormFieldTypePassword = @"password";
-static NSString *const FXFormFieldTypeNumber = @"number";
-static NSString *const FXFormFieldTypeInteger = @"integer";
-static NSString *const FXFormFieldTypeUnsigned = @"unsigned";
-static NSString *const FXFormFieldTypeFloat = @"float";
-static NSString *const FXFormFieldTypeBitfield = @"bitfield";
-static NSString *const FXFormFieldTypeBoolean = @"boolean";
-static NSString *const FXFormFieldTypeOption = @"option";
-static NSString *const FXFormFieldTypeDate = @"date";
-static NSString *const FXFormFieldTypeTime = @"time";
-static NSString *const FXFormFieldTypeDateTime = @"datetime";
-static NSString *const FXFormFieldTypeImage = @"image";
-
-#endif
+extern NSString *const FXFormFieldTypeDefault; //default
+extern NSString *const FXFormFieldTypeLabel; //label
+extern NSString *const FXFormFieldTypeText; //text
+extern NSString *const FXFormFieldTypeLongText; //longtext
+extern NSString *const FXFormFieldTypeURL; //url
+extern NSString *const FXFormFieldTypeEmail; //email
+extern NSString *const FXFormFieldTypePhone; //phone
+extern NSString *const FXFormFieldTypePassword; //password
+extern NSString *const FXFormFieldTypeNumber; //number
+extern NSString *const FXFormFieldTypeInteger; //integer
+extern NSString *const FXFormFieldTypeUnsigned; //unsigned
+extern NSString *const FXFormFieldTypeFloat; //float
+extern NSString *const FXFormFieldTypeBitfield; //bitfield
+extern NSString *const FXFormFieldTypeBoolean; //boolean
+extern NSString *const FXFormFieldTypeOption; //option
+extern NSString *const FXFormFieldTypeDate; //date
+extern NSString *const FXFormFieldTypeTime; //time
+extern NSString *const FXFormFieldTypeDateTime; //datetime
+extern NSString *const FXFormFieldTypeImage; //image
 
 
 #pragma mark -

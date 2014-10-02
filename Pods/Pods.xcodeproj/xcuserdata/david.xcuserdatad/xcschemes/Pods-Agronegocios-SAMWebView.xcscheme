@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9E0D3FD6022E403B868AE81A"
+               BlueprintIdentifier = "C02B957B5C3E4324AFCF72BD"
                BuildableName = "libPods-Agronegocios-SAMWebView.a"
                BlueprintName = "Pods-Agronegocios-SAMWebView"
                ReferencedContainer = "container:Pods.xcodeproj">
