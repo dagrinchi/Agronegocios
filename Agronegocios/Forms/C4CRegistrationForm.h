@@ -10,12 +10,12 @@
 
 @interface C4CRegistrationForm : NSObject <FXForm>
 
-@property (nonatomic, copy) NSString *email;
+@property (nonatomic, copy) NSString *identification;
 @property (nonatomic, copy) NSString *password;
 @property (nonatomic, copy) NSString *repeatPassword;
 
 @property (nonatomic, copy) NSString *name;
-@property (nonatomic, copy) NSString *identification;
+@property (nonatomic, copy) NSString *email;
 @property (nonatomic, copy) NSString *phone;
 @property (nonatomic, copy) NSString *address;
 

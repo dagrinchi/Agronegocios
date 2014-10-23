@@ -2,7 +2,7 @@
 //  Product.m
 //  Agronegocios
 //
-//  Created by David Almeciga on 9/28/14.
+//  Created by David Almeciga on 10/19/14.
 //  Copyright (c) 2014 COOL4CODE. All rights reserved.
 //
 
@@ -12,14 +12,7 @@
 @implementation Product
 
 @dynamic code;
-@dynamic name;
 @dynamic id;
-
-+ (id) productWithContext:(NSManagedObjectContext *)context {
-    Product *product = [NSEntityDescription
-                        insertNewObjectForEntityForName:@"Product"
-                        inManagedObjectContext:context];
-    return product;
-}
+@dynamic name;
 
 @end

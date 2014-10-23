@@ -2,7 +2,7 @@
 //  Product.h
 //  Agronegocios
 //
-//  Created by David Almeciga on 9/28/14.
+//  Created by David Almeciga on 10/19/14.
 //  Copyright (c) 2014 COOL4CODE. All rights reserved.
 //
 
@@ -13,7 +13,7 @@
 @interface Product : NSManagedObject
 
 @property (nonatomic, retain) NSString * code;
-@property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSNumber * id;
+@property (nonatomic, retain) NSString * name;
 
 @end

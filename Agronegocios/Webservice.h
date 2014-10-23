@@ -9,32 +9,32 @@
 #ifndef Agronegocios_Webservice_h
 #define Agronegocios_Webservice_h
 
-#define BASE_URL @"http://placita.azurewebsites.net/"
+#define BASE_URL @"http://placita.azurewebsites.net"
 
 #define GRANT_TYPE @"password"
 
-#define REGISTER_URL [NSString stringWithFormat:@"%@%@", BASE_URL, @"api/Account/Register"]
+#define REGISTER_PATH @"/api/Account/Register"
 
-#define TOKEN_URL [NSString stringWithFormat:@"%@%@", BASE_URL, @"Token"]
+#define TOKEN_PATH @"/Token"
 
-#define PRODUCTS_URL [NSString stringWithFormat:@"%@%@", BASE_URL, @"api/Products"]
+#define PRODUCTS_PATH @"/api/Products"
 
-#define UNITS_URL [NSString stringWithFormat:@"%@%@", BASE_URL, @"api/Units"]
+#define UNITS_PATH @"/api/Units"
 
-#define PLACES_URL [NSString stringWithFormat:@"%@%@", BASE_URL, @"api/Places"]
+#define PLACES_PATH @"/api/Places"
 
-#define PRICES_URL [NSString stringWithFormat:@"%@%@", BASE_URL, @"api/Prices"]
+#define PRICES_PATH @"/api/Prices"
 
-#define NEWSFEEDS_URL [NSString stringWithFormat:@"%@%@", BASE_URL, @"api/NewsFeeds"]
+#define NEWSFEEDS_PATH @"/api/NewsFeeds"
 
-#define STOCKS_URL [NSString stringWithFormat:@"%@%@", BASE_URL, @"api/Stocks"]
+#define STOCKS_PATH @"/api/Stocks"
 
-#define MYSTOCKS_URL [NSString stringWithFormat:@"%@%@", BASE_URL, @"api/MyStocks"]
+#define MYSTOCKS_PATH @"/api/MyStocks"
 
-#define ORDERS_URL [NSString stringWithFormat:@"%@%@", BASE_URL, @"api/Orders"]
+#define ORDERS_PATH @"/api/Orders"
 
-#define MYORDERS_URL [NSString stringWithFormat:@"%@%@", BASE_URL, @"api/MyOrders"]
+#define MYORDERS_PATH @"/api/MyOrders"
 
-#define MYPURCHASES_URL [NSString stringWithFormat:@"%@%@", BASE_URL, @"api/MyPurchases"]
+#define MYPURCHASES_PATH @"/api/MyPurchases"
 
 #endif

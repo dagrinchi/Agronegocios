@@ -12,7 +12,9 @@
 @implementation C4CRegistrationForm
 
 - (NSArray *)fields {
-    return @[@{FXFormFieldKey: @"email",
+    return @[@{FXFormFieldKey: @"identification",
+               FXFormFieldTitle: @"Documento",
+               FXFormFieldType: FXFormFieldTypeNumber,
                FXFormFieldHeader: @"Información de Acceso"},
              @{FXFormFieldKey: @"password",
                FXFormFieldTitle: @"Contraseña",},
@@ -22,8 +24,7 @@
                FXFormFieldHeader: @"Información Básica",
                FXFormFieldTitle: @"Nombre",
                @"textField.autocapitalizationType": @(UITextAutocapitalizationTypeWords)},
-             @{FXFormFieldKey: @"identification",
-               FXFormFieldTitle: @"Documento"},
+             @{FXFormFieldKey: @"email"},
              @{FXFormFieldKey: @"phone",
                FXFormFieldTitle: @"Teléfono móvil",},
              @{FXFormFieldKey: @"address",

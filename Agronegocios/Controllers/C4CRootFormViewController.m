@@ -17,7 +17,7 @@
 - (void)awakeFromNib {
     self.formController.form = [[C4CRootForm alloc] init];
 }
-
+/*
 - (void)submitLoginForm:(UITableViewCell<FXFormFieldCell> *)cell {
     C4CLoginForm *form = cell.field.form;
     NSString *response;
@@ -75,6 +75,8 @@
     }
     
 }
+
+// REQUIRES AFNETWORKING 2
 
 -(NSString *) login:(NSMutableDictionary *)parameters :(SAMHUDView *)hud {
     
@@ -148,5 +150,5 @@
     [hud dismiss];
 //    [self.navigationController popToRootViewControllerAnimated:TRUE];
 }
-
+*/
 @end

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6244" systemVersion="13F34" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6252" systemVersion="14A389" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="GeoPoint" representedClassName="GeoPoint" syncable="YES">
         <attribute name="latitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="longitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
@@ -54,11 +54,16 @@
     </entity>
     <entity name="Price" representedClassName="Price" syncable="YES">
         <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="pricePerUnit" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <relationship name="geoPoint" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GeoPoint" syncable="YES"/>
-        <relationship name="product" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Product" syncable="YES"/>
-        <relationship name="unit" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Unit" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="priceAvgPerUnit" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="priceId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="priceMaxPerUnit" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="priceMinPerUnit" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="productCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="unitCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="unitName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updatedAt" optional="YES" attributeType="Date" syncable="YES"/>
     </entity>
     <entity name="Product" representedClassName="Product" syncable="YES">
         <attribute name="code" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
@@ -100,18 +105,18 @@
         <relationship name="myPurchases" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MyPurchases" inverseName="user" inverseEntity="MyPurchases" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Product" positionX="-360" positionY="-129" width="128" height="88"/>
-        <element name="Unit" positionX="-360" positionY="132" width="128" height="88"/>
-        <element name="Stock" positionX="-108" positionY="9" width="128" height="178"/>
         <element name="GeoPoint" positionX="286" positionY="563" width="128" height="73"/>
-        <element name="User" positionX="-11" positionY="360" width="128" height="163"/>
-        <element name="Price" positionX="871" positionY="144" width="128" height="133"/>
+        <element name="Login" positionX="-117" positionY="63" width="128" height="75"/>
         <element name="MyOrders" positionX="171" positionY="-66" width="128" height="148"/>
         <element name="MyPurchases" positionX="216" positionY="279" width="128" height="163"/>
-        <element name="Place" positionX="-90" positionY="-126" width="128" height="118"/>
-        <element name="NewsFeed" positionX="34" positionY="576" width="128" height="118"/>
         <element name="MyStock" positionX="-200" positionY="351" width="128" height="178"/>
+        <element name="NewsFeed" positionX="34" positionY="576" width="128" height="118"/>
+        <element name="Place" positionX="-90" positionY="-126" width="128" height="118"/>
+        <element name="Price" positionX="871" positionY="144" width="128" height="210"/>
+        <element name="Product" positionX="-360" positionY="-129" width="128" height="88"/>
+        <element name="Stock" positionX="-108" positionY="9" width="128" height="178"/>
         <element name="Token" positionX="-126" positionY="54" width="128" height="135"/>
-        <element name="Login" positionX="-117" positionY="63" width="128" height="75"/>
+        <element name="Unit" positionX="-360" positionY="132" width="128" height="88"/>
+        <element name="User" positionX="-11" positionY="360" width="128" height="163"/>
     </elements>
 </model>

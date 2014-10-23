@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		092A214FD7954C2EB2E9EB25 /* libPods-Agronegocios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40EDC4279B7347119FB1AE5B /* libPods-Agronegocios.a */; };
+		632CCEFD19F71B4C00B6A550 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 632CCEFC19F71B4C00B6A550 /* CoreData.framework */; };
+		6338B5E619F7170C0029F07A /* Price.m in Sources */ = {isa = PBXBuildFile; fileRef = 6338B5E519F7170C0029F07A /* Price.m */; };
 		63495EE019A259D6007BB920 /* comprador.png in Resources */ = {isa = PBXBuildFile; fileRef = 63495EDF19A259D6007BB920 /* comprador.png */; };
 		63495EE219A25A0D007BB920 /* productor.png in Resources */ = {isa = PBXBuildFile; fileRef = 63495EE119A25A0D007BB920 /* productor.png */; };
+		63551C2619F9AB0A00E49EC7 /* C4CPriceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63551C2519F9AB0A00E49EC7 /* C4CPriceTableViewCell.m */; };
 		635606EE19AC0F73007B41DE /* C4CHomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 635606ED19AC0F73007B41DE /* C4CHomeTableViewController.m */; };
 		635F82DF1973507C008CC466 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = 635F82DE1973507C008CC466 /* login.png */; };
 		635F82E21973510D008CC466 /* C4CLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 635F82E11973510D008CC466 /* C4CLoginViewController.m */; };
@@ -18,7 +21,6 @@
 		635F82EB19735678008CC466 /* calc.png in Resources */ = {isa = PBXBuildFile; fileRef = 635F82E619735678008CC466 /* calc.png */; };
 		635F82EC19735678008CC466 /* folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 635F82E719735678008CC466 /* folder.png */; };
 		635F82ED19735678008CC466 /* papers.png in Resources */ = {isa = PBXBuildFile; fileRef = 635F82E819735678008CC466 /* papers.png */; };
-		635F82F019735BF0008CC466 /* C4CPriceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 635F82EF19735BF0008CC466 /* C4CPriceViewController.m */; };
 		63611B051969FA36006B3282 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63611B041969FA36006B3282 /* Foundation.framework */; };
 		63611B071969FA36006B3282 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63611B061969FA36006B3282 /* CoreGraphics.framework */; };
 		63611B091969FA36006B3282 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63611B081969FA36006B3282 /* UIKit.framework */; };
@@ -33,19 +35,7 @@
 		636CB24519A27D780085FE1A /* C4CWhoamiTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 636CB24419A27D780085FE1A /* C4CWhoamiTableViewController.m */; };
 		6377234819756458004F1970 /* agronegocios.png in Resources */ = {isa = PBXBuildFile; fileRef = 6377234719756458004F1970 /* agronegocios.png */; };
 		6386F14519D86AD3006A6B57 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6386F14319D86AD3006A6B57 /* Model.xcdatamodeld */; };
-		6386F1E019D87A96006A6B57 /* Price.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F1DF19D87A96006A6B57 /* Price.m */; };
-		6386F1E319D87A96006A6B57 /* MyOrders.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F1E219D87A96006A6B57 /* MyOrders.m */; };
-		6386F1E619D87A96006A6B57 /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F1E519D87A96006A6B57 /* Place.m */; };
-		6386F1E919D87A96006A6B57 /* Stock.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F1E819D87A96006A6B57 /* Stock.m */; };
-		6386F1EC19D87A96006A6B57 /* GeoPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F1EB19D87A96006A6B57 /* GeoPoint.m */; };
-		6386F1EF19D87A96006A6B57 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F1EE19D87A96006A6B57 /* Product.m */; };
-		6386F1F219D87A96006A6B57 /* Unit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F1F119D87A96006A6B57 /* Unit.m */; };
-		6386F1F519D87A97006A6B57 /* NewsFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F1F419D87A97006A6B57 /* NewsFeed.m */; };
-		6386F1F819D87A97006A6B57 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F1F719D87A97006A6B57 /* User.m */; };
-		6386F1FB19D87A97006A6B57 /* MyPurchases.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F1FA19D87A97006A6B57 /* MyPurchases.m */; };
-		6386F1FE19D87A97006A6B57 /* MyStock.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F1FD19D87A97006A6B57 /* MyStock.m */; };
 		6386F20519D87D52006A6B57 /* C4CRegisterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F20419D87D52006A6B57 /* C4CRegisterTableViewController.m */; };
-		6386F20C19D8B19A006A6B57 /* C4CJSONResponseSerializerWithData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F20B19D8B19A006A6B57 /* C4CJSONResponseSerializerWithData.m */; };
 		6386F21019D8BA2C006A6B57 /* C4CRootForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F20F19D8BA2C006A6B57 /* C4CRootForm.m */; };
 		6386F21319D8BA98006A6B57 /* C4CLoginForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F21219D8BA98006A6B57 /* C4CLoginForm.m */; };
 		6386F21619D8BABB006A6B57 /* C4CRegistrationForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F21519D8BABB006A6B57 /* C4CRegistrationForm.m */; };
@@ -54,8 +44,8 @@
 		6386F22119D8CC7F006A6B57 /* SubmitButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6386F22019D8CC7F006A6B57 /* SubmitButtonCell.xib */; };
 		6386F22419D90B22006A6B57 /* C4CStockNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F22319D90B22006A6B57 /* C4CStockNewViewController.m */; };
 		6386F22719D90B54006A6B57 /* C4CStockForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F22619D90B54006A6B57 /* C4CStockForm.m */; };
-		6386F22D19D90F1A006A6B57 /* Token.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F22C19D90F1A006A6B57 /* Token.m */; };
-		6386F23019D91152006A6B57 /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F22F19D91152006A6B57 /* Login.m */; };
+		639D97BB19F4213F008418D7 /* C4CPriceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 639D97BA19F4213F008418D7 /* C4CPriceTableViewController.m */; };
+		639D97C419F42DE9008418D7 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 639D97C319F42DE9008418D7 /* Product.m */; };
 		63A68634196CA6EF004EAFC2 /* C4CLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A68633196CA6EF004EAFC2 /* C4CLabel.m */; };
 		63A68637196CAEE6004EAFC2 /* C4CImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A68636196CAEE6004EAFC2 /* C4CImageTableViewCell.m */; };
 		63A68645196DB1DA004EAFC2 /* agricultor.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A68643196DB1DA004EAFC2 /* agricultor.png */; };
@@ -91,8 +81,13 @@
 
 /* Begin PBXFileReference section */
 		40EDC4279B7347119FB1AE5B /* libPods-Agronegocios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Agronegocios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		632CCEFC19F71B4C00B6A550 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		6338B5E419F7170C0029F07A /* Price.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Price.h; sourceTree = "<group>"; };
+		6338B5E519F7170C0029F07A /* Price.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Price.m; sourceTree = "<group>"; };
 		63495EDF19A259D6007BB920 /* comprador.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comprador.png; sourceTree = "<group>"; };
 		63495EE119A25A0D007BB920 /* productor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = productor.png; sourceTree = "<group>"; };
+		63551C2419F9AB0A00E49EC7 /* C4CPriceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CPriceTableViewCell.h; path = Views/C4CPriceTableViewCell.h; sourceTree = "<group>"; };
+		63551C2519F9AB0A00E49EC7 /* C4CPriceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4CPriceTableViewCell.m; path = Views/C4CPriceTableViewCell.m; sourceTree = "<group>"; };
 		635606EC19AC0F73007B41DE /* C4CHomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4CHomeTableViewController.h; sourceTree = "<group>"; };
 		635606ED19AC0F73007B41DE /* C4CHomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CHomeTableViewController.m; sourceTree = "<group>"; };
 		635F82DE1973507C008CC466 /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
@@ -103,8 +98,6 @@
 		635F82E619735678008CC466 /* calc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calc.png; sourceTree = "<group>"; };
 		635F82E719735678008CC466 /* folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = folder.png; sourceTree = "<group>"; };
 		635F82E819735678008CC466 /* papers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = papers.png; sourceTree = "<group>"; };
-		635F82EE19735BF0008CC466 /* C4CPriceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4CPriceViewController.h; sourceTree = "<group>"; };
-		635F82EF19735BF0008CC466 /* C4CPriceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CPriceViewController.m; sourceTree = "<group>"; };
 		63611B011969FA36006B3282 /* Agronegocios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Agronegocios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63611B041969FA36006B3282 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		63611B061969FA36006B3282 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -124,33 +117,9 @@
 		636CB24419A27D780085FE1A /* C4CWhoamiTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CWhoamiTableViewController.m; sourceTree = "<group>"; };
 		6377234719756458004F1970 /* agronegocios.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = agronegocios.png; sourceTree = "<group>"; };
 		6386F14419D86AD3006A6B57 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		6386F1DE19D87A96006A6B57 /* Price.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Price.h; path = Models/Price.h; sourceTree = "<group>"; };
-		6386F1DF19D87A96006A6B57 /* Price.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Price.m; path = Models/Price.m; sourceTree = "<group>"; };
-		6386F1E119D87A96006A6B57 /* MyOrders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyOrders.h; path = Models/MyOrders.h; sourceTree = "<group>"; };
-		6386F1E219D87A96006A6B57 /* MyOrders.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyOrders.m; path = Models/MyOrders.m; sourceTree = "<group>"; };
-		6386F1E419D87A96006A6B57 /* Place.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Place.h; path = Models/Place.h; sourceTree = "<group>"; };
-		6386F1E519D87A96006A6B57 /* Place.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Place.m; path = Models/Place.m; sourceTree = "<group>"; };
-		6386F1E719D87A96006A6B57 /* Stock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Stock.h; path = Models/Stock.h; sourceTree = "<group>"; };
-		6386F1E819D87A96006A6B57 /* Stock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Stock.m; path = Models/Stock.m; sourceTree = "<group>"; };
-		6386F1EA19D87A96006A6B57 /* GeoPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeoPoint.h; path = Models/GeoPoint.h; sourceTree = "<group>"; };
-		6386F1EB19D87A96006A6B57 /* GeoPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeoPoint.m; path = Models/GeoPoint.m; sourceTree = "<group>"; };
-		6386F1ED19D87A96006A6B57 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Product.h; path = Models/Product.h; sourceTree = "<group>"; };
-		6386F1EE19D87A96006A6B57 /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Product.m; path = Models/Product.m; sourceTree = "<group>"; };
-		6386F1F019D87A96006A6B57 /* Unit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Unit.h; path = Models/Unit.h; sourceTree = "<group>"; };
-		6386F1F119D87A96006A6B57 /* Unit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Unit.m; path = Models/Unit.m; sourceTree = "<group>"; };
-		6386F1F319D87A97006A6B57 /* NewsFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsFeed.h; path = Models/NewsFeed.h; sourceTree = "<group>"; };
-		6386F1F419D87A97006A6B57 /* NewsFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsFeed.m; path = Models/NewsFeed.m; sourceTree = "<group>"; };
-		6386F1F619D87A97006A6B57 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Models/User.h; sourceTree = "<group>"; };
-		6386F1F719D87A97006A6B57 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Models/User.m; sourceTree = "<group>"; };
-		6386F1F919D87A97006A6B57 /* MyPurchases.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyPurchases.h; path = Models/MyPurchases.h; sourceTree = "<group>"; };
-		6386F1FA19D87A97006A6B57 /* MyPurchases.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyPurchases.m; path = Models/MyPurchases.m; sourceTree = "<group>"; };
-		6386F1FC19D87A97006A6B57 /* MyStock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyStock.h; path = Models/MyStock.h; sourceTree = "<group>"; };
-		6386F1FD19D87A97006A6B57 /* MyStock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyStock.m; path = Models/MyStock.m; sourceTree = "<group>"; };
 		6386F20319D87D52006A6B57 /* C4CRegisterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4CRegisterTableViewController.h; sourceTree = "<group>"; };
 		6386F20419D87D52006A6B57 /* C4CRegisterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CRegisterTableViewController.m; sourceTree = "<group>"; };
 		6386F20819D880C5006A6B57 /* Webservice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Webservice.h; sourceTree = "<group>"; };
-		6386F20A19D8B19A006A6B57 /* C4CJSONResponseSerializerWithData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CJSONResponseSerializerWithData.h; path = Helpers/C4CJSONResponseSerializerWithData.h; sourceTree = "<group>"; };
-		6386F20B19D8B19A006A6B57 /* C4CJSONResponseSerializerWithData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4CJSONResponseSerializerWithData.m; path = Helpers/C4CJSONResponseSerializerWithData.m; sourceTree = "<group>"; };
 		6386F20E19D8BA2C006A6B57 /* C4CRootForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CRootForm.h; path = Forms/C4CRootForm.h; sourceTree = "<group>"; };
 		6386F20F19D8BA2C006A6B57 /* C4CRootForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4CRootForm.m; path = Forms/C4CRootForm.m; sourceTree = "<group>"; };
 		6386F21119D8BA98006A6B57 /* C4CLoginForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CLoginForm.h; path = Forms/C4CLoginForm.h; sourceTree = "<group>"; };
@@ -166,10 +135,11 @@
 		6386F22319D90B22006A6B57 /* C4CStockNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4CStockNewViewController.m; path = Controllers/C4CStockNewViewController.m; sourceTree = "<group>"; };
 		6386F22519D90B54006A6B57 /* C4CStockForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CStockForm.h; path = Forms/C4CStockForm.h; sourceTree = "<group>"; };
 		6386F22619D90B54006A6B57 /* C4CStockForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4CStockForm.m; path = Forms/C4CStockForm.m; sourceTree = "<group>"; };
-		6386F22B19D90F1A006A6B57 /* Token.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Token.h; path = Models/Token.h; sourceTree = "<group>"; };
-		6386F22C19D90F1A006A6B57 /* Token.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Token.m; path = Models/Token.m; sourceTree = "<group>"; };
-		6386F22E19D91152006A6B57 /* Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Login.h; path = Models/Login.h; sourceTree = "<group>"; };
-		6386F22F19D91152006A6B57 /* Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Login.m; path = Models/Login.m; sourceTree = "<group>"; };
+		639D97B919F4213F008418D7 /* C4CPriceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CPriceTableViewController.h; path = Controllers/C4CPriceTableViewController.h; sourceTree = "<group>"; };
+		639D97BA19F4213F008418D7 /* C4CPriceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4CPriceTableViewController.m; path = Controllers/C4CPriceTableViewController.m; sourceTree = "<group>"; };
+		639D97C219F42DE9008418D7 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Product.h; path = Models/Product.h; sourceTree = "<group>"; };
+		639D97C319F42DE9008418D7 /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Product.m; path = Models/Product.m; sourceTree = "<group>"; };
+		639D980B19F53E96008418D7 /* Agronegocios copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Agronegocios copy-Info.plist"; path = "/Users/david/xcode-projects/Agronegocios/Agronegocios copy-Info.plist"; sourceTree = "<absolute>"; };
 		63A68632196CA6EF004EAFC2 /* C4CLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4CLabel.h; sourceTree = "<group>"; };
 		63A68633196CA6EF004EAFC2 /* C4CLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CLabel.m; sourceTree = "<group>"; };
 		63A68635196CAEE6004EAFC2 /* C4CImageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4CImageTableViewCell.h; sourceTree = "<group>"; };
@@ -195,7 +165,8 @@
 		63F5366C19B6B01600A897A4 /* farmerregister-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "farmerregister-1.png"; sourceTree = "<group>"; };
 		63F5367019B7C0B300A897A4 /* papa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = papa.png; sourceTree = "<group>"; };
 		63F5367619B7C75500A897A4 /* fresa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fresa.png; sourceTree = "<group>"; };
-		F60A556C6DD14941B74DDECB /* Pods-Agronegocios.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Agronegocios.xcconfig"; path = "Pods/Pods-Agronegocios.xcconfig"; sourceTree = "<group>"; };
+		95A08EEF1E382FEC2EFB6F19 /* Pods-Agronegocios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Agronegocios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Agronegocios/Pods-Agronegocios.debug.xcconfig"; sourceTree = "<group>"; };
+		E0B687D5E8076F96712D381A /* Pods-Agronegocios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Agronegocios.release.xcconfig"; path = "Pods/Target Support Files/Pods-Agronegocios/Pods-Agronegocios.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +174,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				632CCEFD19F71B4C00B6A550 /* CoreData.framework in Frameworks */,
 				63611B091969FA36006B3282 /* UIKit.framework in Frameworks */,
 				63E9F102199691FA008FEEA0 /* AudioToolbox.framework in Frameworks */,
 				63E9F100199691F2008FEEA0 /* CFNetwork.framework in Frameworks */,
@@ -233,6 +205,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63551C2319F9AA6800E49EC7 /* Price */ = {
+			isa = PBXGroup;
+			children = (
+				63551C2419F9AB0A00E49EC7 /* C4CPriceTableViewCell.h */,
+				63551C2519F9AB0A00E49EC7 /* C4CPriceTableViewCell.m */,
+			);
+			name = Price;
+			sourceTree = "<group>";
+		};
 		635F82E319735649008CC466 /* icons */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,8 +232,9 @@
 				63611B0A1969FA36006B3282 /* Agronegocios */,
 				63611B231969FA36006B3282 /* AgronegociosTests */,
 				63611B031969FA36006B3282 /* Frameworks */,
-				F60A556C6DD14941B74DDECB /* Pods-Agronegocios.xcconfig */,
 				63611B021969FA36006B3282 /* Products */,
+				C3049EDBC6810DF5F448E47A /* Pods */,
+				639D980B19F53E96008418D7 /* Agronegocios copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -268,6 +250,7 @@
 		63611B031969FA36006B3282 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				632CCEFC19F71B4C00B6A550 /* CoreData.framework */,
 				63E9F101199691FA008FEEA0 /* AudioToolbox.framework */,
 				63E9F0FF199691F2008FEEA0 /* CFNetwork.framework */,
 				63E9F0FD199691DB008FEEA0 /* CoreLocation.framework */,
@@ -290,17 +273,17 @@
 		63611B0A1969FA36006B3282 /* Agronegocios */ = {
 			isa = PBXGroup;
 			children = (
-				6386F20D19D8B9F1006A6B57 /* Forms */,
-				6386F20919D8B170006A6B57 /* Helpers */,
-				6386F20619D87E63006A6B57 /* Config */,
-				63611B42196B5244006B3282 /* Models */,
-				63611B3C196B3A1E006B3282 /* Views */,
-				63611B3B196B3A15006B3282 /* Controllers */,
 				63611B341969FA99006B3282 /* Assets */,
 				63611B131969FA36006B3282 /* C4CAppDelegate.h */,
 				63611B141969FA36006B3282 /* C4CAppDelegate.m */,
+				6386F20619D87E63006A6B57 /* Config */,
+				63611B3B196B3A15006B3282 /* Controllers */,
+				6386F20D19D8B9F1006A6B57 /* Forms */,
+				6386F20919D8B170006A6B57 /* Helpers */,
 				63611B161969FA36006B3282 /* Images.xcassets */,
+				63611B42196B5244006B3282 /* Models */,
 				63611B0B1969FA36006B3282 /* Supporting Files */,
+				63611B3C196B3A1E006B3282 /* Views */,
 			);
 			path = Agronegocios;
 			sourceTree = "<group>";
@@ -370,6 +353,7 @@
 		63611B3C196B3A1E006B3282 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				63551C2319F9AA6800E49EC7 /* Price */,
 				63F5367519B7C14200A897A4 /* Stock */,
 				63A68632196CA6EF004EAFC2 /* C4CLabel.h */,
 				63A68633196CA6EF004EAFC2 /* C4CLabel.m */,
@@ -381,33 +365,11 @@
 		63611B42196B5244006B3282 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				6338B5E419F7170C0029F07A /* Price.h */,
+				6338B5E519F7170C0029F07A /* Price.m */,
 				6386F14319D86AD3006A6B57 /* Model.xcdatamodeld */,
-				6386F22E19D91152006A6B57 /* Login.h */,
-				6386F22F19D91152006A6B57 /* Login.m */,
-				6386F22B19D90F1A006A6B57 /* Token.h */,
-				6386F22C19D90F1A006A6B57 /* Token.m */,
-				6386F1FC19D87A97006A6B57 /* MyStock.h */,
-				6386F1FD19D87A97006A6B57 /* MyStock.m */,
-				6386F1F919D87A97006A6B57 /* MyPurchases.h */,
-				6386F1FA19D87A97006A6B57 /* MyPurchases.m */,
-				6386F1F619D87A97006A6B57 /* User.h */,
-				6386F1F719D87A97006A6B57 /* User.m */,
-				6386F1F319D87A97006A6B57 /* NewsFeed.h */,
-				6386F1F419D87A97006A6B57 /* NewsFeed.m */,
-				6386F1F019D87A96006A6B57 /* Unit.h */,
-				6386F1F119D87A96006A6B57 /* Unit.m */,
-				6386F1ED19D87A96006A6B57 /* Product.h */,
-				6386F1EE19D87A96006A6B57 /* Product.m */,
-				6386F1EA19D87A96006A6B57 /* GeoPoint.h */,
-				6386F1EB19D87A96006A6B57 /* GeoPoint.m */,
-				6386F1E719D87A96006A6B57 /* Stock.h */,
-				6386F1E819D87A96006A6B57 /* Stock.m */,
-				6386F1E419D87A96006A6B57 /* Place.h */,
-				6386F1E519D87A96006A6B57 /* Place.m */,
-				6386F1E119D87A96006A6B57 /* MyOrders.h */,
-				6386F1E219D87A96006A6B57 /* MyOrders.m */,
-				6386F1DE19D87A96006A6B57 /* Price.h */,
-				6386F1DF19D87A96006A6B57 /* Price.m */,
+				639D97C219F42DE9008418D7 /* Product.h */,
+				639D97C319F42DE9008418D7 /* Product.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -432,8 +394,6 @@
 		6386F20919D8B170006A6B57 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				6386F20A19D8B19A006A6B57 /* C4CJSONResponseSerializerWithData.h */,
-				6386F20B19D8B19A006A6B57 /* C4CJSONResponseSerializerWithData.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -497,8 +457,8 @@
 		63E9F1111996F4AF008FEEA0 /* Price */ = {
 			isa = PBXGroup;
 			children = (
-				635F82EE19735BF0008CC466 /* C4CPriceViewController.h */,
-				635F82EF19735BF0008CC466 /* C4CPriceViewController.m */,
+				639D97B919F4213F008418D7 /* C4CPriceTableViewController.h */,
+				639D97BA19F4213F008418D7 /* C4CPriceTableViewController.m */,
 			);
 			name = Price;
 			sourceTree = "<group>";
@@ -519,6 +479,15 @@
 				63F5367019B7C0B300A897A4 /* papa.png */,
 			);
 			name = products;
+			sourceTree = "<group>";
+		};
+		C3049EDBC6810DF5F448E47A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				95A08EEF1E382FEC2EFB6F19 /* Pods-Agronegocios.debug.xcconfig */,
+				E0B687D5E8076F96712D381A /* Pods-Agronegocios.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -662,7 +631,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-Agronegocios-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Agronegocios/Pods-Agronegocios-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -672,38 +641,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6386F1E619D87A96006A6B57 /* Place.m in Sources */,
-				6386F20C19D8B19A006A6B57 /* C4CJSONResponseSerializerWithData.m in Sources */,
+				63551C2619F9AB0A00E49EC7 /* C4CPriceTableViewCell.m in Sources */,
+				639D97C419F42DE9008418D7 /* Product.m in Sources */,
 				6386F20519D87D52006A6B57 /* C4CRegisterTableViewController.m in Sources */,
-				6386F22D19D90F1A006A6B57 /* Token.m in Sources */,
 				6386F21319D8BA98006A6B57 /* C4CLoginForm.m in Sources */,
 				63E9F10A1996CA69008FEEA0 /* C4CProductTableViewController.m in Sources */,
-				6386F1EF19D87A96006A6B57 /* Product.m in Sources */,
 				63E9F1071996A402008FEEA0 /* C4CStockTableViewController.m in Sources */,
-				6386F1E019D87A96006A6B57 /* Price.m in Sources */,
-				6386F1E319D87A96006A6B57 /* MyOrders.m in Sources */,
 				6386F21D19D8C72A006A6B57 /* C4CSubmitButtonCell.m in Sources */,
-				6386F1E919D87A96006A6B57 /* Stock.m in Sources */,
-				6386F23019D91152006A6B57 /* Login.m in Sources */,
-				6386F1FB19D87A97006A6B57 /* MyPurchases.m in Sources */,
-				6386F1F819D87A97006A6B57 /* User.m in Sources */,
+				6338B5E619F7170C0029F07A /* Price.m in Sources */,
+				639D97BB19F4213F008418D7 /* C4CPriceTableViewController.m in Sources */,
 				635F82E21973510D008CC466 /* C4CLoginViewController.m in Sources */,
-				6386F1FE19D87A97006A6B57 /* MyStock.m in Sources */,
 				635606EE19AC0F73007B41DE /* C4CHomeTableViewController.m in Sources */,
 				63611B111969FA36006B3282 /* main.m in Sources */,
 				6386F22419D90B22006A6B57 /* C4CStockNewViewController.m in Sources */,
 				6386F21019D8BA2C006A6B57 /* C4CRootForm.m in Sources */,
-				6386F1F219D87A96006A6B57 /* Unit.m in Sources */,
 				63A68634196CA6EF004EAFC2 /* C4CLabel.m in Sources */,
 				636CB24519A27D780085FE1A /* C4CWhoamiTableViewController.m in Sources */,
 				6386F21619D8BABB006A6B57 /* C4CRegistrationForm.m in Sources */,
 				6386F21919D8BF30006A6B57 /* C4CRootFormViewController.m in Sources */,
-				6386F1EC19D87A96006A6B57 /* GeoPoint.m in Sources */,
 				63A68637196CAEE6004EAFC2 /* C4CImageTableViewCell.m in Sources */,
 				63611B151969FA36006B3282 /* C4CAppDelegate.m in Sources */,
-				635F82F019735BF0008CC466 /* C4CPriceViewController.m in Sources */,
 				6386F22719D90B54006A6B57 /* C4CStockForm.m in Sources */,
-				6386F1F519D87A97006A6B57 /* NewsFeed.m in Sources */,
 				6386F14519D86AD3006A6B57 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -801,7 +759,7 @@
 		};
 		63611B2E1969FA36006B3282 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F60A556C6DD14941B74DDECB /* Pods-Agronegocios.xcconfig */;
+			baseConfigurationReference = 95A08EEF1E382FEC2EFB6F19 /* Pods-Agronegocios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -812,36 +770,16 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Agronegocios/Agronegocios-Prefix.pch";
 				INFOPLIST_FILE = "Agronegocios/Agronegocios-Info.plist";
-				OTHER_LDFLAGS = (
-					"-framework",
-					CoreGraphics,
-					"-framework",
-					CoreLocation,
-					"-framework",
-					CoreText,
-					"-framework",
-					Foundation,
-					"-framework",
-					MessageUI,
-					"-framework",
-					MobileCoreServices,
-					"-framework",
-					QuartzCore,
-					"-framework",
-					Security,
-					"-framework",
-					SystemConfiguration,
-					"-framework",
-					UIKit,
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		63611B2F1969FA36006B3282 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F60A556C6DD14941B74DDECB /* Pods-Agronegocios.xcconfig */;
+			baseConfigurationReference = E0B687D5E8076F96712D381A /* Pods-Agronegocios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -852,29 +790,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Agronegocios/Agronegocios-Prefix.pch";
 				INFOPLIST_FILE = "Agronegocios/Agronegocios-Info.plist";
-				OTHER_LDFLAGS = (
-					"-framework",
-					CoreGraphics,
-					"-framework",
-					CoreLocation,
-					"-framework",
-					CoreText,
-					"-framework",
-					Foundation,
-					"-framework",
-					MessageUI,
-					"-framework",
-					MobileCoreServices,
-					"-framework",
-					QuartzCore,
-					"-framework",
-					Security,
-					"-framework",
-					SystemConfiguration,
-					"-framework",
-					UIKit,
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

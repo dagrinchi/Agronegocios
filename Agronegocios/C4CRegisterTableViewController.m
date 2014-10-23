@@ -29,6 +29,8 @@
     
 }
 
+// REQUIRES AFNETWORKING 2
+/*
 - (IBAction)saveBtn:(id)sender {
     
     SAMHUDView *hud = [[SAMHUDView alloc] initWithTitle:@"Enviando registro" loading:YES];
@@ -40,7 +42,7 @@
                                   @"Email" : emailTxt.text,
                                   @"Password" : passwordTxt.text,
                                   @"ConfirmPassword" : passwordTxt.text };
-    
+
     AFJSONRequestSerializer *requestSerializer = [AFJSONRequestSerializer serializer];
     
 //    [requestSerializer setValue:@"application/json; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
@@ -72,7 +74,7 @@
 
 -(void) returnToLogin:(SAMHUDView *)hud {
     [hud dismiss];
-}
+}*/
 
 
 #pragma mark - Table view data source

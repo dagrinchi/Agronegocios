@@ -1,1 +1,0 @@
-../../MediaRSSParser/MediaRSSParser/RSSMediaThumbnail.h

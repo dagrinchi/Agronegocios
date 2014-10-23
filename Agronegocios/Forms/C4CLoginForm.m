@@ -11,11 +11,16 @@
 
 @implementation C4CLoginForm
 
+- (NSDictionary *)passwordField
+{
+    return @{FXFormFieldTitle: @"Clave", FXFormFieldType : FXFormFieldTypePassword};
+}
+
 - (NSArray *)fields {
     return @[@{FXFormFieldKey: @"identification",
+               FXFormFieldType: FXFormFieldTypeNumber,
                FXFormFieldTitle: @"Documento"},
-             @{FXFormFieldKey: @"password",
-               FXFormFieldTitle: @"Clave"},
+             @"password",
              @{FXFormFieldKey: @"rememberMe",
                FXFormFieldTitle: @"Recordarme"},
              @{//FXFormFieldCell: [C4CSubmitButtonCell class],
