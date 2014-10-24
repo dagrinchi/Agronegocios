@@ -24,6 +24,23 @@
     [refreshControl addTarget:self action:@selector(loadData) forControlEvents:UIControlEventValueChanged];
     self.refreshControl = refreshControl;
     [self.refreshControl beginRefreshing];
+    
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Price"];
+    NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"createdAt" ascending:NO];
+    fetchRequest.sortDescriptors = @[descriptor];
+    NSError *error = nil;
+    
+    self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
+                                                                        managedObjectContext:[RKManagedObjectStore defaultStore].mainQueueManagedObjectContext
+                                                                          sectionNameKeyPath:nil
+                                                                                   cacheName:nil];
+    [self.fetchedResultsController setDelegate:self];
+    if (![self.fetchedResultsController performFetch:&error]) {
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        C4CPriceShowAlertWithError(error);
+        abort();
+    }
+    
     [self loadData];
 }
 
@@ -31,15 +48,13 @@
     [[RKObjectManager sharedManager] getObjectsAtPath:PRICES_PATH
                                            parameters:nil
                                               success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                                                  RKLogInfo(@"Load complete: Table should refresh...");
-                                                  [self.refreshControl endRefreshing];
                                                   [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:@"LastUpdatedAt"];
                                                   [[NSUserDefaults standardUserDefaults] synchronize];
                                               } failure:^(RKObjectRequestOperation *operation, NSError *error) {
-                                                  RKLogError(@"Load failed with error: %@", error);
-                                                  [self.refreshControl endRefreshing];
+                                                  RKLogError(@"Error: %@", error);
                                                   C4CPriceShowAlertWithError(error);
                                               }];
+    [self.refreshControl endRefreshing];
     
 }
 
@@ -48,6 +63,7 @@
     return [sectionInfo numberOfObjects];
 }
 
+/*
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     NSDate *lastUpdatedAt = [[NSUserDefaults standardUserDefaults] objectForKey:@"LastUpdatedAt"];
@@ -56,7 +72,7 @@
         dateString = @"ninguna";
     }
     return [NSString stringWithFormat:@"Última actualización: %@", dateString];
-}
+}*/
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -78,30 +94,6 @@
 }
 
 #pragma mark - Fetched results controller
-
-- (NSFetchedResultsController *)fetchedResultsController
-{
-    if (_fetchedResultsController != nil) {
-        return _fetchedResultsController;
-    }
-    
-    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Price"];
-    
-    NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"createdAt" ascending:NO];
-    fetchRequest.sortDescriptors = @[descriptor];
-    
-    self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
-                                                                        managedObjectContext:[RKManagedObjectStore defaultStore].mainQueueManagedObjectContext
-                                                                          sectionNameKeyPath:nil
-                                                                                   cacheName:nil];
-    NSError *error = nil;
-    if (![self.fetchedResultsController performFetch:&error]) {
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
-    }
-    
-    return _fetchedResultsController;
-}
 
 - (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id <NSFetchedResultsSectionInfo>)sectionInfo
            atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type

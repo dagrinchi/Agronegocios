@@ -18,48 +18,6 @@
     NSError *error = nil;
     
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
-
-    /*NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Model" withExtension:@"momd"];
-    NSManagedObjectModel *managedObjectModel = [[[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL] mutableCopy];
-    RKManagedObjectStore *managedObjectStore = [[RKManagedObjectStore alloc] initWithManagedObjectModel:managedObjectModel];
-    
-    [managedObjectStore createPersistentStoreCoordinator];
-    
-    //NSPersistentStore __unused *persistentStore = [managedObjectStore addInMemoryPersistentStore:&error];
-    //NSAssert(persistentStore, @"Failed to add persistent store: %@", error);
-    NSString *storePath = [RKApplicationDataDirectory() stringByAppendingPathComponent:@"Agronegocios.sqlite"];
-    NSString *seedPath = [[NSBundle mainBundle] pathForResource:@"AgronegociosSeedDatabase" ofType:@"sqlite"];
-    NSPersistentStore *persistentStore = [managedObjectStore addSQLitePersistentStoreAtPath:storePath fromSeedDatabaseAtPath:seedPath withConfiguration:nil options:nil error:&error];
-    NSAssert(persistentStore, @"Failed to add persistent store with error: %@", error);
-    
-    [managedObjectStore createManagedObjectContexts];
-    managedObjectStore.managedObjectCache = [[RKInMemoryManagedObjectCache alloc] initWithManagedObjectContext:managedObjectStore.persistentStoreManagedObjectContext];
-    
-    RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:BASE_URL]];
-    objectManager.managedObjectStore = managedObjectStore;
-
-    [RKObjectManager setSharedManager:objectManager];
-    [objectManager.HTTPClient setDefaultHeader:@"Content-Type" value:@"application/json"];
-    
-    RKEntityMapping *priceMapping = [RKEntityMapping mappingForEntityForName:@"Price" inManagedObjectStore:managedObjectStore];
-    [priceMapping addAttributeMappingsFromDictionary:@{@"priceId" : @"Id",
-                                                  @"productCode" : @"Product.Code",
-                                                  @"productName" : @"Product.Name",
-                                                  @"unitCode" : @"Unit.Code",
-                                                  @"unitName" : @"Unit.Name",
-                                                  @"priceAvgPerUnit" : @"PriceAvgPerUnit",
-                                                  @"priceMaxPerUnit" : @"PriceMaxPerUnit",
-                                                  @"priceMinPerUnit" : @"PriceMinPerUnit",
-                                                  @"location" : @"Location",
-                                                  @"createdAt" : @"Created",
-                                                  @"updatedAt" : @"Updated"}];
-    priceMapping.identificationAttributes = @[@"priceId"];
-    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:priceMapping
-                                                                                       pathPattern:PRICES_PATH
-                                                                                           keyPath:nil
-                                                                                       statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
-    
-    [objectManager addResponseDescriptor:responseDescriptor];*/
     
     NSManagedObjectModel *managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
     RKManagedObjectStore *managedObjectStore = [[RKManagedObjectStore alloc] initWithManagedObjectModel:managedObjectModel];
