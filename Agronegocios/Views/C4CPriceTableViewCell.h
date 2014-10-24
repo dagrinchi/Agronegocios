@@ -10,4 +10,9 @@
 
 @interface C4CPriceTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *productName;
+@property (weak, nonatomic) IBOutlet UILabel *location;
+@property (weak, nonatomic) IBOutlet UILabel *price;
+@property (weak, nonatomic) IBOutlet UILabel *unit;
+
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "C4CPriceTableViewController.h"
+#import "C4CPriceTableViewCell.h"
 #import "Price.h"
 
 @interface C4CPriceTableViewController ()  <NSFetchedResultsControllerDelegate>
@@ -77,7 +78,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *reuseIdentifier = @"priceCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
+    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
+    C4CPriceTableViewCell *cell = (C4CPriceTableViewCell *)[self.tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
+    
+    if (cell == nil) {
+        cell = [[C4CPriceTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier];
+    }
     [self configureCell:cell atIndexPath:indexPath];
     return cell;
 }
@@ -135,11 +141,28 @@
     }
 }
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
+- (void)configureCell:(C4CPriceTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
+    
+    
+    /*Recipe *recipe = nil;
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        recipe = [searchResults objectAtIndex:indexPath.row];
+    } else {
+        recipe = [recipes objectAtIndex:indexPath.row];
+    }
+    
+    cell.nameLabel.text = recipe.name;
+    cell.thumbnailImageView.image = [UIImage imageNamed:recipe.image];
+    cell.prepTimeLabel.text = recipe.prepTime;
+    
+    return cell;*/
+    
     Price *price = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    [cell.textLabel setText:price.productName];
-    [cell.detailTextLabel setText:price.location];
+    [cell.productName setText:price.productName];
+    [cell.location setText:price.location];
+    [cell.price setText:[NSNumberFormatter localizedStringFromNumber:price.priceAvgPerUnit numberStyle:NSNumberFormatterCurrencyStyle]];
+    [cell.unit setText:price.unitCode];
 }
 
 - (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
