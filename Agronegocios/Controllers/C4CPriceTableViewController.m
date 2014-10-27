@@ -16,6 +16,7 @@
 
 @implementation C4CPriceTableViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -30,6 +31,7 @@
     UIColor *bgColor = [UIColor colorWithRed:1 green:0.91 blue:0.74 alpha:1];
     
     self.tableView.backgroundView.backgroundColor = bgColor;
+    self.tableView.backgroundColor = bgColor;
     self.refreshControl.backgroundColor = bgColor;
     self.view.backgroundColor = bgColor;
 }
@@ -65,7 +67,7 @@
                                                   C4CPriceShowAlertWithError(error);
                                               }];
     
-    [self performSelector:@selector(endRefreshControl) withObject:nil afterDelay:2];
+    [self performSelector:@selector(endRefreshControl) withObject:nil afterDelay:1.5];
 }
 
 - (void) endRefreshControl{
@@ -79,7 +81,7 @@
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [cell setBackgroundColor:[UIColor colorWithRed:1 green:0.91 blue:0.74 alpha:1]];
+    cell.backgroundColor = self.tableView.backgroundColor = [UIColor colorWithRed:1 green:0.91 blue:0.74 alpha:1];
 }
 
 #pragma mark - UITableViewDataSource

@@ -14,9 +14,25 @@
 
 @implementation C4CRootFormViewController
 
-- (void)awakeFromNib {
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
     self.formController.form = [[C4CRootForm alloc] init];
+    
+    UIColor *bgColor = [UIColor colorWithRed:1 green:0.91 blue:0.74 alpha:1];
+    
+    self.tableView.backgroundView.backgroundColor = bgColor;
+    self.tableView.backgroundColor = bgColor;
+    self.view.backgroundColor = bgColor;
 }
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    cell.backgroundColor = self.tableView.backgroundColor = [UIColor colorWithRed:1 green:0.91 blue:0.74 alpha:1];
+}
+
+
+
 /*
 - (void)submitLoginForm:(UITableViewCell<FXFormFieldCell> *)cell {
     C4CLoginForm *form = cell.field.form;

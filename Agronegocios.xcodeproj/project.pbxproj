@@ -8,6 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		092A214FD7954C2EB2E9EB25 /* libPods-Agronegocios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40EDC4279B7347119FB1AE5B /* libPods-Agronegocios.a */; };
+		63159EBD19FE07EB0095DD9E /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63159EAD19FE07EB0095DD9E /* Icon-60@2x.png */; };
+		63159EBE19FE07EB0095DD9E /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63159EAE19FE07EB0095DD9E /* Icon-60@3x.png */; };
+		63159EBF19FE07EB0095DD9E /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 63159EAF19FE07EB0095DD9E /* Icon-72.png */; };
+		63159EC019FE07EB0095DD9E /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63159EB019FE07EB0095DD9E /* Icon-72@2x.png */; };
+		63159EC119FE07EB0095DD9E /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 63159EB119FE07EB0095DD9E /* Icon-76.png */; };
+		63159EC219FE07EB0095DD9E /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63159EB219FE07EB0095DD9E /* Icon-76@2x.png */; };
+		63159EC319FE07EB0095DD9E /* Icon-Small-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 63159EB319FE07EB0095DD9E /* Icon-Small-40.png */; };
+		63159EC419FE07EB0095DD9E /* Icon-Small-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63159EB419FE07EB0095DD9E /* Icon-Small-40@2x.png */; };
+		63159EC519FE07EB0095DD9E /* Icon-Small-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63159EB519FE07EB0095DD9E /* Icon-Small-40@3x.png */; };
+		63159EC619FE07EB0095DD9E /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 63159EB619FE07EB0095DD9E /* Icon-Small-50.png */; };
+		63159EC719FE07EB0095DD9E /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63159EB719FE07EB0095DD9E /* Icon-Small-50@2x.png */; };
+		63159EC819FE07EB0095DD9E /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 63159EB819FE07EB0095DD9E /* Icon-Small.png */; };
+		63159EC919FE07EB0095DD9E /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63159EB919FE07EB0095DD9E /* Icon-Small@2x.png */; };
+		63159ECA19FE07EB0095DD9E /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63159EBA19FE07EB0095DD9E /* Icon-Small@3x.png */; };
+		63159ECB19FE07EB0095DD9E /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 63159EBB19FE07EB0095DD9E /* Icon.png */; };
+		63159ECC19FE07EB0095DD9E /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63159EBC19FE07EB0095DD9E /* Icon@2x.png */; };
 		632CCEFD19F71B4C00B6A550 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 632CCEFC19F71B4C00B6A550 /* CoreData.framework */; };
 		6338B5E619F7170C0029F07A /* Price.m in Sources */ = {isa = PBXBuildFile; fileRef = 6338B5E519F7170C0029F07A /* Price.m */; };
 		63495EE019A259D6007BB920 /* comprador.png in Resources */ = {isa = PBXBuildFile; fileRef = 63495EDF19A259D6007BB920 /* comprador.png */; };
@@ -17,7 +33,6 @@
 		63551C3019FAF12100E49EC7 /* README.textile in Resources */ = {isa = PBXBuildFile; fileRef = 63551C2E19FAF12100E49EC7 /* README.textile */; };
 		635606EE19AC0F73007B41DE /* C4CHomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 635606ED19AC0F73007B41DE /* C4CHomeTableViewController.m */; };
 		635F82DF1973507C008CC466 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = 635F82DE1973507C008CC466 /* login.png */; };
-		635F82E21973510D008CC466 /* C4CLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 635F82E11973510D008CC466 /* C4CLoginViewController.m */; };
 		635F82E919735678008CC466 /* aprende.png in Resources */ = {isa = PBXBuildFile; fileRef = 635F82E419735678008CC466 /* aprende.png */; };
 		635F82EA19735678008CC466 /* box.png in Resources */ = {isa = PBXBuildFile; fileRef = 635F82E519735678008CC466 /* box.png */; };
 		635F82EB19735678008CC466 /* calc.png in Resources */ = {isa = PBXBuildFile; fileRef = 635F82E619735678008CC466 /* calc.png */; };
@@ -83,6 +98,22 @@
 
 /* Begin PBXFileReference section */
 		40EDC4279B7347119FB1AE5B /* libPods-Agronegocios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Agronegocios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		63159EAD19FE07EB0095DD9E /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		63159EAE19FE07EB0095DD9E /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
+		63159EAF19FE07EB0095DD9E /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		63159EB019FE07EB0095DD9E /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		63159EB119FE07EB0095DD9E /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
+		63159EB219FE07EB0095DD9E /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
+		63159EB319FE07EB0095DD9E /* Icon-Small-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-40.png"; sourceTree = "<group>"; };
+		63159EB419FE07EB0095DD9E /* Icon-Small-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-40@2x.png"; sourceTree = "<group>"; };
+		63159EB519FE07EB0095DD9E /* Icon-Small-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-40@3x.png"; sourceTree = "<group>"; };
+		63159EB619FE07EB0095DD9E /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		63159EB719FE07EB0095DD9E /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50@2x.png"; sourceTree = "<group>"; };
+		63159EB819FE07EB0095DD9E /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		63159EB919FE07EB0095DD9E /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		63159EBA19FE07EB0095DD9E /* Icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@3x.png"; sourceTree = "<group>"; };
+		63159EBB19FE07EB0095DD9E /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		63159EBC19FE07EB0095DD9E /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		632CCEFC19F71B4C00B6A550 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		6338B5E419F7170C0029F07A /* Price.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Price.h; sourceTree = "<group>"; };
 		6338B5E519F7170C0029F07A /* Price.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Price.m; sourceTree = "<group>"; };
@@ -96,8 +127,6 @@
 		635606EC19AC0F73007B41DE /* C4CHomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4CHomeTableViewController.h; sourceTree = "<group>"; };
 		635606ED19AC0F73007B41DE /* C4CHomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CHomeTableViewController.m; sourceTree = "<group>"; };
 		635F82DE1973507C008CC466 /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
-		635F82E01973510D008CC466 /* C4CLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4CLoginViewController.h; sourceTree = "<group>"; };
-		635F82E11973510D008CC466 /* C4CLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CLoginViewController.m; sourceTree = "<group>"; };
 		635F82E419735678008CC466 /* aprende.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aprende.png; sourceTree = "<group>"; };
 		635F82E519735678008CC466 /* box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = box.png; sourceTree = "<group>"; };
 		635F82E619735678008CC466 /* calc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calc.png; sourceTree = "<group>"; };
@@ -210,6 +239,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63159EAB19FDF58F0095DD9E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				635606EC19AC0F73007B41DE /* C4CHomeTableViewController.h */,
+				635606ED19AC0F73007B41DE /* C4CHomeTableViewController.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		63159EAC19FE07EB0095DD9E /* icon */ = {
+			isa = PBXGroup;
+			children = (
+				63159EAD19FE07EB0095DD9E /* Icon-60@2x.png */,
+				63159EAE19FE07EB0095DD9E /* Icon-60@3x.png */,
+				63159EAF19FE07EB0095DD9E /* Icon-72.png */,
+				63159EB019FE07EB0095DD9E /* Icon-72@2x.png */,
+				63159EB119FE07EB0095DD9E /* Icon-76.png */,
+				63159EB219FE07EB0095DD9E /* Icon-76@2x.png */,
+				63159EB319FE07EB0095DD9E /* Icon-Small-40.png */,
+				63159EB419FE07EB0095DD9E /* Icon-Small-40@2x.png */,
+				63159EB519FE07EB0095DD9E /* Icon-Small-40@3x.png */,
+				63159EB619FE07EB0095DD9E /* Icon-Small-50.png */,
+				63159EB719FE07EB0095DD9E /* Icon-Small-50@2x.png */,
+				63159EB819FE07EB0095DD9E /* Icon-Small.png */,
+				63159EB919FE07EB0095DD9E /* Icon-Small@2x.png */,
+				63159EBA19FE07EB0095DD9E /* Icon-Small@3x.png */,
+				63159EBB19FE07EB0095DD9E /* Icon.png */,
+				63159EBC19FE07EB0095DD9E /* Icon@2x.png */,
+			);
+			path = icon;
+			sourceTree = "<group>";
+		};
 		63551C2319F9AA6800E49EC7 /* Price */ = {
 			isa = PBXGroup;
 			children = (
@@ -342,6 +403,7 @@
 		63611B341969FA99006B3282 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				63159EAC19FE07EB0095DD9E /* icon */,
 				63F5367819B7C75900A897A4 /* products */,
 				63F5366A19B6B01600A897A4 /* clientregister.png */,
 				63F5366B19B6B01600A897A4 /* farmerred.png */,
@@ -360,16 +422,11 @@
 		63611B3B196B3A15006B3282 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				63159EAB19FDF58F0095DD9E /* Home */,
 				6386F1FF19D87CBC006A6B57 /* Register */,
 				63E9F1111996F4AF008FEEA0 /* Price */,
 				63E9F1101996F4A4008FEEA0 /* Login */,
 				63E9F10E1996F47D008FEEA0 /* Stock */,
-				636CB24319A27D780085FE1A /* C4CWhoamiTableViewController.h */,
-				636CB24419A27D780085FE1A /* C4CWhoamiTableViewController.m */,
-				635606EC19AC0F73007B41DE /* C4CHomeTableViewController.h */,
-				635606ED19AC0F73007B41DE /* C4CHomeTableViewController.m */,
-				6386F21719D8BF30006A6B57 /* C4CRootFormViewController.h */,
-				6386F21819D8BF30006A6B57 /* C4CRootFormViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -472,8 +529,10 @@
 		63E9F1101996F4A4008FEEA0 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				635F82E01973510D008CC466 /* C4CLoginViewController.h */,
-				635F82E11973510D008CC466 /* C4CLoginViewController.m */,
+				636CB24319A27D780085FE1A /* C4CWhoamiTableViewController.h */,
+				636CB24419A27D780085FE1A /* C4CWhoamiTableViewController.m */,
+				6386F21719D8BF30006A6B57 /* C4CRootFormViewController.h */,
+				6386F21819D8BF30006A6B57 /* C4CRootFormViewController.m */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -597,23 +656,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				6386F22119D8CC7F006A6B57 /* SubmitButtonCell.xib in Resources */,
+				63159ECC19FE07EB0095DD9E /* Icon@2x.png in Resources */,
 				63F5367119B7C0B300A897A4 /* papa.png in Resources */,
+				63159EC019FE07EB0095DD9E /* Icon-72@2x.png in Resources */,
 				635F82ED19735678008CC466 /* papers.png in Resources */,
+				63159EBF19FE07EB0095DD9E /* Icon-72.png in Resources */,
 				63611B3E196B3A6E006B3282 /* Main.storyboard in Resources */,
+				63159EC519FE07EB0095DD9E /* Icon-Small-40@3x.png in Resources */,
 				635F82DF1973507C008CC466 /* login.png in Resources */,
 				63495EE019A259D6007BB920 /* comprador.png in Resources */,
 				63F5367719B7C75500A897A4 /* fresa.png in Resources */,
 				63495EE219A25A0D007BB920 /* productor.png in Resources */,
 				635F82EB19735678008CC466 /* calc.png in Resources */,
+				63159ECB19FE07EB0095DD9E /* Icon.png in Resources */,
 				63F5366E19B6B01600A897A4 /* farmerred.png in Resources */,
+				63159EC319FE07EB0095DD9E /* Icon-Small-40.png in Resources */,
+				63159EBE19FE07EB0095DD9E /* Icon-60@3x.png in Resources */,
 				63F5366F19B6B01600A897A4 /* farmerregister-1.png in Resources */,
+				63159EC819FE07EB0095DD9E /* Icon-Small.png in Resources */,
 				635F82E919735678008CC466 /* aprende.png in Resources */,
 				63F5366D19B6B01600A897A4 /* clientregister.png in Resources */,
+				63159EC419FE07EB0095DD9E /* Icon-Small-40@2x.png in Resources */,
+				63159EC219FE07EB0095DD9E /* Icon-76@2x.png in Resources */,
+				63159EC919FE07EB0095DD9E /* Icon-Small@2x.png in Resources */,
 				6377234819756458004F1970 /* agronegocios.png in Resources */,
 				635F82EA19735678008CC466 /* box.png in Resources */,
 				63A68646196DB1DA004EAFC2 /* consumidor.png in Resources */,
 				63A68645196DB1DA004EAFC2 /* agricultor.png in Resources */,
+				63159ECA19FE07EB0095DD9E /* Icon-Small@3x.png in Resources */,
+				63159EBD19FE07EB0095DD9E /* Icon-60@2x.png in Resources */,
 				63551C3019FAF12100E49EC7 /* README.textile in Resources */,
+				63159EC119FE07EB0095DD9E /* Icon-76.png in Resources */,
+				63159EC719FE07EB0095DD9E /* Icon-Small-50@2x.png in Resources */,
+				63159EC619FE07EB0095DD9E /* Icon-Small-50.png in Resources */,
 				63611B171969FA36006B3282 /* Images.xcassets in Resources */,
 				635F82EC19735678008CC466 /* folder.png in Resources */,
 			);
@@ -675,7 +750,6 @@
 				6386F21D19D8C72A006A6B57 /* C4CSubmitButtonCell.m in Sources */,
 				6338B5E619F7170C0029F07A /* Price.m in Sources */,
 				639D97BB19F4213F008418D7 /* C4CPriceTableViewController.m in Sources */,
-				635F82E21973510D008CC466 /* C4CLoginViewController.m in Sources */,
 				635606EE19AC0F73007B41DE /* C4CHomeTableViewController.m in Sources */,
 				63611B111969FA36006B3282 /* main.m in Sources */,
 				6386F22419D90B22006A6B57 /* C4CStockNewViewController.m in Sources */,
@@ -788,7 +862,6 @@
 			baseConfigurationReference = 95A08EEF1E382FEC2EFB6F19 /* Pods-Agronegocios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -809,7 +882,6 @@
 			baseConfigurationReference = E0B687D5E8076F96712D381A /* Pods-Agronegocios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

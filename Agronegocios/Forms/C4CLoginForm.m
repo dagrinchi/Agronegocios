@@ -23,7 +23,7 @@
              @"password",
              @{FXFormFieldKey: @"rememberMe",
                FXFormFieldTitle: @"Recordarme"},
-             @{//FXFormFieldCell: [C4CSubmitButtonCell class],
+             @{FXFormFieldCell: [C4CSubmitButtonCell class],
                FXFormFieldTitle: @"Iniciar sesión",
                FXFormFieldAction: @"submitLoginForm:" }];
 }
