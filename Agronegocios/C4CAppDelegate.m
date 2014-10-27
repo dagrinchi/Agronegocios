@@ -9,6 +9,7 @@
 #import "C4CAppDelegate.h"
 #import <RestKit/RestKit.h>
 #import <RestKit/CoreData.h>
+#import <RestKit/Search.h>
 #import "C4CPriceTableViewController.h"
 
 @implementation C4CAppDelegate
@@ -18,22 +19,10 @@
     NSError *error = nil;
     
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
+    //RKLogConfigureByName("RestKit/Search", RKLogLevelTrace);
     
-    NSManagedObjectModel *managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
+    NSManagedObjectModel *managedObjectModel = [[NSManagedObjectModel mergedModelFromBundles:nil] mutableCopy];
     RKManagedObjectStore *managedObjectStore = [[RKManagedObjectStore alloc] initWithManagedObjectModel:managedObjectModel];
-    BOOL success = RKEnsureDirectoryExistsAtPath(RKApplicationDataDirectory(), &error);
-    if (! success) {
-        RKLogError(@"Failed to create Application Data Directory at path '%@': %@", RKApplicationDataDirectory(), error);
-    }
-    NSString *path = [RKApplicationDataDirectory() stringByAppendingPathComponent:@"Agronegocios.sqlite"];
-    NSPersistentStore *persistentStore = [managedObjectStore addSQLitePersistentStoreAtPath:path fromSeedDatabaseAtPath:nil withConfiguration:nil options:nil error:&error];
-    if (! persistentStore) {
-        RKLogError(@"Failed adding persistent store at path '%@': %@", path, error);
-    }
-    [managedObjectStore createManagedObjectContexts];
-    
-    RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:BASE_URL]];
-    objectManager.managedObjectStore = managedObjectStore;
     
     // PRICE MAPPING
     RKEntityMapping *priceMapping = [RKEntityMapping mappingForEntityForName:@"Price" inManagedObjectStore:managedObjectStore];
@@ -49,6 +38,27 @@
                                                        @"Created":   @"createdAt",
                                                        @"Updated":   @"updatedAt"}];
     priceMapping.identificationAttributes = @[@"priceId"];
+    [managedObjectStore addSearchIndexingToEntityForName:@"Price"
+                                            onAttributes:@[@"productName", @"location"]];
+    
+    // CORE DATA INITIALIZATION
+    BOOL success = RKEnsureDirectoryExistsAtPath(RKApplicationDataDirectory(), &error);
+    if (! success) {
+        RKLogError(@"Failed to create Application Data Directory at path '%@': %@", RKApplicationDataDirectory(), error);
+    }
+    NSString *path = [RKApplicationDataDirectory() stringByAppendingPathComponent:@"Agronegocios.sqlite"];
+    NSPersistentStore *persistentStore = [managedObjectStore addSQLitePersistentStoreAtPath:path fromSeedDatabaseAtPath:nil withConfiguration:nil options:nil error:&error];
+    if (! persistentStore) {
+        RKLogError(@"Failed adding persistent store at path '%@': %@", path, error);
+    }
+    
+    [managedObjectStore createManagedObjectContexts];
+    [managedObjectStore startIndexingPersistentStoreManagedObjectContext];
+    
+    RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:BASE_URL]];
+    objectManager.managedObjectStore = managedObjectStore;
+
+    // RESPOSE DESCRIPTOR
     RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:priceMapping
                                                                                             method:RKRequestMethodAny
                                                                                        pathPattern:PRICES_PATH

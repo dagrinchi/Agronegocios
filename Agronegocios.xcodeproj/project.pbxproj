@@ -13,6 +13,8 @@
 		63495EE019A259D6007BB920 /* comprador.png in Resources */ = {isa = PBXBuildFile; fileRef = 63495EDF19A259D6007BB920 /* comprador.png */; };
 		63495EE219A25A0D007BB920 /* productor.png in Resources */ = {isa = PBXBuildFile; fileRef = 63495EE119A25A0D007BB920 /* productor.png */; };
 		63551C2619F9AB0A00E49EC7 /* C4CPriceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63551C2519F9AB0A00E49EC7 /* C4CPriceTableViewCell.m */; };
+		63551C2F19FAF12100E49EC7 /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 63551C2D19FAF12100E49EC7 /* NSDate+Helper.m */; };
+		63551C3019FAF12100E49EC7 /* README.textile in Resources */ = {isa = PBXBuildFile; fileRef = 63551C2E19FAF12100E49EC7 /* README.textile */; };
 		635606EE19AC0F73007B41DE /* C4CHomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 635606ED19AC0F73007B41DE /* C4CHomeTableViewController.m */; };
 		635F82DF1973507C008CC466 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = 635F82DE1973507C008CC466 /* login.png */; };
 		635F82E21973510D008CC466 /* C4CLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 635F82E11973510D008CC466 /* C4CLoginViewController.m */; };
@@ -88,6 +90,9 @@
 		63495EE119A25A0D007BB920 /* productor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = productor.png; sourceTree = "<group>"; };
 		63551C2419F9AB0A00E49EC7 /* C4CPriceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CPriceTableViewCell.h; path = Views/C4CPriceTableViewCell.h; sourceTree = "<group>"; };
 		63551C2519F9AB0A00E49EC7 /* C4CPriceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4CPriceTableViewCell.m; path = Views/C4CPriceTableViewCell.m; sourceTree = "<group>"; };
+		63551C2C19FAF12100E49EC7 /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helper.h"; sourceTree = "<group>"; };
+		63551C2D19FAF12100E49EC7 /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Helper.m"; sourceTree = "<group>"; };
+		63551C2E19FAF12100E49EC7 /* README.textile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.textile; sourceTree = "<group>"; };
 		635606EC19AC0F73007B41DE /* C4CHomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4CHomeTableViewController.h; sourceTree = "<group>"; };
 		635606ED19AC0F73007B41DE /* C4CHomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CHomeTableViewController.m; sourceTree = "<group>"; };
 		635F82DE1973507C008CC466 /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
@@ -214,6 +219,24 @@
 			name = Price;
 			sourceTree = "<group>";
 		};
+		63551C2819FAEFB800E49EC7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				63551C2B19FAF12100E49EC7 /* nsdate-helper */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		63551C2B19FAF12100E49EC7 /* nsdate-helper */ = {
+			isa = PBXGroup;
+			children = (
+				63551C2C19FAF12100E49EC7 /* NSDate+Helper.h */,
+				63551C2D19FAF12100E49EC7 /* NSDate+Helper.m */,
+				63551C2E19FAF12100E49EC7 /* README.textile */,
+			);
+			path = "nsdate-helper";
+			sourceTree = "<group>";
+		};
 		635F82E319735649008CC466 /* icons */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +296,7 @@
 		63611B0A1969FA36006B3282 /* Agronegocios */ = {
 			isa = PBXGroup;
 			children = (
+				63551C2819FAEFB800E49EC7 /* Helpers */,
 				63611B341969FA99006B3282 /* Assets */,
 				63611B131969FA36006B3282 /* C4CAppDelegate.h */,
 				63611B141969FA36006B3282 /* C4CAppDelegate.m */,
@@ -589,6 +613,7 @@
 				635F82EA19735678008CC466 /* box.png in Resources */,
 				63A68646196DB1DA004EAFC2 /* consumidor.png in Resources */,
 				63A68645196DB1DA004EAFC2 /* agricultor.png in Resources */,
+				63551C3019FAF12100E49EC7 /* README.textile in Resources */,
 				63611B171969FA36006B3282 /* Images.xcassets in Resources */,
 				635F82EC19735678008CC466 /* folder.png in Resources */,
 			);
@@ -655,6 +680,7 @@
 				63611B111969FA36006B3282 /* main.m in Sources */,
 				6386F22419D90B22006A6B57 /* C4CStockNewViewController.m in Sources */,
 				6386F21019D8BA2C006A6B57 /* C4CRootForm.m in Sources */,
+				63551C2F19FAF12100E49EC7 /* NSDate+Helper.m in Sources */,
 				63A68634196CA6EF004EAFC2 /* C4CLabel.m in Sources */,
 				636CB24519A27D780085FE1A /* C4CWhoamiTableViewController.m in Sources */,
 				6386F21619D8BABB006A6B57 /* C4CRegistrationForm.m in Sources */,
@@ -763,6 +789,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -783,6 +810,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

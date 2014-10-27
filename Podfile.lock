@@ -20,6 +20,8 @@ PODS:
     - ISO8601DateFormatterValueTransformer (~> 0.6.0)
     - RestKit/Support
     - RKValueTransformers (~> 1.1.0)
+  - RestKit/Search (0.23.3):
+    - RestKit/CoreData
   - RestKit/Support (0.23.3):
     - TransitionKit (= 2.1.0)
   - RKValueTransformers (1.1.0)
@@ -55,6 +57,7 @@ PODS:
 DEPENDENCIES:
   - FXForms (= 1.2.3)
   - RestKit (~> 0.23.3)
+  - RestKit/Search (~> 0.23.3)
   - SSToolkit (= 2.0.0)
   - TDBadgedCell (= 2.6)
 

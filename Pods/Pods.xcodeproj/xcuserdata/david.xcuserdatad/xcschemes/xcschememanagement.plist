@@ -8,265 +8,221 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>Pods-Agronegocios-FXForms.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
 		<key>Pods-Agronegocios-ISO8601DateFormatterValueTransformer.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
 		</dict>
 		<key>Pods-Agronegocios-RKValueTransformers.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>6</integer>
 		</dict>
 		<key>Pods-Agronegocios-RestKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>5</integer>
 		</dict>
 		<key>Pods-Agronegocios-SAMAddressBar.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>7</integer>
 		</dict>
 		<key>Pods-Agronegocios-SAMBadgeView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>8</integer>
 		</dict>
 		<key>Pods-Agronegocios-SAMCategories.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>9</integer>
 		</dict>
 		<key>Pods-Agronegocios-SAMCircleProgressView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>10</integer>
 		</dict>
 		<key>Pods-Agronegocios-SAMGradientView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>11</integer>
 		</dict>
 		<key>Pods-Agronegocios-SAMHUDView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>12</integer>
 		</dict>
 		<key>Pods-Agronegocios-SAMLabel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>13</integer>
 		</dict>
 		<key>Pods-Agronegocios-SAMLoadingView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>14</integer>
 		</dict>
 		<key>Pods-Agronegocios-SAMRateLimit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>15</integer>
 		</dict>
 		<key>Pods-Agronegocios-SAMTextField.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>16</integer>
 		</dict>
 		<key>Pods-Agronegocios-SAMTextView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>17</integer>
 		</dict>
 		<key>Pods-Agronegocios-SAMWebView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>18</integer>
 		</dict>
 		<key>Pods-Agronegocios-SOCKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>19</integer>
 		</dict>
 		<key>Pods-Agronegocios-SSToolkit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>20</integer>
 		</dict>
 		<key>Pods-Agronegocios-TDBadgedCell.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>21</integer>
 		</dict>
 		<key>Pods-Agronegocios-TransitionKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>22</integer>
 		</dict>
 		<key>Pods-Agronegocios.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>044BC218F17BFA36E6B98005</key>
+		<key>04DA2B7E545318DFC89B327E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>12DE6E608C4AB64087A5F078</key>
+		<key>114C457ADBF949583E914A3D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1A40062C8A0DDC0812FDCE6E</key>
+		<key>1C64EE950389A58116C21C87</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>22A5A3B17AA50D95AA096FE8</key>
+		<key>36961D28A7FCB4669FF744CA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>25CD0E1EF781357343B3693C</key>
+		<key>5276C9389F4BEC3A55D24CC2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>295E2DC1C688386EEBFA00B1</key>
+		<key>59851B2789E0F5FB56C8A0C1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3B06880068B4222C949E36E3</key>
+		<key>5D27626D1501EC3706467117</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5BBA99E31CBF699517D8D835</key>
+		<key>6E7AD3DB79EDA02F8E12C5A5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5D171C7236D6989E981D8AB1</key>
+		<key>7042C178B83E0E90A2F84BFD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5E4D739DAEAF24B1A7FC5F24</key>
+		<key>77B59207B2D85AC5280D480E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6683B1FAA8E7AF84B232F752</key>
+		<key>7DB9945538D02C5294C3EE44</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>68C46979A0FCE9A602149692</key>
+		<key>8958849E55D508D6B39C0F23</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>84E45151690F78FCC625FB0F</key>
+		<key>99F5FEC4045F3E7D896CA04F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9525ACDD77D4E2ACADEB25FD</key>
+		<key>A89166276D12E5B4B5E72A77</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9C7BBACAF43D8EB851EA84DA</key>
+		<key>CF1F4F0D51A19BA08978170E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B4314AC687A95EE5CDDA8CDF</key>
+		<key>E2C2B3C326329082D4D3CF95</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B4A9FB970427AADB5B205AF4</key>
+		<key>E6AA4D0A8AA5534DC5798E38</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B6415093C6C11FB2B6C5C8FE</key>
+		<key>EC0F7BF81CA42791076A5ACC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D200D942FA2002F069E2E06A</key>
+		<key>EF6B723935A4432C73E3C183</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E40D3D43CA36E25D666607B2</key>
+		<key>F3F0F903D347FCFD5742FF19</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F5581DF21714072F7560B2C5</key>
+		<key>F5226DD9BA509DB4FE16603D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F7CA7920D96FF509C89D13FC</key>
+		<key>F9998F4C90DDE8891641BFA3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

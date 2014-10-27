@@ -14,5 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *location;
 @property (weak, nonatomic) IBOutlet UILabel *price;
 @property (weak, nonatomic) IBOutlet UILabel *unit;
+@property (weak, nonatomic) IBOutlet UILabel *createDate;
+
 
 @end

@@ -19,30 +19,39 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    RKLogConfigureByName("RestKit/Network", RKLogLevelDebug);
-    
     UIRefreshControl *refreshControl = [UIRefreshControl new];
     [refreshControl addTarget:self action:@selector(loadData) forControlEvents:UIControlEventValueChanged];
     self.refreshControl = refreshControl;
     [self.refreshControl beginRefreshing];
     
+    self.fetchedResultsController = [self newFetchedResultsController];
+    [self loadData];
+    
+    UIColor *bgColor = [UIColor colorWithRed:1 green:0.91 blue:0.74 alpha:1];
+    
+    self.tableView.backgroundView.backgroundColor = bgColor;
+    self.refreshControl.backgroundColor = bgColor;
+    self.view.backgroundColor = bgColor;
+}
+
+- (NSFetchedResultsController *)newFetchedResultsController {
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Price"];
     NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"createdAt" ascending:NO];
     fetchRequest.sortDescriptors = @[descriptor];
     NSError *error = nil;
     
-    self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
+    NSFetchedResultsController *fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
                                                                         managedObjectContext:[RKManagedObjectStore defaultStore].mainQueueManagedObjectContext
                                                                           sectionNameKeyPath:nil
                                                                                    cacheName:nil];
-    [self.fetchedResultsController setDelegate:self];
-    if (![self.fetchedResultsController performFetch:&error]) {
+    
+    [fetchedResultsController setDelegate:self];
+    if (![fetchedResultsController performFetch:&error]) {
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         C4CPriceShowAlertWithError(error);
         abort();
     }
-    
-    [self loadData];
+    return fetchedResultsController;
 }
 
 - (void)loadData {
@@ -55,17 +64,51 @@
                                                   RKLogError(@"Error: %@", error);
                                                   C4CPriceShowAlertWithError(error);
                                               }];
+    
+    [self performSelector:@selector(endRefreshControl) withObject:nil afterDelay:2];
+}
+
+- (void) endRefreshControl{
     [self.refreshControl endRefreshing];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 70;
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [cell setBackgroundColor:[UIColor colorWithRed:1 green:0.91 blue:0.74 alpha:1]];
+}
+
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    if (tableView == self.tableView) {
+        return [[self.fetchedResultsController sections] count];
+    } else if (tableView == self.searchDisplayController.searchResultsTableView) {
+        return [[self.searchFetchedResultsController sections] count];
+    }
+    
+    return 1;
     
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][section];
-    return [sectionInfo numberOfObjects];
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    if (tableView == self.tableView) {
+        return [[[self.fetchedResultsController sections] objectAtIndex:section] numberOfObjects];
+    } else if (tableView == self.searchDisplayController.searchResultsTableView) {
+        return [[[self.searchFetchedResultsController sections] objectAtIndex:section] numberOfObjects];
+    }
+    
+    return 0;
 }
 
 /*
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+ - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     NSDate *lastUpdatedAt = [[NSUserDefaults standardUserDefaults] objectForKey:@"LastUpdatedAt"];
     NSString *dateString = [NSDateFormatter localizedStringFromDate:lastUpdatedAt dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterMediumStyle];
@@ -73,30 +116,57 @@
         dateString = @"ninguna";
     }
     return [NSString stringWithFormat:@"Última actualización: %@", dateString];
-}*/
+}
+ */
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *reuseIdentifier = @"priceCell";
-    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
     C4CPriceTableViewCell *cell = (C4CPriceTableViewCell *)[self.tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
-    
     if (cell == nil) {
         cell = [[C4CPriceTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier];
     }
-    [self configureCell:cell atIndexPath:indexPath];
+    
+    Price *price = nil;
+    if (tableView == self.tableView) {
+        price = [_fetchedResultsController objectAtIndexPath:indexPath];
+    } else if (tableView == self.searchDisplayController.searchResultsTableView) {
+        price = [_searchFetchedResultsController objectAtIndexPath:indexPath];
+    }
+    
+    [cell.productName setText:price.productName];
+    [cell.createDate setText:[NSDate stringForDisplayFromDate:price.createdAt]];
+    [cell.location setText:price.location];
+    [cell.price setText:[NSNumberFormatter localizedStringFromNumber:price.priceAvgPerUnit numberStyle:NSNumberFormatterCurrencyStyle]];
+    [cell.unit setText:price.unitCode];
+
+    
+    UIView *selectedBackgroupdView = [[UIView alloc] init];
+    selectedBackgroupdView.backgroundColor = [UIColor colorWithRed:0.4 green:0.6 blue:0 alpha:0.6];
+    [cell setSelectedBackgroundView:selectedBackgroupdView];
+    
     return cell;
 }
 
-#pragma mark NSFetchedResultsControllerDelegate methods
 
--(void)controllerDidChangeContent:(NSFetchedResultsController *)controller
+#pragma mark - NSFetchedResultsControllerDelegate
+
+- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
 {
-    [self.tableView endUpdates];
+    if (controller == self.fetchedResultsController) {
+        [self.tableView beginUpdates];
+    } else if (controller == self.searchFetchedResultsController) {
+        [self.searchDisplayController.searchResultsTableView beginUpdates];
+    }
 }
 
-- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
-    [self.tableView beginUpdates];
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
+{
+    if (controller == self.fetchedResultsController) {
+        [self.tableView endUpdates];
+    } else if (controller == self.searchFetchedResultsController) {
+        [self.searchDisplayController.searchResultsTableView endUpdates];
+    }
 }
 
 #pragma mark - Fetched results controller
@@ -130,10 +200,6 @@
             [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
             break;
             
-        case NSFetchedResultsChangeUpdate:
-            [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
-            break;
-            
         case NSFetchedResultsChangeMove:
             [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
             [tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
@@ -141,42 +207,24 @@
     }
 }
 
-- (void)configureCell:(C4CPriceTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
+#pragma mark - UISearchDisplayDelegate
+
+- (void)searchDisplayControllerWillBeginSearch:(UISearchDisplayController *)controller
 {
-    
-    
-    /*Recipe *recipe = nil;
-    if (tableView == self.searchDisplayController.searchResultsTableView) {
-        recipe = [searchResults objectAtIndex:indexPath.row];
-    } else {
-        recipe = [recipes objectAtIndex:indexPath.row];
-    }
-    
-    cell.nameLabel.text = recipe.name;
-    cell.thumbnailImageView.image = [UIImage imageNamed:recipe.image];
-    cell.prepTimeLabel.text = recipe.prepTime;
-    
-    return cell;*/
-    
-    Price *price = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    [cell.productName setText:price.productName];
-    [cell.location setText:price.location];
-    [cell.price setText:[NSNumberFormatter localizedStringFromNumber:price.priceAvgPerUnit numberStyle:NSNumberFormatterCurrencyStyle]];
-    [cell.unit setText:price.unitCode];
+    self.searchFetchedResultsController = [self newFetchedResultsController];
 }
 
-- (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
+- (void)searchDisplayControllerDidEndSearch:(UISearchDisplayController *)controller
 {
-    //NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"name contains[c] %@", searchText];
-    //searchResults = [recipes filteredArrayUsingPredicate:resultPredicate];
+    self.searchFetchedResultsController = nil;
 }
 
 -(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
 {
-    [self filterContentForSearchText:searchString
-                               scope:[[self.searchDisplayController.searchBar scopeButtonTitles]
-                                      objectAtIndex:[self.searchDisplayController.searchBar
-                                                     selectedScopeButtonIndex]]];
+    NSPredicate *predicate = [RKSearchPredicate searchPredicateWithText:searchString type:NSAndPredicateType];
+    self.searchFetchedResultsController.fetchRequest.predicate = predicate;
+    NSError *error = nil;
+    [self.searchFetchedResultsController performFetch:&error];
     
     return YES;
 }

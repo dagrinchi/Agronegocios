@@ -10,6 +10,8 @@
 	<string>Agronegocios</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>15F8D286907633BEC1646AEBD4DCF90F044EBBFF</key>
+		<string>https://github.com/billymeltdown/nsdate-helper.git</string>
 		<key>F478BBAA4C91924B48D8F87F9EA6E32A69FE4111</key>
 		<string>https://github.com/dagrinchi/Agronegocios.git</string>
 	</dict>
@@ -17,6 +19,8 @@
 	<string>Agronegocios.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>15F8D286907633BEC1646AEBD4DCF90F044EBBFF</key>
+		<string>../Agronegocios/nsdate-helper</string>
 		<key>F478BBAA4C91924B48D8F87F9EA6E32A69FE4111</key>
 		<string>..</string>
 	</dict>
@@ -35,6 +39,14 @@
 			<string>F478BBAA4C91924B48D8F87F9EA6E32A69FE4111</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Agronegocios</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>15F8D286907633BEC1646AEBD4DCF90F044EBBFF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>nsdate-helper</string>
 		</dict>
 	</array>
 </dict>

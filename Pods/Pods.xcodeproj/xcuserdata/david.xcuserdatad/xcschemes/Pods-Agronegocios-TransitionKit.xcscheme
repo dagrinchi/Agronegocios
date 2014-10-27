@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5D171C7236D6989E981D8AB1"
+               BlueprintIdentifier = "5D27626D1501EC3706467117"
                BuildableName = "libPods-Agronegocios-TransitionKit.a"
                BlueprintName = "Pods-Agronegocios-TransitionKit"
                ReferencedContainer = "container:Pods.xcodeproj">
