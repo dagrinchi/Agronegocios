@@ -168,7 +168,7 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="84M-qD-tGO" kind="relationship" relationship="rootViewController" id="kD4-V4-aOO"/>
+                        <segue destination="84M-qD-tGO" kind="relationship" relationship="rootViewController" id="Mov-Tp-fgl"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hNi-Tq-CY8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -228,15 +228,15 @@
                                             <color key="textColor" red="0.40000000000000002" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0XT-aJ-xiW">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0XT-aJ-xiW">
                                             <rect key="frame" x="206" y="23" width="106" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="106" id="QP9-dZ-RQP"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="18"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unit" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3r-rU-871">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unit" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3r-rU-871">
                                             <rect key="frame" x="206" y="42" width="106" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="yrU-52-5Ip"/>

@@ -140,7 +140,7 @@
     [cell.createDate setText:[NSDate stringForDisplayFromDate:price.createdAt]];
     [cell.location setText:price.location];
     [cell.price setText:[NSNumberFormatter localizedStringFromNumber:price.priceAvgPerUnit numberStyle:NSNumberFormatterCurrencyStyle]];
-    [cell.unit setText:price.unitCode];
+    [cell.unit setText:price.unitName];
 
     
     UIView *selectedBackgroupdView = [[UIView alloc] init];
