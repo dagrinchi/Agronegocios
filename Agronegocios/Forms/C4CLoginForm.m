@@ -11,21 +11,30 @@
 
 @implementation C4CLoginForm
 
+- (NSDictionary *)identificationField
+{
+    return @{@"textLabel.font": [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:18.0]};
+}
+
 - (NSDictionary *)passwordField
 {
-    return @{FXFormFieldTitle: @"Clave", FXFormFieldType : FXFormFieldTypePassword};
+    return @{FXFormFieldTitle: @"Clave",
+             FXFormFieldType : FXFormFieldTypePassword,
+             @"textLabel.font": [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:18.0]};
 }
 
 - (NSArray *)fields {
     return @[@{FXFormFieldKey: @"identification",
                FXFormFieldType: FXFormFieldTypeNumber,
-               FXFormFieldTitle: @"Documento"},
-             @"password",
-             @{FXFormFieldKey: @"rememberMe",
-               FXFormFieldTitle: @"Recordarme"},
-             @{FXFormFieldCell: [C4CSubmitButtonCell class],
-               FXFormFieldTitle: @"Iniciar sesión",
-               FXFormFieldAction: @"submitLoginForm:" }];
+               FXFormFieldTitle: @"No. identificación"},
+             @"password"];
+}
+
+- (NSArray *)extraFields
+{
+    return @[@{FXFormFieldCell: [C4CSubmitButtonCell class],
+               FXFormFieldHeader: @"",
+               FXFormFieldAction: @"submitLoginForm:"}];
 }
 
 @end

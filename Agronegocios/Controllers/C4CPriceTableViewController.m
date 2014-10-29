@@ -34,6 +34,8 @@
     self.tableView.backgroundColor = bgColor;
     self.refreshControl.backgroundColor = bgColor;
     self.view.backgroundColor = bgColor;
+    
+    self.title = @"Precios";
 }
 
 - (NSFetchedResultsController *)newFetchedResultsController {
@@ -53,6 +55,7 @@
         C4CPriceShowAlertWithError(error);
         abort();
     }
+    
     return fetchedResultsController;
 }
 
@@ -60,8 +63,8 @@
     [[RKObjectManager sharedManager] getObjectsAtPath:PRICES_PATH
                                            parameters:nil
                                               success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                                                  [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:@"LastUpdatedAt"];
-                                                  [[NSUserDefaults standardUserDefaults] synchronize];
+                                                  /*[[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:@"LastUpdatedAt"];
+                                                  [[NSUserDefaults standardUserDefaults] synchronize];*/
                                               } failure:^(RKObjectRequestOperation *operation, NSError *error) {
                                                   RKLogError(@"Error: %@", error);
                                                   C4CPriceShowAlertWithError(error);

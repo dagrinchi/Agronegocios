@@ -1,18 +1,13 @@
 //
-//  Product.m
+//  C4CDoncampoImageCell.h
 //  Agronegocios
 //
 //  Created by David Almeciga on 10/28/14.
 //  Copyright (c) 2014 COOL4CODE. All rights reserved.
 //
 
-#import "Product.h"
+#import "FXForms.h"
 
-
-@implementation Product
-
-@dynamic code;
-@dynamic productId;
-@dynamic name;
+@interface C4CDoncampoImageCell : FXFormBaseCell
 
 @end

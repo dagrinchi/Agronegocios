@@ -26,19 +26,19 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="299"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="agronegocios.png" translatesAutoresizingMaskIntoConstraints="NO" id="wSu-yq-fHA">
-                                                    <rect key="frame" x="56" y="52" width="209" height="196"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="agronegocios.png" translatesAutoresizingMaskIntoConstraints="NO" id="wSu-yq-fHA">
+                                                    <rect key="frame" x="56" y="54" width="209" height="192"/>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BUEENAS!!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXK-kp-1yc">
-                                                    <rect key="frame" x="85" y="20" width="151" height="21"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
-                                                    <color key="textColor" red="1" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="¡Buenas!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXK-kp-1yc">
+                                                    <rect key="frame" x="85" y="20" width="151" height="23"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
+                                                    <color key="textColor" red="0.46635272999999999" green="0.69353505289999995" blue="0.01055301478" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="centerY" secondItem="wSu-yq-fHA" secondAttribute="centerY" id="Cl4-7R-TAq"/>
-                                                <constraint firstItem="IXK-kp-1yc" firstAttribute="top" secondItem="dEG-Tv-esk" secondAttribute="top" constant="20" symbolic="YES" id="GRp-Wu-gDj"/>
+                                                <constraint firstItem="IXK-kp-1yc" firstAttribute="top" secondItem="dEG-Tv-esk" secondAttribute="top" constant="20" id="GRp-Wu-gDj"/>
                                                 <constraint firstAttribute="centerX" secondItem="IXK-kp-1yc" secondAttribute="centerX" id="JUv-Cb-a2L"/>
                                                 <constraint firstAttribute="centerX" secondItem="wSu-yq-fHA" secondAttribute="centerX" id="Jin-ID-CXz"/>
                                                 <constraint firstItem="wSu-yq-fHA" firstAttribute="top" secondItem="IXK-kp-1yc" secondAttribute="bottom" constant="11" id="Tnh-ke-7A6"/>
@@ -49,25 +49,35 @@
                                             <outlet property="selectedBackgroundView" destination="mdF-0O-Ctw" id="BXx-4i-QJa"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="DBi-ve-6p8" style="IBUITableViewCellStyleDefault" id="QIT-s6-xwo">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="QIT-s6-xwo">
                                         <rect key="frame" x="0.0" y="335" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QIT-s6-xwo" id="Pvh-Dv-zu2">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Iniciar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DBi-ve-6p8">
-                                                    <rect key="frame" x="15" y="0.0" width="270" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ja-Vg-ICE">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                                    <color key="backgroundColor" red="0.40000000000000002" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="20"/>
+                                                    <state key="normal" title="Iniciar">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="IVg-Lo-67t" kind="push" id="bvZ-ce-sIw"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1Ja-Vg-ICE" firstAttribute="top" secondItem="Pvh-Dv-zu2" secondAttribute="top" id="18X-Zb-vYa"/>
+                                                <constraint firstItem="1Ja-Vg-ICE" firstAttribute="leading" secondItem="Pvh-Dv-zu2" secondAttribute="leading" id="T1D-Sh-OgT"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="1Ja-Vg-ICE" secondAttribute="bottom" constant="-8.5" id="fmq-Tp-Njx"/>
+                                                <constraint firstAttribute="trailing" secondItem="1Ja-Vg-ICE" secondAttribute="trailing" id="roz-3c-3hy"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="selectedBackgroundView" destination="mdF-0O-Ctw" id="Z6n-FF-IbH"/>
-                                            <segue destination="IVg-Lo-67t" kind="push" id="gdr-5P-nSS"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="BJl-3c-LAZ" style="IBUITableViewCellStyleDefault" id="V8J-sA-rur">
@@ -188,7 +198,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Hst-FI-JVd"/>
+                    <navigationItem key="navigationItem" id="Hst-FI-JVd">
+                        <barButtonItem key="backBarButtonItem" title="Atras" id="2Dx-7m-g5v"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oKM-tg-KFM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -203,7 +215,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" red="0.40000000000000002" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Buscar" translucent="NO" id="uMp-ir-X8U">
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Buscar por producto ó mercado" translucent="NO" id="uMp-ir-X8U">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -292,7 +304,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="Bfp-pW-ASV">
                         <barButtonItem key="backBarButtonItem" title="Atras" id="dzX-hu-etA"/>
-                        <barButtonItem key="rightBarButtonItem" title="Iniciar sesión" id="hxh-oR-89g">
+                        <barButtonItem key="rightBarButtonItem" image="user.png" id="hxh-oR-89g">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="0gd-lX-6Ag" kind="push" id="PD8-fd-Bn8"/>
@@ -870,6 +882,7 @@
         <image name="folder.png" width="30" height="30"/>
         <image name="papers.png" width="30" height="30"/>
         <image name="productor.png" width="233" height="239"/>
+        <image name="user.png" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

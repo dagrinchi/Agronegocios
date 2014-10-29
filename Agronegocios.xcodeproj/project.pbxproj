@@ -25,13 +25,20 @@
 		63159ECB19FE07EB0095DD9E /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 63159EBB19FE07EB0095DD9E /* Icon.png */; };
 		63159ECC19FE07EB0095DD9E /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63159EBC19FE07EB0095DD9E /* Icon@2x.png */; };
 		632CCEFD19F71B4C00B6A550 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 632CCEFC19F71B4C00B6A550 /* CoreData.framework */; };
-		6338B5E619F7170C0029F07A /* Price.m in Sources */ = {isa = PBXBuildFile; fileRef = 6338B5E519F7170C0029F07A /* Price.m */; };
 		63495EE019A259D6007BB920 /* comprador.png in Resources */ = {isa = PBXBuildFile; fileRef = 63495EDF19A259D6007BB920 /* comprador.png */; };
 		63495EE219A25A0D007BB920 /* productor.png in Resources */ = {isa = PBXBuildFile; fileRef = 63495EE119A25A0D007BB920 /* productor.png */; };
 		63551C2619F9AB0A00E49EC7 /* C4CPriceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63551C2519F9AB0A00E49EC7 /* C4CPriceTableViewCell.m */; };
 		63551C2F19FAF12100E49EC7 /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 63551C2D19FAF12100E49EC7 /* NSDate+Helper.m */; };
 		63551C3019FAF12100E49EC7 /* README.textile in Resources */ = {isa = PBXBuildFile; fileRef = 63551C2E19FAF12100E49EC7 /* README.textile */; };
 		635606EE19AC0F73007B41DE /* C4CHomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 635606ED19AC0F73007B41DE /* C4CHomeTableViewController.m */; };
+		63581CF81A0053AD0008196F /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 63581CF71A0053AD0008196F /* user.png */; };
+		63581CFE1A00664D0008196F /* C4CDoncampoImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63581CFD1A00664D0008196F /* C4CDoncampoImageCell.xib */; };
+		63581D011A0066D60008196F /* C4CDoncampoImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63581D001A0066D60008196F /* C4CDoncampoImageCell.m */; };
+		63581D041A0069F40008196F /* Token.m in Sources */ = {isa = PBXBuildFile; fileRef = 63581D031A0069F40008196F /* Token.m */; };
+		63581D071A006A140008196F /* Price.m in Sources */ = {isa = PBXBuildFile; fileRef = 63581D061A006A140008196F /* Price.m */; };
+		63581D0A1A006A800008196F /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 63581D091A006A800008196F /* Product.m */; };
+		63581D101A0076C00008196F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63581D0F1A0076C00008196F /* Default-568h@2x.png */; };
+		63581D131A007C150008196F /* Registration.m in Sources */ = {isa = PBXBuildFile; fileRef = 63581D121A007C150008196F /* Registration.m */; };
 		635F82DF1973507C008CC466 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = 635F82DE1973507C008CC466 /* login.png */; };
 		635F82E919735678008CC466 /* aprende.png in Resources */ = {isa = PBXBuildFile; fileRef = 635F82E419735678008CC466 /* aprende.png */; };
 		635F82EA19735678008CC466 /* box.png in Resources */ = {isa = PBXBuildFile; fileRef = 635F82E519735678008CC466 /* box.png */; };
@@ -52,17 +59,15 @@
 		636CB24519A27D780085FE1A /* C4CWhoamiTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 636CB24419A27D780085FE1A /* C4CWhoamiTableViewController.m */; };
 		6377234819756458004F1970 /* agronegocios.png in Resources */ = {isa = PBXBuildFile; fileRef = 6377234719756458004F1970 /* agronegocios.png */; };
 		6386F14519D86AD3006A6B57 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6386F14319D86AD3006A6B57 /* Model.xcdatamodeld */; };
-		6386F20519D87D52006A6B57 /* C4CRegisterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F20419D87D52006A6B57 /* C4CRegisterTableViewController.m */; };
 		6386F21019D8BA2C006A6B57 /* C4CRootForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F20F19D8BA2C006A6B57 /* C4CRootForm.m */; };
 		6386F21319D8BA98006A6B57 /* C4CLoginForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F21219D8BA98006A6B57 /* C4CLoginForm.m */; };
 		6386F21619D8BABB006A6B57 /* C4CRegistrationForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F21519D8BABB006A6B57 /* C4CRegistrationForm.m */; };
 		6386F21919D8BF30006A6B57 /* C4CRootFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F21819D8BF30006A6B57 /* C4CRootFormViewController.m */; };
 		6386F21D19D8C72A006A6B57 /* C4CSubmitButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F21C19D8C72A006A6B57 /* C4CSubmitButtonCell.m */; };
-		6386F22119D8CC7F006A6B57 /* SubmitButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6386F22019D8CC7F006A6B57 /* SubmitButtonCell.xib */; };
+		6386F22119D8CC7F006A6B57 /* C4CSubmitButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6386F22019D8CC7F006A6B57 /* C4CSubmitButtonCell.xib */; };
 		6386F22419D90B22006A6B57 /* C4CStockNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F22319D90B22006A6B57 /* C4CStockNewViewController.m */; };
 		6386F22719D90B54006A6B57 /* C4CStockForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F22619D90B54006A6B57 /* C4CStockForm.m */; };
 		639D97BB19F4213F008418D7 /* C4CPriceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 639D97BA19F4213F008418D7 /* C4CPriceTableViewController.m */; };
-		639D97C419F42DE9008418D7 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 639D97C319F42DE9008418D7 /* Product.m */; };
 		63A68634196CA6EF004EAFC2 /* C4CLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A68633196CA6EF004EAFC2 /* C4CLabel.m */; };
 		63A68637196CAEE6004EAFC2 /* C4CImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A68636196CAEE6004EAFC2 /* C4CImageTableViewCell.m */; };
 		63A68645196DB1DA004EAFC2 /* agricultor.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A68643196DB1DA004EAFC2 /* agricultor.png */; };
@@ -115,8 +120,6 @@
 		63159EBB19FE07EB0095DD9E /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		63159EBC19FE07EB0095DD9E /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		632CCEFC19F71B4C00B6A550 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		6338B5E419F7170C0029F07A /* Price.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Price.h; sourceTree = "<group>"; };
-		6338B5E519F7170C0029F07A /* Price.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Price.m; sourceTree = "<group>"; };
 		63495EDF19A259D6007BB920 /* comprador.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comprador.png; sourceTree = "<group>"; };
 		63495EE119A25A0D007BB920 /* productor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = productor.png; sourceTree = "<group>"; };
 		63551C2419F9AB0A00E49EC7 /* C4CPriceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CPriceTableViewCell.h; path = Views/C4CPriceTableViewCell.h; sourceTree = "<group>"; };
@@ -126,6 +129,19 @@
 		63551C2E19FAF12100E49EC7 /* README.textile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.textile; sourceTree = "<group>"; };
 		635606EC19AC0F73007B41DE /* C4CHomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4CHomeTableViewController.h; sourceTree = "<group>"; };
 		635606ED19AC0F73007B41DE /* C4CHomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CHomeTableViewController.m; sourceTree = "<group>"; };
+		63581CF71A0053AD0008196F /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
+		63581CFD1A00664D0008196F /* C4CDoncampoImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = C4CDoncampoImageCell.xib; sourceTree = "<group>"; };
+		63581CFF1A0066D60008196F /* C4CDoncampoImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CDoncampoImageCell.h; path = Forms/C4CDoncampoImageCell.h; sourceTree = "<group>"; };
+		63581D001A0066D60008196F /* C4CDoncampoImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4CDoncampoImageCell.m; path = Forms/C4CDoncampoImageCell.m; sourceTree = "<group>"; };
+		63581D021A0069F40008196F /* Token.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Token.h; path = Models/Token.h; sourceTree = "<group>"; };
+		63581D031A0069F40008196F /* Token.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Token.m; path = Models/Token.m; sourceTree = "<group>"; };
+		63581D051A006A140008196F /* Price.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Price.h; path = Models/Price.h; sourceTree = "<group>"; };
+		63581D061A006A140008196F /* Price.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Price.m; path = Models/Price.m; sourceTree = "<group>"; };
+		63581D081A006A800008196F /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Product.h; path = Models/Product.h; sourceTree = "<group>"; };
+		63581D091A006A800008196F /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Product.m; path = Models/Product.m; sourceTree = "<group>"; };
+		63581D0F1A0076C00008196F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		63581D111A007C150008196F /* Registration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Registration.h; path = Models/Registration.h; sourceTree = "<group>"; };
+		63581D121A007C150008196F /* Registration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Registration.m; path = Models/Registration.m; sourceTree = "<group>"; };
 		635F82DE1973507C008CC466 /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
 		635F82E419735678008CC466 /* aprende.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aprende.png; sourceTree = "<group>"; };
 		635F82E519735678008CC466 /* box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = box.png; sourceTree = "<group>"; };
@@ -151,8 +167,6 @@
 		636CB24419A27D780085FE1A /* C4CWhoamiTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CWhoamiTableViewController.m; sourceTree = "<group>"; };
 		6377234719756458004F1970 /* agronegocios.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = agronegocios.png; sourceTree = "<group>"; };
 		6386F14419D86AD3006A6B57 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		6386F20319D87D52006A6B57 /* C4CRegisterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4CRegisterTableViewController.h; sourceTree = "<group>"; };
-		6386F20419D87D52006A6B57 /* C4CRegisterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CRegisterTableViewController.m; sourceTree = "<group>"; };
 		6386F20819D880C5006A6B57 /* Webservice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Webservice.h; sourceTree = "<group>"; };
 		6386F20E19D8BA2C006A6B57 /* C4CRootForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CRootForm.h; path = Forms/C4CRootForm.h; sourceTree = "<group>"; };
 		6386F20F19D8BA2C006A6B57 /* C4CRootForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4CRootForm.m; path = Forms/C4CRootForm.m; sourceTree = "<group>"; };
@@ -164,15 +178,13 @@
 		6386F21819D8BF30006A6B57 /* C4CRootFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4CRootFormViewController.m; path = Controllers/C4CRootFormViewController.m; sourceTree = "<group>"; };
 		6386F21B19D8C72A006A6B57 /* C4CSubmitButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CSubmitButtonCell.h; path = Forms/C4CSubmitButtonCell.h; sourceTree = "<group>"; };
 		6386F21C19D8C72A006A6B57 /* C4CSubmitButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4CSubmitButtonCell.m; path = Forms/C4CSubmitButtonCell.m; sourceTree = "<group>"; };
-		6386F22019D8CC7F006A6B57 /* SubmitButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SubmitButtonCell.xib; path = Forms/SubmitButtonCell.xib; sourceTree = "<group>"; };
+		6386F22019D8CC7F006A6B57 /* C4CSubmitButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = C4CSubmitButtonCell.xib; path = Forms/C4CSubmitButtonCell.xib; sourceTree = "<group>"; };
 		6386F22219D90B22006A6B57 /* C4CStockNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CStockNewViewController.h; path = Controllers/C4CStockNewViewController.h; sourceTree = "<group>"; };
 		6386F22319D90B22006A6B57 /* C4CStockNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4CStockNewViewController.m; path = Controllers/C4CStockNewViewController.m; sourceTree = "<group>"; };
 		6386F22519D90B54006A6B57 /* C4CStockForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CStockForm.h; path = Forms/C4CStockForm.h; sourceTree = "<group>"; };
 		6386F22619D90B54006A6B57 /* C4CStockForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4CStockForm.m; path = Forms/C4CStockForm.m; sourceTree = "<group>"; };
 		639D97B919F4213F008418D7 /* C4CPriceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CPriceTableViewController.h; path = Controllers/C4CPriceTableViewController.h; sourceTree = "<group>"; };
 		639D97BA19F4213F008418D7 /* C4CPriceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4CPriceTableViewController.m; path = Controllers/C4CPriceTableViewController.m; sourceTree = "<group>"; };
-		639D97C219F42DE9008418D7 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Product.h; path = Models/Product.h; sourceTree = "<group>"; };
-		639D97C319F42DE9008418D7 /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Product.m; path = Models/Product.m; sourceTree = "<group>"; };
 		639D980B19F53E96008418D7 /* Agronegocios copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Agronegocios copy-Info.plist"; path = "/Users/david/xcode-projects/Agronegocios/Agronegocios copy-Info.plist"; sourceTree = "<absolute>"; };
 		63A68632196CA6EF004EAFC2 /* C4CLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4CLabel.h; sourceTree = "<group>"; };
 		63A68633196CA6EF004EAFC2 /* C4CLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CLabel.m; sourceTree = "<group>"; };
@@ -306,6 +318,7 @@
 				635F82E619735678008CC466 /* calc.png */,
 				635F82E719735678008CC466 /* folder.png */,
 				635F82E819735678008CC466 /* papers.png */,
+				63581CF71A0053AD0008196F /* user.png */,
 			);
 			name = icons;
 			sourceTree = "<group>";
@@ -313,6 +326,7 @@
 		63611AF81969FA36006B3282 = {
 			isa = PBXGroup;
 			children = (
+				63581D0F1A0076C00008196F /* Default-568h@2x.png */,
 				63611B0A1969FA36006B3282 /* Agronegocios */,
 				63611B231969FA36006B3282 /* AgronegociosTests */,
 				63611B031969FA36006B3282 /* Frameworks */,
@@ -423,7 +437,6 @@
 			isa = PBXGroup;
 			children = (
 				63159EAB19FDF58F0095DD9E /* Home */,
-				6386F1FF19D87CBC006A6B57 /* Register */,
 				63E9F1111996F4AF008FEEA0 /* Price */,
 				63E9F1101996F4A4008FEEA0 /* Login */,
 				63E9F10E1996F47D008FEEA0 /* Stock */,
@@ -446,22 +459,17 @@
 		63611B42196B5244006B3282 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				6338B5E419F7170C0029F07A /* Price.h */,
-				6338B5E519F7170C0029F07A /* Price.m */,
 				6386F14319D86AD3006A6B57 /* Model.xcdatamodeld */,
-				639D97C219F42DE9008418D7 /* Product.h */,
-				639D97C319F42DE9008418D7 /* Product.m */,
+				63581D081A006A800008196F /* Product.h */,
+				63581D091A006A800008196F /* Product.m */,
+				63581D051A006A140008196F /* Price.h */,
+				63581D061A006A140008196F /* Price.m */,
+				63581D021A0069F40008196F /* Token.h */,
+				63581D031A0069F40008196F /* Token.m */,
+				63581D111A007C150008196F /* Registration.h */,
+				63581D121A007C150008196F /* Registration.m */,
 			);
 			name = Models;
-			sourceTree = "<group>";
-		};
-		6386F1FF19D87CBC006A6B57 /* Register */ = {
-			isa = PBXGroup;
-			children = (
-				6386F20319D87D52006A6B57 /* C4CRegisterTableViewController.h */,
-				6386F20419D87D52006A6B57 /* C4CRegisterTableViewController.m */,
-			);
-			name = Register;
 			sourceTree = "<group>";
 		};
 		6386F20619D87E63006A6B57 /* Config */ = {
@@ -498,9 +506,12 @@
 		6386F21A19D8C700006A6B57 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				6386F22019D8CC7F006A6B57 /* C4CSubmitButtonCell.xib */,
 				6386F21B19D8C72A006A6B57 /* C4CSubmitButtonCell.h */,
 				6386F21C19D8C72A006A6B57 /* C4CSubmitButtonCell.m */,
-				6386F22019D8CC7F006A6B57 /* SubmitButtonCell.xib */,
+				63581CFD1A00664D0008196F /* C4CDoncampoImageCell.xib */,
+				63581CFF1A0066D60008196F /* C4CDoncampoImageCell.h */,
+				63581D001A0066D60008196F /* C4CDoncampoImageCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -655,7 +666,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6386F22119D8CC7F006A6B57 /* SubmitButtonCell.xib in Resources */,
+				6386F22119D8CC7F006A6B57 /* C4CSubmitButtonCell.xib in Resources */,
 				63159ECC19FE07EB0095DD9E /* Icon@2x.png in Resources */,
 				63F5367119B7C0B300A897A4 /* papa.png in Resources */,
 				63159EC019FE07EB0095DD9E /* Icon-72@2x.png in Resources */,
@@ -672,6 +683,7 @@
 				63F5366E19B6B01600A897A4 /* farmerred.png in Resources */,
 				63159EC319FE07EB0095DD9E /* Icon-Small-40.png in Resources */,
 				63159EBE19FE07EB0095DD9E /* Icon-60@3x.png in Resources */,
+				63581CFE1A00664D0008196F /* C4CDoncampoImageCell.xib in Resources */,
 				63F5366F19B6B01600A897A4 /* farmerregister-1.png in Resources */,
 				63159EC819FE07EB0095DD9E /* Icon-Small.png in Resources */,
 				635F82E919735678008CC466 /* aprende.png in Resources */,
@@ -681,6 +693,7 @@
 				63159EC919FE07EB0095DD9E /* Icon-Small@2x.png in Resources */,
 				6377234819756458004F1970 /* agronegocios.png in Resources */,
 				635F82EA19735678008CC466 /* box.png in Resources */,
+				63581CF81A0053AD0008196F /* user.png in Resources */,
 				63A68646196DB1DA004EAFC2 /* consumidor.png in Resources */,
 				63A68645196DB1DA004EAFC2 /* agricultor.png in Resources */,
 				63159ECA19FE07EB0095DD9E /* Icon-Small@3x.png in Resources */,
@@ -688,6 +701,7 @@
 				63551C3019FAF12100E49EC7 /* README.textile in Resources */,
 				63159EC119FE07EB0095DD9E /* Icon-76.png in Resources */,
 				63159EC719FE07EB0095DD9E /* Icon-Small-50@2x.png in Resources */,
+				63581D101A0076C00008196F /* Default-568h@2x.png in Resources */,
 				63159EC619FE07EB0095DD9E /* Icon-Small-50.png in Resources */,
 				63611B171969FA36006B3282 /* Images.xcassets in Resources */,
 				635F82EC19735678008CC466 /* folder.png in Resources */,
@@ -742,15 +756,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				63551C2619F9AB0A00E49EC7 /* C4CPriceTableViewCell.m in Sources */,
-				639D97C419F42DE9008418D7 /* Product.m in Sources */,
-				6386F20519D87D52006A6B57 /* C4CRegisterTableViewController.m in Sources */,
 				6386F21319D8BA98006A6B57 /* C4CLoginForm.m in Sources */,
 				63E9F10A1996CA69008FEEA0 /* C4CProductTableViewController.m in Sources */,
 				63E9F1071996A402008FEEA0 /* C4CStockTableViewController.m in Sources */,
+				63581D0A1A006A800008196F /* Product.m in Sources */,
 				6386F21D19D8C72A006A6B57 /* C4CSubmitButtonCell.m in Sources */,
-				6338B5E619F7170C0029F07A /* Price.m in Sources */,
+				63581D071A006A140008196F /* Price.m in Sources */,
+				63581D011A0066D60008196F /* C4CDoncampoImageCell.m in Sources */,
 				639D97BB19F4213F008418D7 /* C4CPriceTableViewController.m in Sources */,
 				635606EE19AC0F73007B41DE /* C4CHomeTableViewController.m in Sources */,
+				63581D041A0069F40008196F /* Token.m in Sources */,
 				63611B111969FA36006B3282 /* main.m in Sources */,
 				6386F22419D90B22006A6B57 /* C4CStockNewViewController.m in Sources */,
 				6386F21019D8BA2C006A6B57 /* C4CRootForm.m in Sources */,
@@ -760,6 +775,7 @@
 				6386F21619D8BABB006A6B57 /* C4CRegistrationForm.m in Sources */,
 				6386F21919D8BF30006A6B57 /* C4CRootFormViewController.m in Sources */,
 				63A68637196CAEE6004EAFC2 /* C4CImageTableViewCell.m in Sources */,
+				63581D131A007C150008196F /* Registration.m in Sources */,
 				63611B151969FA36006B3282 /* C4CAppDelegate.m in Sources */,
 				6386F22719D90B54006A6B57 /* C4CStockForm.m in Sources */,
 				6386F14519D86AD3006A6B57 /* Model.xcdatamodeld in Sources */,

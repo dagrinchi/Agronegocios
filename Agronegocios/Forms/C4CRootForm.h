@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "C4CLoginForm.h"
 #import "C4CRegistrationForm.h"
+#import "C4CDoncampoImageCell.h"
 
 @interface C4CRootForm : NSObject <FXForm>
 

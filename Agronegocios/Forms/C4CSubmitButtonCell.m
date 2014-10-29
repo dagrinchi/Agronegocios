@@ -10,7 +10,7 @@
 
 @interface C4CSubmitButtonCell ()
 
-@property (weak, nonatomic) IBOutlet UIButton *cellButton;
+@property (nonatomic, strong) IBOutlet UIButton *cellButton;
 
 @end
 

@@ -11,6 +11,7 @@
 #import <RestKit/CoreData.h>
 #import <RestKit/Search.h>
 #import "C4CPriceTableViewController.h"
+#import "Registration.h"
 
 @implementation C4CAppDelegate
 
@@ -19,7 +20,9 @@
     NSError *error = nil;
     
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
-    //RKLogConfigureByName("RestKit/Search", RKLogLevelTrace);
+    
+    //RKLogConfigureByName("RestKit/CoreData", RKLogLevelDebug);
+    RKLogConfigureByName("RestKit/Search", RKLogLevelTrace);
     
     NSManagedObjectModel *managedObjectModel = [[NSManagedObjectModel mergedModelFromBundles:nil] mutableCopy];
     RKManagedObjectStore *managedObjectStore = [[RKManagedObjectStore alloc] initWithManagedObjectModel:managedObjectModel];
@@ -41,6 +44,25 @@
     [managedObjectStore addSearchIndexingToEntityForName:@"Price"
                                             onAttributes:@[@"productName", @"location"]];
     
+    //REGISTRATION MAPPING
+    RKObjectMapping *registrationMapping = [RKObjectMapping requestMapping];
+    [registrationMapping addAttributeMappingsFromDictionary:@{@"name": @"Name",
+                                                              @"identification": @"Identification",
+                                                              @"phone": @"Phone",
+                                                              @"address": @"Address",
+                                                              @"email": @"Email",
+                                                              @"password": @"Password",
+                                                              @"repeatPassword": @"ConfirmPassword"}];
+    
+    // TOKEN MAPPING
+    /*RKEntityMapping *tokenMapping = [RKEntityMapping mappingForEntityForName:@"Token" inManagedObjectStore:nil];
+    [tokenMapping addAttributeMappingsFromDictionary:@{@"access_token": @"accessToken",
+                                                       @"token_type": @"tokenType",
+                                                       @"expires_in": @"expiresIn",
+                                                       @"userName": @"userName",
+                                                       @".issued": @"expiresAt",
+                                                       @".expires": @"issuedAt"}];*/
+    
     // CORE DATA INITIALIZATION
     BOOL success = RKEnsureDirectoryExistsAtPath(RKApplicationDataDirectory(), &error);
     if (! success) {
@@ -58,13 +80,24 @@
     RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:BASE_URL]];
     objectManager.managedObjectStore = managedObjectStore;
 
-    // RESPOSE DESCRIPTOR
-    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:priceMapping
-                                                                                            method:RKRequestMethodAny
-                                                                                       pathPattern:PRICES_PATH
-                                                                                           keyPath:nil
-                                                                                       statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
-    [objectManager addResponseDescriptor:responseDescriptor];
+    // RESPOSE DESCRIPTOR PRICE
+    [objectManager addResponseDescriptor:[RKResponseDescriptor responseDescriptorWithMapping:priceMapping
+                                                                                      method:RKRequestMethodAny
+                                                                                 pathPattern:PRICES_PATH
+                                                                                     keyPath:nil
+                                                                                 statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)]];
+    
+    /*[objectManager addResponseDescriptor:[RKResponseDescriptor responseDescriptorWithMapping:tokenMapping
+                                                                                      method:RKRequestMethodPOST
+                                                                                 pathPattern:TOKEN_PATH
+                                                                                     keyPath:nil
+                                                                                 statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)]];*/
+    
+    // REQUEST DESCRIPTOR
+    [objectManager addRequestDescriptor:[RKRequestDescriptor requestDescriptorWithMapping:registrationMapping
+                                                                              objectClass:[Registration class]
+                                                                              rootKeyPath:nil
+                                                                                   method:RKRequestMethodAny]];
     
     return YES;
 }

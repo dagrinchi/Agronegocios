@@ -7,6 +7,13 @@
 //
 
 #import "FXForms.h"
+#import "C4CRootForm.h"
+#import "C4CRegistrationForm.h"
+#import "C4CLoginForm.h"
+#import "C4CWhoamiTableViewController.h"
+#import "SAMHUDView.h"
+#import <RestKit/RestKit.h>
+#import "Registration.h"
 
 @interface C4CRootFormViewController : FXFormViewController
 

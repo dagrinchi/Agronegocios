@@ -15,8 +15,7 @@
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4MS-kn-syj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <color key="backgroundColor" red="0.3921568627" green="0.7843137255" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="20"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <state key="normal" title="Enviar">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -26,6 +25,7 @@
                         </connections>
                     </button>
                 </subviews>
+                <color key="backgroundColor" red="1" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
             </tableViewCellContentView>
             <connections>
                 <outlet property="cellButton" destination="4MS-kn-syj" id="KQI-IW-sNL"/>

@@ -12,6 +12,5 @@
 
 @property (nonatomic, copy) NSString *identification;
 @property (nonatomic, copy) NSString *password;
-@property (nonatomic, assign) BOOL rememberMe;
 
 @end

@@ -2,7 +2,7 @@
 //  Price.h
 //  Agronegocios
 //
-//  Created by David Almeciga on 10/21/14.
+//  Created by David Almeciga on 10/28/14.
 //  Copyright (c) 2014 COOL4CODE. All rights reserved.
 //
 
@@ -18,10 +18,10 @@
 @property (nonatomic, retain) NSNumber * priceId;
 @property (nonatomic, retain) NSNumber * priceMaxPerUnit;
 @property (nonatomic, retain) NSNumber * priceMinPerUnit;
-@property (nonatomic, retain) NSDate * updatedAt;
 @property (nonatomic, retain) NSString * productCode;
 @property (nonatomic, retain) NSString * productName;
 @property (nonatomic, retain) NSString * unitCode;
 @property (nonatomic, retain) NSString * unitName;
+@property (nonatomic, retain) NSDate * updatedAt;
 
 @end
