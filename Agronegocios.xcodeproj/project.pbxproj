@@ -56,6 +56,7 @@
 		63611B201969FA36006B3282 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63611B081969FA36006B3282 /* UIKit.framework */; };
 		63611B2A1969FA36006B3282 /* AgronegociosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63611B291969FA36006B3282 /* AgronegociosTests.m */; };
 		63611B3E196B3A6E006B3282 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63611B3D196B3A6E006B3282 /* Main.storyboard */; };
+		6368B6071A018CFC00B3805A /* farmerred140.png in Resources */ = {isa = PBXBuildFile; fileRef = 6368B6061A018CFC00B3805A /* farmerred140.png */; };
 		636CB24519A27D780085FE1A /* C4CWhoamiTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 636CB24419A27D780085FE1A /* C4CWhoamiTableViewController.m */; };
 		6377234819756458004F1970 /* agronegocios.png in Resources */ = {isa = PBXBuildFile; fileRef = 6377234719756458004F1970 /* agronegocios.png */; };
 		6386F14519D86AD3006A6B57 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6386F14319D86AD3006A6B57 /* Model.xcdatamodeld */; };
@@ -163,6 +164,7 @@
 		63611B251969FA36006B3282 /* AgronegociosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AgronegociosTests-Info.plist"; sourceTree = "<group>"; };
 		63611B291969FA36006B3282 /* AgronegociosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AgronegociosTests.m; sourceTree = "<group>"; };
 		63611B3D196B3A6E006B3282 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		6368B6061A018CFC00B3805A /* farmerred140.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = farmerred140.png; sourceTree = "<group>"; };
 		636CB24319A27D780085FE1A /* C4CWhoamiTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4CWhoamiTableViewController.h; sourceTree = "<group>"; };
 		636CB24419A27D780085FE1A /* C4CWhoamiTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CWhoamiTableViewController.m; sourceTree = "<group>"; };
 		6377234719756458004F1970 /* agronegocios.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = agronegocios.png; sourceTree = "<group>"; };
@@ -417,6 +419,7 @@
 		63611B341969FA99006B3282 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				6368B6061A018CFC00B3805A /* farmerred140.png */,
 				63159EAC19FE07EB0095DD9E /* icon */,
 				63F5367819B7C75900A897A4 /* products */,
 				63F5366A19B6B01600A897A4 /* clientregister.png */,
@@ -674,6 +677,7 @@
 				63159EBF19FE07EB0095DD9E /* Icon-72.png in Resources */,
 				63611B3E196B3A6E006B3282 /* Main.storyboard in Resources */,
 				63159EC519FE07EB0095DD9E /* Icon-Small-40@3x.png in Resources */,
+				6368B6071A018CFC00B3805A /* farmerred140.png in Resources */,
 				635F82DF1973507C008CC466 /* login.png in Resources */,
 				63495EE019A259D6007BB920 /* comprador.png in Resources */,
 				63F5367719B7C75500A897A4 /* fresa.png in Resources */,

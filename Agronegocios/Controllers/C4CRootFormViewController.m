@@ -67,14 +67,14 @@
                                                     hud.textLabel.text = @"Listo!";
                                                     hud.loading = FALSE;
                                                     hud.successful = TRUE;
-                                                    
-                                                    [self.navigationController popViewControllerAnimated:YES];
+                                                    [self performSelector:@selector(returnToLogin:) withObject:hud afterDelay:1.5];
                                                     
                                                 }
                                                 failure:^(RKObjectRequestOperation *operation, NSError *error) {
-                                                    RKLogError(@">>>>>>>> Error <<<<<<< %@", error);
-                                                    C4CShowAlertWithError([error localizedDescription]);
+                                                    RKErrorMessage *errorMessage =  [[error.userInfo objectForKey:RKObjectMapperErrorObjectsKey] firstObject];
+                                                    C4CShowAlertWithError(errorMessage.errorMessage);
                                                     [hud dismiss];
+                                                    
                                                 }];
             
             
@@ -88,6 +88,11 @@
         C4CShowAlertWithError(@"Todos los campos son obligatorios");
     }
     
+}
+
+-(void)returnToLogin:(SAMHUDView *) hud {
+    [hud dismiss];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 static void C4CShowAlertWithError(NSString *error)

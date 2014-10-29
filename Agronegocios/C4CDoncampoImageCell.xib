@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -13,15 +14,20 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="s1a-de-OIK" id="gg0-yM-ozd">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="farmerred.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ktq-mc-j0E">
+                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="farmerred140.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ktq-mc-j0E">
                         <rect key="frame" x="0.0" y="8" width="320" height="140"/>
                     </imageView>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="Ktq-mc-j0E" firstAttribute="top" secondItem="gg0-yM-ozd" secondAttribute="topMargin" id="2g9-d6-S4H"/>
+                    <constraint firstAttribute="centerX" secondItem="Ktq-mc-j0E" secondAttribute="centerX" id="7wy-eQ-cV7"/>
+                    <constraint firstItem="Ktq-mc-j0E" firstAttribute="leading" secondItem="gg0-yM-ozd" secondAttribute="leading" id="dqY-sG-5cu"/>
+                </constraints>
             </tableViewCellContentView>
             <point key="canvasLocation" x="234" y="226.5"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="farmerred.png" width="143" height="237"/>
+        <image name="farmerred140.png" width="84" height="140"/>
     </resources>
 </document>

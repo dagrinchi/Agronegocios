@@ -45,14 +45,24 @@
                                             onAttributes:@[@"productName", @"location"]];
     
     //REGISTRATION MAPPING
-    RKObjectMapping *registrationMapping = [RKObjectMapping requestMapping];
-    [registrationMapping addAttributeMappingsFromDictionary:@{@"name": @"Name",
+    RKObjectMapping *registrationRqMapping = [RKObjectMapping requestMapping];
+    [registrationRqMapping addAttributeMappingsFromDictionary:@{@"name": @"Name",
                                                               @"identification": @"Identification",
                                                               @"phone": @"Phone",
                                                               @"address": @"Address",
                                                               @"email": @"Email",
                                                               @"password": @"Password",
                                                               @"repeatPassword": @"ConfirmPassword"}];
+    
+    RKObjectMapping *registrationRpMapping = [RKObjectMapping mappingForClass:[Registration class]];
+    [registrationRpMapping addAttributeMappingsFromDictionary:@{@"name": @"User.Name",
+                                                                @"identification": @"User.Identification",
+                                                                @"phone": @"User.Phone",
+                                                                @"email": @"Email"}];
+    
+    RKObjectMapping *errorMapping = [RKObjectMapping mappingForClass:[RKErrorMessage class]];
+    [errorMapping addPropertyMapping:[RKAttributeMapping attributeMappingFromKeyPath:nil toKeyPath:@"errorMessage"]];
+
     
     // TOKEN MAPPING
     /*RKEntityMapping *tokenMapping = [RKEntityMapping mappingForEntityForName:@"Token" inManagedObjectStore:nil];
@@ -81,11 +91,22 @@
     objectManager.managedObjectStore = managedObjectStore;
 
     // RESPOSE DESCRIPTOR PRICE
-    [objectManager addResponseDescriptor:[RKResponseDescriptor responseDescriptorWithMapping:priceMapping
-                                                                                      method:RKRequestMethodAny
-                                                                                 pathPattern:PRICES_PATH
-                                                                                     keyPath:nil
-                                                                                 statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)]];
+     NSArray *responseDescriptors = @[[RKResponseDescriptor responseDescriptorWithMapping:priceMapping
+                                                                                   method:RKRequestMethodAny
+                                                                              pathPattern:PRICES_PATH
+                                                                                  keyPath:nil
+                                                                              statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)],
+                                      [RKResponseDescriptor responseDescriptorWithMapping:registrationRpMapping
+                                                                                   method:RKRequestMethodAny
+                                                                              pathPattern:REGISTER_PATH
+                                                                                  keyPath:nil
+                                                                              statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)],
+                                      [RKResponseDescriptor responseDescriptorWithMapping:errorMapping
+                                                                                   method:RKRequestMethodAny
+                                                                              pathPattern:nil
+                                                                                  keyPath:@"Message"
+                                                                              statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassClientError)]];
+    [objectManager addResponseDescriptorsFromArray:responseDescriptors];
     
     /*[objectManager addResponseDescriptor:[RKResponseDescriptor responseDescriptorWithMapping:tokenMapping
                                                                                       method:RKRequestMethodPOST
@@ -94,7 +115,7 @@
                                                                                  statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)]];*/
     
     // REQUEST DESCRIPTOR
-    [objectManager addRequestDescriptor:[RKRequestDescriptor requestDescriptorWithMapping:registrationMapping
+    [objectManager addRequestDescriptor:[RKRequestDescriptor requestDescriptorWithMapping:registrationRqMapping
                                                                               objectClass:[Registration class]
                                                                               rootKeyPath:nil
                                                                                    method:RKRequestMethodAny]];
