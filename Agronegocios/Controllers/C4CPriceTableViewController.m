@@ -234,31 +234,23 @@
 
 #pragma mark - Login Button Action
 - (IBAction)loginAction:(id)sender {
-    NSError *error = nil;
-    NSManagedObjectContext *moc = [RKObjectManager sharedManager].managedObjectStore.mainQueueManagedObjectContext;
-    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Token" inManagedObjectContext:moc];
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    [request setEntity:entityDescription];
-    
-    //NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Token"];
-    /*NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"issuedAt" ascending:NO];
-    [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sortDescriptor]];
-    
-    NSArray *results = [moc executeFetchRequest:request error:&error];
-    Token *lastToken = [results objectAtIndex:0];
-    
-    if (lastToken == nil && [NSDate date] >= lastToken.expiresAt) {
-        [self.navigationController pushViewController:[[C4CRootFormViewController alloc] init] animated:YES];
-    } else {
-        [self.navigationController pushViewController:[[C4CWhoamiTableViewController alloc] init] animated:YES];
-    }
-    NSLog(@"Go app %@", [[[NSDateFormatter alloc] init] stringFromDate:lastToken.expiresAt]);*/
-    //[self.navigationController pushViewController:[[C4CRootFormViewController alloc] init] animated:YES];
-    //[self.navigationController pushViewController:[[C4CWhoamiTableViewController alloc] init] animated:YES];
-    
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    C4CWhoamiTableViewController *whoami = [storyBoard instantiateViewControllerWithIdentifier:@"whoami"];
-    [self.navigationController pushViewController:whoami animated:YES];
+    C4CRootFormViewController *loginView = [storyBoard instantiateViewControllerWithIdentifier:@"loginView"];
+    C4CWhoamiTableViewController *whoamiView = [storyBoard instantiateViewControllerWithIdentifier:@"whoamiView"];
+    
+    NSError *error = nil;
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Token"];
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"issuedAt" ascending:NO];
+    [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sortDescriptor]];
+    NSArray *results = [[RKObjectManager sharedManager].managedObjectStore.mainQueueManagedObjectContext executeFetchRequest:fetchRequest error:&error];
+
+    Token *lastToken = [results lastObject];
+    if (lastToken == nil && [NSDate date] >= lastToken.expiresAt) {
+       [self.navigationController pushViewController:loginView animated:YES];
+    } else {
+       [self.navigationController pushViewController:whoamiView animated:YES];
+    }
     
 }
 

@@ -58,8 +58,8 @@
                                                 [self performSelector:@selector(goApp:) withObject:hud afterDelay:1.5];
                                             }
                                             failure:^(RKObjectRequestOperation *operation, NSError *error) {
-                                                RKErrorMessage *errorMessage =  [[error.userInfo objectForKey:RKObjectMapperErrorObjectsKey] firstObject];
-                                                C4CShowAlertWithError(errorMessage.errorMessage);
+                                                //RKErrorMessage *errorMessage =  [[error.userInfo objectForKey:RKObjectMapperErrorObjectsKey] firstObject];
+                                                C4CShowAlertWithError(@"Número de identificación o clave inválidos");
                                                 [hud dismiss];                                                
                                             }];
         
@@ -70,7 +70,8 @@
 
 -(void) goApp:(SAMHUDView *)hud {
     [hud dismiss];
-    [self.navigationController pushViewController:[[C4CWhoamiTableViewController alloc] init] animated:TRUE];
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    [self.navigationController pushViewController:[storyBoard instantiateViewControllerWithIdentifier:@"whoamiView"] animated:TRUE];
 }
 
 static void C4CShowAlertWithError(NSString *error)
