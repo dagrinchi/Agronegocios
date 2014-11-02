@@ -2,7 +2,7 @@
 //  C4CWhoamiTableViewController.h
 //  Agronegocios
 //
-//  Created by David Almeciga on 8/18/14.
+//  Created by David Almeciga on 11/2/14.
 //  Copyright (c) 2014 COOL4CODE. All rights reserved.
 //
 

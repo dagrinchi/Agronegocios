@@ -16,9 +16,6 @@
     
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
     
-    //RKLogConfigureByName("RestKit/CoreData", RKLogLevelDebug);
-    RKLogConfigureByName("RestKit/Search", RKLogLevelTrace);
-    
     NSManagedObjectModel *managedObjectModel = [[NSManagedObjectModel mergedModelFromBundles:nil] mutableCopy];
     RKManagedObjectStore *managedObjectStore = [[RKManagedObjectStore alloc] initWithManagedObjectModel:managedObjectModel];
     
@@ -117,12 +114,6 @@
                                                                               statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)]];
     [objectManager addResponseDescriptorsFromArray:responseDescriptors];
     
-    /*[objectManager addResponseDescriptor:[RKResponseDescriptor responseDescriptorWithMapping:tokenMapping
-                                                                                      method:RKRequestMethodPOST
-                                                                                 pathPattern:TOKEN_PATH
-                                                                                     keyPath:nil
-                                                                                 statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)]];*/
-    
     // REQUEST DESCRIPTOR
     NSArray *requestDescriptors = @[[RKRequestDescriptor requestDescriptorWithMapping:registrationRqMapping
                                                                           objectClass:[Registration class]
@@ -133,26 +124,6 @@
                                                                           rootKeyPath:nil
                                                                                method:RKRequestMethodAny]];
     [objectManager addRequestDescriptorsFromArray:requestDescriptors];
-    
-    /// TEST ///
-    NSManagedObjectContext *moc = [managedObjectStore mainQueueManagedObjectContext];
-    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Token" inManagedObjectContext:moc];
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    [request setEntity:entityDescription];
-    
-    //NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Token"];
-    /*NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"issuedAt" ascending:NO];
-     [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sortDescriptor]];*/
-    
-    NSArray *results = [moc executeFetchRequest:request error:&error];
-    Token *lastToken = [results objectAtIndex:0];
-    
-    /*if (lastToken == nil && [NSDate date] >= lastToken.expiresAt) {
-     [self.navigationController pushViewController:[[C4CRootFormViewController alloc] init] animated:YES];
-     } else {
-     [self.navigationController pushViewController:[[C4CWhoamiTableViewController alloc] init] animated:YES];
-     }*/
-    NSLog(@"Go app %@", [[[NSDateFormatter alloc] init] stringFromDate:lastToken.expiresAt]);
     
     return YES;
 }

@@ -253,7 +253,12 @@
         [self.navigationController pushViewController:[[C4CWhoamiTableViewController alloc] init] animated:YES];
     }
     NSLog(@"Go app %@", [[[NSDateFormatter alloc] init] stringFromDate:lastToken.expiresAt]);*/
-    [self.navigationController pushViewController:[[C4CRootFormViewController alloc] init] animated:YES];
+    //[self.navigationController pushViewController:[[C4CRootFormViewController alloc] init] animated:YES];
+    //[self.navigationController pushViewController:[[C4CWhoamiTableViewController alloc] init] animated:YES];
+    
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    C4CWhoamiTableViewController *whoami = [storyBoard instantiateViewControllerWithIdentifier:@"whoami"];
+    [self.navigationController pushViewController:whoami animated:YES];
     
 }
 
