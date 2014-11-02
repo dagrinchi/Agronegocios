@@ -7,8 +7,6 @@
 //
 
 #import "C4CPriceTableViewController.h"
-#import "C4CPriceTableViewCell.h"
-#import "Price.h"
 
 @interface C4CPriceTableViewController ()  <NSFetchedResultsControllerDelegate>
 
@@ -232,6 +230,31 @@
     [self.searchFetchedResultsController performFetch:&error];
     
     return YES;
+}
+
+#pragma mark - Login Button Action
+- (IBAction)loginAction:(id)sender {
+    NSError *error = nil;
+    NSManagedObjectContext *moc = [RKObjectManager sharedManager].managedObjectStore.mainQueueManagedObjectContext;
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Token" inManagedObjectContext:moc];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:entityDescription];
+    
+    //NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Token"];
+    /*NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"issuedAt" ascending:NO];
+    [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sortDescriptor]];
+    
+    NSArray *results = [moc executeFetchRequest:request error:&error];
+    Token *lastToken = [results objectAtIndex:0];
+    
+    if (lastToken == nil && [NSDate date] >= lastToken.expiresAt) {
+        [self.navigationController pushViewController:[[C4CRootFormViewController alloc] init] animated:YES];
+    } else {
+        [self.navigationController pushViewController:[[C4CWhoamiTableViewController alloc] init] animated:YES];
+    }
+    NSLog(@"Go app %@", [[[NSDateFormatter alloc] init] stringFromDate:lastToken.expiresAt]);*/
+    [self.navigationController pushViewController:[[C4CRootFormViewController alloc] init] animated:YES];
+    
 }
 
 

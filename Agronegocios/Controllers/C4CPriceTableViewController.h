@@ -9,11 +9,17 @@
 #import <UIKit/UIKit.h>
 #import <RestKit/RestKit.h>
 #import <RestKit/Search.h>
+#import "C4CRootFormViewController.h"
+#import "C4CWhoamiTableViewController.h"
+#import "C4CPriceTableViewCell.h"
+#import "C4CAppDelegate.h"
+#import "Price.h"
+#import "Token.h"
 
 @interface C4CPriceTableViewController : UITableViewController
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSFetchedResultsController *searchFetchedResultsController;
-@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *loginButton;
 
 @end

@@ -7,11 +7,6 @@
 //
 
 #import "C4CAppDelegate.h"
-#import <RestKit/RestKit.h>
-#import <RestKit/CoreData.h>
-#import <RestKit/Search.h>
-#import "C4CPriceTableViewController.h"
-#import "Registration.h"
 
 @implementation C4CAppDelegate
 
@@ -30,21 +25,21 @@
     // PRICE MAPPING
     RKEntityMapping *priceMapping = [RKEntityMapping mappingForEntityForName:@"Price" inManagedObjectStore:managedObjectStore];
     [priceMapping addAttributeMappingsFromDictionary:@{@"Id" : @"priceId",
-                                                       @"Product.Code":   @"productCode",
-                                                       @"Product.Name":   @"productName",
-                                                       @"Unit.Code":   @"unitCode",
-                                                       @"Unit.Name":   @"unitName",
-                                                       @"Location":   @"location",
-                                                       @"PriceMaxPerUnit":   @"priceMaxPerUnit",
-                                                       @"PriceMinPerUnit":   @"priceMinPerUnit",
-                                                       @"PriceAvgPerUnit":   @"priceAvgPerUnit",
-                                                       @"Created":   @"createdAt",
-                                                       @"Updated":   @"updatedAt"}];
+                                                       @"Product.Code" : @"productCode",
+                                                       @"Product.Name" : @"productName",
+                                                       @"Unit.Code" : @"unitCode",
+                                                       @"Unit.Name" : @"unitName",
+                                                       @"Location" : @"location",
+                                                       @"PriceMaxPerUnit" : @"priceMaxPerUnit",
+                                                       @"PriceMinPerUnit" : @"priceMinPerUnit",
+                                                       @"PriceAvgPerUnit" : @"priceAvgPerUnit",
+                                                       @"Created" : @"createdAt",
+                                                       @"Updated" : @"updatedAt"}];
     priceMapping.identificationAttributes = @[@"priceId"];
     [managedObjectStore addSearchIndexingToEntityForName:@"Price"
                                             onAttributes:@[@"productName", @"location"]];
     
-    //REGISTRATION MAPPING
+    //REGISTRATION REQUEST MAPPING
     RKObjectMapping *registrationRqMapping = [RKObjectMapping requestMapping];
     [registrationRqMapping addAttributeMappingsFromDictionary:@{@"name": @"Name",
                                                               @"identification": @"Identification",
@@ -54,24 +49,33 @@
                                                               @"password": @"Password",
                                                               @"repeatPassword": @"ConfirmPassword"}];
     
+    //REGISTRATION RESPONSE MAPPING
     RKObjectMapping *registrationRpMapping = [RKObjectMapping mappingForClass:[Registration class]];
     [registrationRpMapping addAttributeMappingsFromDictionary:@{@"name": @"User.Name",
                                                                 @"identification": @"User.Identification",
                                                                 @"phone": @"User.Phone",
                                                                 @"email": @"Email"}];
     
-    RKObjectMapping *errorMapping = [RKObjectMapping mappingForClass:[RKErrorMessage class]];
-    [errorMapping addPropertyMapping:[RKAttributeMapping attributeMappingFromKeyPath:nil toKeyPath:@"errorMessage"]];
-
+    //LOGIN REQUEST MAPPING
+    RKObjectMapping *loginRqMapping = [RKObjectMapping requestMapping];
+    [loginRqMapping addAttributeMappingsFromDictionary:@{@"grantType": @"grant_type",
+                                                         @"username": @"username",
+                                                         @"password": @"password"}];
     
-    // TOKEN MAPPING
-    /*RKEntityMapping *tokenMapping = [RKEntityMapping mappingForEntityForName:@"Token" inManagedObjectStore:nil];
+    //TOKEN RESPONSE MAPPING
+    RKEntityMapping *tokenMapping = [RKEntityMapping mappingForEntityForName:@"Token" inManagedObjectStore:managedObjectStore];
     [tokenMapping addAttributeMappingsFromDictionary:@{@"access_token": @"accessToken",
                                                        @"token_type": @"tokenType",
                                                        @"expires_in": @"expiresIn",
                                                        @"userName": @"userName",
                                                        @".issued": @"expiresAt",
-                                                       @".expires": @"issuedAt"}];*/
+                                                       @".expires": @"issuedAt"}];
+    
+    //ERROR MAPPING RESPONSE
+    RKObjectMapping *errorMapping = [RKObjectMapping mappingForClass:[RKErrorMessage class]];
+    [errorMapping addPropertyMapping:[RKAttributeMapping attributeMappingFromKeyPath:nil toKeyPath:@"errorMessage"]];
+
+    
     
     // CORE DATA INITIALIZATION
     BOOL success = RKEnsureDirectoryExistsAtPath(RKApplicationDataDirectory(), &error);
@@ -90,7 +94,7 @@
     RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:BASE_URL]];
     objectManager.managedObjectStore = managedObjectStore;
 
-    // RESPOSE DESCRIPTOR PRICE
+    // RESPOSE DESCRIPTORS
      NSArray *responseDescriptors = @[[RKResponseDescriptor responseDescriptorWithMapping:priceMapping
                                                                                    method:RKRequestMethodAny
                                                                               pathPattern:PRICES_PATH
@@ -105,7 +109,12 @@
                                                                                    method:RKRequestMethodAny
                                                                               pathPattern:nil
                                                                                   keyPath:@"Message"
-                                                                              statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassClientError)]];
+                                                                              statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassClientError)],
+                                      [RKResponseDescriptor responseDescriptorWithMapping:tokenMapping
+                                                                                   method:RKRequestMethodAny
+                                                                              pathPattern:TOKEN_PATH
+                                                                                  keyPath:nil
+                                                                              statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)]];
     [objectManager addResponseDescriptorsFromArray:responseDescriptors];
     
     /*[objectManager addResponseDescriptor:[RKResponseDescriptor responseDescriptorWithMapping:tokenMapping
@@ -115,10 +124,35 @@
                                                                                  statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)]];*/
     
     // REQUEST DESCRIPTOR
-    [objectManager addRequestDescriptor:[RKRequestDescriptor requestDescriptorWithMapping:registrationRqMapping
-                                                                              objectClass:[Registration class]
-                                                                              rootKeyPath:nil
-                                                                                   method:RKRequestMethodAny]];
+    NSArray *requestDescriptors = @[[RKRequestDescriptor requestDescriptorWithMapping:registrationRqMapping
+                                                                          objectClass:[Registration class]
+                                                                          rootKeyPath:nil
+                                                                               method:RKRequestMethodAny],
+                                    [RKRequestDescriptor requestDescriptorWithMapping:loginRqMapping
+                                                                          objectClass:[Login class]
+                                                                          rootKeyPath:nil
+                                                                               method:RKRequestMethodAny]];
+    [objectManager addRequestDescriptorsFromArray:requestDescriptors];
+    
+    /// TEST ///
+    NSManagedObjectContext *moc = [managedObjectStore mainQueueManagedObjectContext];
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Token" inManagedObjectContext:moc];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:entityDescription];
+    
+    //NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Token"];
+    /*NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"issuedAt" ascending:NO];
+     [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sortDescriptor]];*/
+    
+    NSArray *results = [moc executeFetchRequest:request error:&error];
+    Token *lastToken = [results objectAtIndex:0];
+    
+    /*if (lastToken == nil && [NSDate date] >= lastToken.expiresAt) {
+     [self.navigationController pushViewController:[[C4CRootFormViewController alloc] init] animated:YES];
+     } else {
+     [self.navigationController pushViewController:[[C4CWhoamiTableViewController alloc] init] animated:YES];
+     }*/
+    NSLog(@"Go app %@", [[[NSDateFormatter alloc] init] stringFromDate:lastToken.expiresAt]);
     
     return YES;
 }

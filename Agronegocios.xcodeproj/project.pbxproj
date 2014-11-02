@@ -57,7 +57,9 @@
 		63611B2A1969FA36006B3282 /* AgronegociosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63611B291969FA36006B3282 /* AgronegociosTests.m */; };
 		63611B3E196B3A6E006B3282 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63611B3D196B3A6E006B3282 /* Main.storyboard */; };
 		6368B6071A018CFC00B3805A /* farmerred140.png in Resources */ = {isa = PBXBuildFile; fileRef = 6368B6061A018CFC00B3805A /* farmerred140.png */; };
+		6368B60D1A01A96000B3805A /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 6368B60C1A01A96000B3805A /* Login.m */; };
 		636CB24519A27D780085FE1A /* C4CWhoamiTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 636CB24419A27D780085FE1A /* C4CWhoamiTableViewController.m */; };
+		636CD4621A069EF500712342 /* C4CRegistrationFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 636CD4611A069EF500712342 /* C4CRegistrationFormViewController.m */; };
 		6377234819756458004F1970 /* agronegocios.png in Resources */ = {isa = PBXBuildFile; fileRef = 6377234719756458004F1970 /* agronegocios.png */; };
 		6386F14519D86AD3006A6B57 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6386F14319D86AD3006A6B57 /* Model.xcdatamodeld */; };
 		6386F21019D8BA2C006A6B57 /* C4CRootForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F20F19D8BA2C006A6B57 /* C4CRootForm.m */; };
@@ -165,8 +167,12 @@
 		63611B291969FA36006B3282 /* AgronegociosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AgronegociosTests.m; sourceTree = "<group>"; };
 		63611B3D196B3A6E006B3282 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		6368B6061A018CFC00B3805A /* farmerred140.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = farmerred140.png; sourceTree = "<group>"; };
+		6368B60B1A01A96000B3805A /* Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Login.h; path = Models/Login.h; sourceTree = "<group>"; };
+		6368B60C1A01A96000B3805A /* Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Login.m; path = Models/Login.m; sourceTree = "<group>"; };
 		636CB24319A27D780085FE1A /* C4CWhoamiTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4CWhoamiTableViewController.h; sourceTree = "<group>"; };
 		636CB24419A27D780085FE1A /* C4CWhoamiTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4CWhoamiTableViewController.m; sourceTree = "<group>"; };
+		636CD4601A069EF500712342 /* C4CRegistrationFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CRegistrationFormViewController.h; path = Controllers/C4CRegistrationFormViewController.h; sourceTree = "<group>"; };
+		636CD4611A069EF500712342 /* C4CRegistrationFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4CRegistrationFormViewController.m; path = Controllers/C4CRegistrationFormViewController.m; sourceTree = "<group>"; };
 		6377234719756458004F1970 /* agronegocios.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = agronegocios.png; sourceTree = "<group>"; };
 		6386F14419D86AD3006A6B57 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		6386F20819D880C5006A6B57 /* Webservice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Webservice.h; sourceTree = "<group>"; };
@@ -471,6 +477,8 @@
 				63581D031A0069F40008196F /* Token.m */,
 				63581D111A007C150008196F /* Registration.h */,
 				63581D121A007C150008196F /* Registration.m */,
+				6368B60B1A01A96000B3805A /* Login.h */,
+				6368B60C1A01A96000B3805A /* Login.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -547,6 +555,8 @@
 				636CB24419A27D780085FE1A /* C4CWhoamiTableViewController.m */,
 				6386F21719D8BF30006A6B57 /* C4CRootFormViewController.h */,
 				6386F21819D8BF30006A6B57 /* C4CRootFormViewController.m */,
+				636CD4601A069EF500712342 /* C4CRegistrationFormViewController.h */,
+				636CD4611A069EF500712342 /* C4CRegistrationFormViewController.m */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -764,12 +774,14 @@
 				63E9F10A1996CA69008FEEA0 /* C4CProductTableViewController.m in Sources */,
 				63E9F1071996A402008FEEA0 /* C4CStockTableViewController.m in Sources */,
 				63581D0A1A006A800008196F /* Product.m in Sources */,
+				6368B60D1A01A96000B3805A /* Login.m in Sources */,
 				6386F21D19D8C72A006A6B57 /* C4CSubmitButtonCell.m in Sources */,
 				63581D071A006A140008196F /* Price.m in Sources */,
 				63581D011A0066D60008196F /* C4CDoncampoImageCell.m in Sources */,
 				639D97BB19F4213F008418D7 /* C4CPriceTableViewController.m in Sources */,
 				635606EE19AC0F73007B41DE /* C4CHomeTableViewController.m in Sources */,
 				63581D041A0069F40008196F /* Token.m in Sources */,
+				636CD4621A069EF500712342 /* C4CRegistrationFormViewController.m in Sources */,
 				63611B111969FA36006B3282 /* main.m in Sources */,
 				6386F22419D90B22006A6B57 /* C4CStockNewViewController.m in Sources */,
 				6386F21019D8BA2C006A6B57 /* C4CRootForm.m in Sources */,

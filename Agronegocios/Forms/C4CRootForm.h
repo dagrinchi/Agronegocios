@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "C4CLoginForm.h"
-#import "C4CRegistrationForm.h"
 #import "C4CDoncampoImageCell.h"
+#import "C4CRegistrationFormViewController.h"
 
 @interface C4CRootForm : NSObject <FXForm>
 
 @property (nonatomic, strong) C4CLoginForm * login;
-@property (nonatomic, strong) C4CRegistrationForm * registration;
+@property (nonatomic, strong) C4CRegistrationFormViewController * registration;
 
 @end
