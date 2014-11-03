@@ -71,15 +71,28 @@
         <attribute name="productId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
     </entity>
     <entity name="Stock" representedClassName="Stock" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="expiresAt" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="pricePerUnit" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="productCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="productName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="qty" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <relationship name="geoPoint" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GeoPoint" syncable="YES"/>
-        <relationship name="product" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Product" syncable="YES"/>
-        <relationship name="unit" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Unit" syncable="YES"/>
-        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stockId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="town" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="unitCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="unitId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="unitName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updatedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="userEmail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userIdentification" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userPhone" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Token" representedClassName="Token" syncable="YES">
         <attribute name="accessToken" optional="YES" attributeType="String" syncable="YES"/>
@@ -91,8 +104,8 @@
     </entity>
     <entity name="Unit" representedClassName="Unit" syncable="YES">
         <attribute name="code" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="unitId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
     </entity>
     <entity name="User" representedClassName="User" syncable="YES">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
@@ -114,7 +127,7 @@
         <element name="Place" positionX="-90" positionY="-126" width="128" height="118"/>
         <element name="Price" positionX="871" positionY="144" width="128" height="210"/>
         <element name="Product" positionX="-360" positionY="-129" width="128" height="90"/>
-        <element name="Stock" positionX="-108" positionY="9" width="128" height="178"/>
+        <element name="Stock" positionX="-108" positionY="9" width="128" height="373"/>
         <element name="Token" positionX="-126" positionY="54" width="128" height="135"/>
         <element name="Unit" positionX="-360" positionY="132" width="128" height="88"/>
         <element name="User" positionX="-11" positionY="360" width="128" height="163"/>

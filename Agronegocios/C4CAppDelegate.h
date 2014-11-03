@@ -10,9 +10,12 @@
 #import <RestKit/RestKit.h>
 #import <RestKit/CoreData.h>
 #import <RestKit/Search.h>
+#import <CoreLocation/CoreLocation.h>
 #import "C4CPriceTableViewController.h"
 #import "Registration.h"
 #import "Login.h"
+#import "GeoCode.h"
+#import "Stock.h"
 
 @interface C4CAppDelegate : UIResponder <UIApplicationDelegate>
 @property (strong, nonatomic) UIWindow *window;

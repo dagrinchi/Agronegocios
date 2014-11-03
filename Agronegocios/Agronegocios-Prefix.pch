@@ -14,6 +14,11 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import <CoreData/CoreData.h>
+    #import <RestKit/RestKit.h>
+    #import <FXForms/FXForms.h>
+    #import "SAMHUDView.h"
+    #import "Webservice.h"
+    #import "NSDate+Helper.h"
 #endif
 
 #import <Availability.h>
@@ -29,8 +34,3 @@
 #import <SystemConfiguration/SystemConfiguration.h>
 #import <CoreServices/CoreServices.h>
 #endif
-
-#import <RestKit/RestKit.h>
-#import <FXForms/FXForms.h>
-#import "Webservice.h"
-#import "NSDate+Helper.h"

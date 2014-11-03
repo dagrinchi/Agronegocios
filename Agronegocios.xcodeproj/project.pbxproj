@@ -71,6 +71,14 @@
 		636CD4C11A06BDF700712342 /* C4CDoncampoImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 636CD4C01A06BDF700712342 /* C4CDoncampoImageCell.xib */; };
 		636CD4C31A06BE2800712342 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 636CD4C21A06BE2800712342 /* Main.storyboard */; };
 		636CD4C61A06BE3A00712342 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 636CD4C41A06BE3A00712342 /* Model.xcdatamodeld */; };
+		636CD4CC1A06CFB700712342 /* C4CNewStockFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 636CD4CB1A06CFB700712342 /* C4CNewStockFormViewController.m */; };
+		636CD4CF1A06D29B00712342 /* Unit.m in Sources */ = {isa = PBXBuildFile; fileRef = 636CD4CE1A06D29B00712342 /* Unit.m */; };
+		636CD4DB1A073CF800712342 /* GeoCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 636CD4DA1A073CF800712342 /* GeoCode.m */; };
+		636CD4E81A07DEE700712342 /* Stock.m in Sources */ = {isa = PBXBuildFile; fileRef = 636CD4E71A07DEE700712342 /* Stock.m */; };
+		636CD4E91A07E82F00712342 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E9F0FD199691DB008FEEA0 /* CoreLocation.framework */; };
+		636CD5341A07F30600712342 /* INTULocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 636CD5301A07F30600712342 /* INTULocationManager.m */; };
+		636CD5351A07F30600712342 /* INTULocationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 636CD5321A07F30600712342 /* INTULocationRequest.m */; };
+		636CD53C1A081DB800712342 /* AddressComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 636CD53B1A081DB800712342 /* AddressComponent.m */; };
 		6386F21019D8BA2C006A6B57 /* C4CRootForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F20F19D8BA2C006A6B57 /* C4CRootForm.m */; };
 		6386F21319D8BA98006A6B57 /* C4CLoginForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F21219D8BA98006A6B57 /* C4CLoginForm.m */; };
 		6386F21619D8BABB006A6B57 /* C4CRegistrationForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F21519D8BABB006A6B57 /* C4CRegistrationForm.m */; };
@@ -86,7 +94,6 @@
 		63E9F0F8199691BC008FEEA0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E9F0F7199691BC008FEEA0 /* Security.framework */; };
 		63E9F0FA199691C9008FEEA0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E9F0F9199691C9008FEEA0 /* QuartzCore.framework */; };
 		63E9F0FC199691D2008FEEA0 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E9F0FB199691D2008FEEA0 /* MobileCoreServices.framework */; };
-		63E9F0FE199691DB008FEEA0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E9F0FD199691DB008FEEA0 /* CoreLocation.framework */; };
 		63E9F100199691F2008FEEA0 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E9F0FF199691F2008FEEA0 /* CFNetwork.framework */; };
 		63E9F102199691FA008FEEA0 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E9F101199691FA008FEEA0 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
@@ -186,6 +193,21 @@
 		636CD4C01A06BDF700712342 /* C4CDoncampoImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = C4CDoncampoImageCell.xib; path = Forms/C4CDoncampoImageCell.xib; sourceTree = "<group>"; };
 		636CD4C21A06BE2800712342 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Views/Main.storyboard; sourceTree = "<group>"; };
 		636CD4C51A06BE3A00712342 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		636CD4CA1A06CFB700712342 /* C4CNewStockFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CNewStockFormViewController.h; path = Controllers/C4CNewStockFormViewController.h; sourceTree = "<group>"; };
+		636CD4CB1A06CFB700712342 /* C4CNewStockFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4CNewStockFormViewController.m; path = Controllers/C4CNewStockFormViewController.m; sourceTree = "<group>"; };
+		636CD4CD1A06D29B00712342 /* Unit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Unit.h; path = Models/Unit.h; sourceTree = "<group>"; };
+		636CD4CE1A06D29B00712342 /* Unit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Unit.m; path = Models/Unit.m; sourceTree = "<group>"; };
+		636CD4D91A073CF800712342 /* GeoCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeoCode.h; path = Models/GeoCode.h; sourceTree = "<group>"; };
+		636CD4DA1A073CF800712342 /* GeoCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeoCode.m; path = Models/GeoCode.m; sourceTree = "<group>"; };
+		636CD4E61A07DEE700712342 /* Stock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Stock.h; path = Models/Stock.h; sourceTree = "<group>"; };
+		636CD4E71A07DEE700712342 /* Stock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Stock.m; path = Models/Stock.m; sourceTree = "<group>"; };
+		636CD52F1A07F30600712342 /* INTULocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INTULocationManager.h; sourceTree = "<group>"; };
+		636CD5301A07F30600712342 /* INTULocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INTULocationManager.m; sourceTree = "<group>"; };
+		636CD5311A07F30600712342 /* INTULocationRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INTULocationRequest.h; sourceTree = "<group>"; };
+		636CD5321A07F30600712342 /* INTULocationRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INTULocationRequest.m; sourceTree = "<group>"; };
+		636CD5331A07F30600712342 /* INTULocationRequestDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INTULocationRequestDefines.h; sourceTree = "<group>"; };
+		636CD53A1A081DB800712342 /* AddressComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddressComponent.h; path = Models/AddressComponent.h; sourceTree = "<group>"; };
+		636CD53B1A081DB800712342 /* AddressComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddressComponent.m; path = Models/AddressComponent.m; sourceTree = "<group>"; };
 		6386F20E19D8BA2C006A6B57 /* C4CRootForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CRootForm.h; path = Forms/C4CRootForm.h; sourceTree = "<group>"; };
 		6386F20F19D8BA2C006A6B57 /* C4CRootForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4CRootForm.m; path = Forms/C4CRootForm.m; sourceTree = "<group>"; };
 		6386F21119D8BA98006A6B57 /* C4CLoginForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CLoginForm.h; path = Forms/C4CLoginForm.h; sourceTree = "<group>"; };
@@ -221,12 +243,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				636CD4E91A07E82F00712342 /* CoreLocation.framework in Frameworks */,
 				632CCEFD19F71B4C00B6A550 /* CoreData.framework in Frameworks */,
 				63611B091969FA36006B3282 /* UIKit.framework in Frameworks */,
 				63E9F102199691FA008FEEA0 /* AudioToolbox.framework in Frameworks */,
 				63E9F100199691F2008FEEA0 /* CFNetwork.framework in Frameworks */,
 				63611B071969FA36006B3282 /* CoreGraphics.framework in Frameworks */,
-				63E9F0FE199691DB008FEEA0 /* CoreLocation.framework in Frameworks */,
 				63E9F0FC199691D2008FEEA0 /* MobileCoreServices.framework in Frameworks */,
 				63E9F0FA199691C9008FEEA0 /* QuartzCore.framework in Frameworks */,
 				63E9F0F8199691BC008FEEA0 /* Security.framework in Frameworks */,
@@ -273,6 +295,7 @@
 		63551C2819FAEFB800E49EC7 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				636CD52E1A07F30600712342 /* LocationManager */,
 				636CD4B91A06BDBD00712342 /* nsdate-helper */,
 			);
 			name = Helpers;
@@ -418,7 +441,13 @@
 		63611B42196B5244006B3282 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				636CD4D91A073CF800712342 /* GeoCode.h */,
+				636CD4DA1A073CF800712342 /* GeoCode.m */,
 				636CD4C41A06BE3A00712342 /* Model.xcdatamodeld */,
+				636CD4E61A07DEE700712342 /* Stock.h */,
+				636CD4E71A07DEE700712342 /* Stock.m */,
+				636CD4CD1A06D29B00712342 /* Unit.h */,
+				636CD4CE1A06D29B00712342 /* Unit.m */,
 				63581D081A006A800008196F /* Product.h */,
 				63581D091A006A800008196F /* Product.m */,
 				63581D051A006A140008196F /* Price.h */,
@@ -429,6 +458,8 @@
 				63581D121A007C150008196F /* Registration.m */,
 				6368B60B1A01A96000B3805A /* Login.h */,
 				6368B60C1A01A96000B3805A /* Login.m */,
+				636CD53A1A081DB800712342 /* AddressComponent.h */,
+				636CD53B1A081DB800712342 /* AddressComponent.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -440,6 +471,8 @@
 				636CD4681A06B53700712342 /* C4CMyOrdersTableViewController.m */,
 				636CD46A1A06B58000712342 /* C4CMyStocksTableViewController.h */,
 				636CD46B1A06B58000712342 /* C4CMyStocksTableViewController.m */,
+				636CD4CA1A06CFB700712342 /* C4CNewStockFormViewController.h */,
+				636CD4CB1A06CFB700712342 /* C4CNewStockFormViewController.m */,
 			);
 			name = Farmer;
 			sourceTree = "<group>";
@@ -488,6 +521,19 @@
 			);
 			name = "nsdate-helper";
 			path = "Helpers/nsdate-helper";
+			sourceTree = "<group>";
+		};
+		636CD52E1A07F30600712342 /* LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				636CD52F1A07F30600712342 /* INTULocationManager.h */,
+				636CD5301A07F30600712342 /* INTULocationManager.m */,
+				636CD5311A07F30600712342 /* INTULocationRequest.h */,
+				636CD5321A07F30600712342 /* INTULocationRequest.m */,
+				636CD5331A07F30600712342 /* INTULocationRequestDefines.h */,
+			);
+			name = LocationManager;
+			path = Helpers/LocationManager;
 			sourceTree = "<group>";
 		};
 		6386F20619D87E63006A6B57 /* Config */ = {
@@ -726,23 +772,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				636CD5341A07F30600712342 /* INTULocationManager.m in Sources */,
 				63551C2619F9AB0A00E49EC7 /* C4CPriceTableViewCell.m in Sources */,
 				6386F21319D8BA98006A6B57 /* C4CLoginForm.m in Sources */,
 				63581D0A1A006A800008196F /* Product.m in Sources */,
 				6368B60D1A01A96000B3805A /* Login.m in Sources */,
 				6386F21D19D8C72A006A6B57 /* C4CSubmitButtonCell.m in Sources */,
+				636CD53C1A081DB800712342 /* AddressComponent.m in Sources */,
 				63581D071A006A140008196F /* Price.m in Sources */,
 				636CD4BD1A06BDBD00712342 /* NSDate+Helper.m in Sources */,
+				636CD4CC1A06CFB700712342 /* C4CNewStockFormViewController.m in Sources */,
+				636CD5351A07F30600712342 /* INTULocationRequest.m in Sources */,
 				63581D011A0066D60008196F /* C4CDoncampoImageCell.m in Sources */,
 				639D97BB19F4213F008418D7 /* C4CPriceTableViewController.m in Sources */,
+				636CD4DB1A073CF800712342 /* GeoCode.m in Sources */,
 				63581D041A0069F40008196F /* Token.m in Sources */,
 				636CD4621A069EF500712342 /* C4CRegistrationFormViewController.m in Sources */,
 				63611B111969FA36006B3282 /* main.m in Sources */,
 				6386F21019D8BA2C006A6B57 /* C4CRootForm.m in Sources */,
 				636CD4771A06BC0200712342 /* C4CHomeTableViewController.m in Sources */,
 				636CD46C1A06B58000712342 /* C4CMyStocksTableViewController.m in Sources */,
+				636CD4E81A07DEE700712342 /* Stock.m in Sources */,
 				6386F21619D8BABB006A6B57 /* C4CRegistrationForm.m in Sources */,
 				636CD4651A06A9B400712342 /* C4CWhoamiTableViewController.m in Sources */,
+				636CD4CF1A06D29B00712342 /* Unit.m in Sources */,
 				636CD4741A06B7FE00712342 /* C4CMyPurchasesTableViewController.m in Sources */,
 				6386F21919D8BF30006A6B57 /* C4CRootFormViewController.m in Sources */,
 				63581D131A007C150008196F /* Registration.m in Sources */,

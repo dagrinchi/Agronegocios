@@ -21,6 +21,7 @@
     self.tableView.backgroundColor = [UIColor colorWithRed:1 green:0.91 blue:0.74 alpha:1];
     self.title = @"¿Quién soy?";
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -34,5 +35,19 @@
 - (IBAction)unwindCustomer:(UIStoryboardSegue *)segue {
     
 }
+
+static void C4CShowAlertWithError(NSError *error)
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                    message:[error localizedDescription]
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
+
 
 @end

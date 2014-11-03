@@ -11,6 +11,10 @@
 
 #define BASE_URL @"http://placita.azurewebsites.net"
 
+#define GOOGLE_MAPS_BASE_URL @"https://maps.googleapis.com"
+
+#define GEOCODE_PATH @"/maps/api/geocode/json"
+
 #define GRANT_TYPE @"password"
 
 #define REGISTER_PATH @"/api/Account/Register"

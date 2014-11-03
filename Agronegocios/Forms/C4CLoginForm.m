@@ -11,23 +11,15 @@
 
 @implementation C4CLoginForm
 
-- (NSDictionary *)identificationField
-{
-    return @{@"textLabel.font": [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:18.0]};
-}
-
-- (NSDictionary *)passwordField
-{
-    return @{FXFormFieldTitle: @"Clave",
-             FXFormFieldType : FXFormFieldTypePassword,
-             @"textLabel.font": [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:18.0]};
-}
-
 - (NSArray *)fields {
     return @[@{FXFormFieldKey: @"identification",
                FXFormFieldType: FXFormFieldTypeNumber,
-               FXFormFieldTitle: @"No. identificación"},
-             @"password"];
+               FXFormFieldTitle: @"No. identificación",
+               @"textLabel.font": [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:18.0]},
+             @{FXFormFieldKey: @"password",
+               FXFormFieldTitle: @"Clave",
+               FXFormFieldType : FXFormFieldTypePassword,
+               @"textLabel.font": [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:18.0]}];
 }
 
 - (NSArray *)extraFields

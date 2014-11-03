@@ -37,8 +37,12 @@
                FXFormFieldHeader: @"Usa 4 dígitos como clave"},
              @{FXFormFieldKey: @"repeatPassword",
                @"textLabel.font": [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:18.0],
-               FXFormFieldTitle: @"Re-clave"},
-             @{FXFormFieldCell: [C4CSubmitButtonCell class],
+               FXFormFieldTitle: @"Re-clave"}];
+}
+
+- (NSArray *)extraFields
+{
+    return @[@{FXFormFieldCell: [C4CSubmitButtonCell class],
                FXFormFieldTitle: @"Enviar",
                FXFormFieldHeader: @"",
                FXFormFieldAction: @"submitRegistrationForm:"}];

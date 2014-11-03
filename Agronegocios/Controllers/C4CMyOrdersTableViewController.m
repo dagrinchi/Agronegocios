@@ -16,16 +16,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-
-    
     UIColor *bgColor = [UIColor colorWithRed:1 green:0.91 blue:0.74 alpha:1];
     
     self.tableView.backgroundView.backgroundColor = bgColor;
     self.tableView.backgroundColor = bgColor;
     self.refreshControl.backgroundColor = bgColor;
     self.view.backgroundColor = bgColor;
-    
+        
 }
 
 - (void)didReceiveMemoryWarning {

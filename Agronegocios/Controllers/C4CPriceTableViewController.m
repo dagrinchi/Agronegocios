@@ -50,7 +50,7 @@
     [fetchedResultsController setDelegate:self];
     if (![fetchedResultsController performFetch:&error]) {
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        C4CPriceShowAlertWithError(error);
+        C4CShowAlertWithError(error);
         abort();
     }
     
@@ -63,9 +63,10 @@
                                               success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
                                                   /*[[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:@"LastUpdatedAt"];
                                                   [[NSUserDefaults standardUserDefaults] synchronize];*/
-                                              } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+                                              }
+                                              failure:^(RKObjectRequestOperation *operation, NSError *error) {
                                                   RKLogError(@"Error: %@", error);
-                                                  C4CPriceShowAlertWithError(error);
+                                                  C4CShowAlertWithError(error);
                                               }];
     
     [self performSelector:@selector(endRefreshControl) withObject:nil afterDelay:1.5];
@@ -234,6 +235,7 @@
 
 #pragma mark - Login Button Action
 - (IBAction)loginAction:(id)sender {
+    
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     C4CRootFormViewController *loginView = [storyBoard instantiateViewControllerWithIdentifier:@"loginView"];
     C4CWhoamiTableViewController *whoamiView = [storyBoard instantiateViewControllerWithIdentifier:@"whoamiView"];
@@ -249,13 +251,12 @@
     if (lastToken == nil && [NSDate date] >= lastToken.expiresAt) {
        [self.navigationController pushViewController:loginView animated:YES];
     } else {
-       [self.navigationController pushViewController:whoamiView animated:YES];
+       [self.navigationController pushViewController:whoamiView animated:YES];        
     }
     
 }
 
-
-static void C4CPriceShowAlertWithError(NSError *error)
+static void C4CShowAlertWithError(NSError *error)
 {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
                                                     message:[error localizedDescription]

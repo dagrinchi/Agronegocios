@@ -7,10 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "C4CSubmitButtonCell.h"
 #import "Product.h"
+#import "Unit.h"
 
 @interface C4CStockForm : NSObject <FXForm>
 
 @property (nonatomic, copy) Product *product;
+@property (nonatomic, copy) Unit *unit;
+@property (nonatomic, copy) NSNumber *qty;
+@property (nonatomic, copy) NSNumber *pricePerUnit;
+@property (nonatomic, copy) NSDate *expiresAt;
+
+@property (nonatomic, copy) NSArray *units;
+@property (nonatomic, copy) NSArray *products;
 
 @end
