@@ -79,6 +79,7 @@
 		636CD5341A07F30600712342 /* INTULocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 636CD5301A07F30600712342 /* INTULocationManager.m */; };
 		636CD5351A07F30600712342 /* INTULocationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 636CD5321A07F30600712342 /* INTULocationRequest.m */; };
 		636CD53C1A081DB800712342 /* AddressComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 636CD53B1A081DB800712342 /* AddressComponent.m */; };
+		636CD53F1A08393C00712342 /* NewStock.m in Sources */ = {isa = PBXBuildFile; fileRef = 636CD53E1A08393C00712342 /* NewStock.m */; };
 		6386F21019D8BA2C006A6B57 /* C4CRootForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F20F19D8BA2C006A6B57 /* C4CRootForm.m */; };
 		6386F21319D8BA98006A6B57 /* C4CLoginForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F21219D8BA98006A6B57 /* C4CLoginForm.m */; };
 		6386F21619D8BABB006A6B57 /* C4CRegistrationForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F21519D8BABB006A6B57 /* C4CRegistrationForm.m */; };
@@ -208,6 +209,8 @@
 		636CD5331A07F30600712342 /* INTULocationRequestDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INTULocationRequestDefines.h; sourceTree = "<group>"; };
 		636CD53A1A081DB800712342 /* AddressComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddressComponent.h; path = Models/AddressComponent.h; sourceTree = "<group>"; };
 		636CD53B1A081DB800712342 /* AddressComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddressComponent.m; path = Models/AddressComponent.m; sourceTree = "<group>"; };
+		636CD53D1A08393C00712342 /* NewStock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewStock.h; path = Models/NewStock.h; sourceTree = "<group>"; };
+		636CD53E1A08393C00712342 /* NewStock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewStock.m; path = Models/NewStock.m; sourceTree = "<group>"; };
 		6386F20E19D8BA2C006A6B57 /* C4CRootForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CRootForm.h; path = Forms/C4CRootForm.h; sourceTree = "<group>"; };
 		6386F20F19D8BA2C006A6B57 /* C4CRootForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4CRootForm.m; path = Forms/C4CRootForm.m; sourceTree = "<group>"; };
 		6386F21119D8BA98006A6B57 /* C4CLoginForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CLoginForm.h; path = Forms/C4CLoginForm.h; sourceTree = "<group>"; };
@@ -460,6 +463,8 @@
 				6368B60C1A01A96000B3805A /* Login.m */,
 				636CD53A1A081DB800712342 /* AddressComponent.h */,
 				636CD53B1A081DB800712342 /* AddressComponent.m */,
+				636CD53D1A08393C00712342 /* NewStock.h */,
+				636CD53E1A08393C00712342 /* NewStock.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -775,6 +780,7 @@
 				636CD5341A07F30600712342 /* INTULocationManager.m in Sources */,
 				63551C2619F9AB0A00E49EC7 /* C4CPriceTableViewCell.m in Sources */,
 				6386F21319D8BA98006A6B57 /* C4CLoginForm.m in Sources */,
+				636CD53F1A08393C00712342 /* NewStock.m in Sources */,
 				63581D0A1A006A800008196F /* Product.m in Sources */,
 				6368B60D1A01A96000B3805A /* Login.m in Sources */,
 				6386F21D19D8C72A006A6B57 /* C4CSubmitButtonCell.m in Sources */,

@@ -70,24 +70,25 @@
                                                          @"GeoPoint.Country"        :@"country",
                                                          @"User.Email"              :@"userEmail",
                                                          @"User.User.Name"          :@"userName",
-                                                         @"User.User.Identification":@"userIdentidication",
+                                                         @"User.User.Identification":@"userIdentification",
                                                          @"User.User.Phone"         :@"userPhone",
                                                          @"Created"                 :@"createdAt",
                                                          @"Updated"                 :@"updatedAt"}];
+    stockRpMapping.identificationAttributes = @[@"stockId"];
     
     //STOCK REQUEST MAPPING
     RKObjectMapping *stockRqMapping = [RKObjectMapping requestMapping];
-    [stockRqMapping addAttributeMappingsFromDictionary:@{@"Product.Id"              :@"productId",
-                                                         @"Unit.Id"                 :@"unitId",
-                                                         @"Qty"                     :@"qty",
-                                                         @"PricePerUnit"            :@"pricePerUnit",
-                                                         @"ExpiresAt"               :@"expiresAt",
-                                                         @"GeoPoint.Latitude"       :@"latitude",
-                                                         @"GeoPoint.Longitude"      :@"longitude",
-                                                         @"GeoPoint.Address"        :@"address",
-                                                         @"GeoPoint.Town"           :@"town",
-                                                         @"GeoPoint.State"          :@"state",
-                                                         @"GeoPoint.Country"        :@"country"}];
+    [stockRqMapping addAttributeMappingsFromDictionary:@{@"productId"   :@"ProductId",
+                                                         @"unitId"      :@"UnitId",
+                                                         @"qty"         :@"Qty",
+                                                         @"pricePerUnit":@"PricePerUnit",
+                                                         @"expiresAt"   :@"ExpiresAt",
+                                                         @"latitude"    :@"GeoPoint.Latitude",
+                                                         @"longitude"   :@"GeoPoint.Longitude",
+                                                         @"address"     :@"GeoPoint.Address",
+                                                         @"town"        :@"GeoPoint.Town",
+                                                         @"state"       :@"GeoPoint.State",
+                                                         @"country"     :@"GeoPoint.Country"}];
     
     //REGISTRATION REQUEST MAPPING
     RKObjectMapping *registrationRqMapping = [RKObjectMapping requestMapping];
@@ -192,7 +193,7 @@
                                                                           rootKeyPath:nil
                                                                                method:RKRequestMethodAny],
                                     [RKRequestDescriptor requestDescriptorWithMapping:stockRqMapping
-                                                                          objectClass:[Stock class]
+                                                                          objectClass:[NewStock class]
                                                                           rootKeyPath:nil
                                                                                method:RKRequestMethodAny]];
     [objectManager addRequestDescriptorsFromArray:requestDescriptors];

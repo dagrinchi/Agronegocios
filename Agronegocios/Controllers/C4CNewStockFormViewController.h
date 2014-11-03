@@ -11,6 +11,7 @@
 #import "Token.h"
 #import "GeoCode.h"
 #import "AddressComponent.h"
+#import "NewStock.h"
 #import "INTULocationManager.h"
 
 @interface C4CNewStockFormViewController : FXFormViewController
@@ -19,5 +20,6 @@
 @property (nonatomic, strong) NSArray *geoCodes;
 @property (nonatomic, strong) NSArray *products;
 @property (nonatomic, strong) NSArray *units;
+@property (nonatomic, strong) CLLocation *location;
 
 @end

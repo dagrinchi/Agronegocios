@@ -28,6 +28,7 @@
         [self loadUnitsData:self.accessToken :^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
             [self startLocationRequest:^(CLLocation *location, INTULocationAccuracy achievedAccuracy, INTULocationStatus status) {
                 if (status == INTULocationStatusSuccess) {
+                    self.location = location;
                     [self loadAddressData:[NSString stringWithFormat:@"%@,%@", [[NSNumber numberWithDouble:location.coordinate.latitude] stringValue], [[NSNumber numberWithDouble:location.coordinate.longitude] stringValue]]
                                          :^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
                                              self.geoCodes = [mappingResult array];
@@ -35,20 +36,24 @@
                                          }];
                 }
                 else if (status == INTULocationStatusTimedOut) {
-                    C4CShowAlertWithError(@"Tiempo agotado para la solicitud de localiazición.");
+                    C4CShowAlertWithError(@"Tiempo agotado para la solicitud de localización.");
+                    [hud dismiss];
+                    [self.navigationController popToRootViewControllerAnimated:YES];
                 }
                 else {
                     if (status == INTULocationStatusServicesNotDetermined) {
-                        C4CShowAlertWithError(@"Tienes apagados los servicios de localización para esta aplicación.");
+                        C4CShowAlertWithError(@"En los ajustes, están apagados los servicios de localización para esta aplicación.");
                     } else if (status == INTULocationStatusServicesDenied) {
-                        C4CShowAlertWithError(@"Tienes prohibido el uso de los servicios de localización para esta aplicación.");
+                        C4CShowAlertWithError(@"En los ajustes, está prohibido el uso de los servicios de localización para esta aplicación.");
                     } else if (status == INTULocationStatusServicesRestricted) {
-                        C4CShowAlertWithError(@"Tienes restricciones en el uso de privacidad con el uso de la localización para esta aplicación.");
+                        C4CShowAlertWithError(@"En los ajustes, están las restricciones en el uso de privacidad con el uso de la localización para esta aplicación.");
                     } else if (status == INTULocationStatusServicesDisabled) {
-                        C4CShowAlertWithError(@"Tienes apagado los servicios de localización para todas las aplicaciones de este dispositivo.");
+                        C4CShowAlertWithError(@"En los ajustes, están apagados los servicios de localización para todas las aplicaciones de este dispositivo.");
                     } else {
                         C4CShowAlertWithError(@"Se presenta un error desconocido, reintente más tarde.");
                     }
+                    [hud dismiss];
+                    [self.navigationController popToRootViewControllerAnimated:YES];
                 }
                 
                 self.locationRequestID = NSNotFound;
@@ -104,8 +109,52 @@
 - (void)submitStockForm:(UITableViewCell<FXFormFieldCell> *)cell
 {
     SAMHUDView *hud = [[SAMHUDView alloc] initWithTitle:@"Enviando!" loading:YES];
-    //C4CStockForm *form = cell.field.form;
+    [hud show];
     
+    GeoCode *geoCode = [self.geoCodes firstObject];
+    AddressComponent *address = [geoCode.addressComponents firstObject];
+    AddressComponent *town = [geoCode.addressComponents objectAtIndex:1];
+    AddressComponent *state = [geoCode.addressComponents objectAtIndex:2];
+    AddressComponent *country = [geoCode.addressComponents lastObject];
+    
+    
+    C4CStockForm *form = cell.field.form;
+    NewStock *stock = [NewStock new];
+    
+    stock.productId = [NSNumber numberWithInteger:1000];
+    stock.unitId = [NSNumber numberWithInteger:10];
+    stock.qty = form.qty;
+    stock.pricePerUnit = form.pricePerUnit;
+    stock.expiresAt = form.expiresAt;
+    stock.latitude = [NSNumber numberWithDouble:self.location.coordinate.latitude];
+    stock.longitude = [NSNumber numberWithDouble:self.location.coordinate.longitude];
+    stock.address = address.longName;
+    stock.town = town.longName;
+    stock.state = state.longName;
+    stock.country = country.longName;
+    
+    
+    [[RKObjectManager sharedManager] postObject:stock
+                                           path:STOCKS_PATH
+                                     parameters:nil
+                                        success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+                                            hud.textLabel.text = @"Listo!";
+                                            hud.loading = FALSE;
+                                            hud.successful = TRUE;
+                                            [self performSelector:@selector(returnToFarmer:) withObject:hud afterDelay:1.5];
+                                            
+                                        }
+                                        failure:^(RKObjectRequestOperation *operation, NSError *error) {
+                                            RKErrorMessage *errorMessage =  [[error.userInfo objectForKey:RKObjectMapperErrorObjectsKey] firstObject];
+                                            C4CShowAlertWithError(errorMessage.errorMessage);
+                                            [hud dismiss];
+                                        }];
+    
+}
+
+- (void)returnToFarmer :(SAMHUDView *)hud
+{
+    [hud dismiss];
 }
 
 - (void)loadProductsData :(NSString *)tokenString :(void (^)(RKObjectRequestOperation *operation, RKMappingResult *mappingResult))success {

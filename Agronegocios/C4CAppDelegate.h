@@ -16,6 +16,7 @@
 #import "Login.h"
 #import "GeoCode.h"
 #import "Stock.h"
+#import "NewStock.h"
 
 @interface C4CAppDelegate : UIResponder <UIApplicationDelegate>
 @property (strong, nonatomic) UIWindow *window;
