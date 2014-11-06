@@ -63,7 +63,7 @@
 
 - (NSArray *)extraFields
 {
-    return @[@{FXFormFieldCell: [C4CSubmitButtonCell class],
+    return @[@{FXFormFieldCell: [C4CBlueSubmitButtonCell class],
                FXFormFieldTitle: @"Enviar",
                FXFormFieldHeader: @"",
                FXFormFieldAction: @"submitStockForm:"}];

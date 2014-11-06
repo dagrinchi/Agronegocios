@@ -14,7 +14,7 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="s1a-de-OIK" id="gg0-yM-ozd">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="farmerred140.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ktq-mc-j0E">
+                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="farmerred140.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ktq-mc-j0E">
                         <rect key="frame" x="0.0" y="8" width="320" height="140"/>
                     </imageView>
                 </subviews>

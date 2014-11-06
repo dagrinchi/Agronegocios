@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "C4CSubmitButtonCell.h"
+#import "C4CBlueSubmitButtonCell.h"
 #import "Product.h"
 #import "Unit.h"
 
