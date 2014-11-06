@@ -10,6 +10,8 @@
 		092A214FD7954C2EB2E9EB25 /* libPods-Agronegocios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40EDC4279B7347119FB1AE5B /* libPods-Agronegocios.a */; };
 		632CCEFD19F71B4C00B6A550 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 632CCEFC19F71B4C00B6A550 /* CoreData.framework */; };
 		63551C2619F9AB0A00E49EC7 /* C4CPriceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63551C2519F9AB0A00E49EC7 /* C4CPriceTableViewCell.m */; };
+		635773221A0AE70500D51CE3 /* C4CProductTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 635773211A0AE70500D51CE3 /* C4CProductTableViewController.m */; };
+		635773261A0AF74E00D51CE3 /* C4CUnitTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 635773251A0AF74E00D51CE3 /* C4CUnitTableViewController.m */; };
 		63581D011A0066D60008196F /* C4CDoncampoImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63581D001A0066D60008196F /* C4CDoncampoImageCell.m */; };
 		63581D041A0069F40008196F /* Token.m in Sources */ = {isa = PBXBuildFile; fileRef = 63581D031A0069F40008196F /* Token.m */; };
 		63581D071A006A140008196F /* Price.m in Sources */ = {isa = PBXBuildFile; fileRef = 63581D061A006A140008196F /* Price.m */; };
@@ -114,6 +116,10 @@
 		632CCEFC19F71B4C00B6A550 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		63551C2419F9AB0A00E49EC7 /* C4CPriceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CPriceTableViewCell.h; path = Views/C4CPriceTableViewCell.h; sourceTree = "<group>"; };
 		63551C2519F9AB0A00E49EC7 /* C4CPriceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4CPriceTableViewCell.m; path = Views/C4CPriceTableViewCell.m; sourceTree = "<group>"; };
+		635773201A0AE70500D51CE3 /* C4CProductTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CProductTableViewController.h; path = Controllers/C4CProductTableViewController.h; sourceTree = "<group>"; };
+		635773211A0AE70500D51CE3 /* C4CProductTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4CProductTableViewController.m; path = Controllers/C4CProductTableViewController.m; sourceTree = "<group>"; };
+		635773241A0AF74E00D51CE3 /* C4CUnitTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CUnitTableViewController.h; path = Controllers/C4CUnitTableViewController.h; sourceTree = "<group>"; };
+		635773251A0AF74E00D51CE3 /* C4CUnitTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4CUnitTableViewController.m; path = Controllers/C4CUnitTableViewController.m; sourceTree = "<group>"; };
 		63581CFF1A0066D60008196F /* C4CDoncampoImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CDoncampoImageCell.h; path = Forms/C4CDoncampoImageCell.h; sourceTree = "<group>"; };
 		63581D001A0066D60008196F /* C4CDoncampoImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4CDoncampoImageCell.m; path = Forms/C4CDoncampoImageCell.m; sourceTree = "<group>"; };
 		63581D021A0069F40008196F /* Token.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Token.h; path = Models/Token.h; sourceTree = "<group>"; };
@@ -304,6 +310,24 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
+		6357731F1A0AE6E600D51CE3 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				635773201A0AE70500D51CE3 /* C4CProductTableViewController.h */,
+				635773211A0AE70500D51CE3 /* C4CProductTableViewController.m */,
+			);
+			name = Product;
+			sourceTree = "<group>";
+		};
+		635773231A0AF73C00D51CE3 /* Unit */ = {
+			isa = PBXGroup;
+			children = (
+				635773241A0AF74E00D51CE3 /* C4CUnitTableViewController.h */,
+				635773251A0AF74E00D51CE3 /* C4CUnitTableViewController.m */,
+			);
+			name = Unit;
+			sourceTree = "<group>";
+		};
 		63611AF81969FA36006B3282 = {
 			isa = PBXGroup;
 			children = (
@@ -421,6 +445,8 @@
 		63611B3B196B3A15006B3282 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				635773231A0AF73C00D51CE3 /* Unit */,
+				6357731F1A0AE6E600D51CE3 /* Product */,
 				636CD46E1A06B7C800712342 /* Customer */,
 				636CD4661A06B4FB00712342 /* Farmer */,
 				63159EAB19FDF58F0095DD9E /* Home */,
@@ -778,6 +804,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				636CD5341A07F30600712342 /* INTULocationManager.m in Sources */,
+				635773261A0AF74E00D51CE3 /* C4CUnitTableViewController.m in Sources */,
 				63551C2619F9AB0A00E49EC7 /* C4CPriceTableViewCell.m in Sources */,
 				6386F21319D8BA98006A6B57 /* C4CLoginForm.m in Sources */,
 				636CD53F1A08393C00712342 /* NewStock.m in Sources */,
@@ -791,6 +818,7 @@
 				636CD5351A07F30600712342 /* INTULocationRequest.m in Sources */,
 				63581D011A0066D60008196F /* C4CDoncampoImageCell.m in Sources */,
 				639D97BB19F4213F008418D7 /* C4CPriceTableViewController.m in Sources */,
+				635773221A0AE70500D51CE3 /* C4CProductTableViewController.m in Sources */,
 				636CD4DB1A073CF800712342 /* GeoCode.m in Sources */,
 				63581D041A0069F40008196F /* Token.m in Sources */,
 				636CD4621A069EF500712342 /* C4CRegistrationFormViewController.m in Sources */,

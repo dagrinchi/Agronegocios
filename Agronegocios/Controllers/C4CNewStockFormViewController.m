@@ -18,56 +18,45 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    NSManagedObjectContext *managedObjectContext = [RKObjectManager sharedManager].managedObjectStore.mainQueueManagedObjectContext;
+
     SAMHUDView *hud = [[SAMHUDView alloc] initWithTitle:@"Regando cultivos!" loading:YES];
 
     C4CStockForm *stockForm = [[C4CStockForm alloc] init];
     [hud show];
-    [self loadProductsData:self.accessToken :^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-        [self loadUnitsData:self.accessToken :^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-            [self startLocationRequest:^(CLLocation *location, INTULocationAccuracy achievedAccuracy, INTULocationStatus status) {
-                if (status == INTULocationStatusSuccess) {
-                    self.location = location;
-                    [self loadAddressData:[NSString stringWithFormat:@"%@,%@", [[NSNumber numberWithDouble:location.coordinate.latitude] stringValue], [[NSNumber numberWithDouble:location.coordinate.longitude] stringValue]]
-                                         :^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                                             self.geoCodes = [mappingResult array];
-                                             [hud dismiss];
-                                         }];
-                }
-                else if (status == INTULocationStatusTimedOut) {
-                    C4CShowAlertWithError(@"Tiempo agotado para la solicitud de localización.");
-                    [hud dismiss];
-                    [self.navigationController popToRootViewControllerAnimated:YES];
-                }
-                else {
-                    if (status == INTULocationStatusServicesNotDetermined) {
-                        C4CShowAlertWithError(@"En los ajustes, están apagados los servicios de localización para esta aplicación.");
-                    } else if (status == INTULocationStatusServicesDenied) {
-                        C4CShowAlertWithError(@"En los ajustes, está prohibido el uso de los servicios de localización para esta aplicación.");
-                    } else if (status == INTULocationStatusServicesRestricted) {
-                        C4CShowAlertWithError(@"En los ajustes, están las restricciones en el uso de privacidad con el uso de la localización para esta aplicación.");
-                    } else if (status == INTULocationStatusServicesDisabled) {
-                        C4CShowAlertWithError(@"En los ajustes, están apagados los servicios de localización para todas las aplicaciones de este dispositivo.");
-                    } else {
-                        C4CShowAlertWithError(@"Se presenta un error desconocido, reintente más tarde.");
-                    }
-                    [hud dismiss];
-                    [self.navigationController popToRootViewControllerAnimated:YES];
-                }
-                
-                self.locationRequestID = NSNotFound;
-            }];
-        }];
+    
+    [self startLocationRequest:^(CLLocation *location, INTULocationAccuracy achievedAccuracy, INTULocationStatus status) {
+        if (status == INTULocationStatusSuccess) {
+            self.location = location;
+            [self loadAddressData:[NSString stringWithFormat:@"%@,%@", [[NSNumber numberWithDouble:location.coordinate.latitude] stringValue], [[NSNumber numberWithDouble:location.coordinate.longitude] stringValue]]
+                                 :^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+                                     self.geoCodes = [mappingResult array];
+                                     [hud dismiss];
+                                 }];
+        }
+        else if (status == INTULocationStatusTimedOut) {
+            C4CShowAlertWithError(@"Tiempo agotado para la solicitud de localización.");
+            [hud dismiss];
+            [self.navigationController popToRootViewControllerAnimated:YES];
+        }
+        else {
+            if (status == INTULocationStatusServicesNotDetermined) {
+                C4CShowAlertWithError(@"En los ajustes, están apagados los servicios de localización para esta aplicación.");
+            } else if (status == INTULocationStatusServicesDenied) {
+                C4CShowAlertWithError(@"En los ajustes, está prohibido el uso de los servicios de localización para esta aplicación.");
+            } else if (status == INTULocationStatusServicesRestricted) {
+                C4CShowAlertWithError(@"En los ajustes, están las restricciones en el uso de privacidad con el uso de la localización para esta aplicación.");
+            } else if (status == INTULocationStatusServicesDisabled) {
+                C4CShowAlertWithError(@"En los ajustes, están apagados los servicios de localización para todas las aplicaciones de este dispositivo.");
+            } else {
+                C4CShowAlertWithError(@"Se presenta un error desconocido, reintente más tarde.");
+            }
+            [hud dismiss];
+            [self.navigationController popToRootViewControllerAnimated:YES];
+        }
+        
+        self.locationRequestID = NSNotFound;
     }];
     
-    NSFetchRequest *productsFetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Product"];
-    [productsFetchRequest setSortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES]]];
-    stockForm.products = [managedObjectContext executeFetchRequest:productsFetchRequest error:nil];
-    
-    NSFetchRequest *unitsFetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Unit"];
-    [unitsFetchRequest setSortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES]]];
-    stockForm.units = [managedObjectContext executeFetchRequest:unitsFetchRequest error:nil];
     self.formController.form = stockForm;
     
     UIColor *bgColor = [UIColor colorWithRed:1 green:0.91 blue:0.74 alpha:1];
@@ -117,70 +106,47 @@
     AddressComponent *state = [geoCode.addressComponents objectAtIndex:2];
     AddressComponent *country = [geoCode.addressComponents lastObject];
     
-    
     C4CStockForm *form = cell.field.form;
     NewStock *stock = [NewStock new];
     
-    stock.productId = [NSNumber numberWithInteger:1000];
-    stock.unitId = [NSNumber numberWithInteger:10];
-    stock.qty = form.qty;
-    stock.pricePerUnit = form.pricePerUnit;
-    stock.expiresAt = form.expiresAt;
-    stock.latitude = [NSNumber numberWithDouble:self.location.coordinate.latitude];
-    stock.longitude = [NSNumber numberWithDouble:self.location.coordinate.longitude];
-    stock.address = address.longName;
-    stock.town = town.longName;
-    stock.state = state.longName;
-    stock.country = country.longName;
-    
-    
-    [[RKObjectManager sharedManager] postObject:stock
-                                           path:STOCKS_PATH
-                                     parameters:nil
-                                        success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                                            hud.textLabel.text = @"Listo!";
-                                            hud.loading = FALSE;
-                                            hud.successful = TRUE;
-                                            [self performSelector:@selector(returnToFarmer:) withObject:hud afterDelay:1.5];
-                                            
-                                        }
-                                        failure:^(RKObjectRequestOperation *operation, NSError *error) {
-                                            RKErrorMessage *errorMessage =  [[error.userInfo objectForKey:RKObjectMapperErrorObjectsKey] firstObject];
-                                            C4CShowAlertWithError(errorMessage.errorMessage);
-                                            [hud dismiss];
-                                        }];
-    
+    if (form.product.productId != nil && form.unit.unitId != nil && form.qty != nil && form.pricePerUnit != nil && form.expiresAt != nil) {
+        stock.productId = form.product.productId;
+        stock.unitId = form.unit.unitId;
+        stock.qty = form.qty;
+        stock.pricePerUnit = form.pricePerUnit;
+        stock.expiresAt = form.expiresAt;
+        stock.latitude = [NSNumber numberWithDouble:self.location.coordinate.latitude];
+        stock.longitude = [NSNumber numberWithDouble:self.location.coordinate.longitude];
+        stock.address = address.longName;
+        stock.town = town.longName;
+        stock.state = state.longName;
+        stock.country = country.longName;
+        
+        [[RKObjectManager sharedManager] postObject:stock
+                                               path:STOCKS_PATH
+                                         parameters:nil
+                                            success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+                                                hud.textLabel.text = @"Listo!";
+                                                hud.loading = FALSE;
+                                                hud.successful = TRUE;
+                                                [self performSelector:@selector(returnToFarmer:) withObject:hud afterDelay:1.5];
+                                                
+                                            }
+                                            failure:^(RKObjectRequestOperation *operation, NSError *error) {
+                                                RKErrorMessage *errorMessage =  [[error.userInfo objectForKey:RKObjectMapperErrorObjectsKey] firstObject];
+                                                C4CShowAlertWithError(errorMessage.errorMessage);
+                                                [hud dismiss];
+                                            }];
+    } else {
+        C4CShowAlertWithError(@"Todos los campos son requeridos.");
+        [hud dismiss];
+    }
 }
 
 - (void)returnToFarmer :(SAMHUDView *)hud
 {
+    [self.navigationController popViewControllerAnimated:YES];
     [hud dismiss];
-}
-
-- (void)loadProductsData :(NSString *)tokenString :(void (^)(RKObjectRequestOperation *operation, RKMappingResult *mappingResult))success {
-    RKObjectManager *objectManager = [RKObjectManager sharedManager];
-    [objectManager.HTTPClient setDefaultHeader:@"Authorization" value:[NSString stringWithFormat:@"Bearer %@", tokenString]];
-    [objectManager getObjectsAtPath:PRODUCTS_PATH
-                         parameters:nil
-                            success:success
-                            failure:^(RKObjectRequestOperation *operation, NSError *error) {
-                                RKLogError(@"Error: %@", error);
-                                C4CShowAlertWithError([error localizedDescription]);
-                            }];
-    
-}
-
-- (void)loadUnitsData :(NSString *)tokenString :(void (^)(RKObjectRequestOperation *operation, RKMappingResult *mappingResult))success {
-    RKObjectManager *objectManager = [RKObjectManager sharedManager];
-    [objectManager.HTTPClient setDefaultHeader:@"Authorization" value:[NSString stringWithFormat:@"Bearer %@", tokenString]];
-    [objectManager getObjectsAtPath:UNITS_PATH
-                         parameters:nil
-                            success:success
-                            failure:^(RKObjectRequestOperation *operation, NSError *error) {
-                                RKLogError(@"Error: %@", error);
-                                C4CShowAlertWithError([error localizedDescription]);
-                            }];
-    
 }
 
 -(void)loadAddressData :(NSString *)latLon :(void (^)(RKObjectRequestOperation *operation, RKMappingResult *mappingResult))success

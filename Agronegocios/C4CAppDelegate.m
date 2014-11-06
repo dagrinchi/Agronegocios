@@ -42,6 +42,8 @@
                                                          @"Code"    :@"code",
                                                          @"Name"    :@"name"}];
     productMapping.identificationAttributes = @[@"productId"];
+    [managedObjectStore addSearchIndexingToEntityForName:@"Product"
+                                            onAttributes:@[@"name"]];
     
     //UNIT RESPONSE MAPPING
     RKEntityMapping *unitMapping = [RKEntityMapping mappingForEntityForName:@"Unit" inManagedObjectStore:managedObjectStore];

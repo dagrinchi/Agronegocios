@@ -10,42 +10,52 @@
 
 @implementation C4CStockForm
 
-- (NSArray *)products
+- (NSDictionary *)productField
 {
-    NSMutableArray *result = [[NSMutableArray alloc] init];
-    for (Product *product in _products) {
-        [result addObject:product.name];
-    }
-    return result;
+    return @{FXFormFieldKey: @"product",
+             FXFormFieldTitle: @"Producto",
+             FXFormFieldViewController: @"C4CProductTableViewController",
+             @"textLabel.font": [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:18.0]};
 }
 
-- (NSArray *)units
+- (NSString *)productFieldDescription
 {
-    NSMutableArray *result = [[NSMutableArray alloc] init];
-    for (Unit *unit in _units) {
-        [result addObject:unit.name];
-    }
-    return result;
+    return self.product ? self.product.name : nil;
+}
+
+- (NSDictionary *)unitField
+{
+    return @{FXFormFieldKey: @"unit",
+             FXFormFieldTitle: @"Unidad",
+             FXFormFieldViewController: @"C4CUnitTableViewController",
+             @"textLabel.font": [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:18.0]};
+}
+
+- (NSString *)unitFieldDescription
+{
+    return self.unit ? self.unit.name : nil;
+}
+
+- (NSDictionary *)qtyField
+{
+    return @{FXFormFieldKey: @"qty",
+             FXFormFieldTitle: @"Cantidad",
+             @"textLabel.font": [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:18.0]};
+}
+
+- (NSDictionary *)pricePerUnitField
+{
+    return @{FXFormFieldKey: @"pricePerUnit",
+             FXFormFieldTitle: @"Precio por unidad",
+             @"textLabel.font": [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:18.0]};
 }
 
 - (NSArray *)fields
 {
-    return @[@{FXFormFieldKey: @"product",
-               FXFormFieldTitle: @"Producto",
-               FXFormFieldOptions: self.products,
-               FXFormFieldCell: [FXFormOptionPickerCell class],
-               @"textLabel.font": [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:18.0]},
-             @{FXFormFieldKey: @"unit",
-               FXFormFieldTitle: @"Unidad",
-               FXFormFieldOptions: self.units,
-               FXFormFieldCell: [FXFormOptionPickerCell class],
-               @"textLabel.font": [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:18.0]},
-             @{FXFormFieldKey: @"qty",
-               FXFormFieldTitle: @"Cantidad",
-               @"textLabel.font": [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:18.0]},
-             @{FXFormFieldKey: @"pricePerUnit",
-               FXFormFieldTitle: @"Precio por unidad",
-               @"textLabel.font": [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:18.0]},
+    return @[@"product",
+             @"unit",
+             @"qty",
+             @"pricePerUnit",
              @{FXFormFieldKey: @"expiresAt",
                FXFormFieldTitle: @"Fecha de vencimiento",
                @"textLabel.font": [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:18.0]}];

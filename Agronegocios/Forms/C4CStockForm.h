@@ -13,13 +13,10 @@
 
 @interface C4CStockForm : NSObject <FXForm>
 
-@property (nonatomic, copy) Product *product;
-@property (nonatomic, copy) Unit *unit;
-@property (nonatomic, copy) NSNumber *qty;
-@property (nonatomic, copy) NSNumber *pricePerUnit;
-@property (nonatomic, copy) NSDate *expiresAt;
-
-@property (nonatomic, copy) NSArray *units;
-@property (nonatomic, copy) NSArray *products;
+@property (nonatomic, strong) Product *product;
+@property (nonatomic, strong) Unit *unit;
+@property (nonatomic, strong) NSNumber *qty;
+@property (nonatomic, strong) NSNumber *pricePerUnit;
+@property (nonatomic, strong) NSDate *expiresAt;
 
 @end
