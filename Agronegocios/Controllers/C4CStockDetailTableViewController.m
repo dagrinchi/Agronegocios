@@ -1,40 +1,33 @@
 //
-//  C4CMyOrdersTableViewController.m
+//  C4CStockDetailTableViewController.m
 //  Agronegocios
 //
-//  Created by David Almeciga on 11/2/14.
+//  Created by David Almeciga on 11/6/14.
 //  Copyright (c) 2014 COOL4CODE. All rights reserved.
 //
 
-#import "C4CMyOrdersTableViewController.h"
+#import "C4CStockDetailTableViewController.h"
 
-@interface C4CMyOrdersTableViewController ()
+@interface C4CStockDetailTableViewController ()
 
 @end
 
-@implementation C4CMyOrdersTableViewController
+@implementation C4CStockDetailTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     UIColor *bgColor = [UIColor colorWithRed:1 green:0.91 blue:0.74 alpha:1];
     
     self.tableView.backgroundView.backgroundColor = bgColor;
     self.tableView.backgroundColor = bgColor;
     self.refreshControl.backgroundColor = bgColor;
     self.view.backgroundColor = bgColor;
-        
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
--(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-{
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 18)];
-    [view setBackgroundColor:[UIColor colorWithRed:166/255.0 green:177/255.0 blue:186/255.0 alpha:1.0]];
-    return view;
 }
 
 #pragma mark - Table view data source

@@ -46,7 +46,7 @@
 - (NSDictionary *)pricePerUnitField
 {
     return @{FXFormFieldKey: @"pricePerUnit",
-             FXFormFieldTitle: @"Precio por unidad",
+             FXFormFieldTitle: @"Precio por unidad ($)",
              @"textLabel.font": [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:18.0]};
 }
 

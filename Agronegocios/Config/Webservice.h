@@ -33,7 +33,7 @@
 
 #define STOCKS_PATH @"/api/Stocks"
 
-#define MYSTOCKS_PATH @"/api/MyStocks"
+#define MYSTOCKS_PATH @"/api/MyStocks/0"
 
 #define ORDERS_PATH @"/api/Orders"
 

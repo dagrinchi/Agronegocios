@@ -77,6 +77,36 @@
                                                          @"Created"                 :@"createdAt",
                                                          @"Updated"                 :@"updatedAt"}];
     stockRpMapping.identificationAttributes = @[@"stockId"];
+    [managedObjectStore addSearchIndexingToEntityForName:@"Stock"
+                                            onAttributes:@[@"productName", @"town", @"state", @"userName"]];
+    
+    //MYSTOCK REPONSE MAPPING
+    RKEntityMapping *myStockRpMapping = [RKEntityMapping mappingForEntityForName:@"MyStock" inManagedObjectStore:managedObjectStore];
+    [myStockRpMapping addAttributeMappingsFromDictionary:@{@"Id"                      :@"stockId",
+                                                         @"Product.Id"              :@"productId",
+                                                         @"Product.Code"            :@"productCode",
+                                                         @"Product.Name"            :@"productName",
+                                                         @"Unit.Id"                 :@"unitId",
+                                                         @"Unit.Code"               :@"unitCode",
+                                                         @"Unit.Name"               :@"unitName",
+                                                         @"Qty"                     :@"qty",
+                                                         @"PricePerUnit"            :@"pricePerUnit",
+                                                         @"ExpiresAt"               :@"expiresAt",
+                                                         @"GeoPoint.Latitude"       :@"latitude",
+                                                         @"GeoPoint.Longitude"      :@"longitude",
+                                                         @"GeoPoint.Address"        :@"address",
+                                                         @"GeoPoint.Town"           :@"town",
+                                                         @"GeoPoint.State"          :@"state",
+                                                         @"GeoPoint.Country"        :@"country",
+                                                         @"User.Email"              :@"userEmail",
+                                                         @"User.User.Name"          :@"userName",
+                                                         @"User.User.Identification":@"userIdentification",
+                                                         @"User.User.Phone"         :@"userPhone",
+                                                         @"Created"                 :@"createdAt",
+                                                         @"Updated"                 :@"updatedAt"}];
+    myStockRpMapping.identificationAttributes = @[@"stockId"];
+    [managedObjectStore addSearchIndexingToEntityForName:@"MyStock"
+                                            onAttributes:@[@"productName", @"town", @"state"]];
     
     //STOCK REQUEST MAPPING
     RKObjectMapping *stockRqMapping = [RKObjectMapping requestMapping];
@@ -181,6 +211,11 @@
                                       [RKResponseDescriptor responseDescriptorWithMapping:stockRpMapping
                                                                                    method:RKRequestMethodAny
                                                                               pathPattern:STOCKS_PATH
+                                                                                  keyPath:nil
+                                                                              statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)],
+                                      [RKResponseDescriptor responseDescriptorWithMapping:myStockRpMapping
+                                                                                   method:RKRequestMethodAny
+                                                                              pathPattern:MYSTOCKS_PATH
                                                                                   keyPath:nil
                                                                               statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)]];
     [objectManager addResponseDescriptorsFromArray:responseDescriptors];
