@@ -141,7 +141,7 @@
     [cell.expiresAt setText:[NSString stringWithFormat:@"Vence: %@", [NSDate stringFromDate:order.expiresAt withFormat:@"dd MMM YYYY"]]];
     [cell.userName setText:order.stockUserName];
     [cell.pricePerUnit setText:[NSNumberFormatter localizedStringFromNumber:order.pricePerUnit numberStyle:NSNumberFormatterCurrencyStyle]];
-    [cell.qty  setText:[NSString stringWithFormat:@"Cantidad: %@",[NSNumberFormatter localizedStringFromNumber:order.orderQty numberStyle:NSNumberFormatterDecimalStyle]]];
+    [cell.qty  setText:[NSString stringWithFormat:@"Cant: %@",[NSNumberFormatter localizedStringFromNumber:order.orderQty numberStyle:NSNumberFormatterDecimalStyle]]];
     [cell.unitName setText:order.unitName];
     
     
@@ -230,23 +230,23 @@
 
 # pragma mark
 
-/*- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- if ([segue.identifier isEqualToString:@"showStockDetail"]) {
- NSIndexPath *indexPath = nil;
- Stock *stock = nil;
- 
- if (self.searchDisplayController.active) {
- indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
- stock = [_searchFetchedResultsController objectAtIndexPath:indexPath];
- } else {
- indexPath = [self.tableView indexPathForSelectedRow];
- stock = [_fetchedResultsController objectAtIndexPath:indexPath];
- }
- 
- C4CStockDetailTableViewController *detailViewController = segue.destinationViewController;
- detailViewController.stock = stock;
- }
- }*/
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showOrderDetail"]) {
+        NSIndexPath *indexPath = nil;
+        MyPurchases *order = nil;
+        
+        if (self.searchDisplayController.active) {
+            indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
+            order = [_searchFetchedResultsController objectAtIndexPath:indexPath];
+        } else {
+            indexPath = [self.tableView indexPathForSelectedRow];
+            order = [_fetchedResultsController objectAtIndexPath:indexPath];
+        }
+        
+        C4CMyPurchasesDetailTableViewController *detailViewController = segue.destinationViewController;
+        detailViewController.order = order;
+    }
+}
 
 
 static void C4CShowAlertWithError(NSError *error)

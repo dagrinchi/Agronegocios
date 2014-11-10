@@ -7,7 +7,7 @@
 //
 
 #import "C4CRegistrationForm.h"
-#import "C4CSubmitButtonCell.h"
+#import "C4CGreenSubmitButtonCell.h"
 
 @implementation C4CRegistrationForm
 
@@ -42,7 +42,7 @@
 
 - (NSArray *)extraFields
 {
-    return @[@{FXFormFieldCell: [C4CSubmitButtonCell class],
+    return @[@{FXFormFieldCell: [C4CGreenSubmitButtonCell class],
                FXFormFieldTitle: @"Enviar",
                FXFormFieldHeader: @"",
                FXFormFieldAction: @"submitRegistrationForm:"}];

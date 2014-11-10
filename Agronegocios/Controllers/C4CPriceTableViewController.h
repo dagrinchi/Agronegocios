@@ -12,6 +12,7 @@
 #import "C4CRootFormViewController.h"
 #import "C4CWhoamiTableViewController.h"
 #import "C4CPriceTableViewCell.h"
+#import "C4CPriceDetailTableViewController.h"
 #import "C4CAppDelegate.h"
 #import "Price.h"
 #import "Token.h"

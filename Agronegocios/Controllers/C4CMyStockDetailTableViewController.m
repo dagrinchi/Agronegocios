@@ -1,21 +1,21 @@
 //
-//  C4CStockDetailTableViewController.m
+//  C4CMyStockDetailTableViewController.m
 //  Agronegocios
 //
-//  Created by David Almeciga on 11/6/14.
+//  Created by David Almeciga on 11/9/14.
 //  Copyright (c) 2014 COOL4CODE. All rights reserved.
 //
 
-#import "C4CStockDetailTableViewController.h"
+#import "C4CMyStockDetailTableViewController.h"
 
-@interface C4CStockDetailTableViewController ()
+@interface C4CMyStockDetailTableViewController ()
 {
     NSArray *stockDetails;
 }
 
 @end
 
-@implementation C4CStockDetailTableViewController
+@implementation C4CMyStockDetailTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -93,16 +93,8 @@
     return 44;
 }
 
-- (IBAction)buyAction:(id)sender {
+- (IBAction)deleteAction:(id)sender {
+    NSLog(@"Go delete!");
 }
-
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"newOrderSegue"]) {
-        C4CNewOrderFormViewController *newOrderFormViewController = segue.destinationViewController;
-        newOrderFormViewController.stock = _stock;
-    }
-}
-
 
 @end

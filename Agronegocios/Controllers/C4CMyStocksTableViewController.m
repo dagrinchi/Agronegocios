@@ -142,7 +142,7 @@
     [cell.expiresAt setText:[NSString stringWithFormat:@"Vence: %@", [NSDate stringFromDate:stock.expiresAt withFormat:@"dd MMM YYYY"]]];
     [cell.userName setText:stock.userName];
     [cell.price setText:[NSNumberFormatter localizedStringFromNumber:stock.pricePerUnit numberStyle:NSNumberFormatterCurrencyStyle]];
-    [cell.qty  setText:[NSString stringWithFormat:@"Cantidad: %@",[NSNumberFormatter localizedStringFromNumber:stock.qty numberStyle:NSNumberFormatterDecimalStyle]]];
+    [cell.qty  setText:[NSString stringWithFormat:@"Cant: %@",[NSNumberFormatter localizedStringFromNumber:stock.qty numberStyle:NSNumberFormatterDecimalStyle]]];
     [cell.unit setText:stock.unitName];
     
     
@@ -237,6 +237,25 @@ static void C4CShowAlertWithError(NSError *error)
                                           cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showStockDetail"]) {
+        NSIndexPath *indexPath = nil;
+        MyStock *stock = nil;
+        
+        if (self.searchDisplayController.active) {
+            indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
+            stock = [_searchFetchedResultsController objectAtIndexPath:indexPath];
+        } else {
+            indexPath = [self.tableView indexPathForSelectedRow];
+            stock = [_fetchedResultsController objectAtIndexPath:indexPath];
+        }
+        
+        C4CMyStockDetailTableViewController *detailViewController = segue.destinationViewController;
+        detailViewController.stock = stock;
+    }
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

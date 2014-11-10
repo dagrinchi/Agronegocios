@@ -62,7 +62,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ja-Vg-ICE">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                                     <color key="backgroundColor" red="0.40000000000000002" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="21"/>
                                                     <state key="normal" title="Iniciar">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -210,19 +210,34 @@
             </objects>
             <point key="canvasLocation" x="-1380" y="69"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Price Detail Table View Controller-->
         <scene sceneID="Ejw-eN-xxp">
             <objects>
-                <tableViewController id="otv-lQ-1Zi" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="bdP-Bb-2Hh">
+                <tableViewController id="otv-lQ-1Zi" customClass="C4CPriceDetailTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="bdP-Bb-2Hh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="separatorColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fmD-8w-bxD">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="priceCell" textLabel="oRa-7v-CW3" detailTextLabel="cEK-tq-Nnh" style="IBUITableViewCellStyleValue2" id="wdu-L4-xvi">
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fmD-8w-bxD" id="zb3-HR-vSu">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wdu-L4-xvi" id="TAp-iZ-dJU">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="oRa-7v-CW3">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="15"/>
+                                            <color key="textColor" red="0.40000000000000002" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cEK-tq-Nnh">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -349,7 +364,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Buscar por producto ó mercado" translucent="NO" id="uMp-ir-X8U">
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Buscar por producto, mercado" translucent="NO" id="uMp-ir-X8U">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -427,7 +442,7 @@
                                     <outlet property="price" destination="0XT-aJ-xiW" id="gO5-Np-y5m"/>
                                     <outlet property="productName" destination="IdV-aW-pvq" id="kg8-uC-rMe"/>
                                     <outlet property="unit" destination="d3r-rU-871" id="E4j-bY-8wC"/>
-                                    <segue destination="otv-lQ-1Zi" kind="push" id="goa-T7-Rnx"/>
+                                    <segue destination="otv-lQ-1Zi" kind="push" identifier="showPriceDetail" id="goa-T7-Rnx"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -439,7 +454,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="Bfp-pW-ASV">
                         <barButtonItem key="backBarButtonItem" title="Atras" id="dzX-hu-etA"/>
-                        <barButtonItem key="rightBarButtonItem" image="user.png" id="hxh-oR-89g">
+                        <barButtonItem key="rightBarButtonItem" title="Ingresar" id="hxh-oR-89g">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="loginAction:" destination="IVg-Lo-67t" id="Gej-Z9-h7s"/>
@@ -724,7 +739,7 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7z-eq-fnw">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="20"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="21"/>
                                             <state key="normal" title="Comprar">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -869,7 +884,7 @@
                                     <outlet property="qty" destination="mkY-m7-yMP" id="VR5-Pz-etj"/>
                                     <outlet property="unitName" destination="BSX-Sx-A9f" id="tF3-Pw-vw6"/>
                                     <outlet property="userName" destination="xC1-3H-xFM" id="eVC-dP-78q"/>
-                                    <segue destination="FK6-B0-eL4" kind="push" id="xkN-VD-Atw"/>
+                                    <segue destination="FK6-B0-eL4" kind="push" identifier="showOrderDetail" id="xkN-VD-Atw"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -927,14 +942,14 @@
             </objects>
             <point key="canvasLocation" x="2529" y="1587"/>
         </scene>
-        <!--Table View Controller-->
+        <!--My Purchases Detail Table View Controller-->
         <scene sceneID="vBH-TG-xsB">
             <objects>
-                <tableViewController id="FK6-B0-eL4" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Y6o-sh-InK">
+                <tableViewController id="FK6-B0-eL4" customClass="C4CMyPurchasesDetailTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Y6o-sh-InK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="orderCell" textLabel="YUw-0b-Ns3" detailTextLabel="sD9-cq-vQg" style="IBUITableViewCellStyleValue2" id="fhY-dx-2Hx">
@@ -965,11 +980,14 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NfL-v9-91y">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="20"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="21"/>
                                             <state key="normal" title="Eliminar">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
+                                            <connections>
+                                                <action selector="deleteAction:" destination="FK6-B0-eL4" eventType="touchUpInside" id="575-V1-yqc"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" red="1" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
@@ -1123,7 +1141,7 @@
                                     <outlet property="qty" destination="LcB-5z-pUA" id="Nsv-DF-cmn"/>
                                     <outlet property="unitName" destination="a7c-2V-asE" id="ltB-Gx-3vO"/>
                                     <outlet property="userName" destination="GyD-9q-GUn" id="TvW-A5-YWV"/>
-                                    <segue destination="seM-nY-zMd" kind="push" id="3EH-jG-M52"/>
+                                    <segue destination="seM-nY-zMd" kind="push" identifier="showOrderDetail" id="3EH-jG-M52"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1151,14 +1169,14 @@
             </objects>
             <point key="canvasLocation" x="2529" y="-1561"/>
         </scene>
-        <!--Table View Controller-->
+        <!--My Orders Detail Table View Controller-->
         <scene sceneID="JMh-Aw-P1l">
             <objects>
-                <tableViewController id="seM-nY-zMd" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="zhg-o4-vXn">
+                <tableViewController id="seM-nY-zMd" customClass="C4CMyOrdersDetailTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="zhg-o4-vXn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="orderCell" textLabel="zUU-Vf-uWm" detailTextLabel="Tpe-aE-NrE" style="IBUITableViewCellStyleValue2" id="zjn-ky-eaj">
@@ -1189,11 +1207,14 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZC4-as-qyK">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="20"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="21"/>
                                             <state key="normal" title="Eliminar">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
+                                            <connections>
+                                                <action selector="deleteAction:" destination="seM-nY-zMd" eventType="touchUpInside" id="bxO-2E-U3K"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -1363,7 +1384,7 @@
                                     <outlet property="qty" destination="95b-e1-fB9" id="hWM-oq-06U"/>
                                     <outlet property="unit" destination="f08-te-rqf" id="pqf-3U-AJA"/>
                                     <outlet property="userName" destination="QxB-9p-mjm" id="XTv-d7-prw"/>
-                                    <segue destination="hNd-X4-hPd" kind="push" id="pDb-vj-LDZ"/>
+                                    <segue destination="hNd-X4-hPd" kind="push" identifier="showStockDetail" id="pDb-vj-LDZ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1391,14 +1412,14 @@
             </objects>
             <point key="canvasLocation" x="2529" y="-866"/>
         </scene>
-        <!--Table View Controller-->
+        <!--My Stock Detail Table View Controller-->
         <scene sceneID="JbX-eX-avN">
             <objects>
-                <tableViewController id="hNd-X4-hPd" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="RfA-tf-5rO">
+                <tableViewController id="hNd-X4-hPd" customClass="C4CMyStockDetailTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="RfA-tf-5rO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="stockCell" textLabel="7Jy-w3-QuS" detailTextLabel="MkX-Gw-Kyr" style="IBUITableViewCellStyleValue2" id="aUJ-eG-xU4">
@@ -1429,11 +1450,14 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7c-uC-kjs">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="20"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="21"/>
                                             <state key="normal" title="Eliminar">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
+                                            <connections>
+                                                <action selector="deleteAction:" destination="hNd-X4-hPd" eventType="touchUpInside" id="atx-W5-ik4"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -1555,7 +1579,6 @@
         <image name="folder.png" width="30" height="30"/>
         <image name="papers.png" width="30" height="30"/>
         <image name="productor.png" width="233" height="239"/>
-        <image name="user.png" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

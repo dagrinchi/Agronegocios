@@ -234,6 +234,7 @@
 }
 
 #pragma mark - Login Button Action
+
 - (IBAction)loginAction:(id)sender {
     
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
@@ -255,6 +256,27 @@
     }
     
 }
+
+#pragma mark
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showPriceDetail"]) {
+        NSIndexPath *indexPath = nil;
+        Price *price = nil;
+        
+        if (self.searchDisplayController.active) {
+            indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
+            price = [_searchFetchedResultsController objectAtIndexPath:indexPath];
+        } else {
+            indexPath = [self.tableView indexPathForSelectedRow];
+            price = [_fetchedResultsController objectAtIndexPath:indexPath];
+        }
+        
+        C4CPriceDetailTableViewController *detailViewController = segue.destinationViewController;
+        detailViewController.price = price;
+    }
+}
+
 
 static void C4CShowAlertWithError(NSError *error)
 {

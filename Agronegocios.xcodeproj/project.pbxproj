@@ -101,6 +101,12 @@
 		639FD5541A0D4C840079EE59 /* MyPurchases.m in Sources */ = {isa = PBXBuildFile; fileRef = 639FD5531A0D4C840079EE59 /* MyPurchases.m */; };
 		639FD5581A0D51C50079EE59 /* C4COrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 639FD5571A0D51C50079EE59 /* C4COrderTableViewCell.m */; };
 		639FD55B1A0DCBB70079EE59 /* NewOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 639FD55A1A0DCBB70079EE59 /* NewOrder.m */; };
+		63AFDA811A104E400078CC4E /* C4CGreenSubmitButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63AFDA801A104E400078CC4E /* C4CGreenSubmitButtonCell.xib */; };
+		63AFDA841A104F2A0078CC4E /* C4CGreenSubmitButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AFDA831A104F2A0078CC4E /* C4CGreenSubmitButtonCell.m */; };
+		63AFDA871A10524F0078CC4E /* C4CMyOrdersDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AFDA861A10524F0078CC4E /* C4CMyOrdersDetailTableViewController.m */; };
+		63AFDA8A1A1057360078CC4E /* C4CMyStockDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AFDA891A1057360078CC4E /* C4CMyStockDetailTableViewController.m */; };
+		63AFDA8D1A1059170078CC4E /* C4CMyPurchasesDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AFDA8C1A1059170078CC4E /* C4CMyPurchasesDetailTableViewController.m */; };
+		63AFDA901A10684A0078CC4E /* C4CPriceDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AFDA8F1A10684A0078CC4E /* C4CPriceDetailTableViewController.m */; };
 		63E9F0F019969184008FEEA0 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E9F0EF19969184008FEEA0 /* Accounts.framework */; };
 		63E9F0F21996919C008FEEA0 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E9F0F11996919C008FEEA0 /* Social.framework */; };
 		63E9F0F4199691A5008FEEA0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E9F0F3199691A5008FEEA0 /* SystemConfiguration.framework */; };
@@ -265,6 +271,17 @@
 		639FD5571A0D51C50079EE59 /* C4COrderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4COrderTableViewCell.m; path = Views/C4COrderTableViewCell.m; sourceTree = "<group>"; };
 		639FD5591A0DCBB70079EE59 /* NewOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewOrder.h; path = Models/NewOrder.h; sourceTree = "<group>"; };
 		639FD55A1A0DCBB70079EE59 /* NewOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewOrder.m; path = Models/NewOrder.m; sourceTree = "<group>"; };
+		63AFDA801A104E400078CC4E /* C4CGreenSubmitButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = C4CGreenSubmitButtonCell.xib; path = Forms/C4CGreenSubmitButtonCell.xib; sourceTree = "<group>"; };
+		63AFDA821A104F2A0078CC4E /* C4CGreenSubmitButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CGreenSubmitButtonCell.h; path = Forms/C4CGreenSubmitButtonCell.h; sourceTree = "<group>"; };
+		63AFDA831A104F2A0078CC4E /* C4CGreenSubmitButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4CGreenSubmitButtonCell.m; path = Forms/C4CGreenSubmitButtonCell.m; sourceTree = "<group>"; };
+		63AFDA851A10524F0078CC4E /* C4CMyOrdersDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CMyOrdersDetailTableViewController.h; path = Controllers/C4CMyOrdersDetailTableViewController.h; sourceTree = "<group>"; };
+		63AFDA861A10524F0078CC4E /* C4CMyOrdersDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4CMyOrdersDetailTableViewController.m; path = Controllers/C4CMyOrdersDetailTableViewController.m; sourceTree = "<group>"; };
+		63AFDA881A1057360078CC4E /* C4CMyStockDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CMyStockDetailTableViewController.h; path = Controllers/C4CMyStockDetailTableViewController.h; sourceTree = "<group>"; };
+		63AFDA891A1057360078CC4E /* C4CMyStockDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4CMyStockDetailTableViewController.m; path = Controllers/C4CMyStockDetailTableViewController.m; sourceTree = "<group>"; };
+		63AFDA8B1A1059170078CC4E /* C4CMyPurchasesDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CMyPurchasesDetailTableViewController.h; path = Controllers/C4CMyPurchasesDetailTableViewController.h; sourceTree = "<group>"; };
+		63AFDA8C1A1059170078CC4E /* C4CMyPurchasesDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4CMyPurchasesDetailTableViewController.m; path = Controllers/C4CMyPurchasesDetailTableViewController.m; sourceTree = "<group>"; };
+		63AFDA8E1A10684A0078CC4E /* C4CPriceDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CPriceDetailTableViewController.h; path = Controllers/C4CPriceDetailTableViewController.h; sourceTree = "<group>"; };
+		63AFDA8F1A10684A0078CC4E /* C4CPriceDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4CPriceDetailTableViewController.m; path = Controllers/C4CPriceDetailTableViewController.m; sourceTree = "<group>"; };
 		63E9F0EF19969184008FEEA0 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		63E9F0F11996919C008FEEA0 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		63E9F0F3199691A5008FEEA0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -555,6 +572,10 @@
 				636CD46B1A06B58000712342 /* C4CMyStocksTableViewController.m */,
 				636CD4CA1A06CFB700712342 /* C4CNewStockFormViewController.h */,
 				636CD4CB1A06CFB700712342 /* C4CNewStockFormViewController.m */,
+				63AFDA851A10524F0078CC4E /* C4CMyOrdersDetailTableViewController.h */,
+				63AFDA861A10524F0078CC4E /* C4CMyOrdersDetailTableViewController.m */,
+				63AFDA881A1057360078CC4E /* C4CMyStockDetailTableViewController.h */,
+				63AFDA891A1057360078CC4E /* C4CMyStockDetailTableViewController.m */,
 			);
 			name = Farmer;
 			sourceTree = "<group>";
@@ -570,6 +591,8 @@
 				635773391A0B398A00D51CE3 /* C4CStockDetailTableViewController.m */,
 				6320FCE61A0E7240009518B7 /* C4CNewOrderFormViewController.h */,
 				6320FCE71A0E7240009518B7 /* C4CNewOrderFormViewController.m */,
+				63AFDA8B1A1059170078CC4E /* C4CMyPurchasesDetailTableViewController.h */,
+				63AFDA8C1A1059170078CC4E /* C4CMyPurchasesDetailTableViewController.m */,
 			);
 			name = Customer;
 			sourceTree = "<group>";
@@ -660,6 +683,9 @@
 				63581D001A0066D60008196F /* C4CDoncampoImageCell.m */,
 				635773291A0B15D500D51CE3 /* C4CBlueSubmitButtonCell.h */,
 				6357732A1A0B15D500D51CE3 /* C4CBlueSubmitButtonCell.m */,
+				63AFDA801A104E400078CC4E /* C4CGreenSubmitButtonCell.xib */,
+				63AFDA821A104F2A0078CC4E /* C4CGreenSubmitButtonCell.h */,
+				63AFDA831A104F2A0078CC4E /* C4CGreenSubmitButtonCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -689,6 +715,8 @@
 			children = (
 				639D97B919F4213F008418D7 /* C4CPriceTableViewController.h */,
 				639D97BA19F4213F008418D7 /* C4CPriceTableViewController.m */,
+				63AFDA8E1A10684A0078CC4E /* C4CPriceDetailTableViewController.h */,
+				63AFDA8F1A10684A0078CC4E /* C4CPriceDetailTableViewController.m */,
 			);
 			name = Price;
 			sourceTree = "<group>";
@@ -800,6 +828,7 @@
 				636CD49F1A06BDAA00712342 /* comprador.png in Resources */,
 				636CD4A31A06BDAA00712342 /* farmerregister-1.png in Resources */,
 				636CD4B41A06BDAA00712342 /* Icon@2x.png in Resources */,
+				63AFDA811A104E400078CC4E /* C4CGreenSubmitButtonCell.xib in Resources */,
 				636CD4C11A06BDF700712342 /* C4CDoncampoImageCell.xib in Resources */,
 				636CD4C31A06BE2800712342 /* Main.storyboard in Resources */,
 				636CD4B71A06BDAA00712342 /* productor.png in Resources */,
@@ -889,6 +918,7 @@
 				636CD5351A07F30600712342 /* INTULocationRequest.m in Sources */,
 				63581D011A0066D60008196F /* C4CDoncampoImageCell.m in Sources */,
 				639D97BB19F4213F008418D7 /* C4CPriceTableViewController.m in Sources */,
+				63AFDA841A104F2A0078CC4E /* C4CGreenSubmitButtonCell.m in Sources */,
 				635773221A0AE70500D51CE3 /* C4CProductTableViewController.m in Sources */,
 				636CD4DB1A073CF800712342 /* GeoCode.m in Sources */,
 				63581D041A0069F40008196F /* Token.m in Sources */,
@@ -897,10 +927,13 @@
 				6386F21019D8BA2C006A6B57 /* C4CRootForm.m in Sources */,
 				636CD4771A06BC0200712342 /* C4CHomeTableViewController.m in Sources */,
 				6320FCE51A0E6D85009518B7 /* C4COrderForm.m in Sources */,
+				63AFDA871A10524F0078CC4E /* C4CMyOrdersDetailTableViewController.m in Sources */,
+				63AFDA8D1A1059170078CC4E /* C4CMyPurchasesDetailTableViewController.m in Sources */,
 				636CD46C1A06B58000712342 /* C4CMyStocksTableViewController.m in Sources */,
 				636CD4E81A07DEE700712342 /* Stock.m in Sources */,
 				6386F21619D8BABB006A6B57 /* C4CRegistrationForm.m in Sources */,
 				636CD4651A06A9B400712342 /* C4CWhoamiTableViewController.m in Sources */,
+				63AFDA8A1A1057360078CC4E /* C4CMyStockDetailTableViewController.m in Sources */,
 				636CD4CF1A06D29B00712342 /* Unit.m in Sources */,
 				636CD4741A06B7FE00712342 /* C4CMyPurchasesTableViewController.m in Sources */,
 				635773341A0B1D7900D51CE3 /* C4CStockTableViewCell.m in Sources */,
@@ -918,6 +951,7 @@
 				636CD4C61A06BE3A00712342 /* Model.xcdatamodeld in Sources */,
 				6386F22719D90B54006A6B57 /* C4CStockForm.m in Sources */,
 				636CD4691A06B53700712342 /* C4CMyOrdersTableViewController.m in Sources */,
+				63AFDA901A10684A0078CC4E /* C4CPriceDetailTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
