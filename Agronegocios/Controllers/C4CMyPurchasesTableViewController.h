@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <RestKit/Search.h>
+#import "C4COrderTableViewCell.h"
+#import "MyPurchases.h"
+#import "Token.h"
 
 @interface C4CMyPurchasesTableViewController : UITableViewController
+
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+@property (strong, nonatomic) NSFetchedResultsController *searchFetchedResultsController;
 
 @end

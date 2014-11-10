@@ -12,6 +12,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSShadow *shadow = [[NSShadow alloc] init];
+    shadow.shadowColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8];
+    shadow.shadowOffset = CGSizeMake(0, 1);
+    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
+                                                           [UIColor colorWithRed:245.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:1.0], NSForegroundColorAttributeName,
+                                                           shadow, NSShadowAttributeName,
+                                                           [UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:21.0], NSFontAttributeName, nil]];
+    
     NSError *error = nil;
     
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
@@ -78,7 +86,7 @@
                                                          @"Updated"                 :@"updatedAt"}];
     stockRpMapping.identificationAttributes = @[@"stockId"];
     [managedObjectStore addSearchIndexingToEntityForName:@"Stock"
-                                            onAttributes:@[@"productName", @"town", @"state", @"userName"]];
+                                            onAttributes:@[@"productName", @"userName"]];
     
     //MYSTOCK REPONSE MAPPING
     RKEntityMapping *myStockRpMapping = [RKEntityMapping mappingForEntityForName:@"MyStock" inManagedObjectStore:managedObjectStore];
@@ -106,7 +114,89 @@
                                                          @"Updated"                 :@"updatedAt"}];
     myStockRpMapping.identificationAttributes = @[@"stockId"];
     [managedObjectStore addSearchIndexingToEntityForName:@"MyStock"
-                                            onAttributes:@[@"productName", @"town", @"state"]];
+                                            onAttributes:@[@"productName"]];
+    
+    //MYORDERS REPONSE MAPPING
+    
+    RKEntityMapping *myOrdersRpMapping = [RKEntityMapping mappingForEntityForName:@"MyOrders" inManagedObjectStore:managedObjectStore];
+    [myOrdersRpMapping addAttributeMappingsFromDictionary:@{@"Id"                      :@"orderId",
+                                                         @"FullName"                :@"fullName",
+                                                         @"Phone"                   :@"phone",
+                                                         @"Qty"                     :@"orderQty",
+                                                         @"Stock.Id"                      :@"stockId",
+                                                         @"Stock.Product.Code"            :@"productCode",
+                                                         @"Stock.Product.Name"            :@"productName",
+                                                         @"Stock.Unit.Code"               :@"unitCode",
+                                                         @"Stock.Unit.Name"               :@"unitName",
+                                                         @"Stock.Qty"                     :@"stockQty",
+                                                         @"Stock.PricePerUnit"            :@"pricePerUnit",
+                                                         @"Stock.ExpiresAt"               :@"expiresAt",
+                                                         @"Stock.GeoPoint.Latitude"       :@"stockLatitude",
+                                                         @"Stock.GeoPoint.Longitude"      :@"stockLongitude",
+                                                         @"Stock.GeoPoint.Address"        :@"stockAddress",
+                                                         @"Stock.GeoPoint.Town"           :@"stockTown",
+                                                         @"Stock.GeoPoint.State"          :@"stockState",
+                                                         @"Stock.GeoPoint.Country"        :@"stockCountry",
+                                                         @"Stock.User.Email"              :@"stockUserEmail",
+                                                         @"Stock.User.User.Name"          :@"stockUserName",
+                                                         @"Stock.User.User.Identification":@"stockUserIdentification",
+                                                         @"Stock.User.User.Phone"         :@"stockUserPhone",
+                                                         @"GeoPoint.Latitude"       :@"orderLatitude",
+                                                         @"GeoPoint.Longitude"      :@"orderLongitude",
+                                                         @"GeoPoint.Address"        :@"orderAddress",
+                                                         @"GeoPoint.Town"           :@"orderTown",
+                                                         @"GeoPoint.State"          :@"orderState",
+                                                         @"GeoPoint.Country"        :@"orderCountry",
+                                                         @"User.Email"              :@"userEmail",
+                                                         @"User.User.Name"          :@"userName",
+                                                         @"User.User.Identification":@"userIdentification",
+                                                         @"User.User.Phone"         :@"userPhone",
+                                                         @"Created"                 :@"createdAt",
+                                                         @"Updated"                 :@"updatedAt"}];
+    myOrdersRpMapping.identificationAttributes = @[@"orderId"];
+    [managedObjectStore addSearchIndexingToEntityForName:@"MyOrders"
+                                            onAttributes:@[@"productName", @"userName"]];
+    
+    //MYPURCHASES REPONSE MAPPING
+    
+    RKEntityMapping *myPurchasesRpMapping = [RKEntityMapping mappingForEntityForName:@"MyPurchases" inManagedObjectStore:managedObjectStore];
+    [myPurchasesRpMapping addAttributeMappingsFromDictionary:@{@"Id"                      :@"orderId",
+                                                            @"FullName"                :@"fullName",
+                                                            @"Phone"                   :@"phone",
+                                                            @"Qty"                     :@"orderQty",
+                                                            @"Stock.Id"                      :@"stockId",
+                                                            @"Stock.Product.Code"            :@"productCode",
+                                                            @"Stock.Product.Name"            :@"productName",
+                                                            @"Stock.Unit.Code"               :@"unitCode",
+                                                            @"Stock.Unit.Name"               :@"unitName",
+                                                            @"Stock.Qty"                     :@"stockQty",
+                                                            @"Stock.PricePerUnit"            :@"pricePerUnit",
+                                                            @"Stock.ExpiresAt"               :@"expiresAt",
+                                                            @"Stock.GeoPoint.Latitude"       :@"stockLatitude",
+                                                            @"Stock.GeoPoint.Longitude"      :@"stockLongitude",
+                                                            @"Stock.GeoPoint.Address"        :@"stockAddress",
+                                                            @"Stock.GeoPoint.Town"           :@"stockTown",
+                                                            @"Stock.GeoPoint.State"          :@"stockState",
+                                                            @"Stock.GeoPoint.Country"        :@"stockCountry",
+                                                            @"Stock.User.Email"              :@"stockUserEmail",
+                                                            @"Stock.User.User.Name"          :@"stockUserName",
+                                                            @"Stock.User.User.Identification":@"stockUserIdentification",
+                                                            @"Stock.User.User.Phone"         :@"stockUserPhone",
+                                                            @"GeoPoint.Latitude"       :@"orderLatitude",
+                                                            @"GeoPoint.Longitude"      :@"orderLongitude",
+                                                            @"GeoPoint.Address"        :@"orderAddress",
+                                                            @"GeoPoint.Town"           :@"orderTown",
+                                                            @"GeoPoint.State"          :@"orderState",
+                                                            @"GeoPoint.Country"        :@"orderCountry",
+                                                            @"User.Email"              :@"userEmail",
+                                                            @"User.User.Name"          :@"userName",
+                                                            @"User.User.Identification":@"userIdentification",
+                                                            @"User.User.Phone"         :@"userPhone",
+                                                            @"Created"                 :@"createdAt",
+                                                            @"Updated"                 :@"updatedAt"}];
+    myPurchasesRpMapping.identificationAttributes = @[@"orderId"];
+    [managedObjectStore addSearchIndexingToEntityForName:@"MyPurchases"
+                                            onAttributes:@[@"productName", @"stockUserName"]];
     
     //STOCK REQUEST MAPPING
     RKObjectMapping *stockRqMapping = [RKObjectMapping requestMapping];
@@ -115,6 +205,19 @@
                                                          @"qty"         :@"Qty",
                                                          @"pricePerUnit":@"PricePerUnit",
                                                          @"expiresAt"   :@"ExpiresAt",
+                                                         @"latitude"    :@"GeoPoint.Latitude",
+                                                         @"longitude"   :@"GeoPoint.Longitude",
+                                                         @"address"     :@"GeoPoint.Address",
+                                                         @"town"        :@"GeoPoint.Town",
+                                                         @"state"       :@"GeoPoint.State",
+                                                         @"country"     :@"GeoPoint.Country"}];
+    
+    //ORDER REQUEST MAPPING
+    RKObjectMapping *orderRqMapping = [RKObjectMapping requestMapping];
+    [orderRqMapping addAttributeMappingsFromDictionary:@{@"stockId"     :@"StockId",
+                                                         @"fullName"    :@"FullName",
+                                                         @"phone"       :@"Phone",
+                                                         @"qty"         :@"Qty",
                                                          @"latitude"    :@"GeoPoint.Latitude",
                                                          @"longitude"   :@"GeoPoint.Longitude",
                                                          @"address"     :@"GeoPoint.Address",
@@ -217,6 +320,16 @@
                                                                                    method:RKRequestMethodAny
                                                                               pathPattern:MYSTOCKS_PATH
                                                                                   keyPath:nil
+                                                                              statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)],
+                                      [RKResponseDescriptor responseDescriptorWithMapping:myOrdersRpMapping
+                                                                                   method:RKRequestMethodAny
+                                                                              pathPattern:MYORDERS_PATH
+                                                                                  keyPath:nil
+                                                                              statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)],
+                                      [RKResponseDescriptor responseDescriptorWithMapping:myPurchasesRpMapping
+                                                                                   method:RKRequestMethodAny
+                                                                              pathPattern:MYPURCHASES_PATH
+                                                                                  keyPath:nil
                                                                               statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)]];
     [objectManager addResponseDescriptorsFromArray:responseDescriptors];
     
@@ -231,6 +344,10 @@
                                                                                method:RKRequestMethodAny],
                                     [RKRequestDescriptor requestDescriptorWithMapping:stockRqMapping
                                                                           objectClass:[NewStock class]
+                                                                          rootKeyPath:nil
+                                                                               method:RKRequestMethodAny],
+                                    [RKRequestDescriptor requestDescriptorWithMapping:orderRqMapping
+                                                                          objectClass:[NewOrder class]
                                                                           rootKeyPath:nil
                                                                                method:RKRequestMethodAny]];
     [objectManager addRequestDescriptorsFromArray:requestDescriptors];

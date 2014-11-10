@@ -18,7 +18,8 @@
     [super viewDidLoad];
     self.tableView.backgroundColor = [UIColor colorWithRed:1 green:0.91 blue:0.74 alpha:1];
     self.title = @"Agronegocios";
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;    
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <RestKit/Search.h>
 #import "C4CStockTableViewCell.h"
+#import "C4CStockDetailTableViewController.h"
 #import "Token.h"
 #import "Stock.h"
 

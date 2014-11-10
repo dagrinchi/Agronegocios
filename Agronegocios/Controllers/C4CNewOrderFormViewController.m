@@ -1,27 +1,27 @@
 //
-//  C4CNewStockFormViewController.m
+//  C4CNewOrderFormViewController.m
 //  Agronegocios
 //
-//  Created by David Almeciga on 11/2/14.
+//  Created by David Almeciga on 11/8/14.
 //  Copyright (c) 2014 COOL4CODE. All rights reserved.
 //
 
-#import "C4CNewStockFormViewController.h"
+#import "C4CNewOrderFormViewController.h"
 
-@interface C4CNewStockFormViewController ()
+@interface C4CNewOrderFormViewController ()
 
 @property (assign, nonatomic) NSInteger locationRequestID;
 
 @end
 
-@implementation C4CNewStockFormViewController
+@implementation C4CNewOrderFormViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    SAMHUDView *hud = [[SAMHUDView alloc] initWithTitle:@"Regando cultivos!" loading:YES];
-
-    C4CStockForm *stockForm = [[C4CStockForm alloc] init];
+    SAMHUDView *hud = [[SAMHUDView alloc] initWithTitle:@"Sembrando semillas!" loading:YES];
+    
+    C4COrderForm *orderForm = [[C4COrderForm alloc] init];
     [hud show];
     
     [self startLocationRequest:^(CLLocation *location, INTULocationAccuracy achievedAccuracy, INTULocationStatus status) {
@@ -57,16 +57,16 @@
         self.locationRequestID = NSNotFound;
     }];
     
-    self.formController.form = stockForm;
+    self.formController.form = orderForm;
     
     UIColor *bgColor = [UIColor colorWithRed:1 green:0.91 blue:0.74 alpha:1];
     self.tableView.backgroundView.backgroundColor = bgColor;
     self.tableView.backgroundColor = bgColor;
     self.view.backgroundColor = bgColor;
     
-    self.title = @"Nuevo Inventario";
+    self.title = @"Nuevo Pedido";
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Atras" style:UIBarButtonItemStylePlain target:nil action:nil];
-    
+
 }
 
 - (NSString *)accessToken
@@ -95,7 +95,7 @@
     [super viewWillDisappear:animated];
 }
 
-- (void)submitStockForm:(UITableViewCell<FXFormFieldCell> *)cell
+- (void)submitOrderForm:(UITableViewCell<FXFormFieldCell> *)cell
 {
     SAMHUDView *hud = [[SAMHUDView alloc] initWithTitle:@"Enviando!" loading:YES];
     [hud show];
@@ -106,32 +106,32 @@
     AddressComponent *state = [geoCode.addressComponents objectAtIndex:2];
     AddressComponent *country = [geoCode.addressComponents lastObject];
     
-    C4CStockForm *form = cell.field.form;
-    NewStock *stock = [NewStock new];
+    C4COrderForm *form = cell.field.form;
+    NewOrder *order = [NewOrder new];
     
-    if (form.product.productId != nil && form.unit.unitId != nil && form.qty != nil && form.pricePerUnit != nil && form.expiresAt != nil) {
-        stock.productId = form.product.productId;
-        stock.unitId = form.unit.unitId;
-        stock.qty = form.qty;
-        stock.pricePerUnit = form.pricePerUnit;
-        stock.expiresAt = form.expiresAt;
-        stock.latitude = [NSNumber numberWithDouble:self.location.coordinate.latitude];
-        stock.longitude = [NSNumber numberWithDouble:self.location.coordinate.longitude];
-        stock.address = address.longName;
-        stock.town = town.longName;
-        stock.state = state.longName;
-        stock.country = country.longName;
+    if (form.fullName != nil && form.phone != nil && form.qty != nil) {
+        
+        order.stockId = _stock.stockId;
+        order.fullName = form.fullName;
+        order.phone = form.phone;
+        order.qty = form.qty;
+        order.latitude = [NSNumber numberWithDouble:self.location.coordinate.latitude];
+        order.longitude = [NSNumber numberWithDouble:self.location.coordinate.longitude];
+        order.address = address.longName;
+        order.town = town.longName;
+        order.state = state.longName;
+        order.country = country.longName;
         
         RKObjectManager *objectManager = [RKObjectManager sharedManager];
         [objectManager.HTTPClient setDefaultHeader:@"Authorization" value:[NSString stringWithFormat:@"Bearer %@", [self accessToken]]];
-        [objectManager postObject:stock
-                             path:STOCKS_PATH
+        [objectManager postObject:order
+                             path:ORDERS_PATH
                        parameters:nil
                           success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
                               hud.textLabel.text = @"Listo!";
                               hud.loading = FALSE;
                               hud.successful = TRUE;
-                              [self performSelector:@selector(returnToFarmer:) withObject:hud afterDelay:1.5];
+                              [self performSelector:@selector(returnToStockDetail:) withObject:hud afterDelay:1.5];
                               
                           }
                           failure:^(RKObjectRequestOperation *operation, NSError *error) {
@@ -145,11 +145,12 @@
     }
 }
 
-- (void)returnToFarmer :(SAMHUDView *)hud
+- (void)returnToStockDetail :(SAMHUDView *)hud
 {
     [self.navigationController popViewControllerAnimated:YES];
     [hud dismiss];
 }
+
 
 -(void)loadAddressData :(NSString *)latLon :(void (^)(RKObjectRequestOperation *operation, RKMappingResult *mappingResult))success
 {
@@ -194,7 +195,7 @@ static void C4CShowAlertWithError(NSString *error)
 
 - (void) startLocationRequest :(void (^)(CLLocation *currentLocation, INTULocationAccuracy achievedAccuracy, INTULocationStatus status))block
 {
-   
+    
     INTULocationManager *locMgr = [INTULocationManager sharedInstance];
     self.locationRequestID = [locMgr requestLocationWithDesiredAccuracy:INTULocationAccuracyCity
                                                                 timeout:20

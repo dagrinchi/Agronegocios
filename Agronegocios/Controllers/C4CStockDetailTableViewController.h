@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Stock.h"
+#import "C4CNewOrderFormViewController.h"
 
 @interface C4CStockDetailTableViewController : UITableViewController
+
+@property (nonatomic, strong) Stock *stock;
 
 @end
