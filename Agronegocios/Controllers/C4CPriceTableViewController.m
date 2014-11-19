@@ -9,6 +9,9 @@
 #import "C4CPriceTableViewController.h"
 
 @interface C4CPriceTableViewController ()  <NSFetchedResultsControllerDelegate>
+{
+    SAMHUDView *hud;
+}
 
 @end
 
@@ -21,7 +24,7 @@
     UIRefreshControl *refreshControl = [UIRefreshControl new];
     [refreshControl addTarget:self action:@selector(loadData) forControlEvents:UIControlEventValueChanged];
     self.refreshControl = refreshControl;
-    [self.refreshControl beginRefreshing];
+    // [self.refreshControl beginRefreshing];
     
     self.fetchedResultsController = [self newFetchedResultsController];
     [self loadData];
@@ -34,12 +37,16 @@
     self.view.backgroundColor = bgColor;
     
     self.title = @"Precios";
+    
+    hud = [[SAMHUDView alloc] initWithTitle:@"Descargando listas!" loading:YES];
+    [hud show];
 }
 
 - (NSFetchedResultsController *)newFetchedResultsController {
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Price"];
-    NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"createdAt" ascending:NO];
-    fetchRequest.sortDescriptors = @[descriptor];
+    NSSortDescriptor *byDateDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"createdAt" ascending:NO];
+    NSSortDescriptor *byProductNameDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"productName" ascending:YES];
+    fetchRequest.sortDescriptors = @[byDateDescriptor, byProductNameDescriptor];
     NSError *error = nil;
     
     NSFetchedResultsController *fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
@@ -61,6 +68,7 @@
     [[RKObjectManager sharedManager] getObjectsAtPath:PRICES_PATH
                                            parameters:nil
                                               success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+                                                  [hud dismiss];
                                                   /*[[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:@"LastUpdatedAt"];
                                                   [[NSUserDefaults standardUserDefaults] synchronize];*/
                                               }

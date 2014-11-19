@@ -12,6 +12,7 @@
 {
     UISearchBar *searchBar;
     UISearchDisplayController *searchDisplayController;
+    SAMHUDView *hud;
 }
 
 
@@ -25,7 +26,7 @@
     UIRefreshControl *refreshControl = [UIRefreshControl new];
     [refreshControl addTarget:self action:@selector(loadData) forControlEvents:UIControlEventValueChanged];
     self.refreshControl = refreshControl;
-    [self.refreshControl beginRefreshing];
+    //[self.refreshControl beginRefreshing];
     
     self.fetchedResultsController = [self newFetchedResultsController];
     [self loadData];
@@ -49,6 +50,9 @@
     self.tableView.tableHeaderView = searchBar;
     
     self.title = @"Productos";
+    
+    hud = [[SAMHUDView alloc] initWithTitle:@"Descargando listas!" loading:YES];
+    [hud show];
 }
 
 - (NSFetchedResultsController *)newFetchedResultsController {
@@ -88,7 +92,7 @@
     [objectManager getObjectsAtPath:PRODUCTS_PATH
                                            parameters:nil
                                               success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                                                  
+                                                  [hud dismiss];
                                               }
                                               failure:^(RKObjectRequestOperation *operation, NSError *error) {
                                                   RKLogError(@"Error: %@", error);

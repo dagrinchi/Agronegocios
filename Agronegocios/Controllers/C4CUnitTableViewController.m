@@ -9,6 +9,9 @@
 #import "C4CUnitTableViewController.h"
 
 @interface C4CUnitTableViewController ()
+{
+    SAMHUDView *hud;
+}
 
 @end
 
@@ -28,6 +31,9 @@
     self.view.backgroundColor = bgColor;
     
     self.title = @"Unidades";
+    
+    hud = [[SAMHUDView alloc] initWithTitle:@"Descargando listas!" loading:YES];
+    [hud show];
 
 }
 
@@ -68,6 +74,7 @@
     [objectManager getObjectsAtPath:UNITS_PATH
                                            parameters:nil
                                               success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+                                                  [hud dismiss];
                                                   /*[[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:@"LastUpdatedAt"];
                                                    [[NSUserDefaults standardUserDefaults] synchronize];*/
                                               }

@@ -9,6 +9,9 @@
 #import "C4CMyStocksTableViewController.h"
 
 @interface C4CMyStocksTableViewController () <NSFetchedResultsControllerDelegate>
+{
+    SAMHUDView *hud;
+}
 
 @end
 
@@ -20,7 +23,7 @@
     UIRefreshControl *refreshControl = [UIRefreshControl new];
     [refreshControl addTarget:self action:@selector(loadData) forControlEvents:UIControlEventValueChanged];
     self.refreshControl = refreshControl;
-    [self.refreshControl beginRefreshing];
+    // [self.refreshControl beginRefreshing];
     
     self.fetchedResultsController = [self newFetchedResultsController];
     [self loadData];
@@ -33,6 +36,9 @@
     self.view.backgroundColor = bgColor;
     
     self.title = @"Mis inventarios";
+    
+    hud = [[SAMHUDView alloc] initWithTitle:@"Descargando listas!" loading:YES];
+    [hud show];
     
 }
 
@@ -73,7 +79,7 @@
     [objectManager getObjectsAtPath:MYSTOCKS_PATH
                          parameters:nil
                             success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                                
+                                [hud dismiss];
                             }
                             failure:^(RKObjectRequestOperation *operation, NSError *error) {
                                 RKLogError(@"Error: %@", error);
