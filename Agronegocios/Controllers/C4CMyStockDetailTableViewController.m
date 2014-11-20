@@ -93,8 +93,49 @@
     return 44;
 }
 
-- (IBAction)deleteAction:(id)sender {
-    NSLog(@"Go delete!");
+- (NSString *)accessToken
+{
+    NSError *error = nil;
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Token"];
+    [fetchRequest setSortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"issuedAt" ascending:NO]]];
+    NSArray *result = [[RKObjectManager sharedManager].managedObjectStore.mainQueueManagedObjectContext executeFetchRequest:fetchRequest error:&error];
+    Token *lastToken = [result lastObject];
+    return lastToken.accessToken;
 }
+
+- (IBAction)deleteAction:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"¿Desea countinar?"
+                                                    message:[NSString stringWithFormat:@"Vas a eliminar el inventario #%@, esta acción no se puede reversar.", _stock.stockId]
+                                                   delegate:self
+                                          cancelButtonTitle:@"Cancelar"
+                                          otherButtonTitles:@"Continuar", nil];
+    [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 1) {
+        RKObjectManager *objectManager = [RKObjectManager sharedManager];
+        [objectManager.HTTPClient setDefaultHeader:@"Authorization" value:[NSString stringWithFormat:@"Bearer %@", [self accessToken]]];
+        [objectManager deleteObject:_stock
+                               path:[NSString stringWithFormat:@"%@/%@", STOCKS_PATH, _stock.stockId]
+                         parameters:nil
+                            success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+                                [self.navigationController popViewControllerAnimated:YES];
+                            }
+                            failure:^(RKObjectRequestOperation *operation, NSError *error) {
+                                C4CShowAlertWithError(error);
+                            }];
+    }
+}
+
+static void C4CShowAlertWithError(NSError *error)
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                    message:[error localizedDescription]
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
+}
+
 
 @end

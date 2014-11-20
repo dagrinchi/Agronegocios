@@ -58,7 +58,6 @@
              @"pricePerUnit",
              @{FXFormFieldKey: @"expiresAt",
                FXFormFieldTitle: @"Fecha de vencimiento",
-               FXFormFieldType: FXFormFieldTypeDateTime,
                @"textLabel.font": [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:18.0]}];
 }
 

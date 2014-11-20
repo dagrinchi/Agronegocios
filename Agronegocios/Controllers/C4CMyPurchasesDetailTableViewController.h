@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MyPurchases.h"
+#import "Token.h"
 
 @interface C4CMyPurchasesDetailTableViewController : UITableViewController
 

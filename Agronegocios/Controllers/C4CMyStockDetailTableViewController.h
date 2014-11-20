@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MyStock.h"
+#import "Token.h"
 
 @interface C4CMyStockDetailTableViewController : UITableViewController
 

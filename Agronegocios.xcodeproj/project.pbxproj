@@ -36,6 +36,9 @@
 		63611B201969FA36006B3282 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63611B081969FA36006B3282 /* UIKit.framework */; };
 		63611B2A1969FA36006B3282 /* AgronegociosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63611B291969FA36006B3282 /* AgronegociosTests.m */; };
 		6368B60D1A01A96000B3805A /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 6368B60C1A01A96000B3805A /* Login.m */; };
+		636CAC821A1D397A008375D4 /* about_agronet.png in Resources */ = {isa = PBXBuildFile; fileRef = 636CAC7F1A1D397A008375D4 /* about_agronet.png */; };
+		636CAC831A1D397A008375D4 /* about_minagricultura.png in Resources */ = {isa = PBXBuildFile; fileRef = 636CAC801A1D397A008375D4 /* about_minagricultura.png */; };
+		636CAC841A1D397A008375D4 /* about_mintic.png in Resources */ = {isa = PBXBuildFile; fileRef = 636CAC811A1D397A008375D4 /* about_mintic.png */; };
 		636CD4621A069EF500712342 /* C4CRegistrationFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 636CD4611A069EF500712342 /* C4CRegistrationFormViewController.m */; };
 		636CD4651A06A9B400712342 /* C4CWhoamiTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 636CD4641A06A9B400712342 /* C4CWhoamiTableViewController.m */; };
 		636CD4691A06B53700712342 /* C4CMyOrdersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 636CD4681A06B53700712342 /* C4CMyOrdersTableViewController.m */; };
@@ -177,6 +180,9 @@
 		63611B291969FA36006B3282 /* AgronegociosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AgronegociosTests.m; sourceTree = "<group>"; };
 		6368B60B1A01A96000B3805A /* Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Login.h; path = Models/Login.h; sourceTree = "<group>"; };
 		6368B60C1A01A96000B3805A /* Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Login.m; path = Models/Login.m; sourceTree = "<group>"; };
+		636CAC7F1A1D397A008375D4 /* about_agronet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = about_agronet.png; path = Assets/about_agronet.png; sourceTree = "<group>"; };
+		636CAC801A1D397A008375D4 /* about_minagricultura.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = about_minagricultura.png; path = Assets/about_minagricultura.png; sourceTree = "<group>"; };
+		636CAC811A1D397A008375D4 /* about_mintic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = about_mintic.png; path = Assets/about_mintic.png; sourceTree = "<group>"; };
 		636CD4601A069EF500712342 /* C4CRegistrationFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CRegistrationFormViewController.h; path = Controllers/C4CRegistrationFormViewController.h; sourceTree = "<group>"; };
 		636CD4611A069EF500712342 /* C4CRegistrationFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4CRegistrationFormViewController.m; path = Controllers/C4CRegistrationFormViewController.m; sourceTree = "<group>"; };
 		636CD4631A06A9B400712342 /* C4CWhoamiTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CWhoamiTableViewController.h; path = Controllers/C4CWhoamiTableViewController.h; sourceTree = "<group>"; };
@@ -479,6 +485,9 @@
 		63611B341969FA99006B3282 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				636CAC7F1A1D397A008375D4 /* about_agronet.png */,
+				636CAC801A1D397A008375D4 /* about_minagricultura.png */,
+				636CAC811A1D397A008375D4 /* about_mintic.png */,
 				636CD4781A06BDAA00712342 /* agricultor.png */,
 				636CD4791A06BDAA00712342 /* agronegocios.png */,
 				636CD47A1A06BDAA00712342 /* aprende.png */,
@@ -831,9 +840,11 @@
 				63AFDA811A104E400078CC4E /* C4CGreenSubmitButtonCell.xib in Resources */,
 				636CD4C11A06BDF700712342 /* C4CDoncampoImageCell.xib in Resources */,
 				636CD4C31A06BE2800712342 /* Main.storyboard in Resources */,
+				636CAC841A1D397A008375D4 /* about_mintic.png in Resources */,
 				636CD4B71A06BDAA00712342 /* productor.png in Resources */,
 				636CD4B51A06BDAA00712342 /* login.png in Resources */,
 				636CD4AE1A06BDAA00712342 /* Icon-Small-50.png in Resources */,
+				636CAC821A1D397A008375D4 /* about_agronet.png in Resources */,
 				636CD49C1A06BDAA00712342 /* box.png in Resources */,
 				6357732D1A0B1A2900D51CE3 /* C4CBlueSubmitButtonCell.xib in Resources */,
 				636CD4AB1A06BDAA00712342 /* Icon-Small-40.png in Resources */,
@@ -841,6 +852,7 @@
 				636CD49E1A06BDAA00712342 /* clientregister.png in Resources */,
 				636CD4A81A06BDAA00712342 /* Icon-72@2x.png in Resources */,
 				636CD4B81A06BDAA00712342 /* user.png in Resources */,
+				636CAC831A1D397A008375D4 /* about_minagricultura.png in Resources */,
 				636CD4AC1A06BDAA00712342 /* Icon-Small-40@2x.png in Resources */,
 				63581D101A0076C00008196F /* Default-568h@2x.png in Resources */,
 				636CD49D1A06BDAA00712342 /* calc.png in Resources */,

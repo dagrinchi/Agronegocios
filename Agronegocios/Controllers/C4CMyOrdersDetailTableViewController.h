@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MyOrders.h"
+#import "Token.h"
 
 @interface C4CMyOrdersDetailTableViewController : UITableViewController
 

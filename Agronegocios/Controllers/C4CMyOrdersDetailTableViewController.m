@@ -87,8 +87,49 @@
 }
 
 #pragma mark
+
+- (NSString *)accessToken
+{
+    NSError *error = nil;
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Token"];
+    [fetchRequest setSortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"issuedAt" ascending:NO]]];
+    NSArray *result = [[RKObjectManager sharedManager].managedObjectStore.mainQueueManagedObjectContext executeFetchRequest:fetchRequest error:&error];
+    Token *lastToken = [result lastObject];
+    return lastToken.accessToken;
+}
+
 - (IBAction)deleteAction:(id)sender {
-    NSLog(@"Go delete!");
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"¿Desea countinar?"
+                                                    message:[NSString stringWithFormat:@"Vas a eliminar el pedido #%@, esta acción no se puede reversar.", _order.orderId]
+                                                   delegate:self
+                                          cancelButtonTitle:@"Cancelar"
+                                          otherButtonTitles:@"Continuar", nil];
+    [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 1) {
+        RKObjectManager *objectManager = [RKObjectManager sharedManager];
+        [objectManager.HTTPClient setDefaultHeader:@"Authorization" value:[NSString stringWithFormat:@"Bearer %@", [self accessToken]]];
+        [objectManager deleteObject:_order
+                               path:[NSString stringWithFormat:@"%@/%@", ORDERS_PATH, _order.orderId]
+                         parameters:nil
+                            success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+                                [self.navigationController popViewControllerAnimated:YES];
+                            }
+                            failure:^(RKObjectRequestOperation *operation, NSError *error) {
+                                C4CShowAlertWithError(error);
+                            }];
+    }
+}
+
+static void C4CShowAlertWithError(NSError *error)
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                    message:[error localizedDescription]
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

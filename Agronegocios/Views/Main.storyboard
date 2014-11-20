@@ -367,7 +367,7 @@
                         <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Buscar por producto, mercado" translucent="NO" id="uMp-ir-X8U">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <color key="barTintColor" red="0.40000000000000002" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
@@ -492,7 +492,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MgD-a4-cgz">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <rect key="frame" x="15" y="15" width="290" height="390"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Términos y condiciones de uso de la aplicación para dispositivos móviles">
@@ -726,7 +726,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">8.2.	Los requisitos del software son los siguientes: </string>
+                                        <string key="content">8.2.	Los requisitos del software son los siguientes: iPhone 4 ó posterior, iPad 2ª generación ó posterior; con un espacio mínimo de almacenamiento de 30 Mb.</string>
                                         <attributes>
                                             <font key="NSFont" size="12" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" firstLineHeadIndent="7.0999999999999996" tailIndent="441.89999999999998" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
@@ -735,7 +735,8 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">Esta especificación agradecería me ayudarán a completarla David y Marcos, gracias.
+                                        <string key="content" base64-UTF8="YES">
+Cg
 </string>
                                         <attributes>
                                             <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -823,10 +824,10 @@ Cg
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="MgD-a4-cgz" firstAttribute="bottom" secondItem="Zdt-Ge-ekV" secondAttribute="top" id="CPj-oL-80A"/>
-                            <constraint firstItem="MgD-a4-cgz" firstAttribute="top" secondItem="6T8-Z0-LvR" secondAttribute="bottom" id="S1r-pd-mWQ"/>
-                            <constraint firstItem="MgD-a4-cgz" firstAttribute="leading" secondItem="fde-zf-dfK" secondAttribute="leading" id="mOy-1d-OpC"/>
-                            <constraint firstAttribute="trailing" secondItem="MgD-a4-cgz" secondAttribute="trailing" id="mU9-DN-1gw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MgD-a4-cgz" secondAttribute="trailing" constant="-1" id="Mfi-Je-CMt"/>
+                            <constraint firstItem="MgD-a4-cgz" firstAttribute="leading" secondItem="fde-zf-dfK" secondAttribute="leadingMargin" constant="-1" id="gPm-N4-mkS"/>
+                            <constraint firstItem="Zdt-Ge-ekV" firstAttribute="top" secondItem="MgD-a4-cgz" secondAttribute="bottom" constant="11" id="yqj-39-dYL"/>
+                            <constraint firstItem="MgD-a4-cgz" firstAttribute="top" secondItem="6T8-Z0-LvR" secondAttribute="bottom" constant="15" id="yxI-Dk-mnY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Términos y condiciones" id="bTb-wU-NNe"/>
@@ -846,7 +847,81 @@ Cg
                     <view key="view" contentMode="scaleToFill" id="1Uv-hn-6FW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WKb-V4-RxC">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about_agronet.png" translatesAutoresizingMaskIntoConstraints="NO" id="gHZ-ay-Eeb">
+                                        <rect key="frame" x="0.0" y="8" width="320" height="130"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="130" id="uqi-tQ-sxL"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about_minagricultura.png" translatesAutoresizingMaskIntoConstraints="NO" id="guv-ya-xjc">
+                                        <rect key="frame" x="40" y="146" width="240" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="x6A-Xr-DIq"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about_mintic.png" translatesAutoresizingMaskIntoConstraints="NO" id="eUe-j9-a9w">
+                                        <rect key="frame" x="40" y="229" width="240" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="wbo-mz-4hz"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Db7-jx-ezy">
+                                        <rect key="frame" x="20" y="312" width="280" height="104"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="104" id="LlH-PT-g0F"/>
+                                        </constraints>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Agronegocios v1.0">
+                                                <attributes>
+                                                    <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <font key="NSFont" size="15" name="HelveticaNeue-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">
+
+Marcos Aguilera - maguilera@cool4code.com
+David Alméciga - walmeciga@cool4code.com  Esta aplicación requiere acceso a internet y puede consumir recursos de su plan de datos.</string>
+                                                <attributes>
+                                                    <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <font key="NSFont" size="13" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="gHZ-ay-Eeb" firstAttribute="leading" secondItem="WKb-V4-RxC" secondAttribute="leading" id="3hQ-cg-Ch2"/>
+                                    <constraint firstItem="Db7-jx-ezy" firstAttribute="top" secondItem="eUe-j9-a9w" secondAttribute="bottom" constant="8" symbolic="YES" id="CuF-8t-bwP"/>
+                                    <constraint firstItem="eUe-j9-a9w" firstAttribute="centerX" secondItem="WKb-V4-RxC" secondAttribute="centerX" id="FmP-Yf-cb1"/>
+                                    <constraint firstAttribute="bottom" secondItem="Db7-jx-ezy" secondAttribute="bottom" id="Gvy-rp-msc"/>
+                                    <constraint firstItem="guv-ya-xjc" firstAttribute="leading" secondItem="WKb-V4-RxC" secondAttribute="leading" constant="40" id="KkU-DO-EJj"/>
+                                    <constraint firstItem="gHZ-ay-Eeb" firstAttribute="top" secondItem="WKb-V4-RxC" secondAttribute="topMargin" id="NZv-NA-gE9"/>
+                                    <constraint firstItem="guv-ya-xjc" firstAttribute="trailing" secondItem="eUe-j9-a9w" secondAttribute="trailing" id="QId-JD-SAb"/>
+                                    <constraint firstItem="guv-ya-xjc" firstAttribute="top" secondItem="gHZ-ay-Eeb" secondAttribute="bottom" constant="8" symbolic="YES" id="U7p-qy-aAK"/>
+                                    <constraint firstItem="guv-ya-xjc" firstAttribute="centerX" secondItem="gHZ-ay-Eeb" secondAttribute="centerX" id="b6l-si-Sce"/>
+                                    <constraint firstItem="Db7-jx-ezy" firstAttribute="leading" secondItem="WKb-V4-RxC" secondAttribute="leading" constant="20" id="g5K-CV-tuZ"/>
+                                    <constraint firstItem="eUe-j9-a9w" firstAttribute="leading" secondItem="guv-ya-xjc" secondAttribute="leading" id="gBg-R5-LkM"/>
+                                    <constraint firstItem="eUe-j9-a9w" firstAttribute="centerX" secondItem="Db7-jx-ezy" secondAttribute="centerX" id="rcR-qp-c1Y"/>
+                                    <constraint firstAttribute="trailing" secondItem="gHZ-ay-Eeb" secondAttribute="trailing" id="w81-eo-Pf7"/>
+                                    <constraint firstItem="eUe-j9-a9w" firstAttribute="top" secondItem="guv-ya-xjc" secondAttribute="bottom" constant="8" symbolic="YES" id="wTa-tY-01F"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="WKb-V4-RxC" secondAttribute="trailing" id="2BO-eh-Mwc"/>
+                            <constraint firstItem="WKb-V4-RxC" firstAttribute="bottom" secondItem="J5w-Kb-b3R" secondAttribute="top" id="jCN-Ik-tZV"/>
+                            <constraint firstItem="WKb-V4-RxC" firstAttribute="leading" secondItem="1Uv-hn-6FW" secondAttribute="leading" id="mSt-Wo-Vbs"/>
+                            <constraint firstItem="WKb-V4-RxC" firstAttribute="top" secondItem="2zs-ve-fwO" secondAttribute="bottom" id="vKo-dG-Bhh"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Acerca de" id="TvY-7m-mba"/>
                 </viewController>
@@ -927,7 +1002,7 @@ Cg
                         <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Buscar por producto, nombre productor" translucent="NO" id="1bo-7c-Er6">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <color key="barTintColor" red="1" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
@@ -1909,6 +1984,9 @@ Cg
         </scene>
     </scenes>
     <resources>
+        <image name="about_agronet.png" width="595" height="257"/>
+        <image name="about_minagricultura.png" width="536" height="166"/>
+        <image name="about_mintic.png" width="536" height="166"/>
         <image name="agronegocios.png" width="209" height="196"/>
         <image name="aprende.png" width="30" height="30"/>
         <image name="box.png" width="30" height="30"/>

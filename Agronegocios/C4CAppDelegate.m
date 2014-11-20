@@ -280,9 +280,9 @@
     RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:BASE_URL]];
     objectManager.managedObjectStore = managedObjectStore;
 
-    // RESPOSE DESCRIPTORS
+    // RESPONSE DESCRIPTORS
      NSArray *responseDescriptors = @[[RKResponseDescriptor responseDescriptorWithMapping:priceMapping
-                                                                                   method:RKRequestMethodAny
+                                                                                   method:RKRequestMethodGET
                                                                               pathPattern:PRICES_PATH
                                                                                   keyPath:nil
                                                                               statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)],
