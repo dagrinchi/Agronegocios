@@ -40,6 +40,7 @@
 {
     return @{FXFormFieldKey: @"qty",
              FXFormFieldTitle: @"Cantidad",
+             FXFormFieldType: FXFormFieldTypeNumber,
              @"textLabel.font": [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:18.0]};
 }
 
@@ -47,6 +48,7 @@
 {
     return @{FXFormFieldKey: @"pricePerUnit",
              FXFormFieldTitle: @"Precio por unidad ($)",
+             FXFormFieldType: FXFormFieldTypeNumber,
              @"textLabel.font": [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:18.0]};
 }
 

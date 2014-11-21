@@ -84,6 +84,7 @@
                             failure:^(RKObjectRequestOperation *operation, NSError *error) {
                                 RKLogError(@"Error: %@", error);
                                 C4CShowAlertWithError(error);
+                                [hud dismiss];
                             }];
     
     [self performSelector:@selector(endRefreshControl) withObject:nil afterDelay:1.5];
