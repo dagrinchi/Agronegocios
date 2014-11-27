@@ -107,56 +107,65 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    if (tableView == self.tableView) {
+    /*if (tableView == self.tableView) {
         return [[self.fetchedResultsController sections] count];
     } else if (tableView == self.searchDisplayController.searchResultsTableView) {
         return [[self.searchFetchedResultsController sections] count];
-    }
+    }*/
     
-    return 1;
+    return 2;
     
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (tableView == self.tableView) {
-        return [[[self.fetchedResultsController sections] objectAtIndex:section] numberOfObjects];
-    } else if (tableView == self.searchDisplayController.searchResultsTableView) {
-        return [[[self.searchFetchedResultsController sections] objectAtIndex:section] numberOfObjects];
+    if (section == 0) {
+        if (tableView == self.tableView) {
+            return [[[self.fetchedResultsController sections] objectAtIndex:section] numberOfObjects];
+        } else if (tableView == self.searchDisplayController.searchResultsTableView) {
+            return [[[self.searchFetchedResultsController sections] objectAtIndex:section] numberOfObjects];
+        }
+    } else {
+        return 1;
     }
     
     return 0;
+
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *reuseIdentifier = @"myordersCell";
-    C4COrderTableViewCell *cell = (C4COrderTableViewCell *)[self.tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
-    if (cell == nil) {
-        cell = [[C4COrderTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier];
+    if (indexPath.section == 0) {
+        NSString *reuseIdentifier = @"myordersCell";
+        C4COrderTableViewCell *cell = (C4COrderTableViewCell *)[self.tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
+        if (cell == nil) {
+            cell = [[C4COrderTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier];
+        }
+        
+        MyOrders *order = nil;
+        if (tableView == self.tableView) {
+            order = [_fetchedResultsController objectAtIndexPath:indexPath];
+        } else if (tableView == self.searchDisplayController.searchResultsTableView) {
+            order = [_searchFetchedResultsController objectAtIndexPath:indexPath];
+        }
+        
+        [cell.productName setText:order.productName];
+        [cell.expiresAt setText:[NSString stringWithFormat:@"Vence: %@", [NSDate stringFromDate:order.expiresAt withFormat:@"dd MMM YYYY"]]];
+        [cell.userName setText:order.userName];
+        [cell.pricePerUnit setText:[NSNumberFormatter localizedStringFromNumber:order.pricePerUnit numberStyle:NSNumberFormatterCurrencyStyle]];
+        [cell.qty  setText:[NSString stringWithFormat:@"Cant: %@",[NSNumberFormatter localizedStringFromNumber:order.orderQty numberStyle:NSNumberFormatterDecimalStyle]]];
+        [cell.unitName setText:order.unitName];
+        
+        
+        UIView *selectedBackgroupdView = [[UIView alloc] init];
+        selectedBackgroupdView.backgroundColor = [UIColor colorWithRed:1 green:0.27 blue:0.27 alpha:0.3];
+        [cell setSelectedBackgroundView:selectedBackgroupdView];
+        
+        return cell;
+    } else {
+        return [self.tableView dequeueReusableCellWithIdentifier:@"doncampoCell"];
     }
-    
-    MyOrders *order = nil;
-    if (tableView == self.tableView) {
-        order = [_fetchedResultsController objectAtIndexPath:indexPath];
-    } else if (tableView == self.searchDisplayController.searchResultsTableView) {
-        order = [_searchFetchedResultsController objectAtIndexPath:indexPath];
-    }
-    
-    [cell.productName setText:order.productName];
-    [cell.expiresAt setText:[NSString stringWithFormat:@"Vence: %@", [NSDate stringFromDate:order.expiresAt withFormat:@"dd MMM YYYY"]]];
-    [cell.userName setText:order.userName];
-    [cell.pricePerUnit setText:[NSNumberFormatter localizedStringFromNumber:order.pricePerUnit numberStyle:NSNumberFormatterCurrencyStyle]];
-    [cell.qty  setText:[NSString stringWithFormat:@"Cant: %@",[NSNumberFormatter localizedStringFromNumber:order.orderQty numberStyle:NSNumberFormatterDecimalStyle]]];
-    [cell.unitName setText:order.unitName];
-    
-    
-    UIView *selectedBackgroupdView = [[UIView alloc] init];
-    selectedBackgroupdView.backgroundColor = [UIColor colorWithRed:1 green:0.27 blue:0.27 alpha:0.3];
-    [cell setSelectedBackgroundView:selectedBackgroupdView];
-    
-    return cell;
 }
 
 

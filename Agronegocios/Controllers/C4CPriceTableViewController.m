@@ -40,6 +40,7 @@
     
     hud = [[SAMHUDView alloc] initWithTitle:@"Descargando listas!" loading:YES];
     [hud show];
+
 }
 
 - (NSFetchedResultsController *)newFetchedResultsController {

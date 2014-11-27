@@ -11,6 +11,14 @@
 		6320FCE51A0E6D85009518B7 /* C4COrderForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6320FCE41A0E6D85009518B7 /* C4COrderForm.m */; };
 		6320FCE81A0E7240009518B7 /* C4CNewOrderFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6320FCE71A0E7240009518B7 /* C4CNewOrderFormViewController.m */; };
 		632CCEFD19F71B4C00B6A550 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 632CCEFC19F71B4C00B6A550 /* CoreData.framework */; };
+		63378C711A27907A006EFC64 /* facebook-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 63378C6F1A27907A006EFC64 /* facebook-50.png */; };
+		63378C721A27907A006EFC64 /* twitter-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 63378C701A27907A006EFC64 /* twitter-50.png */; };
+		63378C751A279382006EFC64 /* facebook-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 63378C731A279382006EFC64 /* facebook-32.png */; };
+		63378C761A279382006EFC64 /* twitter-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 63378C741A279382006EFC64 /* twitter-32.png */; };
+		63378C791A27AF5F006EFC64 /* C4CTermsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63378C781A27AF5F006EFC64 /* C4CTermsViewController.m */; };
+		63378C7B1A27D111006EFC64 /* twitter-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 63378C7A1A27D111006EFC64 /* twitter-24.png */; };
+		63378C7D1A27D26F006EFC64 /* facebook-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 63378C7C1A27D26F006EFC64 /* facebook-24.png */; };
+		63378C7F1A27D302006EFC64 /* about-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 63378C7E1A27D302006EFC64 /* about-24.png */; };
 		63551C2619F9AB0A00E49EC7 /* C4CPriceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63551C2519F9AB0A00E49EC7 /* C4CPriceTableViewCell.m */; };
 		635773221A0AE70500D51CE3 /* C4CProductTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 635773211A0AE70500D51CE3 /* C4CProductTableViewController.m */; };
 		635773261A0AF74E00D51CE3 /* C4CUnitTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 635773251A0AF74E00D51CE3 /* C4CUnitTableViewController.m */; };
@@ -99,6 +107,7 @@
 		6386F21D19D8C72A006A6B57 /* C4CSubmitButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F21C19D8C72A006A6B57 /* C4CSubmitButtonCell.m */; };
 		6386F22119D8CC7F006A6B57 /* C4CSubmitButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6386F22019D8CC7F006A6B57 /* C4CSubmitButtonCell.xib */; };
 		6386F22719D90B54006A6B57 /* C4CStockForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F22619D90B54006A6B57 /* C4CStockForm.m */; };
+		6397D10A1A24020600BB9C92 /* farmerstocks.png in Resources */ = {isa = PBXBuildFile; fileRef = 6397D1091A24020600BB9C92 /* farmerstocks.png */; };
 		639D97BB19F4213F008418D7 /* C4CPriceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 639D97BA19F4213F008418D7 /* C4CPriceTableViewController.m */; };
 		639FD5511A0D4B730079EE59 /* MyOrders.m in Sources */ = {isa = PBXBuildFile; fileRef = 639FD5501A0D4B730079EE59 /* MyOrders.m */; };
 		639FD5541A0D4C840079EE59 /* MyPurchases.m in Sources */ = {isa = PBXBuildFile; fileRef = 639FD5531A0D4C840079EE59 /* MyPurchases.m */; };
@@ -138,6 +147,15 @@
 		6320FCE61A0E7240009518B7 /* C4CNewOrderFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CNewOrderFormViewController.h; path = Controllers/C4CNewOrderFormViewController.h; sourceTree = "<group>"; };
 		6320FCE71A0E7240009518B7 /* C4CNewOrderFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4CNewOrderFormViewController.m; path = Controllers/C4CNewOrderFormViewController.m; sourceTree = "<group>"; };
 		632CCEFC19F71B4C00B6A550 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		63378C6F1A27907A006EFC64 /* facebook-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "facebook-50.png"; path = "Assets/facebook-50.png"; sourceTree = "<group>"; };
+		63378C701A27907A006EFC64 /* twitter-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "twitter-50.png"; path = "Assets/twitter-50.png"; sourceTree = "<group>"; };
+		63378C731A279382006EFC64 /* facebook-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "facebook-32.png"; path = "Assets/facebook-32.png"; sourceTree = "<group>"; };
+		63378C741A279382006EFC64 /* twitter-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "twitter-32.png"; path = "Assets/twitter-32.png"; sourceTree = "<group>"; };
+		63378C771A27AF5F006EFC64 /* C4CTermsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CTermsViewController.h; path = Controllers/C4CTermsViewController.h; sourceTree = "<group>"; };
+		63378C781A27AF5F006EFC64 /* C4CTermsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4CTermsViewController.m; path = Controllers/C4CTermsViewController.m; sourceTree = "<group>"; };
+		63378C7A1A27D111006EFC64 /* twitter-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "twitter-24.png"; path = "Assets/twitter-24.png"; sourceTree = "<group>"; };
+		63378C7C1A27D26F006EFC64 /* facebook-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "facebook-24.png"; path = "Assets/facebook-24.png"; sourceTree = "<group>"; };
+		63378C7E1A27D302006EFC64 /* about-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "about-24.png"; path = "Assets/about-24.png"; sourceTree = "<group>"; };
 		63551C2419F9AB0A00E49EC7 /* C4CPriceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CPriceTableViewCell.h; path = Views/C4CPriceTableViewCell.h; sourceTree = "<group>"; };
 		63551C2519F9AB0A00E49EC7 /* C4CPriceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4CPriceTableViewCell.m; path = Views/C4CPriceTableViewCell.m; sourceTree = "<group>"; };
 		635773201A0AE70500D51CE3 /* C4CProductTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CProductTableViewController.h; path = Controllers/C4CProductTableViewController.h; sourceTree = "<group>"; };
@@ -266,6 +284,7 @@
 		6386F22019D8CC7F006A6B57 /* C4CSubmitButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = C4CSubmitButtonCell.xib; path = Forms/C4CSubmitButtonCell.xib; sourceTree = "<group>"; };
 		6386F22519D90B54006A6B57 /* C4CStockForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CStockForm.h; path = Forms/C4CStockForm.h; sourceTree = "<group>"; };
 		6386F22619D90B54006A6B57 /* C4CStockForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4CStockForm.m; path = Forms/C4CStockForm.m; sourceTree = "<group>"; };
+		6397D1091A24020600BB9C92 /* farmerstocks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = farmerstocks.png; path = Assets/farmerstocks.png; sourceTree = "<group>"; };
 		639D97B919F4213F008418D7 /* C4CPriceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CPriceTableViewController.h; path = Controllers/C4CPriceTableViewController.h; sourceTree = "<group>"; };
 		639D97BA19F4213F008418D7 /* C4CPriceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4CPriceTableViewController.m; path = Controllers/C4CPriceTableViewController.m; sourceTree = "<group>"; };
 		639D980B19F53E96008418D7 /* Agronegocios copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Agronegocios copy-Info.plist"; path = "/Users/david/xcode-projects/Agronegocios/Agronegocios copy-Info.plist"; sourceTree = "<absolute>"; };
@@ -485,6 +504,14 @@
 		63611B341969FA99006B3282 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				63378C7E1A27D302006EFC64 /* about-24.png */,
+				63378C7C1A27D26F006EFC64 /* facebook-24.png */,
+				63378C731A279382006EFC64 /* facebook-32.png */,
+				63378C741A279382006EFC64 /* twitter-32.png */,
+				63378C7A1A27D111006EFC64 /* twitter-24.png */,
+				63378C6F1A27907A006EFC64 /* facebook-50.png */,
+				63378C701A27907A006EFC64 /* twitter-50.png */,
+				6397D1091A24020600BB9C92 /* farmerstocks.png */,
 				636CAC7F1A1D397A008375D4 /* about_agronet.png */,
 				636CAC801A1D397A008375D4 /* about_minagricultura.png */,
 				636CAC811A1D397A008375D4 /* about_mintic.png */,
@@ -521,6 +548,8 @@
 				63E9F1101996F4A4008FEEA0 /* Login */,
 				636CD4631A06A9B400712342 /* C4CWhoamiTableViewController.h */,
 				636CD4641A06A9B400712342 /* C4CWhoamiTableViewController.m */,
+				63378C771A27AF5F006EFC64 /* C4CTermsViewController.h */,
+				63378C781A27AF5F006EFC64 /* C4CTermsViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -823,7 +852,9 @@
 			files = (
 				636CD4B61A06BDAA00712342 /* papers.png in Resources */,
 				636CD4A61A06BDAA00712342 /* Icon-60@3x.png in Resources */,
+				63378C711A27907A006EFC64 /* facebook-50.png in Resources */,
 				636CD4A71A06BDAA00712342 /* Icon-72.png in Resources */,
+				63378C721A27907A006EFC64 /* twitter-50.png in Resources */,
 				636CD4AF1A06BDAA00712342 /* Icon-Small-50@2x.png in Resources */,
 				636CD4B11A06BDAA00712342 /* Icon-Small@2x.png in Resources */,
 				636CD4B31A06BDAA00712342 /* Icon.png in Resources */,
@@ -837,10 +868,13 @@
 				636CD49F1A06BDAA00712342 /* comprador.png in Resources */,
 				636CD4A31A06BDAA00712342 /* farmerregister-1.png in Resources */,
 				636CD4B41A06BDAA00712342 /* Icon@2x.png in Resources */,
+				63378C7F1A27D302006EFC64 /* about-24.png in Resources */,
 				63AFDA811A104E400078CC4E /* C4CGreenSubmitButtonCell.xib in Resources */,
+				63378C7D1A27D26F006EFC64 /* facebook-24.png in Resources */,
 				636CD4C11A06BDF700712342 /* C4CDoncampoImageCell.xib in Resources */,
 				636CD4C31A06BE2800712342 /* Main.storyboard in Resources */,
 				636CAC841A1D397A008375D4 /* about_mintic.png in Resources */,
+				63378C761A279382006EFC64 /* twitter-32.png in Resources */,
 				636CD4B71A06BDAA00712342 /* productor.png in Resources */,
 				636CD4B51A06BDAA00712342 /* login.png in Resources */,
 				636CD4AE1A06BDAA00712342 /* Icon-Small-50.png in Resources */,
@@ -848,18 +882,21 @@
 				636CD49C1A06BDAA00712342 /* box.png in Resources */,
 				6357732D1A0B1A2900D51CE3 /* C4CBlueSubmitButtonCell.xib in Resources */,
 				636CD4AB1A06BDAA00712342 /* Icon-Small-40.png in Resources */,
+				63378C7B1A27D111006EFC64 /* twitter-24.png in Resources */,
 				636CD4991A06BDAA00712342 /* agricultor.png in Resources */,
 				636CD49E1A06BDAA00712342 /* clientregister.png in Resources */,
 				636CD4A81A06BDAA00712342 /* Icon-72@2x.png in Resources */,
 				636CD4B81A06BDAA00712342 /* user.png in Resources */,
 				636CAC831A1D397A008375D4 /* about_minagricultura.png in Resources */,
 				636CD4AC1A06BDAA00712342 /* Icon-Small-40@2x.png in Resources */,
+				63378C751A279382006EFC64 /* facebook-32.png in Resources */,
 				63581D101A0076C00008196F /* Default-568h@2x.png in Resources */,
 				636CD49D1A06BDAA00712342 /* calc.png in Resources */,
 				636CD4B01A06BDAA00712342 /* Icon-Small.png in Resources */,
 				636CD4BE1A06BDBD00712342 /* README.textile in Resources */,
 				636CD4AA1A06BDAA00712342 /* Icon-76@2x.png in Resources */,
 				636CD4A91A06BDAA00712342 /* Icon-76.png in Resources */,
+				6397D10A1A24020600BB9C92 /* farmerstocks.png in Resources */,
 				636CD49B1A06BDAA00712342 /* aprende.png in Resources */,
 				636CD49A1A06BDAA00712342 /* agronegocios.png in Resources */,
 				63611B171969FA36006B3282 /* Images.xcassets in Resources */,
@@ -953,6 +990,7 @@
 				635773371A0B301500D51CE3 /* MyStock.m in Sources */,
 				639FD5541A0D4C840079EE59 /* MyPurchases.m in Sources */,
 				639FD5581A0D51C50079EE59 /* C4COrderTableViewCell.m in Sources */,
+				63378C791A27AF5F006EFC64 /* C4CTermsViewController.m in Sources */,
 				6320FCE81A0E7240009518B7 /* C4CNewOrderFormViewController.m in Sources */,
 				63581D131A007C150008196F /* Registration.m in Sources */,
 				6357732B1A0B15D500D51CE3 /* C4CBlueSubmitButtonCell.m in Sources */,

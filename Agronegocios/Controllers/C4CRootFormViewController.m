@@ -64,7 +64,7 @@
                                             }];
         
     } else {
-        C4CShowAlertWithError(@"Digita tu usuario y clave");
+        C4CShowAlertWithError(@"Digita tu número de identificación y clave");
     }
 }
 

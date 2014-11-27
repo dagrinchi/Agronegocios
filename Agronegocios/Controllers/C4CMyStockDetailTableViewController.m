@@ -105,7 +105,7 @@
 
 - (IBAction)deleteAction:(id)sender {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"¿Desea countinar?"
-                                                    message:[NSString stringWithFormat:@"Vas a eliminar el inventario #%@, esta acción no se puede reversar.", _stock.stockId]
+                                                    message:[NSString stringWithFormat:@"Va a eliminar el inventario #%@, esta acción no se puede reversar.", _stock.stockId]
                                                    delegate:self
                                           cancelButtonTitle:@"Cancelar"
                                           otherButtonTitles:@"Continuar", nil];
@@ -113,13 +113,17 @@
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    NSManagedObjectContext *objectContext = [RKObjectManager sharedManager].managedObjectStore.mainQueueManagedObjectContext;
+    
     if (buttonIndex == 1) {
         RKObjectManager *objectManager = [RKObjectManager sharedManager];
         [objectManager.HTTPClient setDefaultHeader:@"Authorization" value:[NSString stringWithFormat:@"Bearer %@", [self accessToken]]];
-        [objectManager deleteObject:_stock
+        [objectManager deleteObject:nil
                                path:[NSString stringWithFormat:@"%@/%@", STOCKS_PATH, _stock.stockId]
                          parameters:nil
                             success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+                                [objectContext deleteObject:_stock];
+                                [objectContext save:nil];
                                 [self.navigationController popViewControllerAnimated:YES];
                             }
                             failure:^(RKObjectRequestOperation *operation, NSError *error) {

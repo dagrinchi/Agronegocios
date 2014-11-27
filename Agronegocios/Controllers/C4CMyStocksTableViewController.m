@@ -35,8 +35,6 @@
     self.refreshControl.backgroundColor = bgColor;
     self.view.backgroundColor = bgColor;
     
-    self.title = @"Mis inventarios";
-    
     hud = [[SAMHUDView alloc] initWithTitle:@"Descargando listas!" loading:YES];
     [hud show];
     
@@ -96,7 +94,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 80;
+    return indexPath.section == 1 ? 44 : 80;
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -108,22 +106,26 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    if (tableView == self.tableView) {
-        return [[self.fetchedResultsController sections] count];
+    /*if (tableView == self.tableView) {
+        return [[self.fetchedResultsController sections] count] + 1;
     } else if (tableView == self.searchDisplayController.searchResultsTableView) {
-        return [[self.searchFetchedResultsController sections] count];
-    }
+        return [[self.searchFetchedResultsController sections] count] + 1;
+    }*/
     
-    return 1;
+    return 3;
     
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (tableView == self.tableView) {
-        return [[[self.fetchedResultsController sections] objectAtIndex:section] numberOfObjects];
-    } else if (tableView == self.searchDisplayController.searchResultsTableView) {
-        return [[[self.searchFetchedResultsController sections] objectAtIndex:section] numberOfObjects];
+    if (section == 0) {
+        if (tableView == self.tableView) {
+            return [[[self.fetchedResultsController sections] objectAtIndex:0] numberOfObjects];
+        } else if (tableView == self.searchDisplayController.searchResultsTableView) {
+            return [[[self.searchFetchedResultsController sections] objectAtIndex:0] numberOfObjects];
+        }
+    } else {
+        return 1;
     }
     
     return 0;
@@ -132,32 +134,46 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *reuseIdentifier = @"mystockCell";
-    C4CStockTableViewCell *cell = (C4CStockTableViewCell *)[self.tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
-    if (cell == nil) {
-        cell = [[C4CStockTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier];
+    
+    if (indexPath.section == 0) {
+        
+        NSString *reuseIdentifier = @"mystockCell";
+        C4CStockTableViewCell *cell = (C4CStockTableViewCell *)[self.tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
+        
+        if (cell == nil) {
+            cell = [[C4CStockTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier];
+        }
+        
+        MyStock *stock = nil;
+        if (tableView == self.tableView) {
+            stock = [_fetchedResultsController objectAtIndexPath:indexPath];
+        } else if (tableView == self.searchDisplayController.searchResultsTableView) {
+            stock = [_searchFetchedResultsController objectAtIndexPath:indexPath];
+        }
+        
+        [cell.productName setText:stock.productName];
+        [cell.expiresAt setText:[NSString stringWithFormat:@"Vence: %@", [NSDate stringFromDate:stock.expiresAt withFormat:@"dd MMM YYYY"]]];
+        [cell.userName setText:stock.userName];
+        [cell.price setText:[NSNumberFormatter localizedStringFromNumber:stock.pricePerUnit numberStyle:NSNumberFormatterCurrencyStyle]];
+        [cell.qty  setText:[NSString stringWithFormat:@"Cant: %@",[NSNumberFormatter localizedStringFromNumber:stock.qty numberStyle:NSNumberFormatterDecimalStyle]]];
+        [cell.unit setText:stock.unitName];
+        
+        
+        UIView *selectedBackgroupdView = [[UIView alloc] init];
+        selectedBackgroupdView.backgroundColor = [UIColor colorWithRed:0.09 green:0.6 blue:0.79 alpha:0.3];
+        [cell setSelectedBackgroundView:selectedBackgroupdView];
+        
+        return cell;
+        
+    } else if (indexPath.section == 1) {
+        UITableViewCell *newstockCell = [self.tableView dequeueReusableCellWithIdentifier:@"newstockCell"];
+        return newstockCell;
+        
+    } else {
+        UITableViewCell *doncampoCell = [self.tableView dequeueReusableCellWithIdentifier:@"doncampoCell"];
+        return doncampoCell;
+        
     }
-    
-    MyStock *stock = nil;
-    if (tableView == self.tableView) {
-        stock = [_fetchedResultsController objectAtIndexPath:indexPath];
-    } else if (tableView == self.searchDisplayController.searchResultsTableView) {
-        stock = [_searchFetchedResultsController objectAtIndexPath:indexPath];
-    }
-    
-    [cell.productName setText:stock.productName];
-    [cell.expiresAt setText:[NSString stringWithFormat:@"Vence: %@", [NSDate stringFromDate:stock.expiresAt withFormat:@"dd MMM YYYY"]]];
-    [cell.userName setText:stock.userName];
-    [cell.price setText:[NSNumberFormatter localizedStringFromNumber:stock.pricePerUnit numberStyle:NSNumberFormatterCurrencyStyle]];
-    [cell.qty  setText:[NSString stringWithFormat:@"Cant: %@",[NSNumberFormatter localizedStringFromNumber:stock.qty numberStyle:NSNumberFormatterDecimalStyle]]];
-    [cell.unit setText:stock.unitName];
-    
-    
-    UIView *selectedBackgroupdView = [[UIView alloc] init];
-    selectedBackgroupdView.backgroundColor = [UIColor colorWithRed:0.09 green:0.6 blue:0.79 alpha:0.3];
-    [cell setSelectedBackgroundView:selectedBackgroupdView];
-    
-    return cell;
 }
 
 

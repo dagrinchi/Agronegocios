@@ -7,6 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Token.h"
+#import "MyOrders.h"
+#import "MyPurchases.h"
+#import "MyStock.h"
 
 @interface C4CWhoamiTableViewController : UITableViewController
 

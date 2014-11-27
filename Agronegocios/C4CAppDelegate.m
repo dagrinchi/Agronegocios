@@ -287,27 +287,27 @@
                                                                                   keyPath:nil
                                                                               statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)],
                                       [RKResponseDescriptor responseDescriptorWithMapping:registrationRpMapping
-                                                                                   method:RKRequestMethodAny
+                                                                                   method:RKRequestMethodPOST
                                                                               pathPattern:REGISTER_PATH
                                                                                   keyPath:nil
                                                                               statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)],
                                       [RKResponseDescriptor responseDescriptorWithMapping:errorMapping
-                                                                                   method:RKRequestMethodAny
+                                                                                   method:RKRequestMethodPOST
                                                                               pathPattern:nil
                                                                                   keyPath:@"Message"
                                                                               statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassClientError)],
                                       [RKResponseDescriptor responseDescriptorWithMapping:tokenMapping
-                                                                                   method:RKRequestMethodAny
+                                                                                   method:RKRequestMethodPOST
                                                                               pathPattern:TOKEN_PATH
                                                                                   keyPath:nil
                                                                               statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)],
                                       [RKResponseDescriptor responseDescriptorWithMapping:productMapping
-                                                                                   method:RKRequestMethodAny
+                                                                                   method:RKRequestMethodGET
                                                                               pathPattern:PRODUCTS_PATH
                                                                                   keyPath:nil
                                                                               statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)],
                                       [RKResponseDescriptor responseDescriptorWithMapping:unitMapping
-                                                                                   method:RKRequestMethodAny
+                                                                                   method:RKRequestMethodGET
                                                                               pathPattern:UNITS_PATH
                                                                                   keyPath:nil
                                                                               statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)],
@@ -317,17 +317,17 @@
                                                                                   keyPath:nil
                                                                               statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)],
                                       [RKResponseDescriptor responseDescriptorWithMapping:myStockRpMapping
-                                                                                   method:RKRequestMethodAny
+                                                                                   method:RKRequestMethodGET
                                                                               pathPattern:MYSTOCKS_PATH
                                                                                   keyPath:nil
                                                                               statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)],
                                       [RKResponseDescriptor responseDescriptorWithMapping:myOrdersRpMapping
-                                                                                   method:RKRequestMethodAny
+                                                                                   method:RKRequestMethodGET
                                                                               pathPattern:MYORDERS_PATH
                                                                                   keyPath:nil
                                                                               statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)],
                                       [RKResponseDescriptor responseDescriptorWithMapping:myPurchasesRpMapping
-                                                                                   method:RKRequestMethodAny
+                                                                                   method:RKRequestMethodGET
                                                                               pathPattern:MYPURCHASES_PATH
                                                                                   keyPath:nil
                                                                               statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)]];
@@ -337,19 +337,19 @@
     NSArray *requestDescriptors = @[[RKRequestDescriptor requestDescriptorWithMapping:registrationRqMapping
                                                                           objectClass:[Registration class]
                                                                           rootKeyPath:nil
-                                                                               method:RKRequestMethodAny],
+                                                                               method:RKRequestMethodPOST],
                                     [RKRequestDescriptor requestDescriptorWithMapping:loginRqMapping
                                                                           objectClass:[Login class]
                                                                           rootKeyPath:nil
-                                                                               method:RKRequestMethodAny],
+                                                                               method:RKRequestMethodPOST],
                                     [RKRequestDescriptor requestDescriptorWithMapping:stockRqMapping
                                                                           objectClass:[NewStock class]
                                                                           rootKeyPath:nil
-                                                                               method:RKRequestMethodAny],
+                                                                               method:RKRequestMethodPOST],
                                     [RKRequestDescriptor requestDescriptorWithMapping:orderRqMapping
                                                                           objectClass:[NewOrder class]
                                                                           rootKeyPath:nil
-                                                                               method:RKRequestMethodAny]];
+                                                                               method:RKRequestMethodPOST]];
     [objectManager addRequestDescriptorsFromArray:requestDescriptors];
     
     if (![CLLocationManager locationServicesEnabled]) {
