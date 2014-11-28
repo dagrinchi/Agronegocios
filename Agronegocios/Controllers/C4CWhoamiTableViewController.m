@@ -11,6 +11,7 @@
 @interface C4CWhoamiTableViewController ()
 {
     CGFloat height;
+    SLComposeViewController *composeViewController;
 }
 
 @end
@@ -119,6 +120,27 @@
         
         [objectContext save:&error];
         [self backHome];
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 2 && indexPath.item == 0) {
+        [self socialShare:SLServiceTypeFacebook];
+    } else if (indexPath.section == 2 && indexPath.item == 1) {
+        [self socialShare:SLServiceTypeTwitter];
+    }
+}
+
+- (void) socialShare: (NSString *)service
+{
+    if (NSClassFromString(@"SLComposeViewController") != nil) {
+        composeViewController = [[SLComposeViewController alloc] init];
+        composeViewController = [SLComposeViewController composeViewControllerForServiceType:service];
+        [composeViewController setInitialText:@"Acabo de comprar y/o vender un producto agropecuario a través de #AGRONEGOCIOS, app de @AgronetMADR descárgala."];
+        [composeViewController addURL:[NSURL URLWithString:@"http://goo.gl/UnfiH1"]];
+        //[composeViewController addImage:[UIImage imageNamed:@"agronegocios"]];
+        [self presentViewController:composeViewController animated:YES completion:nil];
     }
 }
 

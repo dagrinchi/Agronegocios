@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Social/Social.h>
 #import "Token.h"
 #import "MyOrders.h"
 #import "MyPurchases.h"
