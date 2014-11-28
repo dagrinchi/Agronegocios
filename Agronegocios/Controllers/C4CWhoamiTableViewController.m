@@ -80,7 +80,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CGFloat cellHeight = (height / 2) - 120;
+    CGFloat cellHeight = (height / 2) - 130;
     if (indexPath.section == 0) {
         return cellHeight < 240 ? 240 : cellHeight;
     }

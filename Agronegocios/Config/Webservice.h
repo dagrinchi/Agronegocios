@@ -11,6 +11,10 @@
 
 #define BASE_URL @"http://placita.azurewebsites.net"
 
+#define CUSTOMER_LEARN_URL @"http://www.agronet.gov.co/www/htm3b/noticias2uniNuke.asp"
+
+#define FARMER_LEARN_URL @"http://www.agronet.gov.co/www/htm3b/noticias2uniNuke.asp"
+
 #define GOOGLE_MAPS_BASE_URL @"https://maps.googleapis.com"
 
 #define GEOCODE_PATH @"/maps/api/geocode/json"

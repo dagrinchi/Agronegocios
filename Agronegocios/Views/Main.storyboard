@@ -72,7 +72,7 @@
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="startAction:" destination="84M-qD-tGO" eventType="touchUpInside" id="Gp5-67-oNB"/>
+                                                        <segue destination="N0q-fr-2dq" kind="modal" id="I8p-uB-K4A"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -125,7 +125,7 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="hMy-Oa-MZE" kind="relationship" relationship="rootViewController" id="oKC-me-Uha"/>
+                        <segue destination="xk6-KF-e5d" kind="relationship" relationship="rootViewController" id="A58-0z-O28"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6nK-9y-ZoK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -514,368 +514,408 @@
             <point key="canvasLocation" x="-494" y="-679"/>
         </scene>
         <!--Términos y condiciones-->
-        <scene sceneID="aGo-a3-LYO">
+        <scene sceneID="iYR-Po-TxL">
             <objects>
-                <viewController id="hMy-Oa-MZE" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="6T8-Z0-LvR"/>
-                        <viewControllerLayoutGuide type="bottom" id="Zdt-Ge-ekV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fde-zf-dfK">
+                <tableViewController id="xk6-KF-e5d" customClass="C4CTermsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="b5r-B5-zk7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MgD-a4-cgz">
-                                <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Términos y condiciones de uso de la aplicación para dispositivos móviles">
-                                        <attributes>
-                                            <font key="NSFont" size="15" name="HelveticaNeue-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" tailIndent="441.89999999999998" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content" base64-UTF8="YES">
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="hCT-jM-yKz">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="360" id="Sug-yH-mRS">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Sug-yH-mRS" id="hth-hT-2uX">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MgD-a4-cgz">
+                                                    <rect key="frame" x="10" y="0.0" width="300" height="360"/>
+                                                    <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Términos y condiciones de uso de la aplicación para dispositivos móviles">
+                                                            <attributes>
+                                                                <font key="NSFont" size="15" name="HelveticaNeue-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" tailIndent="1134" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content" base64-UTF8="YES">
 Cg
 </string>
-                                        <attributes>
-                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" tailIndent="441.89999999999998" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">1.	Generalidades.</string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="HelveticaNeue-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" firstLineHeadIndent="7.0999999999999996" tailIndent="441.89999999999998" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" tailIndent="1134" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">1.	Generalidades.</string>
+                                                            <attributes>
+                                                                <font key="NSFont" size="12" name="HelveticaNeue-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" tailIndent="1134" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">
 1.1.	Al instalar esta aplicación (tal como se define abajo), el usuario acepta los presentes términos de uso. Deben leerse detenidamente antes de instalar la aplicación y/o aceptar los términos.
 1.2.	Agronegocios (Agronet\Minagricultura) se reserva el derecho a cambiar o modificar cualquiera de los términos y condiciones contenidos en las presentes condiciones o en cualquier política del servicio, en cualquier momento y a su total discreción. Cualquier cambio o modificación será efectivo o publicado en el sitio web ubicado en http://www.agronet.gov.co/agronetweb1/Agronegocios.aspx o en la aplicación Agronegocios. 
 </string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" firstLineHeadIndent="7.0999999999999996" tailIndent="441.89999999999998" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">2.	Definiciones.</string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="HelveticaNeue-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" firstLineHeadIndent="7.0999999999999996" tailIndent="441.89999999999998" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content"> Por aplicación se entiende el software facilitado por Agronegocios (Agronet\Minagricultura), sus servicios para ser utilizado en dispositivos con los sistemas operativos Apple iOS, Android OS y web así como sus actualizaciones periódicas y cualquier otro software o documentación que permita utilizar esta app.
+                                                            <attributes>
+                                                                <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" tailIndent="1134" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">2.	Definiciones.</string>
+                                                            <attributes>
+                                                                <font key="NSFont" size="12" name="HelveticaNeue-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" tailIndent="1134" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content"> Por aplicación se entiende el software facilitado por Agronegocios (Agronet\Minagricultura), sus servicios para ser utilizado en dispositivos con los sistemas operativos Apple iOS, Android OS y web así como sus actualizaciones periódicas y cualquier otro software o documentación que permita utilizar esta app.
 </string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" firstLineHeadIndent="7.0999999999999996" tailIndent="441.89999999999998" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">3.	Protección de Datos. </string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="HelveticaNeue-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" firstLineHeadIndent="7.0999999999999996" tailIndent="441.89999999999998" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">Cualquier información personal que se facilite a Agronegocios (Agronet\Minagricultura), durante el uso de la aplicación se utilizará únicamente con la política de privacidad de Agronegocios.</string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" firstLineHeadIndent="7.0999999999999996" tailIndent="441.89999999999998" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content" base64-UTF8="YES">
+                                                            <attributes>
+                                                                <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" tailIndent="1134" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">3.	Protección de Datos. </string>
+                                                            <attributes>
+                                                                <font key="NSFont" size="12" name="HelveticaNeue-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" tailIndent="1134" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">Cualquier información personal que se facilite a Agronegocios (Agronet\Minagricultura), durante el uso de la aplicación se utilizará únicamente con la política de privacidad de Agronegocios.</string>
+                                                            <attributes>
+                                                                <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" tailIndent="1134" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content" base64-UTF8="YES">
 Cg
 </string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="HelveticaNeue-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" firstLineHeadIndent="7.0999999999999996" tailIndent="441.89999999999998" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">*Política de Privacidad: Agronet\Minagricultura se compromete a proteger su privacidad.
+                                                            <attributes>
+                                                                <font key="NSFont" size="12" name="HelveticaNeue-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" tailIndent="1134" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">*Política de Privacidad: Agronet\Minagricultura se compromete a proteger su privacidad.
 </string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" firstLineHeadIndent="7.0999999999999996" tailIndent="441.89999999999998" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">4.	Agronegocios. </string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="HelveticaNeue-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" firstLineHeadIndent="7.0999999999999996" tailIndent="441.89999999999998" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="La aplicación permite acceder a determinadas funciones disponibles en el sitio web de Agronegocios. ">
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" firstLineHeadIndent="7.0999999999999996" tailIndent="441.89999999999998" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">
+                                                            <attributes>
+                                                                <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" tailIndent="1134" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">4.	Agronegocios. </string>
+                                                            <attributes>
+                                                                <font key="NSFont" size="12" name="HelveticaNeue-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" tailIndent="1134" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="La aplicación permite acceder a determinadas funciones disponibles en el sitio web de Agronegocios. ">
+                                                            <attributes>
+                                                                <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" tailIndent="1134" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">
 5.	Licencia de Derechos de Propiedad.
 </string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="HelveticaNeue-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" firstLineHeadIndent="7.0999999999999996" tailIndent="441.89999999999998" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">5.1.	Todas las marcas, derechos de autor, bases de datos y otros derechos de propiedad intelectual de la Aplicación, cualquiera que sea su naturaleza, así como el código fuente, son propiedad de Agronegocios (Agronet\Minagricultura) o los licenciados de Agronegocios (Agronet\Minagricultura).</string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" firstLineHeadIndent="7.0999999999999996" tailIndent="441.89999999999998" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">
+                                                            <attributes>
+                                                                <font key="NSFont" size="12" name="HelveticaNeue-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" tailIndent="1134" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">5.1.	Todas las marcas, derechos de autor, bases de datos y otros derechos de propiedad intelectual de la Aplicación, cualquiera que sea su naturaleza, así como el código fuente, son propiedad de Agronegocios (Agronet\Minagricultura) o los licenciados de Agronegocios (Agronet\Minagricultura).</string>
+                                                            <attributes>
+                                                                <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" tailIndent="1134" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">
 6.	Condiciones de Uso.
 </string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="HelveticaNeue-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" firstLineHeadIndent="7.0999999999999996" tailIndent="441.89999999999998" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">6.1.	El usuario no actuará ni permitirá que terceras personas actúen en su nombre para (i)hacer y distribuir copias de la aplicación; (ii)intentar copiar, reproducir, alterar, modificar, hacer ingeniería inversa, desarmar, descompilar, transferir, intercambiar o traducir la aplicación; (iii)si va a crear un proyecto derivado de la aplicación consultar primero con Agronegocios (Agronet\Minagricultura) para dar el aval.</string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" firstLineHeadIndent="7.0999999999999996" tailIndent="441.89999999999998" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content" base64-UTF8="YES">
+                                                            <attributes>
+                                                                <font key="NSFont" size="12" name="HelveticaNeue-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" tailIndent="1134" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">6.1.	El usuario no actuará ni permitirá que terceras personas actúen en su nombre para (i)hacer y distribuir copias de la aplicación; (ii)intentar copiar, reproducir, alterar, modificar, hacer ingeniería inversa, desarmar, descompilar, transferir, intercambiar o traducir la aplicación; (iii)si va a crear un proyecto derivado de la aplicación consultar primero con Agronegocios (Agronet\Minagricultura) para dar el aval.</string>
+                                                            <attributes>
+                                                                <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" tailIndent="1134" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content" base64-UTF8="YES">
 Cg
 </string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="HelveticaNeue-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" firstLineHeadIndent="7.0999999999999996" tailIndent="441.89999999999998" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">6.2.	La aplicación se entregará al usuario de manera gratuita para su uso personal (para comercializar sus productos y servicios). Agronegocios (Agronet\Minagricultura) se reserva el derecho a modificar o deshabilitar la Aplicación en cualquier momento y por cualquier motivo.
+                                                            <attributes>
+                                                                <font key="NSFont" size="12" name="HelveticaNeue-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" tailIndent="1134" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">6.2.	La aplicación se entregará al usuario de manera gratuita para su uso personal (para comercializar sus productos y servicios). Agronegocios (Agronet\Minagricultura) se reserva el derecho a modificar o deshabilitar la Aplicación en cualquier momento y por cualquier motivo.
 6.3.	El usuario acepta que los términos del acuerdo con el proveedor de su red móvil (Proveedores de Servicios Móviles) continuarán en vigor durante el uso de la aplicación. En consecuencia es posible que el Proveedor de Servicios Móviles cobre por los servicios de conexión a la red mientras la Aplicación permanezca conectada a la red, o que se produzcan cargos económicos de terceros. El usuario acepta la responsabilidad de los cargos que pudieran surgir.
 6.4.	Si el usuario no es titular de la facturación del teléfono o dispositivo móvil utilizado para acceder a la aplicación, se asumirá que tiene permisos de titular para utilizar la Aplicación.
 </string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" firstLineHeadIndent="7.0999999999999996" tailIndent="441.89999999999998" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">7.	Disponibilidad.</string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="HelveticaNeue-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" firstLineHeadIndent="7.0999999999999996" tailIndent="441.89999999999998" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">
+                                                            <attributes>
+                                                                <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" tailIndent="1134" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">7.	Disponibilidad.</string>
+                                                            <attributes>
+                                                                <font key="NSFont" size="12" name="HelveticaNeue-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" tailIndent="1134" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">
 7.1.	Esta Aplicación está disponible para los dispositivos móviles portátiles que funcionen con los sistemas operativos Apple iOS y android OS. Agronegocios (Agronet\Minagricultura) hará todos los esfuerzos razonables para que la Aplicación esté disponible en todo momento. No obstante, el usuario acepta que la entrega de la Aplicación se realizará a través de internet y de las redes móviles y que, en consecuencia, la calidad y la disponibilidad de la Aplicación pueden verse afectadas por factores ajenos al control responsable de Agronegocios (Agronet\Minagricultura).
 7.2.	Agronegocios (Agronet\Minagricultura) no se hará responsable del servicio técnico o del mantenimiento de la aplicación.
 7.3.	Agronegocios (Agronet\Minagricultura) y sus subcontratistas no se hacen responsables de la no disponibilidad de la Aplicación, de las dificultades o de la imposibilidad de descargar o acceder  a su contenido, ni de ningún otro fallo que pudiera provocar que la Aplicación no este disponible.
 </string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" firstLineHeadIndent="7.0999999999999996" tailIndent="441.89999999999998" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">8.	Requisitos del Sistema.
+                                                            <attributes>
+                                                                <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" tailIndent="1134" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">8.	Requisitos del Sistema.
 </string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="HelveticaNeue-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" firstLineHeadIndent="7.0999999999999996" tailIndent="441.89999999999998" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">8.1.	Para poder utilizar la Aplicación, el usuario debe tener un teléfono o dispositivo móvil compatible, con conexión a internet y que cumpla las especificaciones mínimas (Requisitos del software).</string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" firstLineHeadIndent="7.0999999999999996" tailIndent="441.89999999999998" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content" base64-UTF8="YES">
+                                                            <attributes>
+                                                                <font key="NSFont" size="12" name="HelveticaNeue-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" tailIndent="1134" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">8.1.	Para poder utilizar la Aplicación, el usuario debe tener un teléfono o dispositivo móvil compatible, con conexión a internet y que cumpla las especificaciones mínimas (Requisitos del software).</string>
+                                                            <attributes>
+                                                                <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" tailIndent="1134" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content" base64-UTF8="YES">
 Cg
 </string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="HelveticaNeue-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" firstLineHeadIndent="7.0999999999999996" tailIndent="441.89999999999998" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">8.2.	Los requisitos del software son los siguientes: iPhone 4 ó posterior, iPad 2ª generación ó posterior; con un espacio mínimo de almacenamiento de 30 Mb.</string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" firstLineHeadIndent="7.0999999999999996" tailIndent="441.89999999999998" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content" base64-UTF8="YES">
+                                                            <attributes>
+                                                                <font key="NSFont" size="12" name="HelveticaNeue-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" tailIndent="1134" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">8.2.	Los requisitos del software son los siguientes: iPhone 4 ó posterior, iPad 2ª generación ó posterior; con un espacio mínimo de almacenamiento de 30 Mb.</string>
+                                                            <attributes>
+                                                                <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" tailIndent="1134" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content" base64-UTF8="YES">
 Cg
 </string>
-                                        <attributes>
-                                            <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" firstLineHeadIndent="7.0999999999999996" tailIndent="441.89999999999998" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">8.3.	La versión del software de la Aplicación puede sufrir actualizaciones periódicas para añadir compatibilidad con nuevas funciones y servicios.
+                                                            <attributes>
+                                                                <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" tailIndent="1134" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">8.3.	La versión del software de la Aplicación puede sufrir actualizaciones periódicas para añadir compatibilidad con nuevas funciones y servicios.
 </string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" firstLineHeadIndent="7.0999999999999996" tailIndent="441.89999999999998" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">9.	Finalización.</string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="HelveticaNeue-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" firstLineHeadIndent="7.0999999999999996" tailIndent="441.89999999999998" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">
+                                                            <attributes>
+                                                                <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" tailIndent="1134" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">9.	Finalización.</string>
+                                                            <attributes>
+                                                                <font key="NSFont" size="12" name="HelveticaNeue-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" tailIndent="1134" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">
 9.1.	Agronegocios (Agronet\Minagricultura) puede finalizar el uso de la Aplicación en cualquier momento previa notificación al usuario.
 9.2.	Al finalizar dicho uso, (a) también se pondrá fin a todos los derechos y licencias otorgados al usuario; (b) el usuario deberá dejar de utilizar el software.
 </string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" firstLineHeadIndent="7.0999999999999996" tailIndent="441.89999999999998" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">10.	Limitación de Responsabilidades.</string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="HelveticaNeue-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" firstLineHeadIndent="7.0999999999999996" tailIndent="441.89999999999998" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">
+                                                            <attributes>
+                                                                <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" tailIndent="1134" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">10.	Limitación de Responsabilidades.</string>
+                                                            <attributes>
+                                                                <font key="NSFont" size="12" name="HelveticaNeue-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" tailIndent="1134" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">
 10.1.	En ningún caso se podrá hacer responsable a Agronegocios (Agronet\Minagricultura) de ningún tipo de pérdidas o daños directos, indirectos, especiales, punitivos, ejemplares o consecuentes, derivados del uso o del acceso a la Aplicación, incluida la pérdida de beneficios y similares, se deban o no a la falta de cumplimiento por parte de las partes, ya sea por infracción del contrato, agravio (incluida negligencia), responsabilidad del producto u otros.
 10.2.	Agronegocios (Agronet\Minagricultura), no se hará responsable de ningún daño o alteración en los equipos del usuario como resultado de la instalación o el uso de la Aplicación, incluyendo, pero sin limitarse a, equipos informáticos, dispositivos portátiles o teléfonos móviles.
 10.3.	Ningún  aspecto de estos términos de la aplicación excluye o limita  la responsabilidad de Agronegocios (Agronet\Minagricultura) en relación a lesiones personales o la muerte por negligencia, el fraude o las distorsiones fraudulentas, o cualquier otra responsabilidad que no pueda excluir o limitar por la ley.
 </string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" firstLineHeadIndent="7.0999999999999996" tailIndent="441.89999999999998" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">11.	Exención de Responsabilidad para las Garantías. </string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="HelveticaNeue-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" firstLineHeadIndent="7.0999999999999996" tailIndent="441.89999999999998" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">Con el fin de evitar dudas y de acuerdo al máximo permitido por la ley, Agronegocios (Agronet\Minagricultura) se exime de cualquier responsabilidad en relación a todas las garantías implícitas derivadas de la aplicación. La Aplicación y el software se suministran “tal cual” y “tal como están disponibles” sin ningún tipo de garantía.</string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" firstLineHeadIndent="7.0999999999999996" tailIndent="441.89999999999998" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qyi-nL-Z24">
-                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
-                                <color key="backgroundColor" red="0.33333333329999998" green="0.5450980392" blue="0.0078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="21"/>
-                                <state key="normal" title="Aceptar términos">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Términos y condiciones" id="bTb-wU-NNe">
-                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="PV5-GH-5nx">
+                                                            <attributes>
+                                                                <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" tailIndent="1134" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">11.	Exención de Responsabilidad para las Garantías. </string>
+                                                            <attributes>
+                                                                <font key="NSFont" size="12" name="HelveticaNeue-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" tailIndent="1134" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">Con el fin de evitar dudas y de acuerdo al máximo permitido por la ley, Agronegocios (Agronet\Minagricultura) se exime de cualquier responsabilidad en relación a todas las garantías implícitas derivadas de la aplicación. La Aplicación y el software se suministran “tal cual” y “tal como están disponibles” sin ningún tipo de garantía.</string>
+                                                            <attributes>
+                                                                <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" tailIndent="1134" lineHeightMultiple="1.0791666666666666" defaultTabInterval="35.399999999999999">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="MgD-a4-cgz" firstAttribute="top" secondItem="hth-hT-2uX" secondAttribute="top" id="ELV-Ih-C5T"/>
+                                                <constraint firstItem="MgD-a4-cgz" firstAttribute="leading" secondItem="hth-hT-2uX" secondAttribute="leading" constant="10" id="TmZ-jI-sLJ"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="MgD-a4-cgz" secondAttribute="bottom" constant="-8.5" id="ciH-23-a4A"/>
+                                                <constraint firstAttribute="trailing" secondItem="MgD-a4-cgz" secondAttribute="trailing" constant="10" id="qxq-1G-kx7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="GiL-Z8-eZm">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="3Mf-7n-xeH">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Mf-7n-xeH" id="RGs-Mb-JAc">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qyi-nL-Z24">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                                    <color key="backgroundColor" red="0.33333333329999998" green="0.5450980392" blue="0.0078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="21"/>
+                                                    <state key="normal" title="Aceptar términos">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="7x7-ck-1Mj" kind="unwind" unwindAction="unwindTermsAndAccept:" id="tsg-SS-Whl"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="qyi-nL-Z24" firstAttribute="leading" secondItem="RGs-Mb-JAc" secondAttribute="leading" id="JSg-p9-hYp"/>
+                                                <constraint firstItem="qyi-nL-Z24" firstAttribute="top" secondItem="RGs-Mb-JAc" secondAttribute="top" id="KQR-q2-i5F"/>
+                                                <constraint firstAttribute="trailing" secondItem="qyi-nL-Z24" secondAttribute="trailing" id="Qeo-O0-Jyn"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="qyi-nL-Z24" secondAttribute="bottom" constant="-8.5" id="k8w-K7-dJf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="xk6-KF-e5d" id="GNr-dm-dGX"/>
+                            <outlet property="delegate" destination="xk6-KF-e5d" id="FLT-FK-zaB"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Términos y condiciones" id="NHz-YU-oAC">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="zZv-s3-F3J">
                             <connections>
-                                <segue destination="XGn-Fn-dDq" kind="unwind" unwindAction="unwindTerms:" id="uCm-da-C7n"/>
+                                <segue destination="7x7-ck-1Mj" kind="unwind" unwindAction="unwindTerms:" id="xai-xg-JD6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SHE-AV-jpS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="XGn-Fn-dDq" userLabel="Exit" sceneMemberID="exit"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N7e-28-p2h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="7x7-ck-1Mj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-957" y="-1281"/>
         </scene>
@@ -900,10 +940,10 @@ Cg
                                             <constraint firstAttribute="height" constant="130" id="uqi-tQ-sxL"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about_minagricultura.png" translatesAutoresizingMaskIntoConstraints="NO" id="guv-ya-xjc">
-                                        <rect key="frame" x="40" y="146" width="240" height="75"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-minagricultura.png" translatesAutoresizingMaskIntoConstraints="NO" id="guv-ya-xjc">
+                                        <rect key="frame" x="8" y="147" width="304" height="69"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="75" id="x6A-Xr-DIq"/>
+                                            <constraint firstAttribute="height" constant="69" id="x6A-Xr-DIq"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about_mintic.png" translatesAutoresizingMaskIntoConstraints="NO" id="eUe-j9-a9w">
@@ -946,16 +986,16 @@ David Alméciga - walmeciga@cool4code.com  Esta aplicación requiere acceso 
                                     <constraint firstItem="Db7-jx-ezy" firstAttribute="top" secondItem="eUe-j9-a9w" secondAttribute="bottom" constant="8" symbolic="YES" id="CuF-8t-bwP"/>
                                     <constraint firstItem="eUe-j9-a9w" firstAttribute="centerX" secondItem="WKb-V4-RxC" secondAttribute="centerX" id="FmP-Yf-cb1"/>
                                     <constraint firstAttribute="bottom" secondItem="Db7-jx-ezy" secondAttribute="bottom" id="Gvy-rp-msc"/>
-                                    <constraint firstItem="guv-ya-xjc" firstAttribute="leading" secondItem="WKb-V4-RxC" secondAttribute="leading" constant="40" id="KkU-DO-EJj"/>
+                                    <constraint firstItem="guv-ya-xjc" firstAttribute="leading" secondItem="WKb-V4-RxC" secondAttribute="leading" constant="8" id="KkU-DO-EJj"/>
                                     <constraint firstItem="gHZ-ay-Eeb" firstAttribute="top" secondItem="WKb-V4-RxC" secondAttribute="topMargin" id="NZv-NA-gE9"/>
-                                    <constraint firstItem="guv-ya-xjc" firstAttribute="trailing" secondItem="eUe-j9-a9w" secondAttribute="trailing" id="QId-JD-SAb"/>
-                                    <constraint firstItem="guv-ya-xjc" firstAttribute="top" secondItem="gHZ-ay-Eeb" secondAttribute="bottom" constant="8" symbolic="YES" id="U7p-qy-aAK"/>
+                                    <constraint firstItem="guv-ya-xjc" firstAttribute="trailing" secondItem="eUe-j9-a9w" secondAttribute="trailing" constant="32" id="QId-JD-SAb"/>
+                                    <constraint firstItem="guv-ya-xjc" firstAttribute="top" secondItem="gHZ-ay-Eeb" secondAttribute="bottom" constant="9" id="U7p-qy-aAK"/>
                                     <constraint firstItem="guv-ya-xjc" firstAttribute="centerX" secondItem="gHZ-ay-Eeb" secondAttribute="centerX" id="b6l-si-Sce"/>
                                     <constraint firstItem="Db7-jx-ezy" firstAttribute="leading" secondItem="WKb-V4-RxC" secondAttribute="leading" constant="20" id="g5K-CV-tuZ"/>
-                                    <constraint firstItem="eUe-j9-a9w" firstAttribute="leading" secondItem="guv-ya-xjc" secondAttribute="leading" id="gBg-R5-LkM"/>
+                                    <constraint firstItem="eUe-j9-a9w" firstAttribute="leading" secondItem="guv-ya-xjc" secondAttribute="leading" constant="32" id="gBg-R5-LkM"/>
                                     <constraint firstItem="eUe-j9-a9w" firstAttribute="centerX" secondItem="Db7-jx-ezy" secondAttribute="centerX" id="rcR-qp-c1Y"/>
                                     <constraint firstAttribute="trailing" secondItem="gHZ-ay-Eeb" secondAttribute="trailing" id="w81-eo-Pf7"/>
-                                    <constraint firstItem="eUe-j9-a9w" firstAttribute="top" secondItem="guv-ya-xjc" secondAttribute="bottom" constant="8" symbolic="YES" id="wTa-tY-01F"/>
+                                    <constraint firstItem="eUe-j9-a9w" firstAttribute="top" secondItem="guv-ya-xjc" secondAttribute="bottom" constant="13" id="wTa-tY-01F"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -971,12 +1011,12 @@ David Alméciga - walmeciga@cool4code.com  Esta aplicación requiere acceso 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1fK-Yc-Kqh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="127" y="69"/>
+            <point key="canvasLocation" x="127" y="70"/>
         </scene>
         <!--Comprador-->
         <scene sceneID="aMw-FW-sAe">
             <objects>
-                <tabBarController definesPresentationContext="YES" id="FBw-Gu-xfR" sceneMemberID="viewController">
+                <tabBarController definesPresentationContext="YES" id="FBw-Gu-xfR" customClass="C4CCustomerViewController" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Comprador" id="0VH-t0-cxD">
                         <barButtonItem key="backBarButtonItem" title="Atras" id="MQ0-f8-8xz"/>
@@ -992,17 +1032,88 @@ David Alméciga - walmeciga@cool4code.com  Esta aplicación requiere acceso 
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
                         <segue destination="BeC-ut-6la" kind="relationship" relationship="viewControllers" id="LMu-Jq-s1l"/>
                         <segue destination="WPG-9N-sxj" kind="relationship" relationship="viewControllers" id="2wD-Us-Fid"/>
-                        <segue destination="Qay-8m-hFj" kind="relationship" relationship="viewControllers" id="hom-Jg-9y5"/>
+                        <segue destination="OLs-AE-0T9" kind="relationship" relationship="viewControllers" id="JM0-iF-Ci5"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1IU-Yh-UgU" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Jhl-Oh-Z9T" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1631" y="621"/>
+        </scene>
+        <!--Aprende-->
+        <scene sceneID="gFV-Yy-Bk2">
+            <objects>
+                <viewController id="OLs-AE-0T9" customClass="C4CCustomerLearnViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hIA-uq-Sds"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ari-fP-Khr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fO1-TF-Mkh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zcp-Gz-BrT">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zcp-Gz-BrT" firstAttribute="bottom" secondItem="Ari-fP-Khr" secondAttribute="top" id="0jx-KZ-UMH"/>
+                            <constraint firstItem="zcp-Gz-BrT" firstAttribute="leading" secondItem="fO1-TF-Mkh" secondAttribute="leading" id="4IR-NM-zOa"/>
+                            <constraint firstItem="zcp-Gz-BrT" firstAttribute="top" secondItem="hIA-uq-Sds" secondAttribute="bottom" id="FvO-9e-SQE"/>
+                            <constraint firstAttribute="trailing" secondItem="zcp-Gz-BrT" secondAttribute="trailing" id="jGv-bt-3TV"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Aprende" image="book_stack-30-red.png" id="KLn-Kx-XGx"/>
+                    <connections>
+                        <outlet property="webView" destination="zcp-Gz-BrT" id="bIZ-Oc-PpT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rwz-ly-fgJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1631" y="1275"/>
+        </scene>
+        <!--Aprende-->
+        <scene sceneID="ksk-S8-pGO">
+            <objects>
+                <viewController id="AL6-hg-kZZ" customClass="C4CFarmerLearnViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="faf-Hh-fdM"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ig9-vT-epV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uOU-ZW-B6r">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" misplaced="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="meA-8Z-Rit">
+                                <rect key="frame" x="-1" y="1" width="320" height="367"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="meA-8Z-Rit" secondAttribute="trailing" id="Ob9-ad-7Cg"/>
+                            <constraint firstItem="meA-8Z-Rit" firstAttribute="top" secondItem="faf-Hh-fdM" secondAttribute="bottom" id="ULO-Tw-Sx2"/>
+                            <constraint firstItem="meA-8Z-Rit" firstAttribute="bottom" secondItem="Ig9-vT-epV" secondAttribute="top" id="Y14-MN-5aR"/>
+                            <constraint firstItem="meA-8Z-Rit" firstAttribute="leading" secondItem="uOU-ZW-B6r" secondAttribute="leading" id="pQ0-sV-XUu"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Aprende" image="book_stack-30-blue.png" id="PzF-FN-QP9"/>
+                    <connections>
+                        <outlet property="webView" destination="meA-8Z-Rit" id="rr0-ew-2QS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wVr-eh-dS4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1631" y="-361"/>
         </scene>
         <!--Placita-->
         <scene sceneID="Jww-51-lm9">
@@ -1154,7 +1265,7 @@ Para empezar seleccione un producto.</string>
                         </connections>
                     </tableView>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="Placita" image="papers.png" id="zi1-M5-Uyf"/>
+                    <tabBarItem key="tabBarItem" title="Placita" image="shop-30.png" id="zi1-M5-Uyf"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="wM7-6O-jWB" id="V25-vH-hvH"/>
                     </connections>
@@ -1177,7 +1288,7 @@ Para empezar seleccione un producto.</string>
             <objects>
                 <tableViewController id="eLv-uP-Jz1" customClass="C4CStockDetailTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="9bv-03-KOn">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1251,7 +1362,7 @@ Para empezar seleccione un producto.</string>
                         <viewControllerLayoutGuide type="bottom" id="7o5-J4-KDD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="p4x-SU-OJu">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1365,7 +1476,7 @@ Para empezar seleccione un producto.</string>
                         </connections>
                     </tableView>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="Mis Compras" image="folder.png" id="gdm-h6-xoV"/>
+                    <tabBarItem key="tabBarItem" title="Mis Compras" image="shopping_cart-30.png" id="gdm-h6-xoV"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="HtT-bl-uHl" id="8DX-1E-E5S"/>
                     </connections>
@@ -1383,66 +1494,12 @@ Para empezar seleccione un producto.</string>
             </objects>
             <point key="canvasLocation" x="2529" y="964"/>
         </scene>
-        <!--Aprende-->
-        <scene sceneID="uII-co-C88">
-            <objects>
-                <viewController id="Qay-8m-hFj" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jzM-bo-4a5"/>
-                        <viewControllerLayoutGuide type="bottom" id="HIL-i8-Ikc"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3ih-9k-M2S">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dYI-6s-RdM">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <dataDetectorType key="dataDetectorTypes"/>
-                                <connections>
-                                    <outlet property="delegate" destination="Qay-8m-hFj" id="jDB-F4-eKG"/>
-                                </connections>
-                            </webView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="dYI-6s-RdM" firstAttribute="top" secondItem="jzM-bo-4a5" secondAttribute="bottom" id="BIC-wC-y36"/>
-                            <constraint firstItem="dYI-6s-RdM" firstAttribute="leading" secondItem="3ih-9k-M2S" secondAttribute="leading" id="pIH-Wx-t3q"/>
-                            <constraint firstItem="dYI-6s-RdM" firstAttribute="bottom" secondItem="HIL-i8-Ikc" secondAttribute="top" id="sfw-7n-HVc"/>
-                            <constraint firstAttribute="trailing" secondItem="dYI-6s-RdM" secondAttribute="trailing" id="tXK-xC-rSK"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Aprende" image="aprende.png" id="BYz-n4-8TZ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="A7S-l8-zSV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2117" y="-259"/>
-        </scene>
-        <!--Aprende-->
-        <scene sceneID="Uwz-VJ-Eys">
-            <objects>
-                <viewController id="3Aw-wY-KOP" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="PuP-Od-W9L"/>
-                        <viewControllerLayoutGuide type="bottom" id="2WP-hS-mwb"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="I5h-fU-qLG">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Aprende" image="aprende.png" id="g2B-Cx-xxF"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ryR-wu-C2j" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2529" y="-259"/>
-        </scene>
         <!--My Purchases Detail Table View Controller-->
         <scene sceneID="vBH-TG-xsB">
             <objects>
                 <tableViewController id="FK6-B0-eL4" customClass="C4CMyPurchasesDetailTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Y6o-sh-InK">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1509,7 +1566,7 @@ Para empezar seleccione un producto.</string>
         <!--Productor-->
         <scene sceneID="Njk-so-xNC">
             <objects>
-                <tabBarController definesPresentationContext="YES" id="hba-UY-ZRW" sceneMemberID="viewController">
+                <tabBarController definesPresentationContext="YES" id="hba-UY-ZRW" customClass="C4CFarmerViewController" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Productor" id="QMx-WP-Dk9">
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="iJj-eb-ObC">
@@ -1527,7 +1584,7 @@ Para empezar seleccione un producto.</string>
                     <connections>
                         <segue destination="bIg-iW-TUh" kind="relationship" relationship="viewControllers" id="LXE-uA-RqJ"/>
                         <segue destination="3gC-rl-W54" kind="relationship" relationship="viewControllers" id="zK2-fd-eo1"/>
-                        <segue destination="3Aw-wY-KOP" kind="relationship" relationship="viewControllers" id="c6J-8c-tDU"/>
+                        <segue destination="AL6-hg-kZZ" kind="relationship" relationship="viewControllers" id="HIS-yH-YA3"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YN3-nt-UAA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1684,7 +1741,7 @@ Aquí están sus pedidos.</string>
                         </connections>
                     </tableView>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="Mis Pedidos" image="folder.png" id="zfD-Im-8Uk"/>
+                    <tabBarItem key="tabBarItem" title="Mis Pedidos" image="purchase_order-30.png" id="zfD-Im-8Uk"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="ks2-Q2-3ZJ" id="zJB-Rb-oQK"/>
                     </connections>
@@ -1982,7 +2039,7 @@ Aquí están sus pedidos.</string>
                         </connections>
                     </tableView>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="Mi Inventario" image="box.png" id="AAB-rp-Afr"/>
+                    <tabBarItem key="tabBarItem" title="Mi Inventario" image="move_by_trolley-30.png" id="AAB-rp-Afr"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="5zh-uw-idi" id="7fI-yD-g7e"/>
                     </connections>
@@ -2161,17 +2218,19 @@ Aquí están sus pedidos.</string>
     </scenes>
     <resources>
         <image name="about_agronet.png" width="595" height="257"/>
-        <image name="about_minagricultura.png" width="536" height="166"/>
         <image name="about_mintic.png" width="536" height="166"/>
         <image name="agronegocios.png" width="209" height="196"/>
-        <image name="aprende.png" width="30" height="30"/>
-        <image name="box.png" width="30" height="30"/>
+        <image name="book_stack-30-blue.png" width="30" height="30"/>
+        <image name="book_stack-30-red.png" width="30" height="30"/>
         <image name="comprador.png" width="233" height="239"/>
         <image name="farmerregister-1.png" width="143" height="237"/>
         <image name="farmerstocks.png" width="233" height="239"/>
-        <image name="folder.png" width="30" height="30"/>
-        <image name="papers.png" width="30" height="30"/>
+        <image name="logo-minagricultura.png" width="1024" height="227"/>
+        <image name="move_by_trolley-30.png" width="30" height="30"/>
         <image name="productor.png" width="233" height="239"/>
+        <image name="purchase_order-30.png" width="30" height="30"/>
+        <image name="shop-30.png" width="30" height="30"/>
+        <image name="shopping_cart-30.png" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

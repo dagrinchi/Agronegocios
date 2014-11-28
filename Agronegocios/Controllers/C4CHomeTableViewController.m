@@ -35,7 +35,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CGFloat cellHeight = (height / 2);
+    CGFloat cellHeight = height - 130;
     if (indexPath.section == 0) {
         return cellHeight < 300 ? 300 : cellHeight;
     }
@@ -43,16 +43,17 @@
     return 44;
 }
 
-- (IBAction)unwindTerms:(UIStoryboardSegue *)segue {
-    
-}
-
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     cell.backgroundColor = self.tableView.backgroundColor = [UIColor colorWithRed:1 green:0.91 blue:0.74 alpha:1];
 }
 
-- (IBAction)startAction:(id)sender {
+- (IBAction)unwindTerms:(UIStoryboardSegue *)segue {
 
 }
+
+- (IBAction)unwindTermsAndAccept:(UIStoryboardSegue *)segue {
+
+}
+
 
 @end

@@ -156,6 +156,12 @@
 #define COCOAPODS_VERSION_MINOR_SSToolkit 0
 #define COCOAPODS_VERSION_PATCH_SSToolkit 0
 
+// SVWebViewController
+#define COCOAPODS_POD_AVAILABLE_SVWebViewController
+#define COCOAPODS_VERSION_MAJOR_SVWebViewController 1
+#define COCOAPODS_VERSION_MINOR_SVWebViewController 0
+#define COCOAPODS_VERSION_PATCH_SVWebViewController 0
+
 // TDBadgedCell
 #define COCOAPODS_POD_AVAILABLE_TDBadgedCell
 #define COCOAPODS_VERSION_MAJOR_TDBadgedCell 2

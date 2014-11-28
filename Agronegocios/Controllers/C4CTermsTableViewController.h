@@ -1,5 +1,5 @@
 //
-//  C4CTermsViewController.h
+//  C4CTermsTableViewController.h
 //  Agronegocios
 //
 //  Created by David Almeciga on 11/27/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface C4CTermsViewController : UIViewController
+@interface C4CTermsTableViewController : UITableViewController
 
 @end

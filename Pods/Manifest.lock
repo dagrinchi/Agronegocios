@@ -51,6 +51,7 @@ PODS:
     - SAMTextField
     - SAMTextView
     - SAMWebView
+  - SVWebViewController (HEAD based on 1.0)
   - TDBadgedCell (2.6)
   - TransitionKit (2.1.0)
 
@@ -59,6 +60,7 @@ DEPENDENCIES:
   - RestKit (~> 0.24.0)
   - RestKit/Search (~> 0.24.0)
   - SSToolkit (= 2.0.0)
+  - SVWebViewController (HEAD)
   - TDBadgedCell (= 2.6)
 
 SPEC CHECKSUMS:
@@ -81,6 +83,7 @@ SPEC CHECKSUMS:
   SAMWebView: e615d50d3683b9b4fd3e10da9d079ed03230ee24
   SOCKit: d8d0dd3688ae1026c12367570da8fa8e1a6980fb
   SSToolkit: 64d8bb043b4f36da68936ddbb4ec4e8cb3c5a8df
+  SVWebViewController: fbf917baa92744c54cfb89a52a4c056e409973a4
   TDBadgedCell: e683b5557d12ea4e28a8d6ac20b6e394abc2c1fe
   TransitionKit: 6a6f3ddda38ae758778aa889dcb930e4f8d64edc
 
