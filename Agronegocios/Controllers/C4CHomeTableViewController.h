@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "C4CPriceTableViewController.h"
 
 @interface C4CHomeTableViewController : UITableViewController
 

@@ -72,7 +72,7 @@
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="N0q-fr-2dq" kind="modal" id="I8p-uB-K4A"/>
+                                                        <action selector="startAction:" destination="84M-qD-tGO" eventType="touchUpInside" id="OVI-kr-28W"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
