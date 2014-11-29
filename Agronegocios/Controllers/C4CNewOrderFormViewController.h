@@ -17,6 +17,7 @@
 
 @interface C4CNewOrderFormViewController : FXFormViewController
 
+@property (nonatomic, strong) C4COrderForm *orderForm;
 @property (nonatomic, strong) NSString *accessToken;
 @property (nonatomic, strong) NSArray *geoCodes;
 @property (nonatomic, strong) CLLocation *location;

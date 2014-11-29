@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface C4CRegistrationForm : NSObject <FXForm>
+@interface C4CRegistrationForm : NSObject <FXForm, FXModelValidation>
 
 @property (nonatomic, copy) NSString *identification;
 @property (nonatomic, copy) NSString *password;

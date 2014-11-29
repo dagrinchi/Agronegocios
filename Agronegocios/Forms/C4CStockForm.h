@@ -11,7 +11,7 @@
 #import "Product.h"
 #import "Unit.h"
 
-@interface C4CStockForm : NSObject <FXForm>
+@interface C4CStockForm : NSObject <FXForm, FXModelValidation>
 
 @property (nonatomic, strong) Product *product;
 @property (nonatomic, strong) Unit *unit;

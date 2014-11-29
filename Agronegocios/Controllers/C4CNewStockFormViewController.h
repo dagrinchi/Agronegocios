@@ -19,5 +19,6 @@
 @property (nonatomic, strong) NSString *accessToken;
 @property (nonatomic, strong) NSArray *geoCodes;
 @property (nonatomic, strong) CLLocation *location;
+@property (nonatomic, strong) C4CStockForm *stockForm;
 
 @end

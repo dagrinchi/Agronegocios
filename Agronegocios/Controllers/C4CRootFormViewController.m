@@ -38,9 +38,13 @@
 - (void)submitLoginForm:(UITableViewCell<FXFormFieldCell> *)cell
 {
     C4CLoginForm *form = cell.field.form;
+    form.scenario = @"login";
+    
     SAMHUDView *hud = [[SAMHUDView alloc] initWithTitle:@"Enviando" loading:YES];
     
-    if (form.identification != nil && form.password != nil) {
+    if (![form validate]) {
+        [self showErrors:form];
+    } else {
         [hud show];
         
         Login *login = [Login new];
@@ -60,12 +64,27 @@
                                             failure:^(RKObjectRequestOperation *operation, NSError *error) {
                                                 //RKErrorMessage *errorMessage =  [[error.userInfo objectForKey:RKObjectMapperErrorObjectsKey] firstObject];
                                                 C4CShowAlertWithError(@"Número de identificación o clave inválidos");
-                                                [hud dismiss];                                                
+                                                [hud dismiss];
                                             }];
-        
-    } else {
-        C4CShowAlertWithError(@"Digita tu número de identificación y clave");
     }
+}
+
+-(void)showErrors :(C4CLoginForm *)form {
+    NSMutableString *message = [NSMutableString string];
+    
+    [form.errors enumerateKeysAndObjectsUsingBlock:^(NSString *attribute, NSArray *errors, BOOL *stop) {
+        
+        for(NSString *error in errors) {
+            [message appendFormat:@"- %@\n", error];
+        };
+    }];
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!"
+                                                    message:message
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
 }
 
 -(void) goApp:(SAMHUDView *)hud {

@@ -21,7 +21,7 @@
 
     SAMHUDView *hud = [[SAMHUDView alloc] initWithTitle:@"Regando cultivos!" loading:YES];
 
-    C4CStockForm *stockForm = [[C4CStockForm alloc] init];
+    self.stockForm = [[C4CStockForm alloc] init];
     [hud show];
     
     [self startLocationRequest:^(CLLocation *location, INTULocationAccuracy achievedAccuracy, INTULocationStatus status) {
@@ -57,7 +57,7 @@
         self.locationRequestID = NSNotFound;
     }];
     
-    self.formController.form = stockForm;
+    self.formController.form = self.stockForm;
     
     UIColor *bgColor = [UIColor colorWithRed:1 green:0.91 blue:0.74 alpha:1];
     self.tableView.backgroundView.backgroundColor = bgColor;
@@ -106,15 +106,19 @@
     AddressComponent *state = [geoCode.addressComponents objectAtIndex:2];
     AddressComponent *country = [geoCode.addressComponents lastObject];
     
-    C4CStockForm *form = cell.field.form;
-    NewStock *stock = [NewStock new];
+    self.stockForm.scenario = @"createNewStock";
     
-    if (form.product.productId != nil && form.unit.unitId != nil && form.qty != nil && form.pricePerUnit != nil && form.expiresAt != nil) {
-        stock.productId = form.product.productId;
-        stock.unitId = form.unit.unitId;
-        stock.qty = form.qty;
-        stock.pricePerUnit = form.pricePerUnit;
-        stock.expiresAt = form.expiresAt;
+    if (![self.stockForm validate]) {
+        [hud dismiss];
+        [self showErrors];
+    } else {
+        NewStock *stock = [NewStock new];
+        
+        stock.productId = self.stockForm.product.productId;
+        stock.unitId = self.stockForm.unit.unitId;
+        stock.qty = self.stockForm.qty;
+        stock.pricePerUnit = self.stockForm.pricePerUnit;
+        stock.expiresAt = self.stockForm.expiresAt;
         stock.latitude = [NSNumber numberWithDouble:self.location.coordinate.latitude];
         stock.longitude = [NSNumber numberWithDouble:self.location.coordinate.longitude];
         stock.address = address.longName;
@@ -135,14 +139,11 @@
                               
                           }
                           failure:^(RKObjectRequestOperation *operation, NSError *error) {
-                              RKErrorMessage *errorMessage =  [[error.userInfo objectForKey:RKObjectMapperErrorObjectsKey] firstObject];
-                              C4CShowAlertWithError(errorMessage.errorMessage);
+                              C4CShowAlertWithError(error.localizedDescription);
                               [hud dismiss];
                           }];
-    } else {
-        C4CShowAlertWithError(@"Todos los campos son requeridos.");
-        [hud dismiss];
     }
+    
 }
 
 - (void)returnToFarmer :(SAMHUDView *)hud
@@ -187,6 +188,23 @@ static void C4CShowAlertWithError(NSString *error)
                                                     message:error
                                                    delegate:nil
                                           cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
+}
+
+-(void)showErrors {
+    NSMutableString *message = [NSMutableString string];
+    
+    [self.stockForm.errors enumerateKeysAndObjectsUsingBlock:^(NSString *attribute, NSArray *errors, BOOL *stop) {
+        for(NSString *error in errors) {
+            [message appendFormat:@"- %@\n", error];
+        };
+    }];
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!"
+                                                    message:message
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
     [alert show];
 }
 

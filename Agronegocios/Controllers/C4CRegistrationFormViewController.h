@@ -14,4 +14,6 @@
 
 @interface C4CRegistrationFormViewController : FXFormViewController
 
+@property (nonatomic, strong) C4CRegistrationForm *registrationForm;
+
 @end

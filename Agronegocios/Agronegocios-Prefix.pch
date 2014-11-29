@@ -16,6 +16,7 @@
     #import <CoreData/CoreData.h>
     #import <RestKit/RestKit.h>
     #import <FXForms/FXForms.h>
+    #import "FXModelValidation.h"
     #import "SAMHUDView.h"
     #import "Webservice.h"
     #import "NSDate+Helper.h"

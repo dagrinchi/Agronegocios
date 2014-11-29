@@ -11,6 +11,7 @@ target "Agronegocios" do
     pod 'TDBadgedCell', '2.6'
     pod 'FXForms', '1.2.10'
     pod 'SVWebViewController', :head
+    pod 'FXModelValidation',  '1.0.2'
     
 end
 

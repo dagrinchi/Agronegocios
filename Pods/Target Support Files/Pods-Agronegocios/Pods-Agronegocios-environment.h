@@ -18,6 +18,12 @@
 #define COCOAPODS_VERSION_MINOR_FXForms 2
 #define COCOAPODS_VERSION_PATCH_FXForms 10
 
+// FXModelValidation
+#define COCOAPODS_POD_AVAILABLE_FXModelValidation
+#define COCOAPODS_VERSION_MAJOR_FXModelValidation 1
+#define COCOAPODS_VERSION_MINOR_FXModelValidation 0
+#define COCOAPODS_VERSION_PATCH_FXModelValidation 2
+
 // ISO8601DateFormatterValueTransformer
 #define COCOAPODS_POD_AVAILABLE_ISO8601DateFormatterValueTransformer
 #define COCOAPODS_VERSION_MAJOR_ISO8601DateFormatterValueTransformer 0

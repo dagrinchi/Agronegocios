@@ -21,7 +21,7 @@
 
     SAMHUDView *hud = [[SAMHUDView alloc] initWithTitle:@"Sembrando semillas!" loading:YES];
     
-    C4COrderForm *orderForm = [[C4COrderForm alloc] init];
+    self.orderForm = [[C4COrderForm alloc] init];
     [hud show];
     
     [self startLocationRequest:^(CLLocation *location, INTULocationAccuracy achievedAccuracy, INTULocationStatus status) {
@@ -57,7 +57,7 @@
         self.locationRequestID = NSNotFound;
     }];
     
-    self.formController.form = orderForm;
+    self.formController.form = self.orderForm;
     
     UIColor *bgColor = [UIColor colorWithRed:1 green:0.91 blue:0.74 alpha:1];
     self.tableView.backgroundView.backgroundColor = bgColor;
@@ -106,15 +106,17 @@
     AddressComponent *state = [geoCode.addressComponents objectAtIndex:2];
     AddressComponent *country = [geoCode.addressComponents lastObject];
     
-    C4COrderForm *form = cell.field.form;
-    NewOrder *order = [NewOrder new];
-    
-    if (form.fullName != nil && form.phone != nil && form.qty != nil) {
+    self.orderForm.scenario = @"buy";
+    if (![self.orderForm validate]) {
+        [hud dismiss];
+        [self showErrors];
+    } else {
+        NewOrder *order = [NewOrder new];
         
         order.stockId = _stock.stockId;
-        order.fullName = form.fullName;
-        order.phone = form.phone;
-        order.qty = form.qty;
+        order.fullName = self.orderForm.fullName;
+        order.phone = self.orderForm.phone;
+        order.qty = self.orderForm.qty;
         order.latitude = [NSNumber numberWithDouble:self.location.coordinate.latitude];
         order.longitude = [NSNumber numberWithDouble:self.location.coordinate.longitude];
         order.address = address.longName;
@@ -135,14 +137,28 @@
                               
                           }
                           failure:^(RKObjectRequestOperation *operation, NSError *error) {
-                              RKErrorMessage *errorMessage =  [[error.userInfo objectForKey:RKObjectMapperErrorObjectsKey] firstObject];
-                              C4CShowAlertWithError(errorMessage.errorMessage);
+                              C4CShowAlertWithError(error.localizedDescription);
                               [hud dismiss];
                           }];
-    } else {
-        C4CShowAlertWithError(@"Todos los campos son requeridos.");
-        [hud dismiss];
     }
+}
+
+-(void)showErrors {
+    NSMutableString *message = [NSMutableString string];
+    
+    [self.orderForm.errors enumerateKeysAndObjectsUsingBlock:^(NSString *attribute, NSArray *errors, BOOL *stop) {
+        
+        for(NSString *error in errors) {
+            [message appendFormat:@"- %@\n", error];
+        };
+    }];
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!"
+                                                    message:message
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
 }
 
 - (void)returnToStockDetail :(SAMHUDView *)hud

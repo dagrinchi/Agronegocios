@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "C4CSubmitButtonCell.h"
 
-@interface C4COrderForm : NSObject <FXForm>
+@interface C4COrderForm : NSObject <FXForm, FXModelValidation>
 
 @property (nonatomic, strong) NSString * fullName;
 @property (nonatomic, strong) NSString * phone;

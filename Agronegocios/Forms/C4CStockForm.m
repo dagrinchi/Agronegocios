@@ -10,6 +10,17 @@
 
 @implementation C4CStockForm
 
+-(instancetype) init {
+    if((self = [super init])) {
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            [[self class] validationInit];
+        });
+    }
+    
+    return self;
+}
+
 - (NSDictionary *)productField
 {
     return @{FXFormFieldKey: @"product",
@@ -40,7 +51,7 @@
 {
     return @{FXFormFieldKey: @"qty",
              FXFormFieldTitle: @"Cantidad",
-             FXFormFieldType: FXFormFieldTypeNumber,
+             FXFormFieldType: @"unsigned",
              @"textLabel.font": [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:18.0]};
 }
 
@@ -48,7 +59,7 @@
 {
     return @{FXFormFieldKey: @"pricePerUnit",
              FXFormFieldTitle: @"Precio por unidad ($)",
-             FXFormFieldType: FXFormFieldTypeNumber,
+             FXFormFieldType: @"unsigned",
              @"textLabel.font": [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:18.0]};
 }
 
@@ -71,5 +82,24 @@
                FXFormFieldAction: @"submitStockForm:"}];
 }
 
+-(NSArray *)rules {
+    return @[@{FXModelValidatorAttributes : @[@"product", @"unit", @"qty", @"pricePerUnit", @"expiresAt"],
+               FXModelValidatorType : @"required",
+               FXModelValidatorOn: @[@"createNewStock"]},
+             
+             @{FXModelValidatorAttributes : @[@"qty"],
+               FXModelValidatorType : @"number",
+               FXModelValidatorMin : @1,
+               FXModelValidatorOn: @[@"createNewStock"]},
+             
+             @{FXModelValidatorAttributes : @[@"pricePerUnit"],
+               FXModelValidatorType : @"number",
+               FXModelValidatorMin : @1,
+               FXModelValidatorOn: @[@"createNewStock"]},
+             
+             /*@{FXModelValidatorAttributes : @[@"expiresAt"],
+               FXModelValidatorOn: @[@"createNewStock"]},*/];
+    
+}
 
 @end

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C2F6DED8864A39F57EF4B304"
+               BlueprintIdentifier = "7418ABE4781E044BFB2EF56B"
                BuildableName = "libPods-Agronegocios-SAMLoadingView.a"
                BlueprintName = "Pods-Agronegocios-SAMLoadingView"
                ReferencedContainer = "container:Pods.xcodeproj">

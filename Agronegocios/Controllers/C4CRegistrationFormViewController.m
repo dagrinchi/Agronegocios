@@ -18,7 +18,8 @@
     [super viewDidLoad];
     
     [super viewDidLoad];
-    self.formController.form = [[C4CRegistrationForm alloc] init];
+    self.registrationForm = [[C4CRegistrationForm alloc] init];
+    self.formController.form = self.registrationForm;
     
     UIColor *bgColor = [UIColor colorWithRed:1 green:0.91 blue:0.74 alpha:1];
     self.tableView.backgroundView.backgroundColor = bgColor;
@@ -42,58 +43,66 @@
 
 - (void)submitRegistrationForm:(UITableViewCell<FXFormFieldCell> *)cell {
     
-    C4CRegistrationForm *form = cell.field.form;
+    self.registrationForm.scenario = @"register";
+    
     SAMHUDView *hud = [[SAMHUDView alloc] initWithTitle:@"Enviando" loading:YES];
     
-    if (form.name != nil && form.identification != nil && form.phone != nil && form.address != nil && form.email != nil && form.password != nil && form.repeatPassword != nil) {
-        
-        if ([form.password isEqualToString:form.repeatPassword]) {
-            
-            [hud show];
-            
-            Registration *registration = [Registration new];
-            registration.name = form.name;
-            registration.identification = form.identification;
-            registration.phone = form.phone;
-            registration.address = form.address;
-            registration.email = form.email;
-            registration.password = form.password;
-            registration.repeatPassword = form.repeatPassword;
-            
-            [[RKObjectManager sharedManager] postObject:registration
-                                                   path:REGISTER_PATH
-                                             parameters:nil
-                                                success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                                                    hud.textLabel.text = @"Listo!";
-                                                    hud.loading = FALSE;
-                                                    hud.successful = TRUE;
-                                                    [self performSelector:@selector(returnToLogin:) withObject:hud afterDelay:1.5];
-                                                    
-                                                }
-                                                failure:^(RKObjectRequestOperation *operation, NSError *error) {
-                                                    RKErrorMessage *errorMessage =  [[error.userInfo objectForKey:RKObjectMapperErrorObjectsKey] firstObject];
-                                                    C4CShowAlertWithError(errorMessage.errorMessage);
-                                                    [hud dismiss];
-                                                    
-                                                }];
-            
-            
-        } else {
-            [hud dismiss];
-            C4CShowAlertWithError(@"Las claves no coinciden");
-        }
-        
+    if (![self.registrationForm validate]) {
+        [self showErrors];
     } else {
-        [hud dismiss];
-        C4CShowAlertWithError(@"Todos los campos son obligatorios");
+        [hud show];
+        
+        Registration *registration = [Registration new];
+        registration.name = self.registrationForm.name;
+        registration.identification = self.registrationForm.identification;
+        registration.phone = self.registrationForm.phone;
+        registration.address = self.registrationForm.address;
+        registration.email = self.registrationForm.email;
+        registration.password = self.registrationForm.password;
+        registration.repeatPassword = self.registrationForm.repeatPassword;
+        
+        [[RKObjectManager sharedManager] postObject:registration
+                                               path:REGISTER_PATH
+                                         parameters:nil
+                                            success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+                                                hud.textLabel.text = @"Listo!";
+                                                hud.loading = FALSE;
+                                                hud.successful = TRUE;
+                                                [self performSelector:@selector(returnToLogin:) withObject:hud afterDelay:1.5];
+                                                
+                                            }
+                                            failure:^(RKObjectRequestOperation *operation, NSError *error) {
+                                                RKErrorMessage *errorMessage =  [[error.userInfo objectForKey:RKObjectMapperErrorObjectsKey] firstObject];
+                                                C4CShowAlertWithError(errorMessage.errorMessage);
+                                                [hud dismiss];
+                                                
+                                            }];
     }
-    
 }
 
 -(void)returnToLogin:(SAMHUDView *) hud {
     [hud dismiss];
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+-(void)showErrors {
+    NSMutableString *message = [NSMutableString string];
+    
+    [self.registrationForm.errors enumerateKeysAndObjectsUsingBlock:^(NSString *attribute, NSArray *errors, BOOL *stop) {
+        
+        for(NSString *error in errors) {
+            [message appendFormat:@"- %@\n", error];
+        };
+    }];
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!"
+                                                    message:message
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+}
+
 
 static void C4CShowAlertWithError(NSString *error)
 {
