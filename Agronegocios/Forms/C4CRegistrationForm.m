@@ -74,6 +74,11 @@
                FXModelValidatorPattern : @"^[a-zA-Z0-9]*$",
                FXModelValidatorOn: @[@"register"]},
              
+             @{FXModelValidatorAttributes : @[@"identification"],
+               FXModelValidatorType : @"string",
+               FXModelValidatorMin : @6,
+               FXModelValidatorOn: @[@"register"]},
+             
              @{FXModelValidatorAttributes : @[@"phone"],
                FXModelValidatorType : @"match",
                FXModelValidatorPattern : @"^[0-9]*$",

@@ -65,17 +65,15 @@
                                                path:REGISTER_PATH
                                          parameters:nil
                                             success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                                                hud.textLabel.text = @"Listo!";
+                                                hud.textLabel.text = @"¡Usuario creado!";
                                                 hud.loading = FALSE;
                                                 hud.successful = TRUE;
                                                 [self performSelector:@selector(returnToLogin:) withObject:hud afterDelay:1.5];
                                                 
                                             }
                                             failure:^(RKObjectRequestOperation *operation, NSError *error) {
-                                                RKErrorMessage *errorMessage =  [[error.userInfo objectForKey:RKObjectMapperErrorObjectsKey] firstObject];
-                                                C4CShowAlertWithError(errorMessage.errorMessage);
+                                                C4CShowAlertWithError(error.localizedDescription);
                                                 [hud dismiss];
-                                                
                                             }];
     }
 }

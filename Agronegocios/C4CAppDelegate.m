@@ -217,13 +217,13 @@
     [orderRqMapping addAttributeMappingsFromDictionary:@{@"stockId"     :@"StockId",
                                                          @"fullName"    :@"FullName",
                                                          @"phone"       :@"Phone",
-                                                         @"qty"         :@"Qty",
-                                                         @"latitude"    :@"GeoPoint.Latitude",
-                                                         @"longitude"   :@"GeoPoint.Longitude",
-                                                         @"address"     :@"GeoPoint.Address",
-                                                         @"town"        :@"GeoPoint.Town",
-                                                         @"state"       :@"GeoPoint.State",
-                                                         @"country"     :@"GeoPoint.Country"}];
+                                                         @"orderQty"         :@"Qty",
+                                                         @"orderLatitude"    :@"GeoPoint.Latitude",
+                                                         @"orderLongitude"   :@"GeoPoint.Longitude",
+                                                         @"orderAddress"     :@"GeoPoint.Address",
+                                                         @"orderTown"        :@"GeoPoint.Town",
+                                                         @"orderState"       :@"GeoPoint.State",
+                                                         @"orderCountry"     :@"GeoPoint.Country"}];
     
     //REGISTRATION REQUEST MAPPING
     RKObjectMapping *registrationRqMapping = [RKObjectMapping requestMapping];
@@ -257,11 +257,6 @@
                                                        @".issued"       :@"expiresAt",
                                                        @".expires"      :@"issuedAt"}];
     
-    //ERROR MAPPING RESPONSE
-    RKObjectMapping *errorMapping = [RKObjectMapping mappingForClass:[RKErrorMessage class]];
-    [errorMapping addPropertyMapping:[RKAttributeMapping attributeMappingFromKeyPath:nil toKeyPath:@"errorMessage"]];
-
-    
     
     // CORE DATA INITIALIZATION
     BOOL success = RKEnsureDirectoryExistsAtPath(RKApplicationDataDirectory(), &error);
@@ -291,11 +286,6 @@
                                                                               pathPattern:REGISTER_PATH
                                                                                   keyPath:nil
                                                                               statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)],
-                                      [RKResponseDescriptor responseDescriptorWithMapping:errorMapping
-                                                                                   method:RKRequestMethodPOST
-                                                                              pathPattern:nil
-                                                                                  keyPath:@"Message"
-                                                                              statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassClientError)],
                                       [RKResponseDescriptor responseDescriptorWithMapping:tokenMapping
                                                                                    method:RKRequestMethodPOST
                                                                               pathPattern:TOKEN_PATH
@@ -312,7 +302,12 @@
                                                                                   keyPath:nil
                                                                               statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)],
                                       [RKResponseDescriptor responseDescriptorWithMapping:stockRpMapping
-                                                                                   method:RKRequestMethodAny
+                                                                                   method:RKRequestMethodGET
+                                                                              pathPattern:STOCKS_PATH
+                                                                                  keyPath:nil
+                                                                              statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)],
+                                      [RKResponseDescriptor responseDescriptorWithMapping:myStockRpMapping
+                                                                                   method:RKRequestMethodPOST
                                                                               pathPattern:STOCKS_PATH
                                                                                   keyPath:nil
                                                                               statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)],
@@ -330,6 +325,11 @@
                                                                                    method:RKRequestMethodGET
                                                                               pathPattern:MYPURCHASES_PATH
                                                                                   keyPath:nil
+                                                                              statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)],
+                                      [RKResponseDescriptor responseDescriptorWithMapping:myPurchasesRpMapping
+                                                                                   method:RKRequestMethodPOST
+                                                                              pathPattern:ORDERS_PATH
+                                                                                  keyPath:nil
                                                                               statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)]];
     [objectManager addResponseDescriptorsFromArray:responseDescriptors];
     
@@ -343,14 +343,89 @@
                                                                           rootKeyPath:nil
                                                                                method:RKRequestMethodPOST],
                                     [RKRequestDescriptor requestDescriptorWithMapping:stockRqMapping
-                                                                          objectClass:[NewStock class]
+                                                                          objectClass:[MyStock class]
                                                                           rootKeyPath:nil
                                                                                method:RKRequestMethodPOST],
                                     [RKRequestDescriptor requestDescriptorWithMapping:orderRqMapping
-                                                                          objectClass:[NewOrder class]
+                                                                          objectClass:[MyPurchases class]
                                                                           rootKeyPath:nil
                                                                                method:RKRequestMethodPOST]];
     [objectManager addRequestDescriptorsFromArray:requestDescriptors];
+    [objectManager addFetchRequestBlock:^NSFetchRequest *(NSURL *URL) {
+        RKPathMatcher *pathMatcher = [RKPathMatcher pathMatcherWithPattern:PRICES_PATH];
+        
+        NSDictionary *argsDict = nil;
+        BOOL match = [pathMatcher matchesPath:[URL relativePath] tokenizeQueryStrings:NO parsedArguments:&argsDict];
+        if (match) {
+            NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Price"];
+            NSSortDescriptor *byDateDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"createdAt" ascending:NO];
+            NSSortDescriptor *byProductNameDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"productName" ascending:YES];
+            fetchRequest.sortDescriptors = @[byDateDescriptor, byProductNameDescriptor];
+            return fetchRequest;
+        }
+        
+        return nil;
+    }];
+    
+    [objectManager addFetchRequestBlock:^NSFetchRequest *(NSURL *URL) {
+        RKPathMatcher *pathMatcher = [RKPathMatcher pathMatcherWithPattern:STOCKS_PATH];
+        
+        NSDictionary *argsDict = nil;
+        BOOL match = [pathMatcher matchesPath:[URL relativePath] tokenizeQueryStrings:NO parsedArguments:&argsDict];
+        if (match) {
+            NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Stock"];
+            NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"expiresAt" ascending:YES];
+            fetchRequest.sortDescriptors = @[descriptor];
+            return fetchRequest;
+        }
+        
+        return nil;
+    }];
+    
+    [objectManager addFetchRequestBlock:^NSFetchRequest *(NSURL *URL) {
+        RKPathMatcher *pathMatcher = [RKPathMatcher pathMatcherWithPattern:MYSTOCKS_PATH];
+        
+        NSDictionary *argsDict = nil;
+        BOOL match = [pathMatcher matchesPath:[URL relativePath] tokenizeQueryStrings:NO parsedArguments:&argsDict];
+        if (match) {
+            NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"MyStock"];
+            NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"expiresAt" ascending:YES];
+            fetchRequest.sortDescriptors = @[descriptor];
+            return fetchRequest;
+        }
+        
+        return nil;
+    }];
+    
+    [objectManager addFetchRequestBlock:^NSFetchRequest *(NSURL *URL) {
+        RKPathMatcher *pathMatcher = [RKPathMatcher pathMatcherWithPattern:MYPURCHASES_PATH];
+        
+        NSDictionary *argsDict = nil;
+        BOOL match = [pathMatcher matchesPath:[URL relativePath] tokenizeQueryStrings:NO parsedArguments:&argsDict];
+        if (match) {
+            NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"MyPurchases"];
+            NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"expiresAt" ascending:YES];
+            fetchRequest.sortDescriptors = @[descriptor];
+            return fetchRequest;
+        }
+        
+        return nil;
+    }];
+    
+    [objectManager addFetchRequestBlock:^NSFetchRequest *(NSURL *URL) {
+        RKPathMatcher *pathMatcher = [RKPathMatcher pathMatcherWithPattern:MYORDERS_PATH];
+        
+        NSDictionary *argsDict = nil;
+        BOOL match = [pathMatcher matchesPath:[URL relativePath] tokenizeQueryStrings:NO parsedArguments:&argsDict];
+        if (match) {
+            NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"MyOrders"];
+            NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"expiresAt" ascending:YES];
+            fetchRequest.sortDescriptors = @[descriptor];
+            return fetchRequest;
+        }
+        
+        return nil;
+    }];
     
     if (![CLLocationManager locationServicesEnabled]) {
         UIAlertView *servicesDisabledAlert = [[UIAlertView alloc] initWithTitle:@"El servicio GPS está apagado"

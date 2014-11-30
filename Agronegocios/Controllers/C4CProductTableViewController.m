@@ -52,7 +52,7 @@
     
     self.title = @"Productos";
     
-    hud = [[SAMHUDView alloc] initWithTitle:@"Descargando listas!" loading:YES];
+    hud = [[SAMHUDView alloc] initWithTitle:@"¡Preparando semillas y abono!" loading:YES];
     [hud show];
 }
 

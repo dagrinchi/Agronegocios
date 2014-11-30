@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    SAMHUDView *hud = [[SAMHUDView alloc] initWithTitle:@"Regando cultivos!" loading:YES];
+    SAMHUDView *hud = [[SAMHUDView alloc] initWithTitle:@"¡Preparando productos para la placita!" loading:YES];
 
     self.stockForm = [[C4CStockForm alloc] init];
     [hud show];
@@ -97,7 +97,7 @@
 
 - (void)submitStockForm:(UITableViewCell<FXFormFieldCell> *)cell
 {
-    SAMHUDView *hud = [[SAMHUDView alloc] initWithTitle:@"Enviando!" loading:YES];
+    SAMHUDView *hud = [[SAMHUDView alloc] initWithTitle:@"¡Pesando productos!" loading:YES];
     [hud show];
     
     GeoCode *geoCode = [self.geoCodes firstObject];
@@ -112,7 +112,9 @@
         [hud dismiss];
         [self showErrors];
     } else {
-        NewStock *stock = [NewStock new];
+        RKObjectManager *objectManager = [RKObjectManager sharedManager];
+        NSManagedObjectContext *context = objectManager.managedObjectStore.mainQueueManagedObjectContext;
+        MyStock *stock = [NSEntityDescription insertNewObjectForEntityForName:@"MyStock" inManagedObjectContext:context];
         
         stock.productId = self.stockForm.product.productId;
         stock.unitId = self.stockForm.unit.unitId;
@@ -126,13 +128,12 @@
         stock.state = state.longName;
         stock.country = country.longName;
         
-        RKObjectManager *objectManager = [RKObjectManager sharedManager];
         [objectManager.HTTPClient setDefaultHeader:@"Authorization" value:[NSString stringWithFormat:@"Bearer %@", [self accessToken]]];
         [objectManager postObject:stock
                              path:STOCKS_PATH
                        parameters:nil
                           success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                              hud.textLabel.text = @"Listo!";
+                              hud.textLabel.text = @"¡Inventario creado!";
                               hud.loading = FALSE;
                               hud.successful = TRUE;
                               [self performSelector:@selector(returnToFarmer:) withObject:hud afterDelay:1.5];

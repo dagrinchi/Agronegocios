@@ -49,6 +49,11 @@
                FXModelValidatorPattern : @"^[a-zA-Z0-9]*$",
                FXModelValidatorOn: @[@"login"]},
              
+             @{FXModelValidatorAttributes : @[@"identification"],
+               FXModelValidatorType : @"string",
+               FXModelValidatorMin : @6,
+               FXModelValidatorOn: @[@"login"]},
+             
              @{FXModelValidatorAttributes : @[@"password"],
                FXModelValidatorType : @"match",
                FXModelValidatorPattern : @"^[0-9]*$",

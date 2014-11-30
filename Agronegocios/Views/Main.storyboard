@@ -931,15 +931,9 @@ Cg
                         <rect key="frame" x="0.0" y="64" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WKb-V4-RxC">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WKb-V4-RxC">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about_agronet.png" translatesAutoresizingMaskIntoConstraints="NO" id="gHZ-ay-Eeb">
-                                        <rect key="frame" x="0.0" y="8" width="320" height="130"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="130" id="uqi-tQ-sxL"/>
-                                        </constraints>
-                                    </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-minagricultura.png" translatesAutoresizingMaskIntoConstraints="NO" id="guv-ya-xjc">
                                         <rect key="frame" x="8" y="147" width="304" height="69"/>
                                         <constraints>
@@ -980,9 +974,15 @@ David Alméciga - walmeciga@cool4code.com  Esta aplicación requiere acceso 
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about_agronet.png" translatesAutoresizingMaskIntoConstraints="NO" id="gHZ-ay-Eeb">
+                                        <rect key="frame" x="17" y="8" width="287" height="130"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="130" id="uqi-tQ-sxL"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="gHZ-ay-Eeb" firstAttribute="leading" secondItem="WKb-V4-RxC" secondAttribute="leading" id="3hQ-cg-Ch2"/>
+                                    <constraint firstItem="gHZ-ay-Eeb" firstAttribute="leading" secondItem="WKb-V4-RxC" secondAttribute="leading" constant="17" id="3hQ-cg-Ch2"/>
                                     <constraint firstItem="Db7-jx-ezy" firstAttribute="top" secondItem="eUe-j9-a9w" secondAttribute="bottom" constant="8" symbolic="YES" id="CuF-8t-bwP"/>
                                     <constraint firstItem="eUe-j9-a9w" firstAttribute="centerX" secondItem="WKb-V4-RxC" secondAttribute="centerX" id="FmP-Yf-cb1"/>
                                     <constraint firstAttribute="bottom" secondItem="Db7-jx-ezy" secondAttribute="bottom" id="Gvy-rp-msc"/>
@@ -994,7 +994,7 @@ David Alméciga - walmeciga@cool4code.com  Esta aplicación requiere acceso 
                                     <constraint firstItem="Db7-jx-ezy" firstAttribute="leading" secondItem="WKb-V4-RxC" secondAttribute="leading" constant="20" id="g5K-CV-tuZ"/>
                                     <constraint firstItem="eUe-j9-a9w" firstAttribute="leading" secondItem="guv-ya-xjc" secondAttribute="leading" constant="32" id="gBg-R5-LkM"/>
                                     <constraint firstItem="eUe-j9-a9w" firstAttribute="centerX" secondItem="Db7-jx-ezy" secondAttribute="centerX" id="rcR-qp-c1Y"/>
-                                    <constraint firstAttribute="trailing" secondItem="gHZ-ay-Eeb" secondAttribute="trailing" id="w81-eo-Pf7"/>
+                                    <constraint firstAttribute="trailing" secondItem="gHZ-ay-Eeb" secondAttribute="trailing" constant="16" id="w81-eo-Pf7"/>
                                     <constraint firstItem="eUe-j9-a9w" firstAttribute="top" secondItem="guv-ya-xjc" secondAttribute="bottom" constant="13" id="wTa-tY-01F"/>
                                 </constraints>
                             </scrollView>
@@ -1002,9 +1002,9 @@ David Alméciga - walmeciga@cool4code.com  Esta aplicación requiere acceso 
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="WKb-V4-RxC" secondAttribute="trailing" id="2BO-eh-Mwc"/>
-                            <constraint firstItem="WKb-V4-RxC" firstAttribute="bottom" secondItem="J5w-Kb-b3R" secondAttribute="top" id="jCN-Ik-tZV"/>
+                            <constraint firstItem="WKb-V4-RxC" firstAttribute="bottom" secondItem="J5w-Kb-b3R" secondAttribute="top" constant="-64" id="jCN-Ik-tZV"/>
                             <constraint firstItem="WKb-V4-RxC" firstAttribute="leading" secondItem="1Uv-hn-6FW" secondAttribute="leading" id="mSt-Wo-Vbs"/>
-                            <constraint firstItem="WKb-V4-RxC" firstAttribute="top" secondItem="2zs-ve-fwO" secondAttribute="bottom" id="vKo-dG-Bhh"/>
+                            <constraint firstItem="WKb-V4-RxC" firstAttribute="top" secondItem="2zs-ve-fwO" secondAttribute="bottom" constant="-20" id="vKo-dG-Bhh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Acerca de" id="TvY-7m-mba"/>

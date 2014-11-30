@@ -11,7 +11,7 @@
 #import "Token.h"
 #import "GeoCode.h"
 #import "AddressComponent.h"
-#import "NewStock.h"
+#import "MyStock.h"
 #import "INTULocationManager.h"
 
 @interface C4CNewStockFormViewController : FXFormViewController

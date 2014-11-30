@@ -38,7 +38,7 @@
     
     self.title = @"Precios";
     
-    hud = [[SAMHUDView alloc] initWithTitle:@"Descargando listas!" loading:YES];
+    hud = [[SAMHUDView alloc] initWithTitle:@"¡Regando cultivos!" loading:YES];
     [hud show];
 
 }
@@ -48,6 +48,7 @@
     NSSortDescriptor *byDateDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"createdAt" ascending:NO];
     NSSortDescriptor *byProductNameDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"productName" ascending:YES];
     fetchRequest.sortDescriptors = @[byDateDescriptor, byProductNameDescriptor];
+    
     NSError *error = nil;
     
     NSFetchedResultsController *fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
@@ -69,9 +70,8 @@
     [[RKObjectManager sharedManager] getObjectsAtPath:PRICES_PATH
                                            parameters:nil
                                               success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+                                                  hud.textLabel.text = @"¡Cultivos regados!";
                                                   [hud dismiss];
-                                                  /*[[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:@"LastUpdatedAt"];
-                                                  [[NSUserDefaults standardUserDefaults] synchronize];*/
                                               }
                                               failure:^(RKObjectRequestOperation *operation, NSError *error) {
                                                   RKLogError(@"Error: %@", error);

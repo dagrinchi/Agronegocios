@@ -97,7 +97,7 @@
 
 - (void)submitOrderForm:(UITableViewCell<FXFormFieldCell> *)cell
 {
-    SAMHUDView *hud = [[SAMHUDView alloc] initWithTitle:@"Enviando!" loading:YES];
+    SAMHUDView *hud = [[SAMHUDView alloc] initWithTitle:@"¡Pesando productos!" loading:YES];
     [hud show];
     
     GeoCode *geoCode = [self.geoCodes firstObject];
@@ -111,26 +111,39 @@
         [hud dismiss];
         [self showErrors];
     } else {
-        NewOrder *order = [NewOrder new];
+        RKObjectManager *objectManager = [RKObjectManager sharedManager];
+        NSManagedObjectContext *context = objectManager.managedObjectStore.mainQueueManagedObjectContext;
+        MyPurchases *order = [NSEntityDescription insertNewObjectForEntityForName:@"MyPurchases" inManagedObjectContext:context];
         
+        // ORDER / STOCK
         order.stockId = _stock.stockId;
+        order.stockUserEmail = _stock.userEmail;
+        order.stockUserName = _stock.userName;
+        order.stockUserIdentification = _stock.userIdentification;
+        order.stockUserPhone = _stock.userPhone;
+        order.productCode = _stock.productCode;
+        order.productName = _stock.productName;
+        order.unitCode = _stock.unitCode;
+        order.unitName = _stock.unitName;
+        order.expiresAt = _stock.expiresAt;
+        
+        // ORDER
         order.fullName = self.orderForm.fullName;
         order.phone = self.orderForm.phone;
-        order.qty = self.orderForm.qty;
-        order.latitude = [NSNumber numberWithDouble:self.location.coordinate.latitude];
-        order.longitude = [NSNumber numberWithDouble:self.location.coordinate.longitude];
-        order.address = address.longName;
-        order.town = town.longName;
-        order.state = state.longName;
-        order.country = country.longName;
+        order.orderQty = self.orderForm.qty;
+        order.orderLatitude = [NSNumber numberWithDouble:self.location.coordinate.latitude];
+        order.orderLongitude = [NSNumber numberWithDouble:self.location.coordinate.longitude];
+        order.orderAddress = address.longName;
+        order.orderTown = town.longName;
+        order.orderState = state.longName;
+        order.orderCountry = country.longName;
         
-        RKObjectManager *objectManager = [RKObjectManager sharedManager];
         [objectManager.HTTPClient setDefaultHeader:@"Authorization" value:[NSString stringWithFormat:@"Bearer %@", [self accessToken]]];
         [objectManager postObject:order
                              path:ORDERS_PATH
                        parameters:nil
                           success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                              hud.textLabel.text = @"Listo!";
+                              hud.textLabel.text = @"¡Compra realizada!";
                               hud.loading = FALSE;
                               hud.successful = TRUE;
                               [self performSelector:@selector(returnToStockDetail:) withObject:hud afterDelay:1.5];
@@ -163,7 +176,7 @@
 
 - (void)returnToStockDetail :(SAMHUDView *)hud
 {
-    [self.navigationController popViewControllerAnimated:YES];
+    [self.navigationController popToRootViewControllerAnimated:YES];
     [hud dismiss];
 }
 

@@ -11,6 +11,7 @@
 #import "Token.h"
 #import "GeoCode.h"
 #import "AddressComponent.h"
+#import "MyPurchases.h"
 #import "NewOrder.h"
 #import "INTULocationManager.h"
 #import "Stock.h"

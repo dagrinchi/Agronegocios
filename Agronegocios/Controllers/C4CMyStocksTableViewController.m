@@ -25,9 +25,6 @@
     self.refreshControl = refreshControl;
     // [self.refreshControl beginRefreshing];
     
-    self.fetchedResultsController = [self newFetchedResultsController];
-    [self loadData];
-    
     UIColor *bgColor = [UIColor colorWithRed:1 green:0.91 blue:0.74 alpha:1];
     
     self.tableView.backgroundView.backgroundColor = bgColor;
@@ -35,9 +32,15 @@
     self.refreshControl.backgroundColor = bgColor;
     self.view.backgroundColor = bgColor;
     
-    hud = [[SAMHUDView alloc] initWithTitle:@"Descargando listas!" loading:YES];
+    self.fetchedResultsController = [self newFetchedResultsController];
+    hud = [[SAMHUDView alloc] initWithTitle:@"¡Preparando mi inventario!" loading:YES];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     [hud show];
-    
+    [self loadData];
 }
 
 - (NSFetchedResultsController *)newFetchedResultsController {
@@ -77,6 +80,7 @@
     [objectManager getObjectsAtPath:MYSTOCKS_PATH
                          parameters:nil
                             success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+                                [self.tableView reloadData];
                                 [hud dismiss];
                             }
                             failure:^(RKObjectRequestOperation *operation, NSError *error) {

@@ -25,9 +25,6 @@
     self.refreshControl = refreshControl;
     //[self.refreshControl beginRefreshing];
     
-    self.fetchedResultsController = [self newFetchedResultsController];
-    [self loadData];
-    
     UIColor *bgColor = [UIColor colorWithRed:1 green:0.91 blue:0.74 alpha:1];
     
     self.tableView.backgroundView.backgroundColor = bgColor;
@@ -36,9 +33,16 @@
     self.view.backgroundColor = bgColor;
     
     self.title = @"Mis compras";
+    self.fetchedResultsController = [self newFetchedResultsController];
     
-    hud = [[SAMHUDView alloc] initWithTitle:@"Descargando listas!" loading:YES];
+    hud = [[SAMHUDView alloc] initWithTitle:@"¡Preparando mis compras!" loading:YES];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
     [hud show];
+    [self loadData];
 }
 
 - (NSFetchedResultsController *)newFetchedResultsController {
@@ -78,6 +82,7 @@
     [objectManager getObjectsAtPath:MYPURCHASES_PATH
                          parameters:nil
                             success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+                                [self.tableView reloadData];
                                 [hud dismiss];
                             }
                             failure:^(RKObjectRequestOperation *operation, NSError *error) {
