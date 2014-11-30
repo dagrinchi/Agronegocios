@@ -35,7 +35,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CGFloat cellHeight = height - 130;
+    CGFloat cellHeight = height - 200;
     if (indexPath.section == 0) {
         return cellHeight < 300 ? 300 : cellHeight;
     }
@@ -49,6 +49,10 @@
 
 - (IBAction)unwindTerms:(UIStoryboardSegue *)segue {
 
+}
+
+- (IBAction)unwindHelp:(UIStoryboardSegue *)segue {
+    
 }
 
 - (IBAction)unwindTermsAndAccept:(UIStoryboardSegue *)segue {

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DD0C4B888F3A12E230BADB57"
+               BlueprintIdentifier = "E3844EE8E297DF0B023032F3"
                BuildableName = "libPods-Agronegocios-FXForms.a"
                BlueprintName = "Pods-Agronegocios-FXForms"
                ReferencedContainer = "container:Pods.xcodeproj">
