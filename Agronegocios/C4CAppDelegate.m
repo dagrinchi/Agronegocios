@@ -20,6 +20,11 @@
                                                            shadow, NSShadowAttributeName,
                                                            [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:21.0], NSFontAttributeName, nil]];
     
+    UIPageControl *pageControl = [UIPageControl appearance];
+    pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
+    pageControl.currentPageIndicatorTintColor = [UIColor blackColor];
+    pageControl.backgroundColor = [UIColor whiteColor];
+    
     NSError *error = nil;
     
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
