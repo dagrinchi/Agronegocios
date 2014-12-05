@@ -45,7 +45,7 @@
 
 - (NSFetchedResultsController *)newFetchedResultsController {
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"MyStock"];
-    NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"expiresAt" ascending:YES];
+    NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"stockId" ascending:YES];
     fetchRequest.sortDescriptors = @[descriptor];
     NSError *error = nil;
     

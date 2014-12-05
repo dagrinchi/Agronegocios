@@ -47,7 +47,7 @@
 
 - (NSFetchedResultsController *)newFetchedResultsController {
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"MyPurchases"];
-    NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"expiresAt" ascending:YES];
+    NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"orderId" ascending:YES];
     fetchRequest.sortDescriptors = @[descriptor];
     NSError *error = nil;
     

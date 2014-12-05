@@ -17,7 +17,7 @@
 
 - (NSDictionary *)registrationField {
     return @{ FXFormFieldHeader: @"¿No tienes cuenta?",
-              FXFormFieldTitle: @"Regístrate",
+              FXFormFieldTitle: @"Regístrate en Agronegocios",
               @"textLabel.font": [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:18.0]};
 }
 

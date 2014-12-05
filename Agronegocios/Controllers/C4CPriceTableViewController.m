@@ -47,7 +47,8 @@
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Price"];
     NSSortDescriptor *byDateDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"createdAt" ascending:NO];
     NSSortDescriptor *byProductNameDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"productName" ascending:YES];
-    fetchRequest.sortDescriptors = @[byDateDescriptor, byProductNameDescriptor];
+    NSSortDescriptor *byLocationNameDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"location" ascending:YES];
+    fetchRequest.sortDescriptors = @[byDateDescriptor, byProductNameDescriptor, byLocationNameDescriptor];
     
     NSError *error = nil;
     

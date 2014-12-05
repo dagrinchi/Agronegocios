@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="npq-Ux-sYb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="npq-Ux-sYb">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -423,7 +423,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                                     <color key="backgroundColor" red="0.40000000000000002" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="21"/>
-                                                    <state key="normal" title="Cerrar sesión">
+                                                    <state key="normal" title="Salir de Agronegocios">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -610,7 +610,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="Bfp-pW-ASV">
                         <barButtonItem key="backBarButtonItem" title="Atras" id="dzX-hu-etA"/>
-                        <barButtonItem key="rightBarButtonItem" title="Ingresar" id="hxh-oR-89g">
+                        <barButtonItem key="rightBarButtonItem" title="Iniciar sesión" id="hxh-oR-89g">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="loginAction:" destination="IVg-Lo-67t" id="Gej-Z9-h7s"/>
@@ -1167,7 +1167,7 @@ David Alméciga - walmeciga@cool4code.com  Esta aplicación requiere acceso 
             </objects>
             <point key="canvasLocation" x="1631" y="621"/>
         </scene>
-        <!--Aprende-->
+        <!--Noticias-->
         <scene sceneID="gFV-Yy-Bk2">
             <objects>
                 <viewController id="OLs-AE-0T9" customClass="C4CCustomerLearnViewController" sceneMemberID="viewController">
@@ -1193,7 +1193,7 @@ David Alméciga - walmeciga@cool4code.com  Esta aplicación requiere acceso 
                             <constraint firstAttribute="trailing" secondItem="zcp-Gz-BrT" secondAttribute="trailing" id="jGv-bt-3TV"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Aprende" image="book_stack-30-red.png" id="KLn-Kx-XGx"/>
+                    <tabBarItem key="tabBarItem" title="Noticias" image="book_stack-30-red.png" id="KLn-Kx-XGx"/>
                     <connections>
                         <outlet property="webView" destination="zcp-Gz-BrT" id="bIZ-Oc-PpT"/>
                     </connections>
@@ -1202,7 +1202,7 @@ David Alméciga - walmeciga@cool4code.com  Esta aplicación requiere acceso 
             </objects>
             <point key="canvasLocation" x="1631" y="1275"/>
         </scene>
-        <!--Aprende-->
+        <!--Noticias-->
         <scene sceneID="ksk-S8-pGO">
             <objects>
                 <viewController id="AL6-hg-kZZ" customClass="C4CFarmerLearnViewController" sceneMemberID="viewController">
@@ -1228,7 +1228,7 @@ David Alméciga - walmeciga@cool4code.com  Esta aplicación requiere acceso 
                             <constraint firstItem="meA-8Z-Rit" firstAttribute="leading" secondItem="uOU-ZW-B6r" secondAttribute="leading" id="pQ0-sV-XUu"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Aprende" image="book_stack-30-blue.png" id="PzF-FN-QP9"/>
+                    <tabBarItem key="tabBarItem" title="Noticias" image="book_stack-30-blue.png" id="PzF-FN-QP9"/>
                     <connections>
                         <outlet property="webView" destination="meA-8Z-Rit" id="rr0-ew-2QS"/>
                     </connections>
@@ -1744,22 +1744,13 @@ Para empezar seleccione un producto.</string>
                                                 <constraint firstAttribute="width" constant="72" id="Xsy-er-c19"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdY-dQ-c9p">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdY-dQ-c9p">
                                             <rect key="frame" x="88" y="8" width="224" height="63"/>
                                             <attributedString key="attributedText">
-                                                <fragment content="¡Buenas!">
+                                                <fragment content="Aquí están tus pedidos, revisa los detalles y contáctate con el comprador">
                                                     <attributes>
                                                         <color key="NSColor" red="0.066666666666666666" green="0.52549019607843139" blue="0.75686274509803919" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <font key="NSFont" size="18" name="HelveticaNeue-Thin"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                    </attributes>
-                                                </fragment>
-                                                <fragment>
-                                                    <string key="content">
-Aquí están sus pedidos.</string>
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.066666666666666666" green="0.52549019607843139" blue="0.75686274509803919" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <font key="NSFont" size="14" name="HelveticaNeue-Thin"/>
+                                                        <font key="NSFont" size="15" name="HelveticaNeue-Thin"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                                     </attributes>
                                                 </fragment>
@@ -2032,9 +2023,9 @@ Aquí están sus pedidos.</string>
                                                 <constraint firstAttribute="width" constant="72" id="6Ih-vV-rUT"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Este es su inventario, por favor revíselo y actualícelo periódicamente." textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pxN-HV-IQj">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Este es tu inventario, revísalo simpre y mantenlo al día." textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pxN-HV-IQj">
                                             <rect key="frame" x="88" y="8" width="224" height="63"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="15"/>
                                             <color key="textColor" red="0.066666666669999999" green="0.52549019610000003" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
