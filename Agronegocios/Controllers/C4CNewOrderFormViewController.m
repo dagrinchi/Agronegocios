@@ -19,10 +19,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    SAMHUDView *hud = [[SAMHUDView alloc] initWithTitle:@"Sembrando semillas!" loading:YES];
+    MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+    [self.navigationController.view addSubview:hud];
+    hud.labelText = @"!Sembrando semillas!";
+    hud.color = [UIColor colorWithRed:1 green:0.27 blue:0.27 alpha:0.9];
     
     self.orderForm = [[C4COrderForm alloc] init];
-    [hud show];
+    [hud show:YES];
     
     [self startLocationRequest:^(CLLocation *location, INTULocationAccuracy achievedAccuracy, INTULocationStatus status) {
         if (status == INTULocationStatusSuccess) {
@@ -30,12 +33,12 @@
             [self loadAddressData:[NSString stringWithFormat:@"%@,%@", [[NSNumber numberWithDouble:location.coordinate.latitude] stringValue], [[NSNumber numberWithDouble:location.coordinate.longitude] stringValue]]
                                  :^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
                                      self.geoCodes = [mappingResult array];
-                                     [hud dismiss];
+                                     [hud hide:YES];
                                  }];
         }
         else if (status == INTULocationStatusTimedOut) {
             C4CShowAlertWithError(@"Tiempo agotado para la solicitud de localización.");
-            [hud dismiss];
+            [hud hide:YES];
             [self.navigationController popToRootViewControllerAnimated:YES];
         }
         else {
@@ -50,7 +53,7 @@
             } else {
                 C4CShowAlertWithError(@"Se presenta un error desconocido, reintente más tarde.");
             }
-            [hud dismiss];
+            [hud hide:YES];
             [self.navigationController popToRootViewControllerAnimated:YES];
         }
         
@@ -97,8 +100,11 @@
 
 - (void)submitOrderForm:(UITableViewCell<FXFormFieldCell> *)cell
 {
-    SAMHUDView *hud = [[SAMHUDView alloc] initWithTitle:@"¡Pesando productos!" loading:YES];
-    [hud show];
+    MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+    [self.navigationController.view addSubview:hud];
+    hud.labelText = @"¡Pesando productos!";
+    hud.color = [UIColor colorWithRed:1 green:0.27 blue:0.27 alpha:0.9];
+    [hud show:YES];
     
     GeoCode *geoCode = [self.geoCodes firstObject];
     AddressComponent *address = [geoCode.addressComponents firstObject];
@@ -108,7 +114,7 @@
     
     self.orderForm.scenario = @"buy";
     if (![self.orderForm validate]) {
-        [hud dismiss];
+        [hud hide:YES];
         [self showErrors];
     } else {
         RKObjectManager *objectManager = [RKObjectManager sharedManager];
@@ -143,15 +149,15 @@
                              path:ORDERS_PATH
                        parameters:nil
                           success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                              hud.textLabel.text = @"¡Compra realizada!";
-                              hud.loading = FALSE;
-                              hud.successful = TRUE;
+                              hud.labelText = @"¡Compra realizada!";
+                              hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
+                              hud.mode = MBProgressHUDModeCustomView;
                               [self performSelector:@selector(returnToStockDetail:) withObject:hud afterDelay:1.5];
                               
                           }
                           failure:^(RKObjectRequestOperation *operation, NSError *error) {
                               C4CShowAlertWithError(error.localizedDescription);
-                              [hud dismiss];
+                              [hud hide:YES];
                           }];
     }
 }
@@ -174,10 +180,10 @@
     [alert show];
 }
 
-- (void)returnToStockDetail :(SAMHUDView *)hud
+- (void)returnToStockDetail :(MBProgressHUD *)hud
 {
     [self.navigationController popToRootViewControllerAnimated:YES];
-    [hud dismiss];
+    [hud hide:YES];
 }
 
 

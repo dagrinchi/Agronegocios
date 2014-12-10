@@ -10,7 +10,7 @@
 
 @interface C4CMyPurchasesTableViewController () <NSFetchedResultsControllerDelegate>
 {
-    SAMHUDView *hud;
+    MBProgressHUD *hud;
 }
 
 @end
@@ -35,13 +35,16 @@
     self.title = @"Mis compras";
     self.fetchedResultsController = [self newFetchedResultsController];
     
-    hud = [[SAMHUDView alloc] initWithTitle:@"¡Preparando mis compras!" loading:YES];
+    hud = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+    [self.navigationController.view addSubview:hud];
+    hud.labelText = @"¡Preparando mis compras!";
+    hud.color = [UIColor colorWithRed:1 green:0.27 blue:0.27 alpha:0.9];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [hud show];
+    [hud show:YES];
     [self loadData];
 }
 
@@ -83,12 +86,12 @@
                          parameters:nil
                             success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
                                 [self.tableView reloadData];
-                                [hud dismiss];
+                                [hud hide:YES];
                             }
                             failure:^(RKObjectRequestOperation *operation, NSError *error) {
                                 RKLogError(@"Error: %@", error);
                                 C4CShowAlertWithError(error);
-                                [hud dismiss];
+                                [hud hide:YES];
                             }];
     
     [self performSelector:@selector(endRefreshControl) withObject:nil afterDelay:1.5];

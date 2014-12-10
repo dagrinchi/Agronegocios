@@ -45,12 +45,15 @@
     
     self.registrationForm.scenario = @"register";
     
-    SAMHUDView *hud = [[SAMHUDView alloc] initWithTitle:@"Enviando" loading:YES];
+    MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+    [self.navigationController.view addSubview:hud];
+    hud.detailsLabelText = @"¡Registrándote en Agronegocios!";
+    hud.color = [UIColor colorWithRed:0.4 green:0.6 blue:0 alpha:0.9];
     
     if (![self.registrationForm validate]) {
         [self showErrors];
     } else {
-        [hud show];
+        [hud show:YES];
         
         Registration *registration = [Registration new];
         registration.name = self.registrationForm.name;
@@ -65,21 +68,21 @@
                                                path:REGISTER_PATH
                                          parameters:nil
                                             success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                                                hud.textLabel.text = @"¡Usuario creado!";
-                                                hud.loading = FALSE;
-                                                hud.successful = TRUE;
+                                                hud.detailsLabelText = @"¡Te has registrado en Agronegocios!";
+                                                hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
+                                                hud.mode = MBProgressHUDModeCustomView;
                                                 [self performSelector:@selector(returnToLogin:) withObject:hud afterDelay:1.5];
                                                 
                                             }
                                             failure:^(RKObjectRequestOperation *operation, NSError *error) {
                                                 C4CShowAlertWithError(error.localizedDescription);
-                                                [hud dismiss];
+                                                [hud hide:YES];
                                             }];
     }
 }
 
--(void)returnToLogin:(SAMHUDView *) hud {
-    [hud dismiss];
+-(void)returnToLogin:(MBProgressHUD *) hud {
+    [hud hide:YES];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

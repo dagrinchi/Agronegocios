@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D7184916665EA052526A2C05"
+               BlueprintIdentifier = "8247952EA9B2583B37107457"
                BuildableName = "libPods-Agronegocios-SVWebViewController.a"
                BlueprintName = "Pods-Agronegocios-SVWebViewController"
                ReferencedContainer = "container:Pods.xcodeproj">

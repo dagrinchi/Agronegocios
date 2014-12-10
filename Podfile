@@ -12,6 +12,7 @@ target "Agronegocios" do
     pod 'FXForms', '1.2.10'
     pod 'SVWebViewController', :head
     pod 'FXModelValidation',  '1.0.2'
+    pod 'MBProgressHUD', '~> 0.9'
     
 end
 

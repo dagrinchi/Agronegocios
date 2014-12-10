@@ -40,12 +40,15 @@
     C4CLoginForm *form = cell.field.form;
     form.scenario = @"login";
     
-    SAMHUDView *hud = [[SAMHUDView alloc] initWithTitle:@"Enviando" loading:YES];
+    MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+    [self.navigationController.view addSubview:hud];
+    hud.labelText = @"¡Ingresando a Agronegocios!";
+    hud.color = [UIColor colorWithRed:0.4 green:0.6 blue:0 alpha:0.9];
     
     if (![form validate]) {
         [self showErrors:form];
     } else {
-        [hud show];
+        [hud show:YES];
         
         Login *login = [Login new];
         login.grantType = GRANT_TYPE;
@@ -56,15 +59,15 @@
                                                path:TOKEN_PATH
                                          parameters:nil
                                             success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                                                hud.textLabel.text = @"Listo!";
-                                                hud.loading = FALSE;
-                                                hud.successful = TRUE;
+                                                hud.labelText = @"¡Estás en Agronegocios!";
+                                                hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
+                                                hud.mode = MBProgressHUDModeCustomView;
                                                 [self performSelector:@selector(goApp:) withObject:hud afterDelay:1.5];
                                             }
                                             failure:^(RKObjectRequestOperation *operation, NSError *error) {
                                                 //RKErrorMessage *errorMessage =  [[error.userInfo objectForKey:RKObjectMapperErrorObjectsKey] firstObject];
                                                 C4CShowAlertWithError(@"Número de identificación o clave inválidos");
-                                                [hud dismiss];
+                                                [hud hide:YES];
                                             }];
     }
 }
@@ -87,8 +90,8 @@
     [alert show];
 }
 
--(void) goApp:(SAMHUDView *)hud {
-    [hud dismiss];
+-(void) goApp:(MBProgressHUD *)hud {
+    [hud hide:YES];
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     [self.navigationController pushViewController:[storyBoard instantiateViewControllerWithIdentifier:@"whoamiView"] animated:TRUE];
 }

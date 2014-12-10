@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C95DC2BEBD43C486983B08E1"
+               BlueprintIdentifier = "B3712C6DF5DEC66AED9E4974"
                BuildableName = "libPods-Agronegocios-FXModelValidation.a"
                BlueprintName = "Pods-Agronegocios-FXModelValidation"
                ReferencedContainer = "container:Pods.xcodeproj">

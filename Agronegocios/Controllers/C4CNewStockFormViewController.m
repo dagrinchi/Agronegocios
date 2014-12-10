@@ -19,23 +19,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    SAMHUDView *hud = [[SAMHUDView alloc] initWithTitle:@"¡Preparando productos para la placita!" loading:YES];
-
-    self.stockForm = [[C4CStockForm alloc] init];
-    [hud show];
+    MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+    [self.navigationController.view addSubview:hud];
+    hud.detailsLabelText = @"¡Preparando productos para la placita!";
+    hud.color = [UIColor colorWithRed:0 green:0.6 blue:0.8 alpha:0.9];
+    [hud show:YES];
     
+    self.stockForm = [[C4CStockForm alloc] init];
     [self startLocationRequest:^(CLLocation *location, INTULocationAccuracy achievedAccuracy, INTULocationStatus status) {
         if (status == INTULocationStatusSuccess) {
             self.location = location;
             [self loadAddressData:[NSString stringWithFormat:@"%@,%@", [[NSNumber numberWithDouble:location.coordinate.latitude] stringValue], [[NSNumber numberWithDouble:location.coordinate.longitude] stringValue]]
                                  :^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
                                      self.geoCodes = [mappingResult array];
-                                     [hud dismiss];
+                                     [hud hide:YES];
                                  }];
         }
         else if (status == INTULocationStatusTimedOut) {
             C4CShowAlertWithError(@"Tiempo agotado para la solicitud de localización.");
-            [hud dismiss];
+            [hud hide:YES];
             [self.navigationController popToRootViewControllerAnimated:YES];
         }
         else {
@@ -50,7 +52,7 @@
             } else {
                 C4CShowAlertWithError(@"Se presenta un error desconocido, reintente más tarde.");
             }
-            [hud dismiss];
+            [hud hide:YES];
             [self.navigationController popToRootViewControllerAnimated:YES];
         }
         
@@ -97,8 +99,11 @@
 
 - (void)submitStockForm:(UITableViewCell<FXFormFieldCell> *)cell
 {
-    SAMHUDView *hud = [[SAMHUDView alloc] initWithTitle:@"¡Pesando productos!" loading:YES];
-    [hud show];
+    MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+    [self.navigationController.view addSubview:hud];
+    hud.labelText = @"¡Pesando productos!";
+    hud.color = [UIColor colorWithRed:0 green:0.6 blue:0.8 alpha:0.9];
+    [hud show:YES];
     
     GeoCode *geoCode = [self.geoCodes firstObject];
     AddressComponent *address = [geoCode.addressComponents firstObject];
@@ -109,7 +114,7 @@
     self.stockForm.scenario = @"createNewStock";
     
     if (![self.stockForm validate]) {
-        [hud dismiss];
+        [hud hide:YES];
         [self showErrors];
     } else {
         RKObjectManager *objectManager = [RKObjectManager sharedManager];
@@ -133,24 +138,24 @@
                              path:STOCKS_PATH
                        parameters:nil
                           success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                              hud.textLabel.text = @"¡Inventario creado!";
-                              hud.loading = FALSE;
-                              hud.successful = TRUE;
+                              hud.labelText = @"¡Inventario creado!";
+                              hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
+                              hud.mode = MBProgressHUDModeCustomView;
                               [self performSelector:@selector(returnToFarmer:) withObject:hud afterDelay:1.5];
                               
                           }
                           failure:^(RKObjectRequestOperation *operation, NSError *error) {
                               C4CShowAlertWithError(error.localizedDescription);
-                              [hud dismiss];
+                              [hud hide:YES];
                           }];
     }
     
 }
 
-- (void)returnToFarmer :(SAMHUDView *)hud
+- (void)returnToFarmer :(MBProgressHUD *)hud
 {
     [self.navigationController popViewControllerAnimated:YES];
-    [hud dismiss];
+    [hud hide:YES];
 }
 
 -(void)loadAddressData :(NSString *)latLon :(void (^)(RKObjectRequestOperation *operation, RKMappingResult *mappingResult))success

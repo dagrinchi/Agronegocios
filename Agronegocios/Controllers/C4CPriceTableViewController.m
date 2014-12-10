@@ -10,7 +10,7 @@
 
 @interface C4CPriceTableViewController ()  <NSFetchedResultsControllerDelegate>
 {
-    SAMHUDView *hud;
+    MBProgressHUD *hud;
 }
 
 @end
@@ -38,8 +38,11 @@
     
     self.title = @"Precios";
     
-    hud = [[SAMHUDView alloc] initWithTitle:@"¡Regando cultivos!" loading:YES];
-    [hud show];
+    hud = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+    [self.navigationController.view addSubview:hud];
+    hud.labelText = @"¡Regando cultivos!";
+    hud.color = [UIColor colorWithRed:0.4 green:0.6 blue:0 alpha:0.9];
+    [hud show:YES];
 
 }
 
@@ -71,13 +74,15 @@
     [[RKObjectManager sharedManager] getObjectsAtPath:PRICES_PATH
                                            parameters:nil
                                               success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                                                  hud.textLabel.text = @"¡Cultivos regados!";
-                                                  [hud dismiss];
+                                                  hud.labelText = @"¡Cultivos regados!";
+                                                  hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
+                                                  hud.mode = MBProgressHUDModeCustomView;
+                                                  [hud hide:YES afterDelay:1.5];
                                               }
                                               failure:^(RKObjectRequestOperation *operation, NSError *error) {
                                                   RKLogError(@"Error: %@", error);
                                                   C4CShowAlertWithError(error);
-                                                  [hud dismiss];
+                                                  [hud hide:YES];
                                               }];
     
     [self performSelector:@selector(endRefreshControl) withObject:nil afterDelay:1.5];

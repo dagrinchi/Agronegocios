@@ -128,6 +128,8 @@
 		6386F21D19D8C72A006A6B57 /* C4CSubmitButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F21C19D8C72A006A6B57 /* C4CSubmitButtonCell.m */; };
 		6386F22119D8CC7F006A6B57 /* C4CSubmitButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6386F22019D8CC7F006A6B57 /* C4CSubmitButtonCell.xib */; };
 		6386F22719D90B54006A6B57 /* C4CStockForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F22619D90B54006A6B57 /* C4CStockForm.m */; };
+		638F7B321A38BFAC0028D3E8 /* 37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 638F7B301A38BFAC0028D3E8 /* 37x-Checkmark.png */; };
+		638F7B331A38BFAC0028D3E8 /* 37x-Checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 638F7B311A38BFAC0028D3E8 /* 37x-Checkmark@2x.png */; };
 		6397D10A1A24020600BB9C92 /* farmerstocks.png in Resources */ = {isa = PBXBuildFile; fileRef = 6397D1091A24020600BB9C92 /* farmerstocks.png */; };
 		639D97BB19F4213F008418D7 /* C4CPriceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 639D97BA19F4213F008418D7 /* C4CPriceTableViewController.m */; };
 		639FD5511A0D4B730079EE59 /* MyOrders.m in Sources */ = {isa = PBXBuildFile; fileRef = 639FD5501A0D4B730079EE59 /* MyOrders.m */; };
@@ -332,6 +334,8 @@
 		6386F22019D8CC7F006A6B57 /* C4CSubmitButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = C4CSubmitButtonCell.xib; path = Forms/C4CSubmitButtonCell.xib; sourceTree = "<group>"; };
 		6386F22519D90B54006A6B57 /* C4CStockForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CStockForm.h; path = Forms/C4CStockForm.h; sourceTree = "<group>"; };
 		6386F22619D90B54006A6B57 /* C4CStockForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4CStockForm.m; path = Forms/C4CStockForm.m; sourceTree = "<group>"; };
+		638F7B301A38BFAC0028D3E8 /* 37x-Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "37x-Checkmark.png"; path = "Assets/37x-Checkmark.png"; sourceTree = "<group>"; };
+		638F7B311A38BFAC0028D3E8 /* 37x-Checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "37x-Checkmark@2x.png"; path = "Assets/37x-Checkmark@2x.png"; sourceTree = "<group>"; };
 		6397D1091A24020600BB9C92 /* farmerstocks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = farmerstocks.png; path = Assets/farmerstocks.png; sourceTree = "<group>"; };
 		639D97B919F4213F008418D7 /* C4CPriceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CPriceTableViewController.h; path = Controllers/C4CPriceTableViewController.h; sourceTree = "<group>"; };
 		639D97BA19F4213F008418D7 /* C4CPriceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4CPriceTableViewController.m; path = Controllers/C4CPriceTableViewController.m; sourceTree = "<group>"; };
@@ -580,6 +584,8 @@
 			children = (
 				633967871A2B9079003E230B /* help */,
 				63378C961A27E769006EFC64 /* logo-minagricultura.png */,
+				638F7B301A38BFAC0028D3E8 /* 37x-Checkmark.png */,
+				638F7B311A38BFAC0028D3E8 /* 37x-Checkmark@2x.png */,
 				63378C941A27DFE8006EFC64 /* book_stack-30-red.png */,
 				63378C921A27DF87006EFC64 /* book_stack-30-blue.png */,
 				63378C861A27D821006EFC64 /* courses-30.png */,
@@ -971,6 +977,7 @@
 				63378C7D1A27D26F006EFC64 /* facebook-24.png in Resources */,
 				63378C951A27DFE8006EFC64 /* book_stack-30-red.png in Resources */,
 				636CD4C11A06BDF700712342 /* C4CDoncampoImageCell.xib in Resources */,
+				638F7B331A38BFAC0028D3E8 /* 37x-Checkmark@2x.png in Resources */,
 				636CD4C31A06BE2800712342 /* Main.storyboard in Resources */,
 				63378C871A27D821006EFC64 /* courses-30.png in Resources */,
 				636CAC841A1D397A008375D4 /* about_mintic.png in Resources */,
@@ -1002,6 +1009,7 @@
 				63378C971A27E769006EFC64 /* logo-minagricultura.png in Resources */,
 				636CD4A91A06BDAA00712342 /* Icon-76.png in Resources */,
 				6397D10A1A24020600BB9C92 /* farmerstocks.png in Resources */,
+				638F7B321A38BFAC0028D3E8 /* 37x-Checkmark.png in Resources */,
 				636CD49B1A06BDAA00712342 /* aprende.png in Resources */,
 				636CD49A1A06BDAA00712342 /* agronegocios.png in Resources */,
 				63378C901A27DF3F006EFC64 /* move_by_trolley-30.png in Resources */,

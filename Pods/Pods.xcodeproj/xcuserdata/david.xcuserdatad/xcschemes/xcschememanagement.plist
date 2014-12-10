@@ -2,244 +2,257 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-Agronegocios-AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Agronegocios-FXForms.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Agronegocios-FXModelValidation.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Agronegocios-ISO8601DateFormatterValueTransformer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Agronegocios-MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Agronegocios-RKValueTransformers.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Agronegocios-RestKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Agronegocios-SAMAddressBar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Agronegocios-SAMBadgeView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Agronegocios-SAMCategories.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Agronegocios-SAMCircleProgressView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Agronegocios-SAMGradientView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Agronegocios-SAMHUDView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Agronegocios-SAMLabel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Agronegocios-SAMLoadingView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Agronegocios-SAMRateLimit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Agronegocios-SAMTextField.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Agronegocios-SAMTextView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Agronegocios-SAMWebView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Agronegocios-SOCKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Agronegocios-SSToolkit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Agronegocios-SVWebViewController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Agronegocios-TDBadgedCell.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Agronegocios-TransitionKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Agronegocios.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>071E65978B06873ECCA886DF</key>
+		<key>01F8B4DFE55A0B6989A40444</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>08AFF87F0E3E5FC13991A5E0</key>
+		<key>1D70E8E9E06B14E9C042E406</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>09A03C2B1E2C9325EE19A301</key>
+		<key>2429EDF0DA0C44229C45A8D9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>09CD201F23F34D231A8CB632</key>
+		<key>2BF5F5853BEF3DCAF04403D1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0E3056DA99F462C07AFFF988</key>
+		<key>4518B20E0EDED64CED91B1B3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0F0E2215D539136F55389A8F</key>
+		<key>5FB4588BE3BD7464EC6167DA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>13C165B2B3A5BBFA337447EF</key>
+		<key>76626AB9571A01574FC952F1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1CAB97034AA85007A0D91F97</key>
+		<key>8247952EA9B2583B37107457</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1EFF2F39643998352AE3628B</key>
+		<key>824D499CA895270414D2D47B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2079942EE9AC1A1FBB9E3AF7</key>
+		<key>8F4742BDEA6D21DE23E37D11</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2B7B79C67629EF16F782B86A</key>
+		<key>95C837BF64D4455A6AF7BAA7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2D55D05EE181A1C8B2435B8C</key>
+		<key>98336D1F6ED5B00FFC839871</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2E24EA29AA13F4448BDBBA93</key>
+		<key>9933754E3A78684C0C526014</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2FB882D5276437320BDAF498</key>
+		<key>9A934E1E298BDBF4DD66E109</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>372558A0185A94E378A08427</key>
+		<key>9AAF7AA00752C5276A760130</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3A9FD8CA5820CF832036384D</key>
+		<key>A4CF31903F81D695CF30935A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3D3FE33A89345090F1C566B8</key>
+		<key>B3712C6DF5DEC66AED9E4974</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>409AE6D2243E47E55F241439</key>
+		<key>BAD0C1D63D3136DACA728D84</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>414E220CF5A671F0E320D4C4</key>
+		<key>C36FE7B35888A07383D98F5D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>472A8F8AD050738C3316668C</key>
+		<key>CC0B3C1C82F7D0711B108E15</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>479428096EE84EADBDDB5253</key>
+		<key>DDF98582C7B07BD828A39CAF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4C61D84C10E633E2A7ACB98C</key>
+		<key>E06F47239CCE6E9F9A2FC248</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4E79A135D09BED0DC4AAF61F</key>
+		<key>E3664A034B8D350F945DC980</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>58A35E81137D1C32A2BDA25D</key>
+		<key>EE22BFC672963CF9B38AB992</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6569F15A6F79236996C0A085</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>7418ABE4781E044BFB2EF56B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>75CFC53E8545BA131D265863</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>7C3D66DED8A78947D2235512</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8074563080BC1C1CF33A273C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8E899D403CB02FDF9C110186</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>91968BF1AD11894AFF9D052F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>922568CFF2C4F8406C2BDDC7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A3C280E441E2DD4C7C0220C3</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B8467F10810AD18BBE897F4F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C95DC2BEBD43C486983B08E1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CD370C6C57D4FA90D5080762</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CEA8F965B6F999CE732A9514</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D7184916665EA052526A2C05</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DC08A4E4C9AA9C6599F351E1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DC3F62E8AC82E14DC299B406</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DD0C4B888F3A12E230BADB57</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E1A547F2C8D6B9A3B1CB10D7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E3844EE8E297DF0B023032F3</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E732F05DA8944E141D77F87B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EB7F51ECBE908C28688C582B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FA3A3489D359B110FD0FAB96</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FDE4D3456317397CB2830037</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FE98FDB37A96D18F2925DC81</key>
+		<key>F5261576BE3B52A00D60C2FC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

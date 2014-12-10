@@ -72,7 +72,7 @@
 
 - (IBAction)logoutAction:(id)sender {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"¿Desea countinar?"
-                                                    message:@"Va a cerrar sesión"
+                                                    message:@"Va a salir de Agronegocios."
                                                    delegate:self
                                           cancelButtonTitle:@"Cancelar"
                                           otherButtonTitles:@"Continuar", nil];

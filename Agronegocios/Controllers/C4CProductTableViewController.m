@@ -12,7 +12,7 @@
 {
     UISearchBar *searchBar;
     UISearchDisplayController *searchDisplayController;
-    SAMHUDView *hud;
+    MBProgressHUD *hud;
 }
 
 
@@ -52,8 +52,11 @@
     
     self.title = @"Productos";
     
-    hud = [[SAMHUDView alloc] initWithTitle:@"¡Preparando semillas y abono!" loading:YES];
-    [hud show];
+    hud = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+    [self.navigationController.view addSubview:hud];
+    hud.labelText = @"¡Preparando semillas y abono!";
+    hud.color = [UIColor colorWithRed:0 green:0.6 blue:0.8 alpha:0.9];
+    [hud show:YES];
 }
 
 - (NSFetchedResultsController *)newFetchedResultsController {
@@ -93,7 +96,7 @@
     [objectManager getObjectsAtPath:PRODUCTS_PATH
                                            parameters:nil
                                               success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                                                  [hud dismiss];
+                                                  [hud hide:YES];
                                               }
                                               failure:^(RKObjectRequestOperation *operation, NSError *error) {
                                                   RKLogError(@"Error: %@", error);

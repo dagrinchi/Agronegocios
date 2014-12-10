@@ -10,7 +10,7 @@
 
 @interface C4CUnitTableViewController ()
 {
-    SAMHUDView *hud;
+    MBProgressHUD *hud;
 }
 
 @end
@@ -32,9 +32,11 @@
     
     self.title = @"Unidades";
     
-    hud = [[SAMHUDView alloc] initWithTitle:@"¡Preparando semillas y abono!" loading:YES];
-    [hud show];
-
+    hud = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+    [self.navigationController.view addSubview:hud];
+    hud.labelText = @"¡Preparando semillas y abono!";
+    hud.color = [UIColor colorWithRed:0 green:0.6 blue:0.8 alpha:0.9];
+    [hud show:YES];
 }
 
 - (NSFetchedResultsController *)newFetchedResultsController {
@@ -74,7 +76,7 @@
     [objectManager getObjectsAtPath:UNITS_PATH
                                            parameters:nil
                                               success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                                                  [hud dismiss];
+                                                  [hud hide:YES];
                                                   /*[[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:@"LastUpdatedAt"];
                                                    [[NSUserDefaults standardUserDefaults] synchronize];*/
                                               }
