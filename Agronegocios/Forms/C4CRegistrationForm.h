@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "C4CGreenSubmitButtonCell.h"
+#import "C4CPasswordCell.h"
 
 @interface C4CRegistrationForm : NSObject <FXForm, FXModelValidation>
 
@@ -18,5 +20,7 @@
 @property (nonatomic, copy) NSString *email;
 @property (nonatomic, copy) NSString *phone;
 @property (nonatomic, copy) NSString *address;
+
+- (NSDictionary *)getField :(NSString *) key;
 
 @end

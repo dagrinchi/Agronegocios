@@ -21,38 +21,36 @@
     return self;
 }
 
-- (NSDictionary *)fullNameField
+- (NSDictionary *)getField :(NSString *) key
 {
-    return @{FXFormFieldHeader: @"Confirma tus datos",
-             FXFormFieldKey: @"fullName",
-             FXFormFieldTitle: @"Nombre completo",
-             @"textLabel.font": [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:18.0]};
-}
-
-- (NSDictionary *)phoneField
-{
-    return @{FXFormFieldKey: @"phone",
-             FXFormFieldTitle: @"No. móvil",
-             @"textLabel.font": [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:18.0]};
-}
-
-- (NSDictionary *)qtyField
-{
-    return @{FXFormFieldKey: @"qty",
-             FXFormFieldTitle: @"Cantidad",
-             FXFormFieldType: @"unsigned",
-             @"textLabel.font": [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:18.0]};
+    for (NSDictionary *obj in self.fields) {
+        if ([obj objectForKey:@"key"] == key){
+            return obj;
+        }
+    }
+    
+    return nil;
 }
 
 - (NSArray *) fields
 {
-    return @[@"fullName", @"phone", @"qty"];
+    return @[@{FXFormFieldHeader: @"Confirma tus datos",
+               FXFormFieldKey: @"fullName",
+               FXFormFieldTitle: @"Nombre completo",
+               @"textLabel.font": [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:18.0]},
+             @{FXFormFieldKey: @"phone",
+               FXFormFieldTitle: @"No. móvil",
+               @"textLabel.font": [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:18.0]},
+             @{FXFormFieldCell: [C4CNumericCell class],
+               FXFormFieldKey: @"qty",
+               FXFormFieldTitle: @"Cantidad",
+               @"textLabel.font": [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:18.0]}];
 }
 
 - (NSArray *)extraFields
 {
     return @[@{FXFormFieldCell: [C4CSubmitButtonCell class],
-               FXFormFieldTitle: @"Enviar",
+               FXFormFieldTitle: @"¡Confirmar compra!",
                FXFormFieldHeader: @"",
                FXFormFieldAction: @"submitOrderForm:"}];
 }
@@ -60,27 +58,38 @@
 -(NSArray *)rules {
     return @[@{FXModelValidatorAttributes : @[@"fullName", @"phone", @"qty"],
                FXModelValidatorType : @"required",
+               FXModelValidatorMessage: @"es requerido",
                FXModelValidatorOn: @[@"buy"]},
              
              @{FXModelValidatorAttributes : @[@"fullName"],
                FXModelValidatorType : @"string",
                FXModelValidatorMin : @8,
+               FXModelValidatorTooShort: @"debe tener al menos {min} caracteres",
                FXModelValidatorOn: @[@"buy"]},
              
              @{FXModelValidatorAttributes : @[@"phone"],
                FXModelValidatorType : @"match",
                FXModelValidatorPattern : @"^[0-9]*$",
+               FXModelValidatorMessage: @"es inválido",
                FXModelValidatorOn: @[@"buy"]},
              
              @{FXModelValidatorAttributes : @[@"phone"],
                FXModelValidatorType : @"string",
-               FXModelValidatorLength : @[@7, @10],
+               FXModelValidatorLength : @10,
+               FXModelValidatorNotEqual: @"debe contener {length} dígitos",
                FXModelValidatorOn: @[@"buy"]},
              
              @{FXModelValidatorAttributes : @[@"qty"],
-               FXModelValidatorType : @"number",
-               FXModelValidatorMin : @1,
+               FXModelValidatorType : @"match",
+               FXModelValidatorPattern : @"^[0-9]*$",
+               FXModelValidatorMessage: @"es inválido",
                FXModelValidatorOn: @[@"buy"]},
+             
+             @{FXModelValidatorAttributes : @[@"qty"],
+               FXModelValidatorType : @"string",
+               FXModelValidatorMax : @10,
+               FXModelValidatorTooLong: @"no debe tener más de {max} dígitos",
+               FXModelValidatorOn: @[@"buy"]}
              
              /*@{FXModelValidatorAttributes : @[@"expiresAt"],
               FXModelValidatorOn: @[@"createNewStock"]},*/];

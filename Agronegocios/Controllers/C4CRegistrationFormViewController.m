@@ -88,15 +88,14 @@
 
 -(void)showErrors {
     NSMutableString *message = [NSMutableString string];
-    
     [self.registrationForm.errors enumerateKeysAndObjectsUsingBlock:^(NSString *attribute, NSArray *errors, BOOL *stop) {
-        
+        NSDictionary *field = [self.registrationForm getField:attribute];
         for(NSString *error in errors) {
-            [message appendFormat:@"- %@\n", error];
+            [message appendFormat:@"-%@ %@\n", [field objectForKey:@"title"], error];
         };
     }];
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!"
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
                                                     message:message
                                                    delegate:nil
                                           cancelButtonTitle:@"OK"

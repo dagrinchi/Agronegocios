@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "C4CBlueSubmitButtonCell.h"
+#import "C4CNumericCell.h"
 #import "Product.h"
 #import "Unit.h"
 
@@ -15,8 +16,10 @@
 
 @property (nonatomic, strong) Product *product;
 @property (nonatomic, strong) Unit *unit;
-@property (nonatomic, strong) NSNumber *qty;
-@property (nonatomic, strong) NSNumber *pricePerUnit;
+@property (nonatomic, strong) NSString *qty;
+@property (nonatomic, strong) NSString *pricePerUnit;
 @property (nonatomic, strong) NSDate *expiresAt;
+
+- (NSDictionary *)getField :(NSString *) key;
 
 @end

@@ -13,4 +13,6 @@
 @property (nonatomic, copy) NSString *identification;
 @property (nonatomic, copy) NSString *password;
 
+- (NSDictionary *)getField :(NSString *) key;
+
 @end

@@ -16,6 +16,11 @@
 
 @implementation C4CSubmitButtonCell
 
+- (void)update
+{
+    [self.cellButton setTitle:self.field.title forState:UIControlStateNormal];
+}
+
 - (IBAction)submitAction:(id)sender {
     if (self.field.action) self.field.action(self);
 }

@@ -73,16 +73,16 @@
 }
 
 -(void)showErrors :(C4CLoginForm *)form {
-    NSMutableString *message = [NSMutableString string];
     
+    NSMutableString *message = [NSMutableString string];
     [form.errors enumerateKeysAndObjectsUsingBlock:^(NSString *attribute, NSArray *errors, BOOL *stop) {
-        
+        NSDictionary *field = [form getField:attribute];
         for(NSString *error in errors) {
-            [message appendFormat:@"- %@\n", error];
+            [message appendFormat:@"-%@ %@\n", [field objectForKey:@"title"], error];
         };
     }];
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!"
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
                                                     message:message
                                                    delegate:nil
                                           cancelButtonTitle:@"OK"

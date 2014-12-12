@@ -117,14 +117,17 @@
         [hud hide:YES];
         [self showErrors];
     } else {
+        NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
+        [f setNumberStyle:NSNumberFormatterDecimalStyle];
         RKObjectManager *objectManager = [RKObjectManager sharedManager];
         NSManagedObjectContext *context = objectManager.managedObjectStore.mainQueueManagedObjectContext;
         MyStock *stock = [NSEntityDescription insertNewObjectForEntityForName:@"MyStock" inManagedObjectContext:context];
         
         stock.productId = self.stockForm.product.productId;
         stock.unitId = self.stockForm.unit.unitId;
-        stock.qty = self.stockForm.qty;
-        stock.pricePerUnit = self.stockForm.pricePerUnit;
+        
+        stock.qty = [f numberFromString:self.stockForm.qty];
+        stock.pricePerUnit = [f numberFromString:self.stockForm.pricePerUnit];
         stock.expiresAt = self.stockForm.expiresAt;
         stock.latitude = [NSNumber numberWithDouble:self.location.coordinate.latitude];
         stock.longitude = [NSNumber numberWithDouble:self.location.coordinate.longitude];
@@ -199,14 +202,14 @@ static void C4CShowAlertWithError(NSString *error)
 
 -(void)showErrors {
     NSMutableString *message = [NSMutableString string];
-    
     [self.stockForm.errors enumerateKeysAndObjectsUsingBlock:^(NSString *attribute, NSArray *errors, BOOL *stop) {
+        NSDictionary *field = [self.stockForm getField:attribute];
         for(NSString *error in errors) {
-            [message appendFormat:@"- %@\n", error];
+            [message appendFormat:@"-%@ %@\n", [field objectForKey:@"title"], error];
         };
     }];
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!"
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
                                                     message:message
                                                    delegate:nil
                                           cancelButtonTitle:@"OK"

@@ -121,6 +121,8 @@
 		636CD5351A07F30600712342 /* INTULocationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 636CD5321A07F30600712342 /* INTULocationRequest.m */; };
 		636CD53C1A081DB800712342 /* AddressComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 636CD53B1A081DB800712342 /* AddressComponent.m */; };
 		636CD53F1A08393C00712342 /* NewStock.m in Sources */ = {isa = PBXBuildFile; fileRef = 636CD53E1A08393C00712342 /* NewStock.m */; };
+		637C932B1A3B4CE4003740E0 /* C4CPasswordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 637C932A1A3B4CE4003740E0 /* C4CPasswordCell.m */; };
+		637C932E1A3B4F94003740E0 /* C4CNumericCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 637C932D1A3B4F94003740E0 /* C4CNumericCell.m */; };
 		6386F21019D8BA2C006A6B57 /* C4CRootForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F20F19D8BA2C006A6B57 /* C4CRootForm.m */; };
 		6386F21319D8BA98006A6B57 /* C4CLoginForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F21219D8BA98006A6B57 /* C4CLoginForm.m */; };
 		6386F21619D8BABB006A6B57 /* C4CRegistrationForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F21519D8BABB006A6B57 /* C4CRegistrationForm.m */; };
@@ -321,6 +323,10 @@
 		636CD53B1A081DB800712342 /* AddressComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddressComponent.m; path = Models/AddressComponent.m; sourceTree = "<group>"; };
 		636CD53D1A08393C00712342 /* NewStock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewStock.h; path = Models/NewStock.h; sourceTree = "<group>"; };
 		636CD53E1A08393C00712342 /* NewStock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewStock.m; path = Models/NewStock.m; sourceTree = "<group>"; };
+		637C93291A3B4CE4003740E0 /* C4CPasswordCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CPasswordCell.h; path = Forms/C4CPasswordCell.h; sourceTree = "<group>"; };
+		637C932A1A3B4CE4003740E0 /* C4CPasswordCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4CPasswordCell.m; path = Forms/C4CPasswordCell.m; sourceTree = "<group>"; };
+		637C932C1A3B4F94003740E0 /* C4CNumericCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CNumericCell.h; path = Forms/C4CNumericCell.h; sourceTree = "<group>"; };
+		637C932D1A3B4F94003740E0 /* C4CNumericCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4CNumericCell.m; path = Forms/C4CNumericCell.m; sourceTree = "<group>"; };
 		6386F20E19D8BA2C006A6B57 /* C4CRootForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CRootForm.h; path = Forms/C4CRootForm.h; sourceTree = "<group>"; };
 		6386F20F19D8BA2C006A6B57 /* C4CRootForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4CRootForm.m; path = Forms/C4CRootForm.m; sourceTree = "<group>"; };
 		6386F21119D8BA98006A6B57 /* C4CLoginForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4CLoginForm.h; path = Forms/C4CLoginForm.h; sourceTree = "<group>"; };
@@ -447,8 +453,8 @@
 		63551C2319F9AA6800E49EC7 /* Price */ = {
 			isa = PBXGroup;
 			children = (
-				63551C2419F9AB0A00E49EC7 /* C4CPriceTableViewCell.h */,
 				63551C2519F9AB0A00E49EC7 /* C4CPriceTableViewCell.m */,
+				63551C2419F9AB0A00E49EC7 /* C4CPriceTableViewCell.h */,
 			);
 			name = Price;
 			sourceTree = "<group>";
@@ -647,10 +653,10 @@
 		63611B3C196B3A1E006B3282 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				639FD5551A0D51A30079EE59 /* Order */,
-				635773311A0B1D5600D51CE3 /* Stock */,
 				636CD4C21A06BE2800712342 /* Main.storyboard */,
 				63551C2319F9AA6800E49EC7 /* Price */,
+				639FD5551A0D51A30079EE59 /* Order */,
+				635773311A0B1D5600D51CE3 /* Stock */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -822,6 +828,10 @@
 				63AFDA801A104E400078CC4E /* C4CGreenSubmitButtonCell.xib */,
 				63AFDA821A104F2A0078CC4E /* C4CGreenSubmitButtonCell.h */,
 				63AFDA831A104F2A0078CC4E /* C4CGreenSubmitButtonCell.m */,
+				637C93291A3B4CE4003740E0 /* C4CPasswordCell.h */,
+				637C932A1A3B4CE4003740E0 /* C4CPasswordCell.m */,
+				637C932C1A3B4F94003740E0 /* C4CNumericCell.h */,
+				637C932D1A3B4F94003740E0 /* C4CNumericCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -1090,6 +1100,7 @@
 				63581D041A0069F40008196F /* Token.m in Sources */,
 				636CD4621A069EF500712342 /* C4CRegistrationFormViewController.m in Sources */,
 				63611B111969FA36006B3282 /* main.m in Sources */,
+				637C932E1A3B4F94003740E0 /* C4CNumericCell.m in Sources */,
 				6386F21019D8BA2C006A6B57 /* C4CRootForm.m in Sources */,
 				636CD4771A06BC0200712342 /* C4CHomeTableViewController.m in Sources */,
 				6320FCE51A0E6D85009518B7 /* C4COrderForm.m in Sources */,
@@ -1105,6 +1116,7 @@
 				636CD4741A06B7FE00712342 /* C4CMyPurchasesTableViewController.m in Sources */,
 				635773341A0B1D7900D51CE3 /* C4CStockTableViewCell.m in Sources */,
 				6386F21919D8BF30006A6B57 /* C4CRootFormViewController.m in Sources */,
+				637C932B1A3B4CE4003740E0 /* C4CPasswordCell.m in Sources */,
 				635773371A0B301500D51CE3 /* MyStock.m in Sources */,
 				639FD5541A0D4C840079EE59 /* MyPurchases.m in Sources */,
 				639FD5581A0D51C50079EE59 /* C4COrderTableViewCell.m in Sources */,

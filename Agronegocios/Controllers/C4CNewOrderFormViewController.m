@@ -117,6 +117,8 @@
         [hud hide:YES];
         [self showErrors];
     } else {
+        NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
+        [f setNumberStyle:NSNumberFormatterDecimalStyle];
         RKObjectManager *objectManager = [RKObjectManager sharedManager];
         NSManagedObjectContext *context = objectManager.managedObjectStore.mainQueueManagedObjectContext;
         MyPurchases *order = [NSEntityDescription insertNewObjectForEntityForName:@"MyPurchases" inManagedObjectContext:context];
@@ -136,7 +138,7 @@
         // ORDER
         order.fullName = self.orderForm.fullName;
         order.phone = self.orderForm.phone;
-        order.orderQty = self.orderForm.qty;
+        order.orderQty = [f numberFromString:self.orderForm.qty];
         order.orderLatitude = [NSNumber numberWithDouble:self.location.coordinate.latitude];
         order.orderLongitude = [NSNumber numberWithDouble:self.location.coordinate.longitude];
         order.orderAddress = address.longName;
@@ -164,15 +166,14 @@
 
 -(void)showErrors {
     NSMutableString *message = [NSMutableString string];
-    
     [self.orderForm.errors enumerateKeysAndObjectsUsingBlock:^(NSString *attribute, NSArray *errors, BOOL *stop) {
-        
+        NSDictionary *field = [self.orderForm getField:attribute];
         for(NSString *error in errors) {
-            [message appendFormat:@"- %@\n", error];
+            [message appendFormat:@"-%@ %@\n", [field objectForKey:@"title"], error];
         };
     }];
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!"
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
                                                     message:message
                                                    delegate:nil
                                           cancelButtonTitle:@"OK"

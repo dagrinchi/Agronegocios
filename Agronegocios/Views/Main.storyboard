@@ -1056,20 +1056,26 @@ Cg
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WKb-V4-RxC">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-minagricultura.png" translatesAutoresizingMaskIntoConstraints="NO" id="guv-ya-xjc">
-                                        <rect key="frame" x="8" y="147" width="304" height="69"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about_minagricultura.png" translatesAutoresizingMaskIntoConstraints="NO" id="guv-ya-xjc">
+                                        <rect key="frame" x="8" y="177" width="304" height="70"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="69" id="x6A-Xr-DIq"/>
+                                            <constraint firstAttribute="height" constant="70" id="x6A-Xr-DIq"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about_mintic.png" translatesAutoresizingMaskIntoConstraints="NO" id="eUe-j9-a9w">
-                                        <rect key="frame" x="40" y="229" width="240" height="75"/>
+                                        <rect key="frame" x="8" y="255" width="304" height="80"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="75" id="wbo-mz-4hz"/>
+                                            <constraint firstAttribute="height" constant="80" id="wbo-mz-4hz"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about_agronet.png" translatesAutoresizingMaskIntoConstraints="NO" id="gHZ-ay-Eeb">
+                                        <rect key="frame" x="17" y="39" width="287" height="130"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="130" id="uqi-tQ-sxL"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Db7-jx-ezy">
-                                        <rect key="frame" x="20" y="312" width="280" height="104"/>
+                                        <rect key="frame" x="20" y="358" width="280" height="104"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="104" id="LlH-PT-g0F"/>
                                         </constraints>
@@ -1096,28 +1102,22 @@ David Alméciga - walmeciga@cool4code.com  Esta aplicación requiere acceso 
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about_agronet.png" translatesAutoresizingMaskIntoConstraints="NO" id="gHZ-ay-Eeb">
-                                        <rect key="frame" x="17" y="8" width="287" height="130"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="130" id="uqi-tQ-sxL"/>
-                                        </constraints>
-                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="gHZ-ay-Eeb" firstAttribute="leading" secondItem="WKb-V4-RxC" secondAttribute="leading" constant="17" id="3hQ-cg-Ch2"/>
-                                    <constraint firstItem="Db7-jx-ezy" firstAttribute="top" secondItem="eUe-j9-a9w" secondAttribute="bottom" constant="8" symbolic="YES" id="CuF-8t-bwP"/>
+                                    <constraint firstItem="Db7-jx-ezy" firstAttribute="top" secondItem="eUe-j9-a9w" secondAttribute="bottom" constant="23" id="CuF-8t-bwP"/>
                                     <constraint firstItem="eUe-j9-a9w" firstAttribute="centerX" secondItem="WKb-V4-RxC" secondAttribute="centerX" id="FmP-Yf-cb1"/>
-                                    <constraint firstAttribute="bottom" secondItem="Db7-jx-ezy" secondAttribute="bottom" id="Gvy-rp-msc"/>
+                                    <constraint firstAttribute="bottom" secondItem="Db7-jx-ezy" secondAttribute="bottom" constant="-46" id="Gvy-rp-msc"/>
                                     <constraint firstItem="guv-ya-xjc" firstAttribute="leading" secondItem="WKb-V4-RxC" secondAttribute="leading" constant="8" id="KkU-DO-EJj"/>
-                                    <constraint firstItem="gHZ-ay-Eeb" firstAttribute="top" secondItem="WKb-V4-RxC" secondAttribute="topMargin" id="NZv-NA-gE9"/>
-                                    <constraint firstItem="guv-ya-xjc" firstAttribute="trailing" secondItem="eUe-j9-a9w" secondAttribute="trailing" constant="32" id="QId-JD-SAb"/>
-                                    <constraint firstItem="guv-ya-xjc" firstAttribute="top" secondItem="gHZ-ay-Eeb" secondAttribute="bottom" constant="9" id="U7p-qy-aAK"/>
+                                    <constraint firstItem="gHZ-ay-Eeb" firstAttribute="top" secondItem="WKb-V4-RxC" secondAttribute="topMargin" constant="31" id="NZv-NA-gE9"/>
+                                    <constraint firstItem="guv-ya-xjc" firstAttribute="trailing" secondItem="eUe-j9-a9w" secondAttribute="trailing" id="QId-JD-SAb"/>
+                                    <constraint firstItem="guv-ya-xjc" firstAttribute="top" secondItem="gHZ-ay-Eeb" secondAttribute="bottom" constant="8" id="U7p-qy-aAK"/>
                                     <constraint firstItem="guv-ya-xjc" firstAttribute="centerX" secondItem="gHZ-ay-Eeb" secondAttribute="centerX" id="b6l-si-Sce"/>
                                     <constraint firstItem="Db7-jx-ezy" firstAttribute="leading" secondItem="WKb-V4-RxC" secondAttribute="leading" constant="20" id="g5K-CV-tuZ"/>
-                                    <constraint firstItem="eUe-j9-a9w" firstAttribute="leading" secondItem="guv-ya-xjc" secondAttribute="leading" constant="32" id="gBg-R5-LkM"/>
+                                    <constraint firstItem="eUe-j9-a9w" firstAttribute="leading" secondItem="guv-ya-xjc" secondAttribute="leading" id="gBg-R5-LkM"/>
                                     <constraint firstItem="eUe-j9-a9w" firstAttribute="centerX" secondItem="Db7-jx-ezy" secondAttribute="centerX" id="rcR-qp-c1Y"/>
                                     <constraint firstAttribute="trailing" secondItem="gHZ-ay-Eeb" secondAttribute="trailing" constant="16" id="w81-eo-Pf7"/>
-                                    <constraint firstItem="eUe-j9-a9w" firstAttribute="top" secondItem="guv-ya-xjc" secondAttribute="bottom" constant="13" id="wTa-tY-01F"/>
+                                    <constraint firstItem="eUe-j9-a9w" firstAttribute="top" secondItem="guv-ya-xjc" secondAttribute="bottom" constant="8" id="wTa-tY-01F"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -2331,14 +2331,14 @@ Para empezar seleccione un producto.</string>
     </scenes>
     <resources>
         <image name="about_agronet.png" width="595" height="257"/>
-        <image name="about_mintic.png" width="536" height="166"/>
+        <image name="about_minagricultura.png" width="294" height="85"/>
+        <image name="about_mintic.png" width="207" height="94"/>
         <image name="agronegocios.png" width="209" height="196"/>
         <image name="book_stack-30-blue.png" width="30" height="30"/>
         <image name="book_stack-30-red.png" width="30" height="30"/>
         <image name="comprador.png" width="233" height="239"/>
         <image name="farmerregister-1.png" width="143" height="237"/>
         <image name="farmerstocks.png" width="233" height="239"/>
-        <image name="logo-minagricultura.png" width="1024" height="227"/>
         <image name="move_by_trolley-30.png" width="30" height="30"/>
         <image name="productor.png" width="233" height="239"/>
         <image name="purchase_order-30.png" width="30" height="30"/>

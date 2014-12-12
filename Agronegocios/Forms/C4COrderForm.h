@@ -8,11 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "C4CSubmitButtonCell.h"
+#import "C4CNumericCell.h"
 
 @interface C4COrderForm : NSObject <FXForm, FXModelValidation>
 
 @property (nonatomic, strong) NSString * fullName;
 @property (nonatomic, strong) NSString * phone;
-@property (nonatomic, strong) NSNumber * qty;
+@property (nonatomic, strong) NSString * qty;
+
+- (NSDictionary *)getField :(NSString *) key;
 
 @end
