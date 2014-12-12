@@ -37,9 +37,9 @@
     return @[@{FXFormFieldKey: @"identification",
                FXFormFieldTitle: @"No. identificación",
                @"textLabel.font": [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:18.0]},
-             @{FXFormFieldKey: @"password",
+             @{FXFormFieldCell: [C4CPasswordCell class],
+               FXFormFieldKey: @"password",
                FXFormFieldTitle: @"Clave",
-               FXFormFieldType : FXFormFieldTypePassword,
                @"textLabel.font": [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:18.0]}];
 }
 

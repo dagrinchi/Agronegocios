@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "C4CPasswordCell.h"
 
 @interface C4CLoginForm : NSObject <FXForm, FXModelValidation>
 

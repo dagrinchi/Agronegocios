@@ -64,7 +64,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCg-qw-8OK">
-                                                    <rect key="frame" x="100" y="8" width="120" height="28"/>
+                                                    <rect key="frame" x="65" y="5" width="190" height="34"/>
                                                     <color key="backgroundColor" red="0.98431372549999996" green="0.1647058824" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="18"/>
                                                     <state key="normal" title="Ayuda">
@@ -77,14 +77,45 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="dCg-qw-8OK" secondAttribute="bottom" constant="-0.5" id="q29-YH-muo"/>
-                                                <constraint firstAttribute="trailing" secondItem="dCg-qw-8OK" secondAttribute="trailing" constant="100" id="vQG-bD-gY3"/>
-                                                <constraint firstItem="dCg-qw-8OK" firstAttribute="leading" secondItem="dyV-7l-Rin" secondAttribute="leading" constant="100" id="wPb-Na-2vO"/>
-                                                <constraint firstItem="dCg-qw-8OK" firstAttribute="top" secondItem="dyV-7l-Rin" secondAttribute="top" constant="8" id="z1c-Yo-e2w"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="dCg-qw-8OK" secondAttribute="bottom" constant="-3" id="q29-YH-muo"/>
+                                                <constraint firstAttribute="trailing" secondItem="dCg-qw-8OK" secondAttribute="trailing" constant="65" id="vQG-bD-gY3"/>
+                                                <constraint firstItem="dCg-qw-8OK" firstAttribute="leading" secondItem="dyV-7l-Rin" secondAttribute="leading" constant="65" id="wPb-Na-2vO"/>
+                                                <constraint firstItem="dCg-qw-8OK" firstAttribute="top" secondItem="dyV-7l-Rin" secondAttribute="top" constant="5" id="z1c-Yo-e2w"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="selectedBackgroundView" destination="mdF-0O-Ctw" id="skQ-n1-hho"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="jDJ-tV-VMQ">
+                                        <rect key="frame" x="0.0" y="335" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jDJ-tV-VMQ" id="1QL-4Z-dKp">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIA-Yu-fsO">
+                                                    <rect key="frame" x="65" y="5" width="190" height="34"/>
+                                                    <color key="backgroundColor" red="0.98431372549999996" green="0.1647058824" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="18"/>
+                                                    <state key="normal" title="Términos y condiciones">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="N0q-fr-2dq" kind="modal" id="1Ii-3N-gRp"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="kIA-Yu-fsO" secondAttribute="trailing" constant="65" id="GOR-DF-6ba"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="kIA-Yu-fsO" secondAttribute="bottom" constant="-3" id="Raz-O3-x2L"/>
+                                                <constraint firstItem="kIA-Yu-fsO" firstAttribute="leading" secondItem="1QL-4Z-dKp" secondAttribute="leading" constant="65" id="Rgv-C7-ZfM"/>
+                                                <constraint firstItem="kIA-Yu-fsO" firstAttribute="top" secondItem="1QL-4Z-dKp" secondAttribute="top" constant="5" id="Vtc-aJ-1Jb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="selectedBackgroundView" destination="mdF-0O-Ctw" id="CPd-P7-mbw"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>

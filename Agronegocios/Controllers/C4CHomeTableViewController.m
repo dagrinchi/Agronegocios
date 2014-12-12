@@ -56,26 +56,28 @@
 }
 
 - (IBAction)unwindTermsAndAccept:(UIStoryboardSegue *)segue {
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    /*NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     BOOL is_accept_terms = [userDefaults boolForKey:@"is_accept_terms"];
     if (!is_accept_terms) {
         [userDefaults setBool:true forKey:@"is_accept_terms"];
         [userDefaults synchronize];
-    }
+    }*/
 }
 
 - (IBAction)startAction:(id)sender {
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     C4CPriceTableViewController *priceTableViewController = [storyBoard instantiateViewControllerWithIdentifier:@"pricesView"];
-    UINavigationController *termsNavigationController = [storyBoard instantiateViewControllerWithIdentifier:@"termsView"];
+    [self.navigationController pushViewController:priceTableViewController animated:YES];
     
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    /*
+     UINavigationController *termsNavigationController = [storyBoard instantiateViewControllerWithIdentifier:@"termsView"];
+     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     BOOL is_accept_terms = [userDefaults boolForKey:@"is_accept_terms"];
     if (is_accept_terms) {
         [self.navigationController pushViewController:priceTableViewController animated:YES];
     } else {
         [self presentViewController:termsNavigationController animated:YES completion:NULL];
-    }
+    }*/
 }
 
 @end
