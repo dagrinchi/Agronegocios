@@ -9,7 +9,7 @@
 #ifndef Agronegocios_Webservice_h
 #define Agronegocios_Webservice_h
 
-#define BASE_URL @"http://placita.azurewebsites.net"
+#define BASE_URL @"http://serviciosmadr.minagricultura.gov.co"
 
 #define CUSTOMER_LEARN_URL @"http://www.agronet.gov.co/www/htm3b/noticias2uniNuke.asp"
 
@@ -21,28 +21,28 @@
 
 #define GRANT_TYPE @"password"
 
-#define REGISTER_PATH @"/api/Account/Register"
+#define REGISTER_PATH @"/MiPlacita/PlacitaWS/api/Account/Register"
 
-#define TOKEN_PATH @"/Token"
+#define TOKEN_PATH @"/MiPlacita/PlacitaWS/Token"
 
-#define PRODUCTS_PATH @"/api/Products"
+#define PRODUCTS_PATH @"/MiPlacita/PlacitaWS/api/Products"
 
-#define UNITS_PATH @"/api/Units"
+#define UNITS_PATH @"/MiPlacita/PlacitaWS/api/Units"
 
-#define PLACES_PATH @"/api/Places"
+#define PLACES_PATH @"/MiPlacita/PlacitaWS/api/Places"
 
-#define PRICES_PATH @"/api/Prices"
+#define PRICES_PATH @"/MiPlacita/PlacitaWS/api/Prices"
 
-#define NEWSFEEDS_PATH @"/api/NewsFeeds"
+#define NEWSFEEDS_PATH @"/MiPlacita/PlacitaWS/api/NewsFeeds"
 
-#define STOCKS_PATH @"/api/Stocks"
+#define STOCKS_PATH @"/MiPlacita/PlacitaWS/api/Stocks"
 
-#define MYSTOCKS_PATH @"/api/MyStocks/0"
+#define MYSTOCKS_PATH @"/MiPlacita/PlacitaWS/api/MyStocks/0"
 
-#define ORDERS_PATH @"/api/Orders"
+#define ORDERS_PATH @"/MiPlacita/PlacitaWS/api/Orders"
 
-#define MYORDERS_PATH @"/api/MyOrders"
+#define MYORDERS_PATH @"/MiPlacita/PlacitaWS/api/MyOrders"
 
-#define MYPURCHASES_PATH @"/api/MyPurchases"
+#define MYPURCHASES_PATH @"/MiPlacita/PlacitaWS/api/MyPurchases"
 
 #endif
